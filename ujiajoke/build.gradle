@@ -1,0 +1,95 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "http://repo.spring.io/libs-release" }
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        maven { url "http://repo.spring.io/libs-milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+
+sourceCompatibility = 1.6
+version = '1.0'
+
+jar {
+    baseName = 'ujiajoke'
+    version =  '1.0'
+}
+//项目打包
+war {
+    baseName = 'ujiajoke'
+    version =  ''
+
+    //classpath( 'src/main/production') // adds a file-set to the WEB-INF dir
+    //from 'src/main/production' // adds a file-set to the root of the archive
+    //webInf { from 'src/main/production' into 'classes' exclude 'web.xml' } // adds a file-set to the WEB-INF dir.
+    //classpath fileTree('src/main/production') // adds a file-set to the WEB-INF/lib dir.
+    //webXml = file('src/main/production/web.xml') // copies a file to WEB-INF/web.xml
+}
+
+processResources {
+    exclude '*.*'
+    //from('src/main/production') {
+    //    include 'logback.xml'
+    //}
+}
+
+//指定仓库使用
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    maven { url "http://repo.spring.io/libs-milestone" }
+}
+//项目依赖定义compile为编译级别依赖testCompile为测试级别的依赖
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.1.8.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-redis")
+
+    //compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.1.RELEASE'
+    compile 'org.hibernate:hibernate-entitymanager:4.2.8.Final'
+    compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    compile 'commons-httpclient:commons-httpclient:3.1'
+    compile 'org.apache.commons:commons-lang3:3.1'
+    compile 'javax.mail:mail:1.4.7'
+    compile 'org.apache.ant:ant:1.9.3'
+    compile 'org.jasypt:jasypt-spring31:1.9.2'
+
+    compile files('libs/kaptcha-2.3.2.jar')
+    compile files('libs/mariadb-java-client-1.1.6.jar')
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+copy {
+    from('src/main/resources/templates') {
+        exclude '**/*.html', '**/*.xml'
+    }
+    into 'src/main/resources/static/'
+    exclude '**/*.bak'
+
+    includeEmptyDirs = false
+}
+compileJava.options.encoding = 'UTF-8'
+javadoc {
+    options {
+        locale = 'en_US'
+        encoding = 'UTF-8'
+        docFilesSubDirs = true
+        excludeDocFilesSubDir '.svn'
+        options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PRIVATE
+    }
+}
