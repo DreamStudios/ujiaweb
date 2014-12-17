@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="applicable-device" content="pc"/>
+    <title>发布笑话_快乐麻花！</title>
+    <meta name="description" content="您可以在这发布笑话，然后有机会被广大麻花所看见喔，快来投稿吧" />
+    <meta name="keywords" content="投稿,发笑话,上传笑话" />
+    <link type="text/css" href="css/tougao.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/ujiajoke.js"></script>
+</head>
+<body>
+<!--头部信息开始-->
+<div class="header">
+    <!--标题开始-->
+    <div class="header-top">
+        <div class="header-top-content">
+            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <div id="islogin" class="islogin">
+                <div class="my-center">
+                    <i title="个人中心"></i>
+                    <ul>
+                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
+                        <li><a href="http://user.mahua.com/my/gift">兑换礼品</a></li>
+                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
+                        <li><a href="http://user.mahua.com/my/task">今日任务</a></li>
+                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
+                        <li class="noborder"><a href="http://user.mahua.com/member/logout" rel="nofollow">退出</a></li>
+                    </ul>
+                </div>
+                <div class="my-message">
+                    <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
+                </div>
+                <span class="username-top"><a href="http://user.mahua.com/home">JackAn</a>，欢迎回来!</span>
+            </div>
+            
+        </div>
+    </div>
+    <!--标题结束-->
+    <!--导航菜单开始-->
+    <div class="header-nav">
+      <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
+      <ul>
+          <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="newjokes/index.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="shenhuifu.html" >糗事</a></li>
+            <li><a href="user/lipin/index.html" >内涵图</a></li>
+            <li><a href="user/lipin/index.html" >会员专享<i></i></a></li>
+        </ul>
+      <div class="mahua-slogan"></div>
+    </div>
+    <!--导航菜单结束-->
+</div>
+<!--头部信息结束-->
+<!--主要内容开始-->
+<div class="main">
+	<!--左侧信息开始-->
+	<div class="left">
+		<form id="publish-joke" onSubmit="return publishJoke(this);">
+          <dl class="publish-title">
+              <dt>笑话标题：</dt>
+              <dd><input type="text" name="title" value="起个逗逼点的标题" id="title"/></dd>
+              <dd class="publish-message message-title">错误提示</dd>
+          </dl>
+          <dl class="publish-content">
+              <dt>
+                  <span>输入内容：</span><span id="fileuploader">插入图片</span>
+              </dt>
+              <dd>
+                  <textarea>内容</textarea>
+              </dd>
+              <dd class="publish-message message-content"></dd>
+              <dd class="publish-btn">
+                  <input type="submit" value="投稿"/>
+              </dd>
+          </dl>
+		</form>
+		<dl class="publish-reward-malicious">
+			<dt>奖励规则</dt>
+			<dd>
+				<p>1、被审核通过后，可获得500麻币奖励。</p>
+				<p>2、好笑的投稿通过率高，而且更容易获得其它用户的麻币打赏哦。</p>
+				<p>3、投稿的数量有等级限制，详情请参考<a href="http://www.mahua.com/about/shengjiguize.htm" target="_blank">等级规则</a>。</p>
+				<p>4、你可以勾选“<i class="s-color-red">我想被包养</i>”，把你的投稿标一个买断价。如果有别的用户看中，他会出价买断，当然，后续这条投稿赚到的打赏就跟您没关系啦。</p>
+			</dd>
+		</dl>
+	</div>
+    <!--左侧信息结束-->
+	<div class="right">
+		<div class="publish-rules">
+			<p>1、麻花是快乐分享网站，只要搞笑就可以发！</p>
+			<p>2、千万别投涉政治、色情、暴力、陪聊、广告等内容，小心封号哦。</p>
+			<p>3、我们是个搞笑类网站，非搞笑的投稿就算通过也会被删掉的哦。</p>
+			<p>4、分享你身边的趣事、糗事，鼓励原创，反对转载。</p>
+			<p>5、带水印图片审核是不会通过的，图片越清晰越好。</p>
+			<p>6、不要投重复的内容，会自动过滤掉的。</p>
+			<p>7、最多只允许上传3M的图片。</p>
+			<p class="more"><a href="javascript:alert(1);" target="_blank">查看详细规则>></a></p>
+		</div>
+	</div>
+</div>
+<!--右侧导航结束-->
+<!--底部内容开始-->
+<div class="footer">
+	<div class="footer-content">
+        <div class="about">
+            <dl>
+                <dt>关于有家</dt>
+                <dd><a href="about/mahuajianjie.html" target="_blank">有家简介</a><a href="about/mahuagonggao.html" target="_blank">有家公告</a></dd>
+                <dd><a href="about/mianzeshengming.html" target="_blank">免责声明</a><a href="about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
+            </dl>
+            <dl>
+                <dt>互动规则</dt>
+                <dd><a href="about/tougaoguize.html" target="_blank">投稿规则</a><a href="about/shengaoguize.html" target="_blank">审稿规则</a></dd>
+                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/mabiguize.html" target="_blank">笑币规则</a></dd>
+            </dl>
+            <dl>
+                <dt>关注</dt>
+                <dd><a href="http://e.weibo.com/kuailemahua" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="http://user.qzone.qq.com/320182733" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
+                <dd><a href="http://t.qq.com/kuailemahua?lang=zh_CN" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="user/weixin.html" target="_blank" class="footer-weixin" rel="nofollow">微信订阅</a></dd>
+            </dl>
+            <dl class="about-contact">
+                <dt>麻花合作</dt>
+                <dd>麻花粉丝QQ群:<i></i>95773113<i></i>253814987</dd>
+                <dd>合作：kuailemahua@163.com</dd>
+            </dl>
+        </div>		
+      <div class="coypright">
+       	<p>Copyright 2005-2014 mahua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
+      </div>
+	</div>
+</div>
+<!--底部内容结束-->
+<!--[if IE 6]>
+	<script>document.execCommand("BackgroundImageCache",false,true)</script>
+<![endif]-->
+</body>
+</html>
