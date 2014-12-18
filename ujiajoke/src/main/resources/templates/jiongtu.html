@@ -28,7 +28,7 @@
 	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
 </script>
 <!--头部信息开始-->
-<div class="header" th:fragment="index_header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
@@ -47,10 +47,10 @@
     <div class="header-nav">
         <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
         <ul>
-          <li> <a href="index.html" th:class="${type eq 0?'hover':''}" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="jiongtu.html" th:class="${type eq 1?'hover':''}" title="按时间先后排序">囧图</a></li>
-            <li><a href="xiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
-            <li><a href="neihan.html" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
+          <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="xiushi.html" >糗事</a></li>
+            <li><a href="neihan.html" >内涵图</a></li>
             <li><a href="vippass.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
@@ -62,25 +62,10 @@
 <div class="main">
     <!--左侧信息开始-->
 	<div class="left">
-		<!-- 轮播开始-->
-		<div class="list-top-focus" id="listTopFocus">
-            <ul>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
-                </li>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
-                </li>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
-                </li>
-            </ul>
-		</div>	
-        <!--轮播结束-->	
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
 			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" alt="你丫才是逗比"/><i></i></a>
+				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" alt="你丫才是逗比"/><i></i></a>
 				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
 				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
@@ -108,7 +93,12 @@
             </dd>
          </dl>
 		<!-- 分页 -->
-        <div class="pagination pagination-right">
+		<!--<div class="page">
+		   <div class="go-page" id="goPage" data-maxPage="1000">
+             <input value="跳到.." type="text" title="跳到.." /><a href="javascript:void(0);">GO</a>
+           </div>
+        </div>-->
+        <div class="pagination pagination-right"><!-- class="page" -->
             <div id="example" style="float: left;"></div>
             <script th:inline="javascript">
                 /*<![CDATA[*/
@@ -122,7 +112,7 @@
                         currentPage: newPage,
                         totalPages: totalPages,
                         onPageClicked: function (e, originalEvent, type, page) {
-                            window.location.href = "index.html?page=" + page ;
+                            window.location.href = "jiongtu.html?page=" + page ;
                         }
                     }
                     $('#example').bootstrapPaginator(options);
@@ -131,9 +121,9 @@
                     var pageValue=$('#page').val();
                     if(!isNaN(pageValue) && parseInt(pageValue)>0){
                         if(parseInt(pageValue) == 1){
-                            window.location.href = "index.html";
+                            window.location.href = "jiongtu.html";
                         }else{
-                            window.location.href = "index.html?page=" + pageValue;
+                            window.location.href = "jiongtu.html?page=" + pageValue;
                         }
                     }else{
                         alert('请输入正确的页码');
@@ -245,43 +235,6 @@
 	<!--右侧信息结束-->
 </div>
 <!--主要内容结束-->
-<!---友情链接开始-->
-<!--<div class="links-block">
-	<div class="links-list-block">
-		<div class="likes-title">友情链接：</div>
-		<div class="links" id="links_list">
-			<div class="likes-list">
-              <a target="_blank" href="http://www.zhaoxiaoshuo.com/">小说</a>
-                <a target="_blank" href="http://xiaohua.zol.com.cn/">笑话</a>
-              <a target="_blank" href="http://fun.iqiyi.com/">爱奇艺搞笑视频</a>
-              <a target="_blank" href="http://www.domeng.cn/">周公解梦大全</a>
-                <a target="_blank" href="http://www.jijidi.com/">笑话</a>
-              <a target="_blank" href="http://p.ik123.com/">QQ头像</a>
-              <a target="_blank" href="http://www.5523.com/">在线小游戏</a>
-              <a target="_blank" href="http://www.zgjm.org/">周公解梦大全查询</a>
-              <a target="_blank" href="http://www.2280.com/">周公解梦</a>
-          </div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
-	rolling_y('links_list',50,3000)
-	function rolling_y(id, height, rolltime) {
-		h = height,
-		tnode = document.getElementById(id),
-		scrollID = id + '_v',
-		F_rad = scrollID + '_f',
-		F_o = scrollID + '_o',
-		F_rol = rolltime,
-		F_t = scrollID + '_t',
-		_ = Function;
-		_('if(typeof ' + F_t + ' !=="undefined"){clearTimeout(' + F_t + ')}')();
-		_(scrollID + '=0;' + F_rad + '=function(){}')();
-		_('with(' + F_o + '=tnode){innerHTML+=innerHTML;onmouseover=_(\'' + scrollID + '=1\');onmouseout=_(\'' + scrollID + '=0\')}')();
-		_('(' + F_rad + '=_(("if(#%' + h + '||!' + scrollID + ')#++,#%=' + F_o + '.scrollHeight>>1;' + F_t + '=setTimeout(' + F_rad + ',#%' + h + '?10:' + F_rol + ');").replace(/#/g,"' + F_o + '.scrollTop")))()')()
-	}
-</script>-->
-<!---友情链接结束-->
 <script type="text/javascript">
 $(function(){
 	joke_content_area();
@@ -310,7 +263,7 @@ $(function(){
 </div>
 <!--右侧导航结束-->
 <!--底部内容开始-->
-<div class="footer" th:fragment="index_footer">
+<div class="footer"  th:replace="index::index_footer">
 	<div class="footer-content">
         <div class="about">
             <dl>
