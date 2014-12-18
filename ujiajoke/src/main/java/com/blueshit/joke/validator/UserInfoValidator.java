@@ -60,7 +60,7 @@ public class UserInfoValidator implements Validator {
                 }
             }
         } else{
-            errors.rejectValue("email", "注册信息不能为空");
+            errors.rejectValue("email", "注册信息不能为空", "注册信息不能为空");
         }
     }
 }

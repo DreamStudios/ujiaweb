@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -7,6 +8,7 @@
     <meta name="description" content="笑币规则" />
     <meta name="keywords" content="笑币规则" />
     <link type="text/css" href="../css/about.css" rel="stylesheet" />
+    <script src="../js/jquery-1.8.0.js" type="text/javascript"></script>
 </head>
 <body>
 <!--头部信息开始-->
@@ -44,34 +46,51 @@
 <div class="about-main">
 	<div class="left">
         <dl>
-            <dt>关于麻花</dt>
-            <dd><a href="mahuajianjie.html" >麻花简介</a></dd>
-            <dd><a href="mahuagonggao.html" >麻花公告</a></dd>
+            <dt>关于有家</dt>
+            <dd><a href="youjiajianjie.html" >有家简介</a></dd>
+            <dd><a href="youjiagonggao.html" >有家公告</a></dd>
             <dd><a href="mianzeshengming.html" >免责声明</a></dd>
             <dd><a href="fankuiyijian.html"  class="hover">反馈意见</a></dd>
         </dl>	
         <dl class="guize">
-            <dt>互动规则</dt>
+            <dt>校友互动</dt>
             <dd><a href="tougaoguize.html" >投稿规则</a></dd>
             <dd><a href="shengaoguize.html" >审稿规则</a></dd>
             <dd><a href="shengjiguize.html" >升级规则</a></dd>
-            <dd><a href="mabiguize.html" >麻币规则</a></dd>
+            <dd><a href="xiaobiguize.html" >笑币规则</a></dd>
         </dl>	
     </div>	
     <div class="right">
-		<form id="fankui" onSubmit="return post_fankui()">
-		<dl class="fankui">
-			<dt>反馈意见</dt>
-			<dd>
-				<textarea name="fankui" title="请输入您的意见，建议...">请输入您的意见，建议...</textarea>
-			</dd>
-			<dd>
-				<p>请在此留下您的联系方式，我们期待与您取得联系</p>
-				<input type="text" name="qq" class="text-input" title="您的QQ..." value="您的QQ..."/>
-				<input type="submit" class="submit-input" value="提交反馈" />
-			</dd>
-		</dl>
+        <form th:action="@{fankuiyijian.html}" th:object="${proposal}" method="post"  id="proposal" name="form2" onsubmit="return submitFrom();">
+            <dl class="fankui">
+                <dt>留言墙<span style="float:right" id="message" th:text="${message}">提交结果</span></dt>
+                <dd>
+                    <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" style="color: red;">请输入反馈内容</p>
+                    <p>您的支持是我们的动力,你的宝贵意见是我们的改进的方向</p>
+                    <textarea id="content" name="content" th:text="*{content}"></textarea>
+                </dd>
+                <dd>
+                    <p th:if="${#fields.hasErrors('qq')}" th:errors="*{qq}" style="color: red;">请输入您的QQ</p>
+                    <p>请在此留下您的联系方式，有家期待您的加入</p>
+                    <input type="text" name="qq" id="qq" class="text-input" th:value="*{qq}" placeholder="请输入QQ号" />
+                </dd>
+                <dd>
+                    <p th:if="${kaptcha ne null}" th:text="${kaptcha}" style="color: red;">验证码不能为空</p>
+                    <input type="text" name="kaptcha" id="kaptcha" class="text-input" style="float:left;" placeholder="请输入验证码" />
+                    <img class="yanzhengma" th:src="@{/kaptcha.jpg}" src="../img/register/aa.png" id="kaptchaImage" />
+					<script type="text/javascript">
+                        $(function () {
+                            $('#kaptchaImage').click(function () {
+                                var src=$(this).attr('src');
+                                $(this).attr('src', src + '?' + Math.floor(Math.random() * 100));
+                            });
+                        });
+                    </script>
+                    <input type="submit" class="submit-input" value="提交反馈" />
+                </dd>
+            </dl>
 		</form>
+        <div>广告位置</div>
 	</div>
 </div>
 <!--底部内容开始-->
@@ -80,13 +99,13 @@
         <div class="about">
             <dl>
                 <dt>关于有家</dt>
-                <dd><a href="about/mahuajianjie.html" target="_blank">有家简介</a><a href="about/mahuagonggao.html" target="_blank">有家公告</a></dd>
+                <dd><a href="about/youjiajianjie.html" target="_blank">有家简介</a><a href="about/youjiagonggao.html" target="_blank">有家公告</a></dd>
                 <dd><a href="about/mianzeshengming.html" target="_blank">免责声明</a><a href="about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
             </dl>
             <dl>
                 <dt>互动规则</dt>
                 <dd><a href="about/tougaoguize.html" target="_blank">投稿规则</a><a href="about/shengaoguize.html" target="_blank">审稿规则</a></dd>
-                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/mabiguize.html" target="_blank">笑币规则</a></dd>
+                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/xiaobiguize.html" target="_blank">笑币规则</a></dd>
             </dl>
             <dl>
                 <dt>关注</dt>
@@ -108,5 +127,17 @@
 <!--[if IE 6]>
 	<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
+<script type="text/javascript" th:inline="javascript">
+    function submitFrom() {
+        var content =  $.trim($("#content").val());
+        var qq =  $.trim($("#qq").val());
+        var kaptcha =  $.trim($("#kaptcha").val());
+        if(content == "" || qq == "" || kaptcha ==""){
+            alert('请填写完整信息');
+            return false;
+        }
+        $("#regUser").submit();
+    }
+</script>
 </body>
 </html>
