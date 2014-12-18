@@ -840,7 +840,7 @@ textarea{resize:none}
 .title,dt,#checkin-box li,.reg-guide,.header-nav li a,.header-view li,.comment-submit,.newbieGuideStart,.reg-guide-lucky{font-family:"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";_font-weight:bold}
 
 .header{height:130px;width:100%;background:#fff;border-bottom:1px solid #e3e2e1}
-.header-top{height:30px;width:100%;background:#ff7e69;}
+.header-top{height:30px;width:100%;background:#03a8b1;}
 .header-top-content{width:1000px;height:30px;color:#fff;line-height:30px}
 .header-top-title{float:left;width:330px}
 .islogin{float:left;width:670px;height:30px;color:#fff;line-height:30px}
@@ -885,7 +885,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .header-nav ul{float:left;width:520px;height:100px;line-height:100px;}
 .header-nav li{float:left;width:90px;height:100px;text-align:center;}
 .header-nav li a{display:block;width:100%;height:100px;line-height:100px;color:#666;font-size:20px}
-.header-nav li a.hover{color:#ff6766}
+.header-nav li a.hover{color:#03a8b1}
 .header-nav li a:hover,.header-nav li a.hover:hover{color:#03a8b1;}
 .header-nav li em{display:none}
 .header-nav li.joke-hot{position:relative}
@@ -1923,19 +1923,6 @@ span.valid{background-position:-980px -281px}
 #recomment_high{background:#fff;height:380px}
 #recomment_hot{background:#fff;height:328px}
 #recomment_tags{background:#fff}
-
-/*历史笑话*/
-.history-top p{font-size:16px;}
-.history-top p a{margin-left:5px;color:#ff7e69}
-.history-top p a:hover{e05857}
-.history-content{height:32px;overflow:hidden;margin-top:15px;}
-.history-content span{display:block;float:left;width:400px;}
-.history-content span a{display:inline-block;margin-right:10px;width:80px;height:32px;line-height:32px;text-align:center;background:#04ce9b;color:#fff;font-size:16px;}
-.history-content span a:hover{background:#00b789;color:#fff}
-.history-content span.left{float:left;width:400px;margin:0}
-.history-content span.right{float:right;width:240px}
-.history-content span.right input{float:right;margin-right:10px;width:100px;height:28px;color:#969696;border:1px solid #e5e5e5;line-height:28px;padding-left:5px;}
-.history-content span.right a{float:right}
 
 /*详情页右侧图片推荐*/
 .r-pic-recomment-view{width:290px;padding:10px 0 6px 10px;overflow:hidden;margin-top:10px;background:#fff;border-bottom:1px solid #e4e4e2}

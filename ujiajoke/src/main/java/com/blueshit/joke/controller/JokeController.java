@@ -17,7 +17,7 @@ public class JokeController {
     JokeService jokeService;
 
     /** 首页 */
-    @RequestMapping("/index")
+    @RequestMapping(value = {"/","/index"})
     public String index(Model model, String page){
         int pagenumber = stringParseInt(page);
         model.addAttribute("pages", jokeService.getJokePages_byType(0, pagenumber));

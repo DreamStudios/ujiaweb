@@ -26,6 +26,8 @@
 	var getCommentsUrl = 'http://user.mahua.com/comment/getComments';
 	var addCommentUrl = 'http://user.mahua.com/comment/addComment';
 	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
+    var baseUrl = 'newjokes/index_PAGENUM.html';
+    var firstUrl = 'index.html';
 </script>
 <!--头部信息开始-->
 <div class="header" th:fragment="index_header">
@@ -84,10 +86,10 @@
 				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
 				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
-			<dd class="content">
-				<img th:if="${page.style eq 1}" th:src="${page.picture}" src="http://i2.mhimg.com/kl688file/2014-10/2014102017204963227.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+            <dd class="content">
+                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
-			</dd>
+            </dd>
 			<!-- 神回复  -->
             <dd class="operation">
                 <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i>0</i></a>
@@ -246,7 +248,7 @@
 </div>
 <!--主要内容结束-->
 <!---友情链接开始-->
-<!--<div class="links-block">
+<div class="links-block">
 	<div class="links-list-block">
 		<div class="likes-title">友情链接：</div>
 		<div class="links" id="links_list">
@@ -280,7 +282,7 @@
 		_('with(' + F_o + '=tnode){innerHTML+=innerHTML;onmouseover=_(\'' + scrollID + '=1\');onmouseout=_(\'' + scrollID + '=0\')}')();
 		_('(' + F_rad + '=_(("if(#%' + h + '||!' + scrollID + ')#++,#%=' + F_o + '.scrollHeight>>1;' + F_t + '=setTimeout(' + F_rad + ',#%' + h + '?10:' + F_rol + ');").replace(/#/g,"' + F_o + '.scrollTop")))()')()
 	}
-</script>-->
+</script>
 <!---友情链接结束-->
 <script type="text/javascript">
 $(function(){

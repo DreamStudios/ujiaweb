@@ -683,37 +683,37 @@ textarea {
 	color: rgb(255, 126, 105); font-style: normal;
 }
 .title {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 dt {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #checkin-box li {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .reg-guide {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header-nav li a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header-view li {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .comment-submit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .newbieGuideStart {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .reg-guide-lucky {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header {
 	background: rgb(255, 255, 255); width: 100%; height: 130px; border-bottom-color: rgb(227, 226, 225); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .header-top {
-	background: rgb(255, 126, 105); width: 100%; height: 30px;
+    background:#03a8b1; width: 100%; height: 30px;
 }
 .header-top-content {
 	width: 1000px; height: 30px; color: rgb(255, 255, 255); line-height: 30px;
@@ -860,13 +860,13 @@ a.top-login:hover {
 	width: 100%; height: 100px; color: rgb(102, 102, 102); line-height: 100px; font-size: 20px; display: block;
 }
 .header-nav li a.hover {
-	color: rgb(255, 103, 102);
+	color: #03a8b1;
 }
 .header-nav li a:hover {
-	color: rgb(224, 88, 87);
+    color: #03a8b1;
 }
 .header-nav li a.hover:hover {
-	color: rgb(224, 88, 87);
+    color: #03a8b1;
 }
 .header-nav li em {
 	display: none;
@@ -2375,52 +2375,52 @@ a.comment_packUp {
 	background: rgb(248, 248, 248); width: 1000px; overflow: hidden; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .user-nav li a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #editImgBox .head a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .imgsubmit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .ajax-file-upload {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .avatar-symbol {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .editInfo {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #editPassword {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .editInfo input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .mymabi {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .publish {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .audit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .invite-friends dd input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .task-btn {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .audit-prompt-submit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .task-time span {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .no-myinfo {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .user-banner {
 	background: rgb(248, 248, 248); padding: 20px; height: 150px; border-bottom-color: rgb(235, 236, 239); border-bottom-width: 1px; border-bottom-style: solid;
@@ -2465,7 +2465,7 @@ a.comment_packUp {
 	right: 5px;
 }
 .user-info .level i.level_time {
-	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "Î¢ÈíÑÅºÚ","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
+	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
 }
 .user-info .level span {
 	background: url("../img/mahua_common.png") no-repeat -316px -243px; width: 220px; height: 11px; overflow: hidden; display: block;
@@ -2516,7 +2516,7 @@ a.comment_packUp {
 	width: 100%; height: 100%; text-align: center; color: rgb(150, 150, 150); font-size: 16px; display: block;
 }
 .user-nav li a.hover {
-	height: 55px; color: rgb(0, 0, 0); border-bottom-color: rgb(255, 126, 105); border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
+	height: 55px; color: rgb(0, 0, 0); border-bottom-color:#03a8b1; border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
 }
 .user-nav li a:hover {
 	height: 55px; color: rgb(0, 0, 0); border-bottom-color: rgb(255, 126, 105); border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
@@ -2555,7 +2555,7 @@ a.comment_packUp {
 	color: rgb(255, 126, 105);
 }
 #editImgBox .head a.hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .upload-left {
 	background: rgb(238, 238, 238); margin: 0px 80px 0px 20px; width: 430px; height: 310px; float: left;
@@ -2693,7 +2693,7 @@ ul.content li .tab {
 	background: rgb(241, 241, 241); border-radius: 3px; color: rgb(0, 0, 0);
 }
 .myinfo .tab a.hover {
-	background: rgb(241, 241, 241); border-radius: 3px; color: rgb(0, 0, 0);
+	background: rgb(241, 241, 241); border-radius: 3px; color: #03a8b1;
 }
 .myinfo .avatar_30x30 {
 	margin-right: 10px; float: left;
@@ -2714,7 +2714,7 @@ ul.content li .tab {
 	width: 80px; height: 80px; margin-top: 8px;
 }
 .myinfo .content-details p {
-	background: rgb(248, 248, 248); padding: 5px 10px; border: 1px solid rgb(240, 240, 240); width: 612px; line-height: 24px; font-family: "ËÎÌå"; margin-top: 10px;
+	background: rgb(248, 248, 248); padding: 5px 10px; border: 1px solid rgb(240, 240, 240); width: 612px; line-height: 24px; font-family: "ï¿½ï¿½ï¿½ï¿½"; margin-top: 10px;
 }
 .content-details-bold {
 	font-weight: bold;
@@ -2729,7 +2729,7 @@ ul.content li .tab {
 	margin-right: 15px; display: inline-block;
 }
 .page a.hover {
-	background: rgb(255, 132, 91); border-color: rgb(255, 132, 91); color: rgb(255, 255, 255);
+	background: rgb(255, 132, 91); border-color: rgb(255, 132, 91); color: #03a8b1;
 }
 .page a:hover {
 	background: rgb(255, 132, 91); border-color: rgb(255, 132, 91); color: rgb(255, 255, 255);
@@ -2927,7 +2927,7 @@ ul.content li .tab {
 	background: rgb(255, 206, 84); border-radius: 3px; width: 100px; height: 34px; text-align: center; color: rgb(255, 255, 255); line-height: 34px; font-size: 16px; float: right; display: block; text-shadow: 0 1px 1px #e2a100;
 }
 .task-right a.hover {
-	background: rgb(231, 231, 231); color: rgb(150, 150, 150); text-shadow: none;
+	background: rgb(231, 231, 231); color: #03a8b1; text-shadow: none;
 }
 .task-right a.hover-receive {
 	background: rgb(4, 206, 155); text-shadow: 0 1px 0 #069a75;
@@ -2939,7 +2939,7 @@ ul.content li .tab {
 	display: block;
 }
 .task-right span a {
-	margin: 0px 5px; color: rgb(255, 126, 105); text-decoration: underline;
+	margin: 0px 5px; color: #03a8b1; text-decoration: underline;
 }
 .task-right span a:hover {
 	color: rgb(224, 88, 87);

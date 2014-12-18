@@ -683,37 +683,37 @@ textarea {
 	color: rgb(255, 126, 105); font-style: normal;
 }
 .title {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 dt {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #checkin-box li {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .reg-guide {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header-nav li a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header-view li {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .comment-submit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .newbieGuideStart {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .reg-guide-lucky {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .header {
 	background: rgb(255, 255, 255); width: 100%; height: 130px; border-bottom-color: rgb(227, 226, 225); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .header-top {
-	background: rgb(255, 126, 105); width: 100%; height: 30px;
+	background: #03a8b1; width: 100%; height: 30px;
 }
 .header-top-content {
 	width: 1000px; height: 30px; color: rgb(255, 255, 255); line-height: 30px;
@@ -860,13 +860,13 @@ a.top-login:hover {
 	width: 100%; height: 100px; color: rgb(102, 102, 102); line-height: 100px; font-size: 20px; display: block;
 }
 .header-nav li a.hover {
-	color: rgb(255, 103, 102);
+	color: #03a8b1;
 }
 .header-nav li a:hover {
 	color: rgb(224, 88, 87);
 }
 .header-nav li a.hover:hover {
-	color: rgb(224, 88, 87);
+	color: #03a8b1;
 }
 .header-nav li em {
 	display: none;
@@ -2364,49 +2364,49 @@ a.comment_packUp {
 	background-position: 0px -884px;
 }
 .user-btn a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 dt {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .user-show .t {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .app-ios a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .app-android a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .app-winPhone a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .joke-ba .joke-before {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .joke-ba .joke-after {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .recomment-head a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #comment div input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .sarch-results {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .main-tags li.img a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #reward .input-btn input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .buy_box_message {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .history-top {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .main {
 	width: 1000px; overflow: hidden; padding-top: 6px; margin-top: 14px;
@@ -2676,13 +2676,13 @@ dt {
 	width: 135px; margin-top: 0px; float: left; display: block;
 }
 .tags-list dt a.more {
-	text-align: right; font-family: "ËÎÌå"; font-size: 12px;
+	text-align: right; font-family: "ï¿½ï¿½ï¿½ï¿½"; font-size: 12px;
 }
 .new-pic-text dt a.more {
-	text-align: right; font-family: "ËÎÌå"; font-size: 12px;
+	text-align: right; font-family: "ï¿½ï¿½ï¿½ï¿½"; font-size: 12px;
 }
 .new-pic dt a.more {
-	text-align: right; font-family: "ËÎÌå"; font-size: 12px;
+	text-align: right; font-family: "ï¿½ï¿½ï¿½ï¿½"; font-size: 12px;
 }
 .tags-list dd {
 	overflow: hidden;
@@ -2880,10 +2880,10 @@ dt {
 	width: 100px; border-right-color: rgb(241, 241, 241); border-left-color: rgb(241, 241, 241); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
 }
 .user-list-head a.hover {
-	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: rgb(255, 135, 95); font-weight: bold; border-bottom-color: rgb(255, 135, 95);
+	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: #03a8b1; font-weight: bold; border-bottom-color: #0ea8b1;
 }
 .user-list-head a:hover {
-	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: rgb(255, 135, 95); font-weight: bold; border-bottom-color: rgb(255, 135, 95);
+	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: #0ea8b1; font-weight: bold; border-bottom-color: #0ea8b1;
 }
 .user-list ul {
 	width: 295px; overflow: hidden; padding-left: 5px; display: none;
@@ -2916,10 +2916,10 @@ dt {
 	border-left-color: rgb(232, 231, 230); border-left-width: 1px; border-left-style: solid;
 }
 .a-m-sorting-head dd a.hover {
-	color: rgb(255, 135, 95); font-weight: bold;
+	color: #0ea8b1; font-weight: bold;
 }
 .a-m-sorting-head dd a:hover {
-	color: rgb(255, 135, 95); font-weight: bold;
+	color: #0ea8b1; font-weight: bold;
 }
 .a-m-sorting ul {
 	background: rgb(255, 255, 255); overflow: hidden; display: none;
@@ -3555,52 +3555,52 @@ dt {
 	background: rgb(248, 248, 248); width: 1000px; overflow: hidden; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .user-nav li a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #editImgBox .head a {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .imgsubmit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .ajax-file-upload {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .avatar-symbol {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .editInfo {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #editPassword {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .editInfo input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .mymabi {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .publish {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .audit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .invite-friends dd input {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .task-btn {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .audit-prompt-submit {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .task-time span {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .no-myinfo {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .user-banner {
 	background: rgb(248, 248, 248); padding: 20px; height: 150px; border-bottom-color: rgb(235, 236, 239); border-bottom-width: 1px; border-bottom-style: solid;
@@ -3645,7 +3645,7 @@ dt {
 	right: 5px;
 }
 .user-info .level i.level_time {
-	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "Î¢ÈíÑÅºÚ","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
+	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
 }
 .user-info .level span {
 	background: url("../img/mahua_common.png") no-repeat -316px -243px; width: 220px; height: 11px; overflow: hidden; display: block;
@@ -3894,7 +3894,7 @@ ul.content li .tab {
 	width: 80px; height: 80px; margin-top: 8px;
 }
 .myinfo .content-details p {
-	background: rgb(248, 248, 248); padding: 5px 10px; border: 1px solid rgb(240, 240, 240); width: 612px; line-height: 24px; font-family: "ËÎÌå"; margin-top: 10px;
+	background: rgb(248, 248, 248); padding: 5px 10px; border: 1px solid rgb(240, 240, 240); width: 612px; line-height: 24px; font-family: "ï¿½ï¿½ï¿½ï¿½"; margin-top: 10px;
 }
 .content-details-bold {
 	font-weight: bold;
@@ -4260,37 +4260,37 @@ body {
 	
 }
 .title {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .username {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .password {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 dt {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .btn {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #female {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #male {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .validation-Email-content {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .back-password {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #reset_prompt_box {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 .pass-value-login {
-	font-family: "Î¢ÈíÑÅºÚ","microsoft yahei",verdana,lucida,Arial,sans-serif,"ºÚÌå"; _font-weight: bold;
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½","microsoft yahei",verdana,lucida,Arial,sans-serif,"ï¿½ï¿½ï¿½ï¿½"; _font-weight: bold;
 }
 #iframe-login {
 	background: rgb(255, 255, 255); margin: 20px auto; padding: 30px 40px 40px; width: 920px; overflow: hidden; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
