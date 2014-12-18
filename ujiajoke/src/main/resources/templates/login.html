@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>山中医校友网</title>
+    <meta name="Keywords" content="校友、中医、毕业、工作、考研"/>
+    <meta name="Generator" content="山中医校友网"/>
+    <meta name="Author" content="山中医校友网"/>
+    <meta name="sitename" content="山中医校友网"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+    <script src="js/jquery-1.8.0.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="img/login/base-all-min.css" />
+    <link href="img/login/login.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body id="syshome" class="login">
+<!--头部信息开始-->
+<div class="navigation-wrapper">
+    <div class="navigation navigation-new clearfix">
+        <div id="logo2">
+          <a href="index.html" title="山中医校友网">
+             <img alt="山中医校友网" title="山中医校友网" src="img/logo.png" />
+          </a>
+        </div>
+        <div class="nav-body clearfix">
+            <div class="nav-other">
+              <div class="menu">
+                <a href="module/findAlumni.html" target="_blank" class="st-btn">寻找校友</a>
+              </div>
+              <div class="menu">
+                <a href="javascript:alert(1);" target="_blank" class="st-btn">逛逛市场</a>
+              </div>
+              <div class="menu">
+                <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="山中医校友群" title="山中医校友群"/></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头部信息结束-->
+<!--正文内容开始-->
+<div class="login-page clearfix login-wrap">
+  <!--左侧登陆框开始-->
+  <div class="side-column login-box">
+    <div class="login-panel ">
+      <div class="radiusimg">
+        <div class="shadow" style="background:url(img/login/person.jpg)"></div>
+      </div>
+      <span id="errorMessage" class="errors_div" th:if="${(param.error ne null) and (session['SPRING_SECURITY_LAST_EXCEPTION'] ne null)}"
+         th:with="errorMsg=${session['SPRING_SECURITY_LAST_EXCEPTION'].message}" th:utext="${errorMsg}">
+          用户名密码错误
+      </span>
+      <span id="errorMessage2" class="errors_div" th:if="${session['loginMsg'] ne null}" th:text="${session['loginMsg']}">验证码错误</span>
+      <span id="errorMessage3" class="errors_div" style="display: none;">不能为空</span>
+      <form th:action="@{login.html}" method="post" id="loginForm" class="login-form" autocomplete="off" onsubmit="return submitFrom();">
+        <dl class="top clearfix">
+          <dd><input type="text" name="username" class="input-text" id="username" tabindex="1" value="" maxlength="40" placeholder="请输入邮箱" /></dd>
+        </dl>
+        <dl class="pwd clearfix">
+          <dd><input type="password" id="password" name="password" class="input-text" tabindex="2" maxlength="32" placeholder="请输入密码"/>
+          </dd>
+        </dl>
+        <dl>
+          <dd>
+           <span class="getpassword">
+               <span style="float:left;margin-right: 28px;" th:if="${session['loginStatus'] eq 'false'}">
+                   <input type="text" id="kaptcha" name="kaptcha" class="kaptcha" maxlength="5" style="width: 80px;"  placeholder="请输入验证码" />
+                   <img th:src="@{/kaptcha.jpg}" src="developer/home-img/yzm.png" width="110" height="40" id="kaptchaImage" />
+                   <script type="text/javascript">
+                       $(function () {
+                           $('#kaptchaImage').click(function () {
+                               var src=$(this).attr('src');
+                               $(this).attr('src', src + '?' + Math.floor(Math.random() * 100));
+                           });
+                       });
+                   </script>
+               </span>
+               <a href="findPwd.html" stats="home_findpassword">忘记密码？</a>
+           </span>
+          </dd>
+        </dl>
+        <dl class="bottom">
+           <input type="submit" id="login" class="input-submit login-btn" stats="loginPage_login_button" value="登录" tabindex="5"/>
+        </dl>
+      </form>
+      <div class="regnow">
+       <input type="button" onclick="javascrtpt:window.location.href='register.html'" id="regnow"  class="input-button login-btn regbutton" value="注册" tabindex="6" stats="loginPage_signUp_button" />
+      </div>
+      <div class="login_corp" >
+        <!--随机banner广告代码-->
+        <script language="JavaScript" type="text/javascript">
+			tips = new Array(4);
+			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img src="http://www.lanrentuku.com/down/js/images/12498863530.jpg" border="0" /></a>';
+			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img src="http://www.lanrentuku.com/down/js/images/12498863531.jpg" border="0" /></a>';
+			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img src="http://www.lanrentuku.com/down/js/images/12498863532.jpg" border="0" /></a>';
+			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img src="http://www.lanrentuku.com/down/js/images/12498863533.jpg" border="0" /></a>';
+			index = Math.floor(Math.random() * tips.length);
+			document.write(tips[index]);
+		</script>
+      </div>
+    </div>
+  </div>
+  <!--左侧登陆框结束-->
+  <!--右侧信息开始-->
+  <div class="main-column">
+    <div id="mainRecommend" class="main-recommend">
+      <div id="ad100000000061">
+        <!--随机CPC或CPA广告代码-->
+        <script language="JavaScript" type="text/javascript">
+			tips = new Array(6);
+			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/a.jpg"/></a>';
+			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/b.jpg"/></a>';
+			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/c.jpg"/></a>';
+			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/d.jpg"/></a>';
+			tips[4] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/e.jpg"/></a>';
+			tips[5] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="ad/f.jpg"/></a>';
+			index = Math.floor(Math.random() * tips.length);
+			document.write(tips[index]);
+		</script>
+      </div>
+      <div class="login-recommend clearfix">
+        <div class="intro">
+          <div class="item">
+            <a class="qrcode content" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"></a>
+          </div>
+          <div class="item">
+            <a class="qrcode content" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"></a>
+          </div>
+          <div class="item">
+            <a class="qrcode content" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"></a>
+          </div>
+          <div class="item">
+            <a class="qrcode content" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--右侧信息结束-->
+</div>
+<!--正文内容结束-->
+<!--底部信息开始-->
+<div class="ft-wrapper clearfix">
+  <div class="zp_name">今日之星</div>
+  <div class="rollphotos" id="seamScrollDiv" style="overflow:hidden;width:750;" align="center">
+      <table border="0" align="center" cellpadding="1" cellspacing="1" cellspace="0" >
+        <tr>
+          <td valign="top" bgcolor="ffffff" id="marquePic1">
+            <table width="70%" border="0" cellspacing="0">
+              <tr>
+                <td align="center" th:each="sch:${list}">
+                    <a th:href="${sch.homepage eq null?'index.html':sch.homepage}" th:title="${sch.name}" target="_blank">
+                        <img src="images/scroll/a.png" th:src = "${#httpServletRequest.getContextPath() + sch.photo}" width="130" height="175" border="0"/>
+                    </a>
+                </td>
+              </tr>
+            </table>
+		  </td>
+          <td id="marquePic2" valign="top"></td>
+        </tr>
+      </table>
+  </div>
+  <script type="text/javascript">
+      var speed=30
+      marquePic2.innerHTML=marquePic1.innerHTML 
+	  function Marquee(){ 
+		if(seamScrollDiv.scrollLeft>=marquePic1.scrollWidth){ 
+		  seamScrollDiv.scrollLeft=0 
+		}else{ 
+		  seamScrollDiv.scrollLeft++ 
+		} 
+	  } 
+	  var MyMar=setInterval(Marquee,speed) 
+	  seamScrollDiv.onmouseover=function() {clearInterval(MyMar)} 
+	  seamScrollDiv.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+	</script>
+</div>
+<!--底部信息结束-->
+<!--分享-->
+<a class="bshareDiv" href="http://www.bshare.cn/share">分享给其它校友</a>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=5&amp;fs=4&amp;bgcolor=LightBlue"></script>
+<script type="text/javascript" th:inline="javascript">
+    function submitFrom() {
+        var name =  $.trim($("#username").val());
+        var password =  $.trim($("#password").val());
+        if(name==""){
+            showEmptyError("用户名不能为空");
+            return false;
+        }
+        if(password==""){
+            showEmptyError("密码不能为空");
+            return false;
+        }
+        var loginStatus = /*[[${#httpSession.getAttribute('loginStatus')}]]*/;
+        if(loginStatus == 'false'){
+            var kaptcha =  $.trim($("#kaptcha").val());
+            if(kaptcha==""){
+                showEmptyError("验证码不能为空");
+                return false;
+            }
+        }
+        $("#loginForm").submit();
+    }
+    function showEmptyError(val){
+        $("#errorMessage").hide();
+        $("#errorMessage2").hide();
+        $("#errorMessage3").show();
+        $("#errorMessage3").html(val);
+    }
+</script>
+</body>
+</html>

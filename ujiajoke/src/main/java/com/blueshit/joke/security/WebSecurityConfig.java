@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //设置需要权限的地址
         http.authorizeRequests().antMatchers("/vip/*.html").hasAuthority("userIsLogin");
         //设置允许访问的资源
-        http.authorizeRequests().antMatchers("/", "/upload/**", "/*.html", "/kaptcha.jpg", "/ad/**", "/images/**", "/picture/**", "/script/**")
+        http.authorizeRequests().antMatchers("/", "/upload/**", "/*.html", "/kaptcha.jpg", "/about/**", "/img/**", "/css/**", "/js/**")
                 .permitAll().anyRequest()
                 .authenticated().and().formLogin().defaultSuccessUrl("/indexinfo")
                 .loginPage("/login.html").permitAll().and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout.html")).permitAll();
