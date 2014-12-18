@@ -49,7 +49,7 @@ public class UserInfoValidator implements Validator {
             }
             //判断用户姓名
             if(userInfo.getName() == null || userInfo.getName().length() == 0){
-                errors.rejectValue("name", "姓名不能为空", "姓名不能为空");
+                errors.rejectValue("name", "昵称不能为空", "昵称不能为空");
             }
             //判断密码
             if (userInfo.getPassword() == null || userInfo.getPassword().length() == 0){

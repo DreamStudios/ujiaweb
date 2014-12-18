@@ -37,17 +37,17 @@ public class UserInfo implements Serializable {
     @Column(nullable = false, columnDefinition = "int(11) default 1")
     private int status = 1;
 
-    //姓名
+    //姓名(昵称)
     @Column(nullable = false, length = 255)
     private String name;
 
     //用户头像
-    @Column(nullable = true, length = 255)
-    private String photo;
+    @Column(nullable = false, length = 255)
+    private String photo = "img/login/person.jpg"; //默认头像
 
     //性别(0:男性 1:女性)
-    @Column(nullable = true)
-    private int sex;
+    @Column(nullable = false, columnDefinition = "int(11) default 0")
+    private int sex = 0;
 
     //手机号
     @Column(nullable = true, length = 255)
@@ -70,7 +70,7 @@ public class UserInfo implements Serializable {
     private Date updateTime = new Date();
 
     //自己邀请码(分享奖励标识)
-    @Column(nullable = false, length = 255)
+    @Column(nullable = true, length = 255)
     private String inviteCode;
 
     //父类邀请码，邀请人

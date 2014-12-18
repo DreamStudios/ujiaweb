@@ -65,7 +65,7 @@ public class UserInfoServiceImpl implements UserInfoService {
             userInfoRepository.save(userInfo);
             String content = resource.getMessage(Constants.Common.ACTIVE,
                                 new Object[]{userInfo.getName(), userInfo.getEmail(),passwordEncoder.encode(userInfo.getCreateTime() + ""), DateUtils.getIntradayDateAndTime("")}, Locale.getDefault());
-            MailUtils.sendEmail(EMAIL,PASSWORD,"账号激活",content,userInfo.getEmail());
+            MailUtils.sendEmail(EMAIL,PASSWORD,"有家笑话账号激活",content,userInfo.getEmail());
         }catch (Exception ex){
             logger.error("用户注册失败：" + ex.getMessage());
             return false;
@@ -84,7 +84,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         try{
             UserInfo userInfo = userInfoRepository.findByEmail(email);
             if (userInfo != null && passwordEncoder.matches(userInfo.getCreateTime() + "", activeCode)) {
-                userInfo.setStatus(2); //0:禁用 1:未激活 2:启用
+                userInfo.setStatus(2); //用户状态(0:禁用 1:未激活 2:启用)
+                userInfo.setInviteCode(userInfo.getUid() + "100000");//激活时生成邀请码
                 userInfoRepository.save(userInfo);
                 return true;
             } else {

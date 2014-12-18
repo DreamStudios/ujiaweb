@@ -25,10 +25,10 @@ h2{font-size:12px}
 .clearfix .clear{_height:0px;}
 
 /* CSS header */
-.header{background:url(headerbg.png) repeat-x;height:110px;min-width:1100px;}
+.header{background:url(headerbg.png) repeat-x;height:120px;min-width:1100px;}
 .header h2{display:none;}
 .headertop{width:1100px;overflow:hidden;height:53px;margin:0 auto;}
-.logo{margin-top:8px;width:363px;height:90px;float:left;display:block;background:url(logo.png) no-repeat;}
+.logo{margin-top:8px;width:363px;height:110px;float:left;display:block;background:url(logo.png) no-repeat;}
 .nav{float:left;height:54px;margin-left:20px;overflow:hidden;}
 .nav li{float:left;font-size:14px;color:#fff;font-weight:bold;line-height:53px;}
 .nav li a{font-size:14px;color:#fff;display:block;padding-left:12px;padding-right:12px;_padding-left:11px;_padding-right:11px;-webkit-transition: none; -moz-transition: none; transition: background-color 0.3s linear; -moz-transition: background-color 0.3s linear; -webkit-transition: background-color 0.3s linear; -o-transition: background-color 0.3s linear; }

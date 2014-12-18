@@ -43,7 +43,7 @@ public class UserInfoController {
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Model model) {
         UserInfo userInfo = new UserInfo();
-        model.addAttribute("userInfo", userInfo);// 返回一个空developer对象,用于前台界面填充input框内容
+        model.addAttribute("userInfo", userInfo);// 返回一个空用户对象,用于前台界面填充input框内容
         return "register";
     }
 
@@ -71,8 +71,9 @@ public class UserInfoController {
             boolean register = userInfoService.userRegister(userInfo);
             if(register){
                 model.addAttribute("email",userInfo.getEmail());
-                return "register2";
+                return "mailSuccess";
             }else {
+                model.addAttribute("kaptcha", "注册失败<a href='about/fankuiyijian.html' color='red'>立即反馈</a>");
                 return "register";
             }
         }
@@ -90,7 +91,8 @@ public class UserInfoController {
             return "redirect:/login.html";
         }
         else {
-            return "register3";
+            //激活失败
+            return "activeError";
         }
     }
 
@@ -105,7 +107,7 @@ public class UserInfoController {
                                    @RequestParam(value = "username", required = true) String username){
         boolean result = userInfoService.resendActiveMail(username);
         if(result){
-            return "register2";
+            return "mailSuccess";
         }else {
             request.getSession().setAttribute("loginMsg", "请求失败,请稍后再试");
             return "redirect:/login.html";
@@ -132,9 +134,9 @@ public class UserInfoController {
         if(result) {
             boolean findResult = userInfoService.findPassword(email);
             if (findResult) {
-                return "register2";
+                return "mailSuccess";
             } else {
-                return "register3";
+                return "activeError";
             }
         }else {
             return "findPwd";
@@ -171,7 +173,7 @@ public class UserInfoController {
                 return "redirect:/login.html";
             }else {
                 model.addAttribute("title", "找回密码");
-                return "register3";
+                return "activeError";
             }
         }
     }
