@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -27,7 +29,7 @@ import java.util.Locale;
 public class UserInfoServiceImpl implements UserInfoService {
     private static final Logger logger   = LoggerFactory.getLogger(UserInfoServiceImpl.class);
     @Value("${EMAIL}")
-    private              String EMAIL    = "2112947929@qq.com";
+    private              String EMAIL    = "2112947929";
     @Value("${PASSWORD}")
     private              String PASSWORD = "itboys";
 
@@ -41,6 +43,17 @@ public class UserInfoServiceImpl implements UserInfoService {
         this.userInfoRepository = userInfoRepository;
         this.passwordEncoder = passwordEncoder;
         this.resource = resource;
+    }
+
+    /**
+     * 获取今日之星
+     * @return
+     */
+    @Override
+    public List<UserInfo> getTodayStar() {
+        String hql = " FROM UserInfo WHERE status=2 ORDER BY isVip DESC, integral DESC,sex DESC,lastLoginTime DESC";
+        List<UserInfo> list = userInfoRepository.findTopByHql(hql, 30);
+        return list;
     }
 
     /**

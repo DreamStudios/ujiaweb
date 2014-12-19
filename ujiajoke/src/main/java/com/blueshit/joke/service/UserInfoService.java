@@ -2,6 +2,8 @@ package com.blueshit.joke.service;
 
 import com.blueshit.joke.entity.UserInfo;
 
+import java.util.List;
+
 /**
  * 用户信息操作接口
  * @author 9527
@@ -11,6 +13,13 @@ import com.blueshit.joke.entity.UserInfo;
  * @description
  */
 public interface UserInfoService {
+
+    /**
+     * 获取今日之星
+     * @return
+     */
+    public List<UserInfo> getTodayStar();
+
     /**
      * 通过用户账号查找用户信息
      * @param email

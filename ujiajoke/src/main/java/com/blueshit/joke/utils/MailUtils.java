@@ -61,7 +61,7 @@ public class MailUtils {
 	   //实例化一个MimeMessage集成自abstract Message 。参数为session
 	   Message message = new MimeMessage(session); 
 	   try{
-		   message.setFrom(new InternetAddress(sender+"@qq.com", "山东中医药大学校友网")); //设置发出方,使用setXXX设置单用户，使用addXXX添加InternetAddress[]
+		   message.setFrom(new InternetAddress(sender+"@qq.com", "快乐家族-有家笑话")); //设置发出方,使用setXXX设置单用户，使用addXXX添加InternetAddress[]
 		   message.setSubject(emailTitle); //设置标题
 		   message.setContent(emailContent,"text/html;charset=utf8");//设置文本内容 单一文本使用setText,Multipart复杂对象使用setContent
 

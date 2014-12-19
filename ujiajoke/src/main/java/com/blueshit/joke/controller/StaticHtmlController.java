@@ -1,5 +1,6 @@
 package com.blueshit.joke.controller;
 
+import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 登陆
@@ -33,6 +35,9 @@ public class StaticHtmlController {
             //此处用来决定前台页面是否显示验证码
             request.getSession().setAttribute("loginStatus", "false");
         }
+        //获取今日之星
+        List<UserInfo> list = userInfoService.getTodayStar();
+        model.addAttribute("list",list);
         return "login";
     }
 

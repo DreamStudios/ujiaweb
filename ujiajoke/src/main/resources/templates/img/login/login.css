@@ -338,7 +338,7 @@ a:hover.intro-reg-btn {
 	text-decoration: none
 }
 body,html {
-	background-color: #f1f4f5
+	background-color: #FFFFFF
 }
 
 .navigation-wrapper {
@@ -588,4 +588,11 @@ body,html {
 
 .navigation .menu .st-btn:hover {
 	text-decoration: none
+}
+.toptext{
+	float:right;
+	color:#969696;
+	font-size:14px;
+	line-height:50px; 
+	font-family:"微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体";
 }

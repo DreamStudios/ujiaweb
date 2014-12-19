@@ -61,6 +61,10 @@ public class UserInfo implements Serializable {
     @Column(nullable = false, columnDefinition = "int(11) default 50")
     private int integral = 50;
 
+    //经验值
+    @Column(nullable = false, columnDefinition = "int(11) default 0")
+    private int experience = 0;
+
     //创建时间
     @Column(nullable = false)
     private Date createTime = new Date();

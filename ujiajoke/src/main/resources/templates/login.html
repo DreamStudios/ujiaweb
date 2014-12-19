@@ -3,12 +3,10 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>山中医校友网</title>
-    <meta name="Keywords" content="校友、中医、毕业、工作、考研"/>
-    <meta name="Generator" content="山中医校友网"/>
-    <meta name="Author" content="山中医校友网"/>
-    <meta name="sitename" content="山中医校友网"/>
-    <meta name="renderer" content="webkit"/>
+    <meta name="applicable-device" content="pc"/>
+    <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
+    <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
+    <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
     <script src="js/jquery-1.8.0.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="img/login/base-all-min.css" />
@@ -20,23 +18,11 @@
 <div class="navigation-wrapper">
     <div class="navigation navigation-new clearfix">
         <div id="logo2">
-          <a href="index.html" title="山中医校友网">
-             <img alt="山中医校友网" title="山中医校友网" src="img/logo.png" />
+          <a href="index.html" title="有家笑话">
+             <img alt="有家笑话" title="有家笑话" src="img/logo.png" />
           </a>
         </div>
-        <div class="nav-body clearfix">
-            <div class="nav-other">
-              <div class="menu">
-                <a href="module/findAlumni.html" target="_blank" class="st-btn">寻找校友</a>
-              </div>
-              <div class="menu">
-                <a href="javascript:alert(1);" target="_blank" class="st-btn">逛逛市场</a>
-              </div>
-              <div class="menu">
-                <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="山中医校友群" title="山中医校友群"/></a>
-              </div>
-            </div>
-        </div>
+      <div class="toptext">加入有家笑话，成为有家一族，成就快乐家族！</div>
     </div>
 </div>
 <!--头部信息结束-->
@@ -110,12 +96,12 @@
         <!--随机CPC或CPA广告代码-->
         <script language="JavaScript" type="text/javascript">
 			tips = new Array(6);
-			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
-			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
-			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
-			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
-			tips[4] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
-			tips[5] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/11.gif"/></a>';
+			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/a.jpg"/></a>';
+			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/b.jpg"/></a>';
+			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/c.jpg"/></a>';
+			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/d.jpg"/></a>';
+			tips[4] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/e.jpg"/></a>';
+			tips[5] = '<a href="javascript:alert(1);" target="_blank"><img width="600" height="360" src="img/ad/f.jpg"/></a>';
 			index = Math.floor(Math.random() * tips.length);
 			document.write(tips[index]);
 		</script>
@@ -151,8 +137,8 @@
             <table width="70%" border="0" cellspacing="0">
               <tr>
                 <td align="center" th:each="sch:${list}">
-                    <a th:href="${sch.homepage eq null?'index.html':sch.homepage}" th:title="${sch.name}" target="_blank">
-                        <img src="images/scroll/a.png" th:src = "${#httpServletRequest.getContextPath() + sch.photo}" width="130" height="175" border="0"/>
+                    <a th:title="${sch.name}" target="_blank">
+                        <img src="img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + sch.photo}" width="130" height="175" border="0"/>
                     </a>
                 </td>
               </tr>
@@ -178,9 +164,6 @@
 	</script>
 </div>
 <!--底部信息结束-->
-<!--分享-->
-<a class="bshareDiv" href="http://www.bshare.cn/share">分享给其它校友</a>
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=5&amp;fs=4&amp;bgcolor=LightBlue"></script>
 <script type="text/javascript" th:inline="javascript">
     function submitFrom() {
         var name =  $.trim($("#username").val());
