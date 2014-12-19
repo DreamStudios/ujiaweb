@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -9,29 +9,27 @@
 </head>
 <body>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin">
+            <div class="islogin">
                 <div class="my-center">
                     <i title="个人中心"></i>
                     <ul>
-                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
-                        <li><a href="http://user.mahua.com/my/gift">兑换礼品</a></li>
-                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
-                        <li><a href="http://user.mahua.com/my/task">今日任务</a></li>
-                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
-                        <li class="noborder"><a href="http://user.mahua.com/member/logout" rel="nofollow">退出</a></li>
+                        <li><a href="myJoke.html">我的投稿</a></li>
+                        <li><a href="vip.html">VIP专题</a></li>
+                        <li><a href="profile.html">个人资料</a></li>
+                        <li><a href="inviteFriends.html">邀请好友</a></li>
+                        <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
                     </ul>
                 </div>
                 <div class="my-message">
                     <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
                 </div>
-                <span class="username-top"><a href="http://user.mahua.com/home">JackAn</a>，欢迎回来!</span>
+                <span class="username-top"><a href="profile.html">JackAn</a>，欢迎回来!</span>
             </div>
-            
         </div>
     </div>
     <!--标题结束-->
@@ -109,7 +107,7 @@
 </div>
 <!--主要内容结束-->
 <!--底部内容开始-->
-<div class="footer">
+<div class="footer"  th:replace="index::index_footer">
 	<div class="footer-content">
         <div class="about">
             <dl>

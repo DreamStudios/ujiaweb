@@ -1,6 +1,7 @@
 package com.blueshit.joke.service.impl;
 
 import com.blueshit.joke.entity.Joke;
+import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.repository.JokeRepository;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.utils.Constants;
@@ -26,6 +27,20 @@ public class JokeServiceImpl implements JokeService {
         StringBuffer hql = new StringBuffer("From Joke where status=2");
         if (type != 0){
             hql.append(" and type="+type);
+        }
+        hql.append(" order by updateTime desc");
+        return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
+    }
+
+    /**
+     * 查询当前用户的笑话 按笑话状态分页
+     * @param status 0:审核未通过 1:待审核 2:审核通过 3:全部
+     * @return
+     */
+    public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page){
+        StringBuffer hql = new StringBuffer("From Joke where userInfo.uid="+userInfo.getUid());
+        if (status != 3){
+            hql.append(" and status="+status);
         }
         hql.append(" order by updateTime desc");
         return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);

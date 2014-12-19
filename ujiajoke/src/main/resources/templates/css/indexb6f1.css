@@ -1560,20 +1560,6 @@ span.valid{background-position:-980px -281px}
 
 .main .left,.main .right{float:left;width:670px;margin-right:30px}
 
-.page{height:33px;text-align:center}
-.page a{float:left;display:block;color:#666;margin-right:8px;height:32px;line-height:32px;background:#fff;border-bottom:1px solid #e8e7e6;padding:0 12px}
-.page a.next-page{float:right;margin-right:0;}
-.page span{float:left;display:block;height:32px;width:20px;overflow:hidden;line-height:34px;margin-right:8px}
-.page a.hover,.page a:hover{color:#fff;background:#ff845b;border-color:#ff845b}
-.page a.hover:hover{background:#dc643c;border-color:#dc643c}
-.page a.page-back-time{float:right;margin:-6px 0 0 0; position:relative;color:#fff;border:none;width:62px;padding:0 0 0 40px;line-height:47px;height:47px;background:url(../img/mahua_commonb72f.png?v=04) -155px -533px no-repeat}
-.page a.page-back-time:hover{border:none;background:url(../img/mahua_commonb72f.png?v=04) -155px -585px no-repeat}
-
-.go-page{float:left;width:90px;height:30px;overflow:hidden;margin-top:10px;margin-left:5px;}
-.go-page input{color:#999;width:52px;height:28px;line-height:25px;padding:0 0 0 3px;border:1px solid #dfdfdf;border-right:none;float:left}
-.go-page a{padding:0;margin:0;width:34px;height:28px;float:left;line-height:25px;color:#fff;text-align:center;background:#dfdfdf}
-.go-page a:hover{color:#fff;background:#ff845b}
-
 .main .right{width:300px;margin-right:0;overflow:hidden}
 .user-operation{overflow:hidden}
 .user-operation li{float:left;width:100%;overflow:hidden}

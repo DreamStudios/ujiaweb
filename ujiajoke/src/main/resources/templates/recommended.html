@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -9,7 +9,7 @@
 </head>
 <body>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
@@ -130,7 +130,7 @@
 </div>
 <!--主要内容结束-->
 <!--底部内容开始-->
-<div class="footer">
+<div class="footer"  th:replace="index::index_footer">
 	<div class="footer-content">
         <div class="about">
             <dl>

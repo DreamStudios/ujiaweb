@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
     <title>我的投稿_快乐麻花</title>
     <link type="text/css" href="css/person.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="js/ujiajoke.js"></script>
+    <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin">
+            <div class="islogin">
                 <div class="my-center">
                     <i title="个人中心"></i>
                     <ul>
-                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
-                        <li><a href="http://user.mahua.com/my/gift">兑换礼品</a></li>
-                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
-                        <li><a href="http://user.mahua.com/my/task">今日任务</a></li>
-                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
-                        <li class="noborder"><a href="http://user.mahua.com/member/logout" rel="nofollow">退出</a></li>
+                        <li><a href="myJoke.html">我的投稿</a></li>
+                        <li><a href="vip.html">VIP专题</a></li>
+                        <li><a href="profile.html">个人资料</a></li>
+                        <li><a href="inviteFriends.html">邀请好友</a></li>
+                        <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
                     </ul>
                 </div>
                 <div class="my-message">
                     <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
                 </div>
-                <span class="username-top"><a href="http://user.mahua.com/home">JackAn</a>，欢迎回来!</span>
+                <span class="username-top"><a href="profile.html">JackAn</a>，欢迎回来!</span>
             </div>
-            
         </div>
     </div>
     <!--标题结束-->
@@ -82,14 +83,74 @@
         </ul>		
         <ul class="content myinfo my-published">
 			<li class="tab">
-				<a href="http://user.mahua.com/my/joke" class="hover">全部</a>
-				<a href="http://user.mahua.com/my/joke?type=2" >通过</a>
-				<a href="http://user.mahua.com/my/joke?type=1" >待审核</a>
-				<a href="http://user.mahua.com/my/joke?type=3" >未通过</a>
+				<a href="myJoke.html?status=3" th:class="${status eq 3?'hover':''}" class="hover">全部</a>
+				<a href="myJoke.html?status=2" th:class="${status eq 2?'hover':''}" >通过</a>
+				<a href="myJoke.html?status=1" th:class="${status eq 1?'hover':''}" >待审核</a>
+				<a href="myJoke.html?status=0" th:class="${status eq 0?'hover':''}" >未通过</a>
+                <input type="hidden" id="status" th:value="${status}"/>
 			</li>
-			<p class="no-myinfo">哥们新来的吧，啥也没有啊！</p>
+            <li> <!-- 显示内容  <p class="no-myinfo">哥们新来的吧，啥也没有啊！</p> -->
+                <dl th:each="page :${pages}">
+                    <dt th:text="${page.title}">真会走位的小兵</dt>
+                    <dd class="content">
+                        <img th:if="${page.style eq 1}" th:src="${page.picture}" src="http://i1.mhimg.com/M01/05/EB/CgAAhlSSQCCAdx6pABQzSRPCBvA804.gif"
+                             alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                        <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
+                    </dd>
+                    <dd class="results" th:if="${page.status eq 2}">
+                        <div class="results-left">
+                            <span>恭喜！您的投稿已通过审核，获得500麻币</span>
+                            <!--<a href="http://www.mahua.com/xiaohua/923084.htm" target="_blank">http://www.mahua.com/xiaohua/923084.htm</a>-->
+                        </div>
+                        <!--<div class="results-right">
+                            <a href="http://user.mahua.com/common/share?obj_type=joke&obj_id=923084&type=weibo&title=真会走位的小兵" class="results-weibo" rel="nofollow" target="_blank">分享到微博</a>
+                            <a href="http://user.mahua.com/common/share?obj_type=joke&obj_id=923084&type=qzone&title=真会走位的小兵" class="results-qq" rel="nofollow" target="_blank">分享到QQ空间</a>
+                        </div>-->
+                    </dd>
+                    <hr/>
+                </dl>
+                <!-- 分页 -->
+                <div class="pagination pagination-right">
+                    <div id="example" style="float: left;"></div>
+                    <script th:inline="javascript">
+                        /*<![CDATA[*/
+                        $(function () {
+                            var totalPages = /*[[${pages.totalPages}]]*/1;
+                            var newPage = /*[[${newPage}]]*/1;
+                            $.ajaxSetup({
+                                cache: false
+                            });
+                            var options = {
+                                currentPage: newPage,
+                                totalPages: totalPages,
+                                onPageClicked: function (e, originalEvent, type, page) {
+                                    window.location.href = "myJoke.html?page=" + page +"&status="+$("#status").val();
+                                }
+                            }
+                            $('#example').bootstrapPaginator(options);
+                        })
+                        function goPage(){
+                            var pageValue=$('#page').val();
+                            if(!isNaN(pageValue) && parseInt(pageValue)>0){
+                                if(parseInt(pageValue) == 1){
+                                    window.location.href = "myJoke.html?status="+$("#status").val();
+                                }else{
+                                    window.location.href = "myJoke.html?page=" + pageValue +"&status="+$("#status").val();
+                                }
+                            }else{
+                                alert('请输入正确的页码');
+                            }
+                        }
+                        /*]]>*/
+                    </script>
+                    <div class="go-page" data-maxPage="1000">
+                        <input id="page" placeholder="跳到.." type="text" title="跳到.."/><a href="javascript:void(0);" onclick="goPage();">GO</a>
+                    </div>
+                </div>
+            </li>
 		</ul>
 	</div>
+
     <!--左侧信息结束-->
     <!--右侧信息开始-->
 	<div class="right">
@@ -113,7 +174,7 @@
 </div>
 <!--主要内容结束-->
 <!--底部内容开始-->
-<div class="footer">
+<div class="footer"  th:replace="index::index_footer">
 	<div class="footer-content">
         <div class="about">
             <dl>

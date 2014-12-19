@@ -1,6 +1,7 @@
 package com.blueshit.joke.service;
 
 import com.blueshit.joke.entity.Joke;
+import com.blueshit.joke.entity.UserInfo;
 import org.springframework.data.domain.Page;
 
 /**
@@ -17,4 +18,11 @@ public interface JokeService {
      */
     public Page<Joke> getJokePages_byType(int type,int page);
 
+    /**
+     * 查询当前用户的笑话 按笑话状态分页
+     * @param status 0:审核未通过 1:待审核 2:审核通过 3:全部
+     * @param page
+     * @return
+     */
+    public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page);
 }
