@@ -60,7 +60,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-redis")
 
-    //compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.1.RELEASE'
+    compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.1.RELEASE'
     compile 'org.hibernate:hibernate-entitymanager:4.2.8.Final'
     compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
     compile 'commons-httpclient:commons-httpclient:3.1'
