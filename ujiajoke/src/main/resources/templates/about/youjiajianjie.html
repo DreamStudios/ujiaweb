@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -10,11 +11,11 @@
 </head>
 <body>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:replace="about/fankuiyijian::about_fragment_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin">
                 <a href="https://passport.mahua.com/account/register" class="top-reg" target="_blank" rel="nofollow">注册</a>
                 <a href="javascript:void(0);" class="top-login loginClick" rel="nofollow">登录</a>
@@ -27,13 +28,13 @@
     <!--标题结束-->
     <!--导航菜单开始-->
     <div class="header-nav">
-        <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
+        <div class="logo"><a href="../index.html"><h1>笑话</h1></a></div>
         <ul>
-            <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="newjokes/index.html" title="按时间先后排序">囧图</a></li>
-            <li><a href="shenhuifu.html" >糗事</a></li>
-            <li><a href="user/lipin/index.html" >内涵图</a></li>
-            <li><a href="user/lipin/index.html" >会员专享<i></i></a></li>
+            <li> <a href="../index.html"  title="按热门程度排序">首页</a></li>
+            <li><a href="../jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="../qiushi.html" >糗事</a></li>
+            <li><a href="../neihan.html" >内涵图</a></li>
+            <li><a href="../membership.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -42,97 +43,77 @@
 <!--头部信息结束-->
 <!--主要内容开始-->
 <div class="about-main">
-	<div class="left">
+    <div class="left" th:replace="about/fankuiyijian::about_fragment_left">
         <dl>
-            <dt>关于有家</dt>
-            <dd><a href="youjiajianjie.html" class="hover">有家简介</a></dd>
-            <dd><a href="youjiagonggao.html" >有家公告</a></dd>
-            <dd><a href="mianzeshengming.html" >免责声明</a></dd>
-            <dd><a href="fankuiyijian.html">反馈意见</a></dd>
+            <dt>关于快乐家族</dt>
+            <dd><a href="youjiajianjie.html" id="youjiajianjie">快乐家族简介</a></dd>
+            <dd><a href="youjiagonggao.html" id="youjiagonggao">快乐家族公告</a></dd>
+            <dd><a href="mianzeshengming.html" id="mianzeshengming">免责声明</a></dd>
+            <dd><a href="fankuiyijian.html" id="fankuiyijian">反馈意见</a></dd>
         </dl>
         <dl class="guize">
-            <dt>校友互动</dt>
-            <dd><a href="tougaoguize.html" >投稿规则</a></dd>
-            <dd><a href="shengaoguize.html" >审稿规则</a></dd>
-            <dd><a href="shengjiguize.html" >升级规则</a></dd>
-            <dd><a href="xiaobiguize.html" class="hover">笑币规则</a></dd>
-        </dl>	
-    </div>	
+            <dt>笑友互动</dt>
+            <dd><a href="tougaoguize.html" id="tougaoguize">投稿规则</a></dd>
+            <dd><a href="shengaoguize.html" id="shengaoguize">审稿规则</a></dd>
+            <dd><a href="shengjiguize.html" id="shengjiguize">升级规则</a></dd>
+            <dd><a href="xiaobiguize.html" id="xiaobiguize">笑币规则</a></dd>
+        </dl>
+    </div>
     <div class="right">
 		<dl>
-			<dt>麻花简介</dt>
+			<dt>快乐家族简介</dt>
 			<dd>
-				<p>　　欢迎来到快乐麻花！快乐麻花（以下简称“麻花”）专注分享搞笑趣事和图片，是国内顶级笑话网站之一。麻花的内容均以用户自主原创搞笑内容为主，为用户提供便捷的内容上传通道，方便用户分享传播自己发现和原创的搞笑段子、爆笑图片、身边趣事、动态图等，立志打造国内最大的搞笑趣事与图片分享平台。</p>
+				<p>欢迎来到快乐家族！快乐家族专注分享搞笑趣事和图片，内容主要由各位笑友提供，本站主要为笑友提供便捷的内容分享渠道，方便娱乐大众，励志为大家提供一个天天都搞笑的快乐平台，有家笑话站期待您的加入。加入有家笑话，成为有家一族，成就快乐家族！</p>
 			</dd>
 		</dl>
 		<dl>
-			<dt>主要频道</dt>
+			<dt>快乐频道</dt>
 			<dd>
-				<p>热门：8小时、24小时、7天、30天内最受用户欢迎的搞笑内容。</p>
-				<p>新鲜：最新通过审核的内容。</p>
-				<p>神回复：点赞达到一定数量的评论汇总。</p>
-				<p>兑换所：用麻币兑换礼品。</p>
-				<p>审稿：麻花评审官在此审核所有投稿，只有达到一定比例的内容才会上线。</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt>麻币介绍</dt>
-			<dd>
-				<p>　　麻花还通过麻币奖励、麻币赠送、麻币领取等各种方式，让用户在分享快乐的同时有所收获。通过麻币兑换平台，最终达到用户付出终有回报的结果。劳有所得是麻花坚持的理念，也是对一直支持我们的用户的最好的回报。</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt>特色功能</dt>
-			<dd>
-				<p>打赏：赠送麻币给投稿人，概不退还。</p>
-				<p>包养：如果用户在投稿时出价求包养，其他用户都能通过投稿人指定的价格一次性买断该内容，简称包养。买断后，该内容所获得的打赏将归包养人所有。一旦包养，概不反悔。</p>
-				<p>每日任务：完成任务获得麻币。</p>
-				<p>神回复：点赞数达到一定数量，该评论自动升级为神评论。神评论将直接展示在笑话下方。</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt>其他平台</dt>
-			<dd>
-				<p>手机版：m.mahua.com</p>
-				<p>微信公众号：搜索kuailemahua</p>
-				<p>微博：http://weibo.com/kuailemahua</p>
+				<p>首页：最新、最热的搞笑集合。</p>
+				<p>囧图：最新、最热的生活囧图。</p>
+				<p>糗事：最新、最热的趣闻、奇事</p>
+				<p>内涵图：内涵段子、内涵图，无所不用其极!</p>
+                <p>会员专享：转为会员提供的奇闻趣事。</p>
+				<p>神友天地：在这神友说了算，只有神友觉得好的内容才会上线。</p>
 			</dd>
 		</dl>
 	</div>
 </div>
 <!--底部内容开始-->
-<div class="footer">
-	<div class="footer-content">
+<div class="footer" th:replace="about/fankuiyijian::about_fragment_footer">
+    <div class="footer-content">
         <div class="about">
             <dl>
-                <dt>关于有家</dt>
-                <dd><a href="about/mahuajianjie.html" target="_blank">有家简介</a><a href="about/mahuagonggao.html" target="_blank">有家公告</a></dd>
-                <dd><a href="about/mianzeshengming.html" target="_blank">免责声明</a><a href="about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
+                <dt>关于快乐家族</dt>
+                <dd><a href="youjiajianjie.html" target="_blank">家族简介</a><a href="youjiagonggao.html" target="_blank">家族公告</a></dd>
+                <dd><a href="mianzeshengming.html" target="_blank">免责声明</a><a href="fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
             </dl>
             <dl>
                 <dt>互动规则</dt>
-                <dd><a href="about/tougaoguize.html" target="_blank">投稿规则</a><a href="about/shengaoguize.html" target="_blank">审稿规则</a></dd>
-                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/mabiguize.html" target="_blank">笑币规则</a></dd>
+                <dd><a href="tougaoguize.html" target="_blank">投稿规则</a><a href="shengaoguize.html" target="_blank">审稿规则</a></dd>
+                <dd><a href="shengjiguize.html" target="_blank">升级规则</a><a href="xiaobiguize.html" target="_blank">笑币规则</a></dd>
             </dl>
             <dl>
                 <dt>关注</dt>
-                <dd><a href="http://e.weibo.com/kuailemahua" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="http://user.qzone.qq.com/320182733" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
-                <dd><a href="http://t.qq.com/kuailemahua?lang=zh_CN" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="user/weixin.html" target="_blank" class="footer-weixin" rel="nofollow">微信订阅</a></dd>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weixin" rel="nofollow" style="color: #03a8b1;">官方微站</a></dd>
             </dl>
             <dl class="about-contact">
-                <dt>麻花合作</dt>
-                <dd>麻花粉丝QQ群:<i></i>95773113<i></i>253814987</dd>
-                <dd>合作：kuailemahua@163.com</dd>
+                <dt>有家合作</dt>
+                <dd>合作：youjiaxiaohua@163.com</dd>
             </dl>
-        </div>		
-      <div class="coypright">
-       	<p>Copyright 2005-2014 mahua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
-      </div>
-	</div>
+        </div>
+        <div class="coypright">
+            <p>Copyright 2014-2024 youjiaxiaohua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
+        </div>
+    </div>
 </div>
 <!--底部内容结束-->
 <!--[if IE 6]>
 	<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
+<script type="text/javascript" th:inline="javascript">
+    document.getElementById("youjiajianjie").className = "hover";
+</script>
 </body>
 </html>

@@ -950,7 +950,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .footer-weibo,.footer-qzone,.footer-QQweibo,.footer-weixin{height:32px;display:inline-block;padding-left:25px;background:url(../img/mahua_common.png) -975px -561px no-repeat}
 .footer-qzone{background-position:-975px -591px}
 .footer-QQweibo{background-position:-975px -620px}
-.footer-weixin{background-position:-975px -650px}
+.footer-weixin{background-position:-975px -650px;}
 .coypright{padding:20px 0 80px}
 .coypright p{text-align:center;color:#999}
 
@@ -1561,7 +1561,7 @@ span.valid{background-position:-980px -281px}
 .about-main .right{padding:35px;width:649px;float:left;background:#fff;min-height:517px;_height:expression(this.scrollHeight<517?"517px":true);border-bottom:1px solid #e2e1e1}
 .right dl{margin-bottom:25px}
 .right dt{font-size:18px;text-indent:20px;height:40px;line-height:40px;background:url(../img/about.png) 0 -57px no-repeat}
-.right dd p{color:#969696;font-size:14px;line-height:28px;}
+.right dd p{color:#969696;font-size:14px;line-height:28px; font-family:"微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体";}
 .right .gonggao dd{border-bottom:1px solid #e6e3e3;padding:15px 0}
 .right .gonggao a{color:#ff7e69;text-decoration:underline}
 .right .gonggao a:hover{color:#e05857}
@@ -1573,10 +1573,10 @@ span.valid{background-position:-980px -281px}
 .fankui .text-input{align:left;width:200px;height:32px;line-height:32px;color:#d6d5d5;padding:0 5px;border:1px solid #e0e0e0}
 .fankui .submit-input{cursor:pointer;float:right;font-size:16px;width:107px;height:32px;line-height:32px;color:#fff;background:#7EE1F8;border:none}
 .fankui .submit-input:hover{background:#03a8b1}
-.right .fankui p{font-size:12px;color:#969696}
+.right .fankui p{font-size:12px;color:#03a8b1}
 .fankui dd{margin:15px 0;}
 
-.shengji table{background:#fee5e1;width:100%;color:#969696}
+.shengji table{background:#03a8b1;width:100%;color:#969696}
 .shengji table td,.shengji table th{background:#fff;height:30px;text-align:center}
 .shengji table th{font-size:14px; font-weight:normal}
 .shengji table .trcolor td{background:#fef7f7}
