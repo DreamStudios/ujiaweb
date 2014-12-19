@@ -3,6 +3,7 @@ package com.blueshit.joke.service.impl;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.repository.JokeRepository;
 import com.blueshit.joke.service.JokeService;
+import com.blueshit.joke.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,6 @@ public class JokeServiceImpl implements JokeService {
             hql.append(" and type="+type);
         }
         hql.append(" order by updateTime desc");
-        System.out.println(hql.toString());
-        return jokeRepository.findByHql(hql.toString(), 15, page);
+        return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
 }

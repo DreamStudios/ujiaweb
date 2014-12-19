@@ -16,6 +16,8 @@ public class Constants {
         //激活
         public static final String ACTIVE    = "active_mail";
         public static final String RESET_PWD = "reset_password_mail";
+
+        public static final int PAGE_SIZE = 15;
     }
 
     public static class DatePartten {

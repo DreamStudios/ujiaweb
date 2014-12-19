@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -33,14 +34,30 @@
 <div class="header" th:fragment="index_header">
     <!--标题开始-->
     <div class="header-top">
-        <div class="header-top-content">
+        <div class="header-top-content"  th:with="logged=${#authentication.getName() ne 'anonymousUser'}">
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin">
-                <a href="https://passport.mahua.com/account/register" class="top-reg" target="_blank" rel="nofollow">注册</a>
-                <a href="javascript:void(0);" class="top-login loginClick" rel="nofollow">登录</a>
+            <div id="islogin" class="islogin" th:if="${logged eq false}">
+                <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
+                <a href="login.html" class="top-login" rel="nofollow">登录</a>
                 <span class="border-nav-top">|</span>
                 <a href="http://user.mahua.com/connect/weibo" target="_blank" class="top-login-weibo" title="新浪微博登录" rel="nofollow">微博登录</a>
                 <a href="http://user.mahua.com/connect/tencent" target="_blank" class="top-login-qq" title="QQ登录" rel="nofollow">QQ登录</a>
+            </div>
+            <div class="islogin" th:if="${logged eq true}">
+                <div class="my-center">
+                    <i title="个人中心"></i>
+                    <ul>
+                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
+                        <li><a href="http://user.mahua.com/my/vip">VIP专题</a></li>
+                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
+                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
+                        <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
+                    </ul>
+                </div>
+                <div class="my-message">
+                    <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
+                </div>
+                <span class="username-top"><a href="http://user.mahua.com/home">JackAn</a>，欢迎回来!</span>
             </div>
         </div>
     </div>
@@ -49,11 +66,11 @@
     <div class="header-nav">
         <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
         <ul>
-          <li> <a href="index.html" th:class="${type eq 0?'hover':''}" class="hover" title="按热门程度排序">首页</a></li>
+          <li><a href="index.html" th:class="${type eq 0?'hover':''}" class="hover" title="按热门程度排序">首页</a></li>
             <li><a href="jiongtu.html" th:class="${type eq 1?'hover':''}" title="按时间先后排序">囧图</a></li>
-            <li><a href="xiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
-            <li><a href="neihan.html" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
-            <li><a href="vippass.html" >会员专享<i></i></a></li>
+            <li><a href="qiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
+            <li><a href="neihan.html" th:href="@{neihan.html}" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
+            <li><a href="vip/vip_index.html" th:class="${type eq 4?'hover':''}" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>

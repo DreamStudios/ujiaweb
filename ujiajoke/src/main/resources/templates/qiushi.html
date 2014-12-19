@@ -51,7 +51,7 @@
             <li><a href="jiongtu.html" th:class="${type eq 1?'hover':''}" title="按时间先后排序">囧图</a></li>
             <li><a href="xiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
             <li><a href="neihan.html" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
-            <li><a href="vippass.html" >会员专享<i></i></a></li>
+            <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -65,7 +65,7 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
 			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" alt="你丫才是逗比"/><i></i></a>
+				<a href="javascript:alert(1);" target="_blank"><img src="../img/toux.jpg" alt="你丫才是逗比"/><i></i></a>
 				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
 				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
@@ -112,7 +112,7 @@
                         currentPage: newPage,
                         totalPages: totalPages,
                         onPageClicked: function (e, originalEvent, type, page) {
-                            window.location.href = "xiushi.html?page=" + page ;
+                            window.location.href = "qiushi.html?page=" + page ;
                         }
                     }
                     $('#example').bootstrapPaginator(options);
@@ -121,9 +121,9 @@
                     var pageValue=$('#page').val();
                     if(!isNaN(pageValue) && parseInt(pageValue)>0){
                         if(parseInt(pageValue) == 1){
-                            window.location.href = "xiushi.html";
+                            window.location.href = "qiushi.html";
                         }else{
-                            window.location.href = "xiushi.html?page=" + pageValue;
+                            window.location.href = "qiushi.html?page=" + pageValue;
                         }
                     }else{
                         alert('请输入正确的页码');

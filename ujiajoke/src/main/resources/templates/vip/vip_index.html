@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,11 +7,11 @@
     <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
     <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
     <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
-    <link rel="stylesheet" type="text/css" href="css/indexb6f1.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
-    <script type="text/javascript" src="js/ujiajoke.js"></script>
-    <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/indexb6f1.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+    <script type="text/javascript" src="../js/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="../js/ujiajoke.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -28,17 +29,26 @@
 	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
 </script>
 <!--头部信息开始-->
-<div class="header" th:replace="index::index_header">
+<div class="header" th:fragment="index_header">
     <!--标题开始-->
     <div class="header-top">
-        <div class="header-top-content">
+        <div class="header-top-content" >
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin">
-                <a href="https://passport.mahua.com/account/register" class="top-reg" target="_blank" rel="nofollow">注册</a>
-                <a href="javascript:void(0);" class="top-login loginClick" rel="nofollow">登录</a>
-                <span class="border-nav-top">|</span>
-                <a href="http://user.mahua.com/connect/weibo" target="_blank" class="top-login-weibo" title="新浪微博登录" rel="nofollow">微博登录</a>
-                <a href="http://user.mahua.com/connect/tencent" target="_blank" class="top-login-qq" title="QQ登录" rel="nofollow">QQ登录</a>
+            <div class="islogin">
+                <div class="my-center">
+                    <i title="个人中心"></i>
+                    <ul>
+                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
+                        <li><a href="http://user.mahua.com/my/vip">VIP专题</a></li>
+                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
+                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
+                        <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
+                    </ul>
+                </div>
+                <div class="my-message">
+                    <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
+                </div>
+                <span class="username-top"><a href="http://user.mahua.com/home" th:text="${#authentication.getName()}">JackAn</a>，欢迎回来!</span>
             </div>
         </div>
     </div>
@@ -47,11 +57,11 @@
     <div class="header-nav">
         <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
         <ul>
-          <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="jiongtu.html" title="按时间先后排序">囧图</a></li>
-            <li><a href="qiushi.html" >糗事</a></li>
-            <li><a href="neihan.html" >内涵图</a></li>
-            <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
+          <li><a href="../index.html" th:class="${type eq 0?'hover':''}" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="../jiongtu.html" th:class="${type eq 1?'hover':''}" title="按时间先后排序">囧图</a></li>
+            <li><a href="../qiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
+            <li><a href="../neihan.html" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
+            <li><a href="vip_index.html" th:class="${type eq 4?'hover':''}" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -65,19 +75,19 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
 			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" alt="你丫才是逗比"/><i></i></a>
+				<a href="javascript:alert(1);" target="_blank"><img src="../img/toux.jpg" th:src="${page.userInfo.photo}" alt="你丫才是逗比"/><i></i></a>
 				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
 				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
-			<dd class="content">
-				<img th:if="${page.style eq 1}" th:src="${page.picture}" src="http://i2.mhimg.com/kl688file/2014-10/2014102017204963227.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+            <dd class="content">
+                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
-			</dd>
+            </dd>
 			<!-- 神回复  -->
             <dd class="operation">
-                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="img/comment.png" /><i>0条评论</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i>0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="../img/cai.png" /><i>0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="../img/comment.png" /><i>0条评论</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">
@@ -93,12 +103,7 @@
             </dd>
          </dl>
 		<!-- 分页 -->
-		<!--<div class="page">
-		   <div class="go-page" id="goPage" data-maxPage="1000">
-             <input value="跳到.." type="text" title="跳到.." /><a href="javascript:void(0);">GO</a>
-           </div>
-        </div>-->
-        <div class="pagination pagination-right"><!-- class="page" -->
+        <div class="pagination pagination-right">
             <div id="example" style="float: left;"></div>
             <script th:inline="javascript">
                 /*<![CDATA[*/
@@ -112,7 +117,7 @@
                         currentPage: newPage,
                         totalPages: totalPages,
                         onPageClicked: function (e, originalEvent, type, page) {
-                            window.location.href = "jiongtu.html?page=" + page ;
+                            window.location.href = "vip_index.html?page=" + page ;
                         }
                     }
                     $('#example').bootstrapPaginator(options);
@@ -121,9 +126,9 @@
                     var pageValue=$('#page').val();
                     if(!isNaN(pageValue) && parseInt(pageValue)>0){
                         if(parseInt(pageValue) == 1){
-                            window.location.href = "jiongtu.html";
+                            window.location.href = "vip_index.html";
                         }else{
-                            window.location.href = "jiongtu.html?page=" + pageValue;
+                            window.location.href = "vip_index.html?page=" + pageValue;
                         }
                     }else{
                         alert('请输入正确的页码');
@@ -206,12 +211,12 @@
         <dl class="new-pic">
             <dt><a href="newjokes/pic.html" target="_blank"><h2>精彩搞笑图片</h2></a><a href="newjokes/pic.html" target="_blank" class="more">更多</a></dt>
             <dd>
-                <a class="new-pic-left" target="_blank" href="xiaohua/193343.html">
-                    <img alt="贪吃动物们的糗事" src="img/11.gif"/>
+                <a class="new-pic-left" target="_blank" href="../xiaohua/193343.html">
+                    <img alt="贪吃动物们的糗事" src="../img/11.gif"/>
                     <span>贪吃动物们的糗事</span>
                 </a>
                 <a  target="_blank" href="xiaohua/803534.html">
-                    <img alt="这社会，什么奇葩公司都有！" src="img/11.gif"/>
+                    <img alt="这社会，什么奇葩公司都有！" src="../img/11.gif"/>
                     <span>这社会，什么奇葩公司都有！</span>
                 </a>
              </dd>
@@ -219,7 +224,7 @@
         <!-- 客户端下载 -->
         <div class="platform">
             <div class="platform-mobilePhone-web">
-                <img src="img/erweima.png" alt="m.mahua.com"/>
+                <img src="../img/erweima.png" alt="m.mahua.com"/>
                 <p class="title">扫二维码，用手机看麻花</p>
             </div>
             <ul class="platform-other">
@@ -235,6 +240,43 @@
 	<!--右侧信息结束-->
 </div>
 <!--主要内容结束-->
+<!---友情链接开始-->
+<div class="links-block">
+	<div class="links-list-block">
+		<div class="likes-title">友情链接：</div>
+		<div class="links" id="links_list">
+			<div class="likes-list">
+              <a target="_blank" href="http://www.zhaoxiaoshuo.com/">小说</a>
+                <a target="_blank" href="http://xiaohua.zol.com.cn/">笑话</a>
+              <a target="_blank" href="http://fun.iqiyi.com/">爱奇艺搞笑视频</a>
+              <a target="_blank" href="http://www.domeng.cn/">周公解梦大全</a>
+                <a target="_blank" href="http://www.jijidi.com/">笑话</a>
+              <a target="_blank" href="http://p.ik123.com/">QQ头像</a>
+              <a target="_blank" href="http://www.5523.com/">在线小游戏</a>
+              <a target="_blank" href="http://www.zgjm.org/">周公解梦大全查询</a>
+              <a target="_blank" href="http://www.2280.com/">周公解梦</a>
+          </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	rolling_y('links_list',50,3000)
+	function rolling_y(id, height, rolltime) {
+		h = height,
+		tnode = document.getElementById(id),
+		scrollID = id + '_v',
+		F_rad = scrollID + '_f',
+		F_o = scrollID + '_o',
+		F_rol = rolltime,
+		F_t = scrollID + '_t',
+		_ = Function;
+		_('if(typeof ' + F_t + ' !=="undefined"){clearTimeout(' + F_t + ')}')();
+		_(scrollID + '=0;' + F_rad + '=function(){}')();
+		_('with(' + F_o + '=tnode){innerHTML+=innerHTML;onmouseover=_(\'' + scrollID + '=1\');onmouseout=_(\'' + scrollID + '=0\')}')();
+		_('(' + F_rad + '=_(("if(#%' + h + '||!' + scrollID + ')#++,#%=' + F_o + '.scrollHeight>>1;' + F_t + '=setTimeout(' + F_rad + ',#%' + h + '?10:' + F_rol + ');").replace(/#/g,"' + F_o + '.scrollTop")))()')()
+	}
+</script>
+<!---友情链接结束-->
 <script type="text/javascript">
 $(function(){
 	joke_content_area();
@@ -263,7 +305,7 @@ $(function(){
 </div>
 <!--右侧导航结束-->
 <!--底部内容开始-->
-<div class="footer"  th:replace="index::index_footer">
+<div class="footer" th:fragment="index_footer">
 	<div class="footer-content">
         <div class="about">
             <dl>
