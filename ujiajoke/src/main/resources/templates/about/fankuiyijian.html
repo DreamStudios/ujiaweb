@@ -29,13 +29,13 @@
     <!--标题结束-->
     <!--导航菜单开始-->
     <div class="header-nav">
-        <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
+        <div class="logo"><a href="../index.html"><h1>笑话</h1></a></div>
         <ul>
-            <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="newjokes/index.html" title="按时间先后排序">囧图</a></li>
-            <li><a href="shenhuifu.html" >糗事</a></li>
-            <li><a href="user/lipin/index.html" >内涵图</a></li>
-            <li><a href="user/lipin/index.html" >会员专享<i></i></a></li>
+            <li> <a href="../index.html" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="../jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="../qiushi.html" >糗事</a></li>
+            <li><a href="../neihan.html" >内涵图</a></li>
+            <li><a href="../membership.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -66,12 +66,12 @@
                 <dt>留言墙<span style="float:right" id="message" th:text="${message}">提交结果</span></dt>
                 <dd>
                     <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" style="color: red;">请输入反馈内容</p>
-                    <p>您的支持是我们的动力,你的宝贵意见是我们的改进的方向</p>
+                    <p>您的支持是我们最大的动力,你的宝贵意见是我们的改进的方向</p>
                     <textarea id="content" name="content" th:text="*{content}"></textarea>
                 </dd>
                 <dd>
                     <p th:if="${#fields.hasErrors('qq')}" th:errors="*{qq}" style="color: red;">请输入您的QQ</p>
-                    <p>请在此留下您的联系方式，有家期待您的加入</p>
+                    <p>请在此留下您的联系方式，期待您成为有家一族</p>
                     <input type="text" name="qq" id="qq" class="text-input" th:value="*{qq}" placeholder="请输入QQ号" />
                 </dd>
                 <dd>
