@@ -178,4 +178,15 @@ public class UserInfoController {
         }
     }
 
+    /**
+     * 进入其它笑友个人主页，非自己主页
+     * @param id
+     * @return
+     */
+    @RequestMapping("/userCenter")
+    public String userCenter(int id){
+
+        return "usercenter";
+    }
+
 }

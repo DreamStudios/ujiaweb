@@ -69,6 +69,16 @@ public class JokeController {
     }
 
     /**
+     * 普通笑话详情
+     * @param id
+     * @return
+     */
+    @RequestMapping("/jokeDetail")
+    public String jokeDetail(int id){
+        return "detail";
+    }
+
+    /**
      * myJoke 分类分页
      * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
      */

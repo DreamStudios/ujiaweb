@@ -39,23 +39,20 @@
             <div id="islogin" class="islogin" th:if="${logged eq false}">
                 <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
                 <a href="login.html" class="top-login" rel="nofollow">登录</a>
-                <span class="border-nav-top">|</span>
-                <a href="http://user.mahua.com/connect/weibo" target="_blank" class="top-login-weibo" title="新浪微博登录" rel="nofollow">微博登录</a>
-                <a href="http://user.mahua.com/connect/tencent" target="_blank" class="top-login-qq" title="QQ登录" rel="nofollow">QQ登录</a>
             </div>
             <div class="islogin" th:if="${logged eq true}">
                 <div class="my-center">
                     <i title="个人中心"></i>
                     <ul>
                         <li><a href="myJoke.html">我的投稿</a></li>
-                        <li><a href="vip.html">VIP专题</a></li>
+                        <li><a href="vip/vip_index.html">VIP专题</a></li>
                         <li><a href="profile.html">个人资料</a></li>
                         <li><a href="inviteFriends.html">邀请好友</a></li>
                         <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
                     </ul>
                 </div>
                 <div class="my-message">
-                    <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
+                    <a href="recommended.html" target="_blank"><i class="message-new" title="精品推荐"></i></a>
                 </div>
                 <span class="username-top"><a href="profile.html">JackAn</a>，欢迎回来!</span>
             </div>
@@ -99,9 +96,9 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
 			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" alt="你丫才是逗比"/><i></i></a>
-				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
-				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+				<a th:href="@{userCenter.html(id=${page.userInfo.uid})}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+				<p class="joke-uname"><a th:href="@{userCenter.html(id=${page.userInfo.uid})}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
+				<span class="joke-title"><a th:href="@{jokeDetail.html(id=${page.jid})}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
             <dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />

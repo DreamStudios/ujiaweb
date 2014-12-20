@@ -596,7 +596,6 @@ button.ui-button::-moz-focus-inner {
 	height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("images/animated-overlay.html");
 	height: 100%;
 	filter: alpha(opacity=25);
 	opacity: 0.25;
@@ -836,7 +835,7 @@ a{color:#333;text-decoration:none}
 a:hover,h1 a:hover,h3 a:hover,.mahua a:hover{color:#03a8b1;}
 input,textarea,input:focus,textarea:focus{outline:none}
 textarea{resize:none}
-.s-color-red{font-style:normal;color:#ff7e69}
+.s-color-red{font-style:normal;color:#03a8b1}
 .title,dt,#checkin-box li,.reg-guide,.header-nav li a,.header-view li,.comment-submit,.newbieGuideStart,.reg-guide-lucky{font-family:"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";_font-weight:bold}
 
 .header{height:130px;width:100%;background:#fff;border-bottom:1px solid #e3e2e1}
@@ -864,7 +863,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .my-message li{color:#494949;height:24px;line-height:20px;text-indent:10px;overflow:hidden}
 .my-message li.my-message-close{margin:-4px -1px 0;width:180px;position:relative;height:24px;border:none;background:url(../img/mahua_common.24.png) 0 -1021px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -1021px no-repeat}
 .my-message li.my-message-close i{display:block;width:10px;height:10px;float:right;margin:12px 6px 0 0;cursor:pointer}
-.my-message li a{color:#ff7e69;}
+.my-message li a{color:#03a8b1;}
 .my-message li a:hover{color:#03a8b1;}
 
 
@@ -905,12 +904,12 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 
 
 /*详情页头部*/
-.header-view{background:#ff7e69;height:40px}
+.header-view{background:#03a8b1;height:40px}
 .header-top-view{width:1000px;height:40px}
 .header-view .logo{float:left;width:104px;margin-right:50px;height:40px;background:url(../img/logo.png) 0 -169px no-repeat}
 .header-view-nav{width:466px;float:left}
 .header-view-nav li{float:left;width:80px;height:40px;line-height:40px;text-align:center;}
-.header-view-nav li a{display:block;width:100%;height:38px;border-bottom:2px solid #ff7e69;color:#fff;font-size:16px}
+.header-view-nav li a{display:block;width:100%;height:38px;border-bottom:2px solid #03a8b1;color:#fff;font-size:16px}
 .header-view-nav li a:hover{color:#fff;border-bottom-color:#d53500}
 .header-view .islogin{float:right;width:380px;float:left}
 .islogin-view{padding-top:5px}
@@ -945,7 +944,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .about dd i{margin:3px 5px 0;display:inline-block;width:15px;height:16px;background:url(../img/mahua_common.png) -978px -500px no-repeat}
 .about dd a{margin-right:20px;color:#999}
 .about dd a:hover{color:#03a8b1;}
-.about dd a.a-color-red{color:#ff7e69}
+.about dd a.a-color-red{color:#03a8b1}
 .about dd a.a-color-red:hover{color:#e05857}
 
 .footer-weibo,.footer-qzone,.footer-QQweibo,.footer-weixin{height:32px;display:inline-block;padding-left:25px;background:url(../img/mahua_common.png) -975px -561px no-repeat}
@@ -990,15 +989,15 @@ avatar_60x60  60*60的头像
 .mahua dt img,.mahua dt i{width:60px;height:60px;float:left;}
 .mahua dt i{display:block;margin:0 10px 0 -60px;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
 .mahua dt .joke-uname,.mahua dt .joke-title{float:left;width:570px;height:21px;line-height:21px;margin-top:7px;overflow:hidden;font-size:14px}
-.mahua dt .joke-uname a{color:#fe8e69;float:left;margin-right:20px}
-.mahua dt .joke-uname a:hover{color:#e05857}
+.mahua dt .joke-uname a{color:#03a8b1;float:left;margin-right:20px}
+.mahua dt .joke-uname a:hover{color:#04ce9b;}
 .mahua dt .joke-title{height:34px;line-height:34px;font-size:18px;margin-top:0}
 .mahua .content{overflow:hidden;margin:20px 0;font-size:14px;line-height:28px;color:#666}
 .mahua .operation{border-top:1px solid #f3f2f2;width:640px;padding:10px 15px;margin:0 -15px -15px;height:36px;background:#fafafa;position:relative}
 .mahua .operation a{float:left;color:#888}
 .mahua .ding,.mahua .cai,.mahua .comment{display:block;float:left;width:80px;_width:90px;position:relative}
 .mahua .cai:hover{color:#92cfeb}
-.mahua .ding:hover,.mahua .comment:hover{color:#ff7e69}
+.mahua .ding:hover,.mahua .comment:hover{color:#03a8b1}
 .mahua .comment{width:94px;_width:105px;height:24px;line-height:24px}
 .mahua .ding img,.mahua .cai img,.operation .comment img{position:absolute;left:0px;float:left;margin:5px 5px 0 0;width:24px;height:24px;}
 .mahua .ding i,.mahua .cai i,.operation .comment i{float:left;margin:6px 0 0 33px;height:24px;line-height:24px;width:50px}
@@ -1079,19 +1078,19 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 
 /*收藏的弹出框*/
 #collection_tips{position:absolute;z-index:20;text-align:center;background:#fff8da;width:165px;height:32px;line-height:32px;color:#666;font-size:12px;border:1px solid #ecdcb4}
-#collection_tips a{color:#ff7e69}
+#collection_tips a{color:#03a8b1}
 #collection_tips a:hover{color:#e05857}
 #collection_tips i{position:absolute;top:32px;left:75px;display:block;width:15px;height:5px;background:url(../img/joke.24.png) -485px 0 no-repeat;_background:url(../img/joke.24.ie6.png) -485px 0 no-repeat}
 
 
 /*右侧用户推荐*/
 .go-user-index,.go-user-index-btn{display:block;width:100%;height:90px;color:#6e6e6e}
-.go-user-index:hover{color:#ff7e69}
+.go-user-index:hover{color:#03a8b1}
 .go-user-index img{width:60px;height:60px;margin:0 auto}
 .go-user-index p{height:30px;line-height:30px;text-align:center;overflow:hidden}
 .go-user-index i{position:relative;z-index:2;display:block;width:60px;height:60px;margin:-60px auto 0;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
 .go-user-index-btn{margin:6px auto 0;background:#a3abaf;width:60px;height:24px;line-height:24px;text-align:center;color:#fff;}
-.go-user-index-btn:hover{color:#fff;background:#ff7e69}
+.go-user-index-btn:hover{color:#fff;background:#03a8b1}
 
 /*笑点列表页面*/
 .mahua .tags-share-btn{width:270px;border:none;margin-top:5px}
@@ -1099,10 +1098,10 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .tags-info{padding:10px;width:650px;height:220px}
 .tags-info img{float:left;width:220px;height:220px}
 .tags-info dl{float:left;width:400px;padding:0 10px 10px 35px;margin-left:-15px;background:url(../img/mahua_common.24.png) -205px -15px no-repeat;_background:url(../img/mahua_common.24.ie6.png) -205px -15px no-repeat}
-.tags-info dt{height:36px;line-height:36px;font-size:20px;color:#ff7e69;margin-bottom:5px}
+.tags-info dt{height:36px;line-height:36px;font-size:20px;color:#03a8b1;margin-bottom:5px}
 .tags-info dt h1{font-size:20px;}
 .tags-info dd span{color:#969696;margin-right:20px}
-.tags-info dd i{color:#ff7e69}
+.tags-info dd i{color:#03a8b1}
 .tags-info dd.tags-info-content{height:96px;overflow:hidden;padding-bottom:10px;border-bottom:1px dashed #d2d2d2;margin-bottom:15px}
 .tags-info dd.tags-info-content p{height:96px;overflow:hidden;text-indent:24px;line-height:24px}
 
@@ -1156,50 +1155,15 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .newbieGuideStart,.newbieGuideClose{display:block;width:130px;height:50px;color:#fff;font-size:20px;text-align:center;line-height:50px;position:absolute;bottom:116px;left:380px;}
 .newbieGuideStart:hover,.newbieGuideClose:hover{color:#fff}
 .newbieGuideClose{width:50px;height:70px;overflow:hidden;line-height:130px;font-size:12px;top:32px;left:868px;}
-#newbieGuide2{display:none;width:410px;height:330px;background:url(../img/baoyang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide2{display:none;width:410px;height:330px;position:absolute;z-index:1000}
 #newbieGuide2 .newbieGuideClose{top:45px;left:340px;}
-#newbieGuide3{display:none;width:400px;height:320px;background:url(../img/dashang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide3{display:none;width:400px;height:320px;position:absolute;z-index:1000}
 #newbieGuide3 .newbieGuideClose{top:40px;left:325px;}
-#newbieGuide4{width:380px;height:320px;background:url(../img/qiubaoyang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide4{width:380px;height:320px;position:absolute;z-index:1000}
 #newbieGuide4 .newbieGuideClose{top:40px;left:310px;}
 #newbieGuide5{width:165px;height:100px;background:url(../img/audit_tips.png) no-repeat;position:absolute;z-index:1000}
 #newbieGuide5 .newbieGuideClose{top:13px;left:128px;width:10px;height:10px;}
 #newbieGuidebg{top:0;left:0;z-index:999;width:100%;height:100%;position:fixed;background:#000;filter:alpha(opacity=40);-moz-opacity:0.4;opacity:0.4;_position:absolute !important;_height:1000px !important}
-
-/*注册引导*/
-.reg-guide .checkin-box-bg{width:680px;height:420px;padding:50px 40px 0 80px;background:url(../img/checkin.24.png) no-repeat;overflow:hidden}
-.reg-guide .i-dialog-close{right:25px;top:25px;}
-.reg-guide dt{padding:20px 0 0 140px;height:130px;width:540px;background:url(../img/reg.guide.24.png) -766px 0 no-repeat;font-size:30px;color:#ff8675}
-.reg-guide dt p{height:46px;line-height:46px;overflow:hidden}
-.reg-guide dd{font-size:16px;color:#606060;height:30px;line-height:30px;overflow:hidden}
-.reg-guide dd b{margin-right:5px;}
-.reg-guide dd.red-text{color:#ff8675}
-.reg-guide dd.btn{height:90px;text-align:center;margin-top:15px;}
-.reg-guide dd.btn a{display:block;float:left;background:url(../img/reg.guide.24.png) 0 -1px no-repeat}
-.reg-guide dd.btn a.reg-guide-close{width:270px;height:60px;line-height:60px;margin:30px 20px 0 0;text-align:center;color:#fff;font-size:30px;text-shadow:0 1px 0 #eb7565;}
-.reg-guide dd.btn a.reg-guide-close:hover{background-position:0 -62px}
-.reg-guide dd.btn a.reg-guide-start{background-position:0 -125px;margin:0;text-align:left;width:240px;height:90px;line-height:120px;overflow:hidden;text-indent:95px;color:#fff;font-size:30px;text-shadow:0 1px 0 #75b5d2;}
-.reg-guide dd.btn a.reg-guide-start:hover{background-position:0 -216px}
-
-/*注册引导-登录注册领取麻币*/
-.reg-guide-lucky{width:800px;height:470px;background:url(../img/reg.guide.lucky.jpg) no-repeat;overflow:hidden}
-.reg-guide-lucky .i-dialog-close{right:30px;top:30px;background:none}
-.reg-guide-lucky a.right-login-qq,.reg-guide-lucky a.right-login-weibo{display:block;width:60px;height:90px;overflow:hidden;float:left}
-.reg-guide-lucky a.right-login-qq i,.reg-guide-lucky a.right-login-weibo i{width:60px;height:60px;display:block;background:url(../img/reg.guide.lucky.jpg) 0 -472px no-repeat}
-.reg-guide-lucky a.right-login-qq i{background-position:-62px -472px}
-.reg-guide-lucky a.right-login-qq{margin-right:10px;}
-.reg-guide-lucky a.right-login-qq span,.reg-guide-lucky a.right-login-weibo span{text-align:center;width:60px;height:30px;line-height:30px;display:block}
-.reg-guide-lucky-content{width:410px;height:300px;float:right;margin-top:150px}
-.reg-guide-lucky-content p{color:#ccc;font-size:14px;height:50px;line-height:80px;}
-.reg-guide-lucky-content p a{color:#ff7e69}
-.reg-guide-lucky-content p a:hover{color:#e05857}
-.reg-guide-lucky-content .btn{margin:20px 0;width:100%;overflow:hidden}
-.reg-guide-lucky-login{float:left;background:url(../img/reg.guide.lucky.jpg) -125px -472px no-repeat;margin-right:15px;width:240px;height:60px;line-height:56px;text-align:center;font-size:32px;color:#fff;text-shadow:0 1px 0 #03b98c}
-.reg-guide-lucky-login:focus{outline:none;-moz-outline:none}
-.reg-guide-lucky-login:hover{background-position:-125px -536px;color:#fff}
-.reg-guide-lucky-content dl{margin-top:20px;color:#666}
-.reg-guide-lucky-content dt{font-size:16px;margin-bottom:10px;color:#ff7e69}
-.reg-guide-lucky-content dd{width:380px;font-size:14px;line-height:26px}
 
 /*等级*/
 .level_icon{display:inline-block;width:78px;height:21px;overflow:hidden;background:url(../img/level_ico.png) no-repeat;_background:url(../img/level_ico.ie66b1c.png?v=01) no-repeat}
@@ -1304,125 +1268,6 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .icon_lv99{background-position:0 -2147px}
 
 
-/*进度条上的等级图标*/
-.level_text{display:block;width:25px;height:7px;overflow:hidden;background:url(../img/level_text.png) no-repeat;_background:url(../img/level_text.ie6.png) no-repeat}
-.text_lv1{background-position:0 -2px}
-.text_lv2{background-position:0 -11px}
-.text_lv3{background-position:0 -20px}
-.text_lv4{background-position:0 -29px}
-.text_lv5{background-position:0 -38px}
-.text_lv6{background-position:0 -47px}
-.text_lv7{background-position:0 -56px}
-.text_lv8{background-position:0 -65px}
-.text_lv9{background-position:0 -74px}
-.text_lv10{background-position:0 -83px}
-.text_lv11{background-position:0 -92px}
-.text_lv12{background-position:0 -101px}
-.text_lv13{background-position:0 -110px}
-.text_lv14{background-position:0 -119px}
-.text_lv15{background-position:0 -128px}
-.text_lv16{background-position:0 -137px}
-.text_lv17{background-position:0 -146px}
-.text_lv18{background-position:0 -155px}
-.text_lv19{background-position:0 -164px}
-.text_lv20{background-position:0 -173px}
-.text_lv21{background-position:0 -182px}
-.text_lv22{background-position:0 -191px}
-.text_lv23{background-position:0 -200px}
-.text_lv24{background-position:0 -209px}
-.text_lv25{background-position:0 -218px}
-.text_lv26{background-position:0 -227px}
-.text_lv27{background-position:0 -236px}
-.text_lv28{background-position:0 -245px}
-.text_lv29{background-position:0 -254px}
-.text_lv30{background-position:0 -263px}
-.text_lv31{background-position:0 -272px}
-.text_lv32{background-position:0 -281px}
-.text_lv33{background-position:0 -290px}
-.text_lv34{background-position:0 -299px}
-.text_lv35{background-position:0 -308px}
-.text_lv36{background-position:0 -317px}
-.text_lv37{background-position:0 -326px}
-.text_lv38{background-position:0 -335px}
-.text_lv39{background-position:0 -344px}
-.text_lv40{background-position:0 -353px}
-.text_lv41{background-position:0 -362px}
-.text_lv42{background-position:0 -371px}
-.text_lv43{background-position:0 -380px}
-.text_lv44{background-position:0 -389px}
-.text_lv45{background-position:0 -398px}
-.text_lv46{background-position:0 -407px}
-.text_lv47{background-position:0 -416px}
-.text_lv48{background-position:0 -425px}
-.text_lv49{background-position:0 -434px}
-.text_lv50{background-position:0 -443px}
-.text_lv51{background-position:0 -452px}
-.text_lv52{background-position:0 -461px}
-.text_lv53{background-position:0 -470px}
-.text_lv54{background-position:0 -479px}
-.text_lv55{background-position:0 -488px}
-.text_lv56{background-position:0 -497px}
-.text_lv57{background-position:0 -506px}
-.text_lv58{background-position:0 -515px}
-.text_lv59{background-position:0 -524px}
-.text_lv60{background-position:0 -533px}
-.text_lv61{background-position:0 -542px}
-.text_lv62{background-position:0 -551px}
-.text_lv63{background-position:0 -560px}
-.text_lv64{background-position:0 -569px}
-.text_lv65{background-position:0 -578px}
-.text_lv66{background-position:0 -587px}
-.text_lv67{background-position:0 -596px}
-.text_lv68{background-position:0 -605px}
-.text_lv69{background-position:0 -614px}
-.text_lv70{background-position:0 -623px}
-.text_lv71{background-position:0 -632px}
-.text_lv72{background-position:0 -641px}
-.text_lv73{background-position:0 -650px}
-.text_lv74{background-position:0 -659px}
-.text_lv75{background-position:0 -668px}
-.text_lv76{background-position:0 -677px}
-.text_lv77{background-position:0 -686px}
-.text_lv78{background-position:0 -695px}
-.text_lv79{background-position:0 -704px}
-.text_lv80{background-position:0 -713px}
-.text_lv81{background-position:0 -722px}
-.text_lv82{background-position:0 -731px}
-.text_lv83{background-position:0 -740px}
-.text_lv84{background-position:0 -749px}
-.text_lv85{background-position:0 -758px}
-.text_lv86{background-position:0 -767px}
-.text_lv87{background-position:0 -776px}
-.text_lv88{background-position:0 -785px}
-.text_lv89{background-position:0 -794px}
-.text_lv90{background-position:0 -803px}
-.text_lv91{background-position:0 -812px}
-.text_lv92{background-position:0 -821px}
-.text_lv93{background-position:0 -830px}
-.text_lv94{background-position:0 -839px}
-.text_lv95{background-position:0 -848px}
-.text_lv96{background-position:0 -857px}
-.text_lv97{background-position:0 -866px}
-.text_lv98{background-position:0 -875px}
-.text_lv99{background-position:0 -884px}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @charset "utf-8";
 /* CSS Document */
 body{}
@@ -1430,123 +1275,6 @@ body{}
 
 #iframe-login,#iframe-reg,.main-user{width:920px;padding:30px 40px 40px;background:#fff;margin:20px auto;border-bottom:2px solid #e4e4e2;overflow:hidden}
 
-/*登录*/
-#iframe-login{height:300px}
-#iframe-login li{display:block;height:45px;width:500px;text-align:center;margin:5px 0 15px 5px;_margin-left:0;line-height:45px}
-#iframe-login li.user-action{width:300px;height:22px;line-height:22px;margin:15px 0 15px 5px;_margin-left:3px;color:#666}
-
-.login-left,.login-right{width:600px;float:left}
-.login-left dt{color:#ff8976;font-size:20px;line-height:60px;margin-bottom:21px}
-.loginp{height:20px;overflow:hidden}
-.loginp .title{float:left;width:160px;height:20px;line-height:20px;font-size:14px;color:#666}
-#login-prompt{float:left;width:140px;height:20px;line-height:20px;font-size:12px;color:#ff2020;text-indent:25px;}
-#login-prompt .error,#login-prompt .valid{margin-top:0}
-
-.username,.password,.email,.pasw,.pasw2,.uname,.vcode{float:left;position:relative;z-index:2;display:block;width:253px;height:43px;line-height:43px;padding-left:44px;border:1px solid #e2e2e2;font-size:14px;color:#333;background:url(../img/mahua_common.png) -968px 0 no-repeat}
-.pass-value{float:left;position:relative;z-index:1;margin-left:-260px;font-size:14px;text-align:left;color:#c6c6c6}
-.pass-value-login{margin-left:-255px;height:45px;line-height:45px;}
-.pass-value-login{margin-left:-255px;height:45px;line-height:45px;}
-.pass-value-captcha_code{margin-left:-182px;}
-.password,.pasw,.pasw2{background-position:-968px -43px}
-.vcode{background:none;padding-left:10px;width:170px;margin-right:10px}
-#vcode{width:104px;height:43px;border:1px solid #e2e2e2;float:left;margin-right:5px;cursor:pointer}
-#iframe-login #form_back_password_email li{text-align:left}
-#iframe-login #form_back_password_email li.vcodeli span{position:relative;margin-top:2px;}
-#iframe-login #form_back_password_email li a{margin-left:5px;height:20px;line-height:22px;position:absolute;margin-top:25px;color:#969696}
-
-
-
-.email{background-position:-968px -80px}
-.uname{background-position:-968px 0}
-
-#keep,.Remember-account{float:left;vertical-align:middle;border-color:#666}
-.user-action a{float:right;color:#666}
-.login-left .btn,.login-right .btn{display:block;float:left;background:#04ce9b;border:none;width:300px;height:40px;font-size:20px;line-height:40px;text-align:center;color:#fff;cursor:pointer}
-.login-left .btn:hover{background:#00b789}
-.login-right .btn:hover{background:#e56a56}
-.login-right{width:320px;float:right}
-.login-right .or{float:left;margin-top:15px;width:19px;height:240px;border-left:1px solid #e4e4e4;color:#e4e4e4}
-.login-right .or span{display:block;margin:100px 0 0 -10px;width:20px;height:40px;line-height:40px;background:#fff;text-align:center;_position:relative}
-.login-right dl{float:left;width:160px;margin:50px 0 0 50px;overflow:hidden;height:220px}
-.login-right dl dt.title{display:block;text-align:center;width:100%;margin-bottom:20px}
-dd.weibo,dd.qq{display:block;width:64px;height:96px;float:left}
-dd.weibo a,dd.qq a{display:block;width:100%;height:100%;color:#666}
-dd.weibo a:hover,dd.qq a:hover,.user-action a:hover{color:#ff7e69}
-dd.weibo{margin-right:30px}
-dd.weibo span,dd.qq span{display:block;height:32px;line-height:32px;text-align:center;overflow:hidden}
-dd.weibo i,dd.qq i{display:block;width:64px;height:64px;background:url(../img/mahua_common.png) -832px 0px no-repeat}
-dd.qq i{background-position:-896px 0px}
-.login-right .btn{background:#ff7e69;width:160px;}
-.login-right .btn:hover{color:#fff}
-dd.login-reg{float:left;margin-top:44px}
-
-#iframe-reg .login-left form{margin-top:15px;width:520px;overflow:hidden}
-#iframe-reg .login-left{width:520px;}
-#iframe-reg li{display:block;height:45px;width:500px;text-align:center;margin:5px 0 15px 5px;_margin-left:0;line-height:45px}
-span.error{float:left;display:block;height:20px;line-height:20px;overflow:hidden;margin-top:10px;text-align:left;width:175px;_width:172px;color:#ff2020;background:url(../img/mahua_common.png) -980px -263px no-repeat;text-indent:25px;}
-span.valid{background-position:-980px -281px}
-.email,.pasw,.pasw2,.uname{margin-right:5px;width:253px}
-.email:focus,.pasw:focus,.pasw2:focus,.uname:focus,.vcode:focus{outline:none;border-color:#ff7e69;box-shadow:0 0 5px #ff7e69;-webkit-box-shadow:0 0 5px #ff7e69;-moz-box-shadow:0 0 5px #ff7e69}
-#iframe-reg .login-right dl{margin:50px 0 0 10px}
-#iframe-reg .btn{background:#ff7e69}
-
-#iframe-reg li.button{width:300px}
-#iframe-reg li.gender{width:400px;padding-left:80px;margin:20px 0 10px 5px;line-height:45px;}
-#gender{border:none;width:0;height:0;background:none;margin-right:82px;float:left;overflow:hidden}
-.female,.male{display:block;float:left;width:60px;height:27px;line-height:27px;text-indent:30px;background:url(../img/mahua_common.png) -972px -162px no-repeat;font-size:14px;margin-right:20px}
-.male{background-position:-972px -233px;margin-right:0;text-indent:30px}
-.female:hover,.female-hover{background-position:-972px -125px;color:#ea689f}
-.male:hover,.male-hover{background-position:-972px -199px;color:#00b7ee}
-
-.submit_name_main{width:1000px;background:#fff;margin:20px auto 0}
-.submit_name{padding:100px 0;width:700px;margin-left:300px;_margin-left:150px}
-.submit_name dt{color:#ff8976;font-size:20px;line-height:30px;margin-bottom:21px}
-#form_submit_name li{float:none;overflow:hidden}
-#form_submit_name li .pass-value{display:block;height:45px;line-height:45px;}
-#form_submit_name li.gender{width:400px;padding-left:80px;margin:20px 0 30px 5px;line-height:45px;}
-#form_submit_name .btn{color:#fff;width:300px;height:40px;line-height:40px;text-align:center;background:#04ce9b;border:none;font-size:20px;cursor:pointer}
-
-/*邮箱验证*/
-.validation-Email{padding-bottom:30px}
-.validation-Email-content dt{color:#ff8976;font-size:20px;line-height:60px;margin-bottom:21px}
-.validation-Email-content dd{line-height:30px;font-size:16px;color:#333}
-.validation-Email-content dd.title{font-size:20px;margin-bottom:5px}
-.validation-Email-content dd span{color:#ff7e69;margin:0 5px}
-.validation-Email-content dd a,.back-password dd p a{display:block;background:#04ce9b;width:200px;height:40px;line-height:40px;text-align:center;color:#fff;font-size:20px;margin-top:10px}
-.validation-Email-content dd a:hover,.back-password dd p a:hover{background:#00b789}
-
-.validation-Email-orter{margin-top:100px}
-.validation-Email-orter dt{color:#333;font-size:16px;margin-bottom:5px}
-.validation-Email-orter dd{color:#999;height:22px;line-height:22px;overflow:hidden}
-.validation-Email-orter dd a{color:#47abff}
-
-/*找回密码*/
-
-.back-password .title{font-size:20px;margin-bottom:15px}
-.back-password dd p{font-size:16px;line-height:24px}
-.back-password dd p span{color:#ff7e69}
-.back-password dd p.prompt{font-size:12px;color:#969696;font-family:Arial;margin-top:30px}
-.back-password dd p a{margin-top:15px}
-
-#user_email{color:#969696;font-size:20px;margin-bottom:20px}
-
-/*重置密码成功弹框提示*/
-#reset_prompt_box{display:none;background:#fff; border-radius:5px;}
-#reset_prompt_box dl{padding-left:66px;width:330px;margin:150px auto 0;height:50px;background:url(../img/mahua_common.png) -178px -80px no-repeat}
-#reset_prompt_box dt{font-size:20px}
-#reset_prompt_box dd{font-size:14px;color:#969696}
-#reset_prompt_box dd a{color:#ff7e69}
-
-/*弹框登录*/
-.login-main{width:720px;padding:30px 35px 40px;background:#fff;overflow:hidden}
-.login-main .login-left{float:left;width:500px}
-.login-main .login-left .password{border-top:0}
-.login-main .login-left .user-action{float:left;height:16px;line-height:16px;margin:10px 0 20px;width:300px;overflow:hidden}
-.login-main .login-right{float:right;width:220px}
-.login-main .login-right dl{margin-left:30px}
-.login-main .login-left dt{line-height:40px}
-.login-main .loginp{margin-bottom:10px}
-.login-main #form_login .btn{float:left}@charset "utf-8";
 /* CSS Document */
 .user-btn a,dt,.user-show .t,.app-ios a,.app-android a,.app-winPhone a,.joke-ba .joke-before,.joke-ba .joke-after,.recomment-head a,#comment div input,.sarch-results,.main-tags li.img a,#reward .input-btn input,.buy_box_message,.history-top{font-family:"微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体";_font-weight:bold}
 
@@ -1563,15 +1291,15 @@ span.valid{background-position:-980px -281px}
 .main .right{width:300px;margin-right:0;overflow:hidden}
 .user-operation{overflow:hidden}
 .user-operation li{float:left;width:100%;overflow:hidden}
-.user-show{width:268px;height:80px;padding:15px 16px;background:url(../img/mahua_commonb72f.png?v=04) #fff 0 -243px no-repeat;overflow:hidden}
+.user-show{width:268px;height:80px;padding:15px 16px;background:url(../img/mahua_common.png) #fff 0 -243px no-repeat;overflow:hidden}
 .user-show img,.user-show i,.right-top-avatar{display:block;width:60px;height:60px;float:left;}
 .user-show a.right-login-web{text-align:center;display:block;width:60px;height:90px;line-height:150px;overflow:hidden;float:left}
 .user-show a.right-login-qq,.user-show a.right-login-weibo{display:block;width:60px;height:90px;overflow:hidden;float:left}
 .user-show a.right-login-qq i,.user-show a.right-login-weibo i{width:60px;height:60px;display:block}
 .user-show a.right-login-qq span,.user-show a.right-login-weibo span{text-align:center;width:60px;height:30px;line-height:30px;display:block}
-.user-show a.right-login-qq i,.user-show a.right-login-weibo i{background:url(../img/mahua_commonb72f.png?v=04) -352px -459px no-repeat}
+.user-show a.right-login-qq i,.user-show a.right-login-weibo i{background:url(../img/mahua_common.png) -352px -459px no-repeat}
 .user-show a.right-login-weibo i{background-position:-290px -459px}
-.user-show a.right-login-web{background:url(../img/mahua_commonb72f.png?v=04) -16px -259px no-repeat;margin-right:32px;color:#ff7e69}
+.user-show a.right-login-web{background:url(../img/mahua_common.png) -16px -259px no-repeat;margin-right:32px;color:#03a8b1}
 .user-show a.right-login-web:hover{color:#e05857}
 .user-show a.right-login-qq,.user-show a.right-login-weibo{margin-right:18px}
 .user-show a.right-login-weibo{margin-right:0}
@@ -1584,7 +1312,7 @@ span.valid{background-position:-980px -281px}
 .user-show dd em{font-style:normal;color:#ff845b}
 
 .user-btn{padding:10px 1px;background:#fafafa;border-bottom:2px solid #e4e4e2;border-top:1px solid #f1f1f1;width:298px;text-align:center;}
-.user-operation .checkin-right-top , .user-operation .do-task,.user-operation .friends{display:inline-block;width:96px;*width:92px;height:16px;line-height:16px;padding-top:50px;background:url(../img/mahua_commonb72f.png?v=04) -430px 0 no-repeat}
+.user-operation .checkin-right-top , .user-operation .do-task,.user-operation .friends{display:inline-block;width:96px;*width:92px;height:16px;line-height:16px;padding-top:50px;background:url(../img/mahua_common.png) -430px 0 no-repeat}
 .user-operation .checkin-right-top span,.user-operation .do-task span,.user-operation .friends span{display:block;text-align:center;width:100%;}
 .user-operation .do-task{border-right:1px solid #f1f1f1;border-left:1px solid #f1f1f1}
 .user-operation .friends{background-position:-630px 0}
@@ -1597,7 +1325,7 @@ span.valid{background-position:-980px -281px}
 
 .right-top-avatar{float:left;width:195px}
 .right-top-avatar-a{display:block;width:60px;height:60px;margin-right:10px;float:left}
-.right-top-avatar-a a{color:#ff7e69;}
+.right-top-avatar-a a{color:#03a8b1;}
 .right-top-avatar-a a:hover{color:#be321c;}
 
 .user-show .right-top-avatar-a i{display:block;margin-top:-60px;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
@@ -1611,7 +1339,7 @@ span.valid{background-position:-980px -281px}
 .tags-list dd,.new-pic dd,.new-pic-text dd,.editors-recomment dd,.hot-24 dd{overflow:hidden}
 .tags-list dt{margin-bottom:10px}
 .tags-list dd a{display:inline-block;margin-right:15px;color:#666;line-height:26px;}
-.tags-list dd a:hover{color:#ff7e69}
+.tags-list dd a:hover{color:#03a8b1}
 
 .new-pic a,.editors-recomment-img a{display:block;float:left;width:120px;height:120px;margin-top:10px;overflow:hidden}
 .new-pic-left{margin-right:30px}
@@ -1624,7 +1352,7 @@ span.valid{background-position:-980px -281px}
 .special-left{float:left;width:480px;height:96px;overflow:hidden}
 .special-left img{float:left;width:125px;height:96px;margin-right:20px;}
 .special-left .title{float:left;display:block;width:335px;font-size:24px;color:#555;line-height:36px;height:36px;overflow:hidden}
-.special-left .title:hover{color:#ff7e69}
+.special-left .title:hover{color:#03a8b1}
 .special-left p{float:left;width:335px;_width:332px;font-size:12px;margin-top:14px;color:#999;text-indent:24px;line-height:22px;height:44px;overflow:hidden}
 .special-right{float:right;width:165px}
 .special-right .title{margin-top:-21px;float:right;padding:6px 0 0 6px;width:111px;height:73px;background:url(../img/mahua_index.png) 0 -130px no-repeat;position:relative}
@@ -1695,7 +1423,7 @@ span.valid{background-position:-980px -281px}
 .r-sorting-user-title{float:left;width:210px;overflow:hidden}
 .r-sorting-user-title p{float:left;width:207px;line-height:18px;margin-top:3px;overflow:hidden}
 .r-sorting-user-title a{color:#999;float:left}
-.r-sorting-user-title a:hover{color:#ff7e69}
+.r-sorting-user-title a:hover{color:#03a8b1}
 .r-sorting-level{margin:4px 0 0 6px;}
 
 
@@ -1839,23 +1567,17 @@ span.valid{background-position:-980px -281px}
 
 .comment-ding{float:left;width:80px}
 .comment-ding a{display:block;margin:12px 12px 0 0;height:20px;line-height:20px;float:right;background:url(../img/mahua_common.24.png) -199px -492px no-repeat;_background:url(../img/mahua_common.24.ie6.png) -199px -492px no-repeat;text-indent:28px}
-.comment-ding a:hover,.comment-ding a.hover{background-position:-199px -519px;color:#ff7e69}
+.comment-ding a:hover,.comment-ding a.hover{background-position:-199px -519px;color:#03a8b1}
 
 .comment .page{padding:20px 0 10px;}
 .comment .page a,.comment .page .current{border:1px solid #f1f1f1;border-bottom:2px solid #e8e7e6;padding:0 14px}
-.comment .page .current,.comment .page a:hover{border-color:#ff845b;background:#ff845b;color:#fff}
+.comment .page .current,.comment .page a:hover{border-color:#ff845b;background:#03a8b1;color:#fff}
 .comment .page .current{padding:0 8px}
-/*列表页神回复*/
-.comment-list-joke-list{width:640px;margin:35px -15px 0;padding:0 15px}
-.comment-list-joke-list .comment-list-line{padding:0;height:1px;border:none;border-top:1px solid #e2e2e2; overflow:visible}
-.comment-list-joke-list .comment-list-line span{display:block;padding:0 5px;background:#fff;position:absolute;z-index:5;margin-left:10px;color:#b5b5b5;height:14px;line-height:14px;margin-top:-7px}
-.comment-list-joke-list li{padding:15px 0}
-.comment-list-joke-list li.noborder{border:none}
 
 /*搜索结果*/
 .search .left,.search .right{margin-top:0}
 .sarch-results{font-size:20px;color:#444;padding:30px 15px}
-.sarch-results span{color:#ff7e69}
+.sarch-results span{color:#03a8b1}
 .search-right-tags-list{margin-top:20px}
 
 /*笑点列表页面*/
@@ -1870,45 +1592,6 @@ span.valid{background-position:-980px -281px}
 .main-tags li.img a,.main-tags li.img a:hover{width:130px;height:130px;line-height:130px;color:#fff;font-size:20px;background:none;border:none}
 .main-tags li.img span{float:left;display:block;text-align:center;width:130px;height:130px;line-height:130px; position:absolute;top:0;left:0}
 
-/*打赏、包养弹框样式*/
-.joke-buy-box{display:none; position:absolute; z-index:5;width:280px;}
-.joke-buy-box dl{overflow:hidden;padding-top:58px;}
-.joke-buy-box dt{font-size:16px;text-indent:114px;margin-bottom:20px;text-shadow:0px 1px 0px #dc4929;color:#fff;height:46px;line-height:46px}
-.joke-buy-box dt span{color:#ffdc62}
-
-.joke-buy-box .input-radio{height:72px;padding-left:13px;width:267px}
-.joke-buy-box .input-radio span{float:left;width:78px;height:24px;margin:10px 7px 0 0;background:url(../img/mahua_common.png) #f8f8f8 -969px -939px no-repeat;border:1px solid #e7e7e7;text-indent:28px;line-height:24px;color:#999;text-shadow:0 1px 0 #fff;border-radius:2px;cursor:pointer}
-.joke-buy-box .input-radio span:hover{border-color:#e59a00}
-.joke-buy-box .input-radio span.hover{background-position:-195px -216px;border-color:#e59a00;color:#d17e00}
-.joke-buy-box .message,.buy_error_message{height:32px;line-height:32px;color:#ff4000;text-align:center}
-.buy_error_message{height:28px;line-height:28px;}
-.joke-buy-box .input-btn{height:30px;line-height:30px;text-align:center;color:#fff}
-.joke-buy-box .input-btn input{width:70px;height:30px;line-height:30px;font-size:16px;color:#fff;border:none;cursor:pointer}
-.reward-submit{margin-right:20px;background:#ff845b}
-.reward-close{background:#9b7e56}
-
-.obtain-box{height:295px;background:url(../img/joke.24.png) no-repeat;_background:url(../img/joke.24.ie6.png) no-repeat}
-.obtain-box dd.oed{height:70px;padding:15px 0;}
-.obtain-box p.title{font-size:16px;line-height:35px;height:35px;overflow:hidden;text-align:center}
-.obtain-box p.title span{margin:0 5px;color:#ff845b}
-
-.buy-box{height:141px;padding-top:148px;background:url(../img/joke.24.png) 0 -305px no-repeat;_background:url(../img/joke.24.ie6.png) 0 -305px no-repeat}
-.buy-box p.title{font-size:16px;line-height:26px;height:26px;overflow:hidden;text-align:center}
-.buy-box p.title span{margin:0 5px;color:#ff845b}
-.buy_box_message{display:none}
-.buy-box .message{font-size:16px;color:#ff4102;padding-top:8px}
-.buy-box .message_two{text-align:center;font-size:20px;color:#ff4102}
-#reward-bg{z-index:4;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;_position:absolute !important;_height:1000px !important;filter:alpha(opacity=0);-moz-opacity:0;opacity:0}
-.buy-box-success{background:url(../img/joke.24.png) 0 -607px no-repeat;_background:url(../img/joke.24.ie6.png) 0 -607px no-repeat}
-
-.buy-tips{position:absolute;display:none;top:-44px;z-index:10;width:162px;height:48px;padding-top:7px;background:url(../img/joke.246b1c.png?v=01) -338px -18px no-repeat;overflow:hidden}
-.buy-tips i{position:absolute;top:3px;right:3px;display:block;width:7px;height:7px; cursor:pointer}
-.buy-tips p{text-indent:0;line-height:20px;color:#b2b2b2;height:20px;overflow:hidden;text-align:center}
-
-/*强力推荐*/
-#recomment_high{background:#fff;height:380px}
-#recomment_hot{background:#fff;height:328px}
-#recomment_tags{background:#fff}
 
 /*详情页右侧图片推荐*/
 .r-pic-recomment-view{width:290px;padding:10px 0 6px 10px;overflow:hidden;margin-top:10px;background:#fff;border-bottom:1px solid #e4e4e2}

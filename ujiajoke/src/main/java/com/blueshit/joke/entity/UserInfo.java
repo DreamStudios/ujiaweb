@@ -65,6 +65,10 @@ public class UserInfo implements Serializable {
     @Column(nullable = false, columnDefinition = "int(11) default 0")
     private int experience = 0;
 
+    //快乐家族级别
+    @Column(nullable = false, columnDefinition = "varchar(255) default '实习生'")
+    private String level = "实习生";
+
     //创建时间
     @Column(nullable = false)
     private Date createTime = new Date();
@@ -265,6 +269,22 @@ public class UserInfo implements Serializable {
 
     public void setVipJokeSet(List<VipJoke> vipJokeSet) {
         this.vipJokeSet = vipJokeSet;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }
 
