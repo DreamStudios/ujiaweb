@@ -4,6 +4,8 @@ import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 /**
  *  笑话接口
  * Created by shulin on 2014/12/18.
@@ -25,4 +27,19 @@ public interface JokeService {
      * @return
      */
     public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page);
+
+    /**
+     * 查询非此用户的笑话列表
+     * @param uid 用户ID
+     * @param number 查询条数
+     * @return
+     */
+    public List<Joke> getOtherUserJokeList(int uid,int number);
+
+    /**
+     * 通过ID获取笑话内容
+     * @param id
+     * @return
+     */
+    public Joke getJokeById(int id);
 }

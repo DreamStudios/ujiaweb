@@ -15,4 +15,11 @@ public interface UserInfoRepository extends BaseRepository<UserInfo, Integer>  {
      * 通过邮箱查找用户信息
      */
     public UserInfo findByEmail(String email);
+
+    /**
+     * 通过用户ID查找用户信息
+     * @param uid 用户ID
+     * @return
+     */
+    public UserInfo findByUid(int uid);
 }

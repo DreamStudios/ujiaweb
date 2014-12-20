@@ -36,7 +36,7 @@ public class StaticHtmlController {
             request.getSession().setAttribute("loginStatus", "false");
         }
         //获取今日之星
-        List<UserInfo> list = userInfoService.getTodayStar();
+        List<UserInfo> list = userInfoService.getTodayStar(30);
         model.addAttribute("list",list);
         return "login";
     }

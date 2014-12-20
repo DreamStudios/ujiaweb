@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2014/12/18.
  */
@@ -44,5 +46,27 @@ public class JokeServiceImpl implements JokeService {
         }
         hql.append(" order by updateTime desc");
         return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
+    }
+
+    /**
+     * 查询非此用户的笑话列表
+     * @param uid 用户ID
+     * @param number 查询条数
+     * @return
+     */
+    @Override
+    public List<Joke> getOtherUserJokeList(int uid, int number) {
+        StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND userInfo.uid != "+uid);
+        hql.append("ORDER BY updateTime DESC");
+        return jokeRepository.findTopByHql(hql.toString(),number);
+    }
+
+    /**
+     * 通过ID获取笑话内容
+     * @param id
+     * @return
+     */
+    public Joke getJokeById(int id){
+        return jokeRepository.findOne(id);
     }
 }

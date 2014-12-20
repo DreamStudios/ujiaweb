@@ -1,15 +1,19 @@
 package com.blueshit.joke.controller;
 
+import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.UserInfoService;
 import com.blueshit.joke.validator.UserInfoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户信息操作
@@ -24,11 +28,13 @@ public class UserInfoController {
 
     private UserInfoValidator userInfoValidator;
     private UserInfoService   userInfoService;
+    private JokeService jokeService;
 
     @Autowired
-    public UserInfoController(UserInfoValidator userInfoValidator, UserInfoService userInfoService) {
+    public UserInfoController(UserInfoValidator userInfoValidator, UserInfoService userInfoService, JokeService jokeService) {
         this.userInfoValidator = userInfoValidator;
         this.userInfoService = userInfoService;
+        this.jokeService = jokeService;
     }
 
     /**
@@ -181,7 +187,21 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping({"{id}/userCenter.html"})
-    public String userCenter(@PathVariable int id){
+    public String userCenter(Model model,@PathVariable int id,Integer page){
+        UserInfo userInfo = userInfoService.getUserByUid(id);
+        int pagenumber = page == null ? 1 : page;
+        //查询此用户笑话列表
+        Page<Joke> pages = jokeService.getJokePagesAll_byType(userInfo, 2, pagenumber);
+        //查询其它用户信息
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(12);
+        //查询非此用户的笑话列表
+        List<Joke> jokeList = jokeService.getOtherUserJokeList(userInfo.getUid(),10);
+
+        model.addAttribute("userInfo",userInfo);
+        model.addAttribute("pages",pages);
+        model.addAttribute("userInfoList",userInfoList);
+        model.addAttribute("jokeList",jokeList);
+        model.addAttribute("newPage",pagenumber);
         return "/detail/usercenter";
     }
 

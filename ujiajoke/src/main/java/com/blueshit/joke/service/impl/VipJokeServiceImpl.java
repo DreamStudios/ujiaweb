@@ -25,4 +25,13 @@ public class VipJokeServiceImpl implements VipJokeService{
         hql.append(" order by updateTime desc");
         return vipJokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
+
+    /**
+     * 通过笑话ID获取笑话内容
+     * @param id
+     * @return
+     */
+    public VipJoke getVipJokeById(int id){
+        return vipJokeRepository.findOne(id);
+    }
 }

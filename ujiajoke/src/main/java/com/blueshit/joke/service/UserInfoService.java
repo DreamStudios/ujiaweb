@@ -18,7 +18,7 @@ public interface UserInfoService {
      * 获取今日之星
      * @return
      */
-    public List<UserInfo> getTodayStar();
+    public List<UserInfo> getTodayStar(int number);
 
     /**
      * 通过用户账号查找用户信息
@@ -63,4 +63,11 @@ public interface UserInfoService {
      * @return
      */
     public boolean updatePassword(String email, String resetCode, String password);
+
+    /**
+     * 通过用户ID查找用户信息
+     * @param uid
+     * @return
+     */
+    public UserInfo getUserByUid(int uid);
 }

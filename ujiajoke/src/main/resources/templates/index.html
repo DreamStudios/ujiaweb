@@ -96,9 +96,9 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
 			<dt>
-				<a th:href="@{userCenter.html(id=${page.userInfo.uid})}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
-				<p class="joke-uname"><a th:href="@{userCenter.html(id=${page.userInfo.uid})}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
-				<span class="joke-title"><a th:href="@{jokeDetail.html(id=${page.jid})}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+				<a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+				<p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
+				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
             <dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />

@@ -15,4 +15,11 @@ public interface VipJokeService {
      * @return
      */
     public Page<VipJoke> getVipJokePage(int page);
+
+    /**
+     * 通过笑话ID获取笑话内容
+     * @param id
+     * @return
+     */
+    public VipJoke getVipJokeById(int id);
 }

@@ -4,13 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
-    <title>麻花"阿狸爱桃子"发布的笑话_快乐麻花</title>
-    <link rel="canonical" href="http://user.mahua.com/40242" />
-    <link rel="apple-touch-icon-precomposed" sizes="48x48" href="http://static.mhimg.com/public/img/icon_48.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://static.mhimg.com/public/img/icon_72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://static.mhimg.com/public/img/icon_114.png" />
+    <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
+    <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
+    <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
     <link type="text/css" href="../css/usercenter.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
     <script type="text/javascript" src="../js/ujiajoke.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -29,17 +29,30 @@
 	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
 </script>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:fragment="index_header">
     <!--标题开始-->
     <div class="header-top">
-        <div class="header-top-content">
+        <div class="header-top-content"  th:with="logged=${#authentication.getName() ne 'anonymousUser'}">
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin">
-                <a href="https://passport.mahua.com/account/register" class="top-reg" target="_blank" rel="nofollow">注册</a>
-                <a href="javascript:void(0);" class="top-login loginClick" rel="nofollow">登录</a>
-                <span class="border-nav-top">|</span>
-                <a href="http://user.mahua.com/connect/weibo" target="_blank" class="top-login-weibo" title="新浪微博登录" rel="nofollow">微博登录</a>
-                <a href="http://user.mahua.com/connect/tencent" target="_blank" class="top-login-qq" title="QQ登录" rel="nofollow">QQ登录</a>
+            <div id="islogin" class="islogin" th:if="${logged eq false}">
+                <a href="../register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
+                <a href="../login.html" class="top-login" rel="nofollow">登录</a>
+            </div>
+            <div class="islogin" th:if="${logged eq true}">
+                <div class="my-center">
+                    <i title="个人中心"></i>
+                    <ul>
+                        <li><a href="../myJoke.html">我的投稿</a></li>
+                        <li><a href="../vip/vip_index.html">VIP专题</a></li>
+                        <li><a href="../profile.html">个人资料</a></li>
+                        <li><a href="../inviteFriends.html">邀请好友</a></li>
+                        <li class="noborder"><a href="../logout.html" rel="nofollow">退出</a></li>
+                    </ul>
+                </div>
+                <div class="my-message">
+                    <a href="../recommended.html" target="_blank"><i class="message-new" title="精品推荐"></i></a>
+                </div>
+                <span class="username-top"><a href="../profile.html">JackAn</a>，欢迎回来!</span>
             </div>
         </div>
     </div>
@@ -48,11 +61,11 @@
     <div class="header-nav">
         <div class="logo"><a href="../index.html"><h1>笑话</h1></a></div>
         <ul>
-            <li> <a href="../index.html" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="newjokes/index.html" title="按时间先后排序">囧图</a></li>
-            <li><a href="shenhuifu.html" >糗事</a></li>
-            <li><a href="user/lipin/index.html" >内涵图</a></li>
-            <li><a href="user/lipin/index.html" >会员专享<i></i></a></li>
+            <li><a href="../index.html" title="按热门程度排序">首页</a></li>
+            <li><a href="../jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="../qiushi.html">糗事</a></li>
+            <li><a href="../neihan.html">内涵图</a></li>
+            <li><a href="../vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -64,15 +77,15 @@
     <!--个人信息开始-->
 	<div class="user-banner">
 		<span id="editImg">
-			<img src="../img/avatar_2.jpg"/>
+			<img src="../img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + userInfo.photo}"/>
 			<i></i>
 		</span>
 		<dl class="user-info">
-			<script type="text/javascript">var score=0;</script>
-			<dt><span>阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
+			<dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="../about/shengjiguize.html" th:text="${'家族级别：'+userInfo.level}" target="_blank">实习生</a></dt>
 			<dd class="obtain">
-				积分：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				等级：<span class="out">初出茅庐</span>
+				经验值：<span class="in" th:text="${userInfo.experience}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
 			</dd>
 			<dd class="mymabi">Ta的笑话：<span>8424</span></dd>
 			<dd class="obtain">
@@ -86,37 +99,13 @@
 	<!--左侧信息开始-->
 	<div class="left">
 	  <!-- 笑话列表开始 -->
-	  <dl class="mahua" id="joke_770883" mahua="770883">
-        <dt>
-            <span class="joke-title"><a href="javascript:alert(1);" target="_blank">这悲惨的人生</a></span>
-        </dt>
-        <dd class="content">
-           <img src="../img/11.gif" alt=""  width="275" height="211"/>
-        </dd>
-        <!-- 神回复  -->
-        <dd class="operation">
-            <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i>0</i></a>
-            <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="../img/cai.png" /><i>0</i></a>
-            <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="../img/comment.png" /><i>0条评论</i></a>
-            <div class="share">
-                <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
-                <div class="share-btn">
-                    <span>分享到：</span>
-                    <a href="javascript:alert(1);" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
-                    <a href="javascript:alert(1);" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
-                    <a href="javascript:alert(1);" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
-                    <a href="javascript:alert(1);" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                    <a href="javascript:void(0)" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" data-url="http://www.mahua.com/xiaohua/905491.htm">复制网址</a>
-                 </div>
-             </div>
-          </dd>
-		</dl>
-		<dl class="mahua" id="joke_770131" mahua="770131">
+		<dl class="mahua" th:each="page :${pages}">
 			<dt>
-				<span class="joke-title"><a href="javascript:alert(1);" target="_blank">【桃姐淘新闻】北京马拉松看醉众人</a></span>
+				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
 			<dd class="content">
-				<img src="http://i2.mhimg.com/kl688file/2014-10/2014102017204963227.jpg" height="1926" width="420"  alt="【桃姐淘新闻】北京马拉松看醉众人" />		
+                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">
@@ -136,37 +125,80 @@
                  </div>
              </dd>
 		</dl>
+        <p class="no-myinfo" th:if="${pages.totalPages eq 0}">快乐家族的这位笑友新来的吧，啥也没有啊！<br/><a href="../neihan.html">还是随便逛逛吧</a></p>
 	    <!-- 分页 -->
-        <div class="page">
-        </div>			
+        <div class="pagination pagination-right">
+            <div id="example" style="float: left;"></div>
+            <script th:inline="javascript">
+                /*<![CDATA[*/
+                var uid = /*[[${userInfo.uid}]]*/1;
+                $(function () {
+                    var totalPages = /*[[${pages.totalPages}]]*/1;
+                    var newPage = /*[[${newPage}]]*/1;
+                    $.ajaxSetup({
+                        cache: false
+                    });
+                    var options = {
+                        currentPage: newPage,
+                        totalPages: totalPages,
+                        onPageClicked: function (e, originalEvent, type, page) {
+                            window.location.href = "/"+uid+"/userCenter.html?page=" + page ;
+                        }
+                    }
+                    $('#example').bootstrapPaginator(options);
+                })
+                function goPage(){
+                    var pageValue=$('#page').val();
+                    if(!isNaN(pageValue) && parseInt(pageValue)>0){
+                        if(parseInt(pageValue) == 1){
+                            window.location.href = "/"+uid+"/userCenter.html?page=1";
+                        }else{
+                            window.location.href = "/"+uid+"/userCenter.html?page=" + pageValue;
+                        }
+                    }else{
+                        alert('请输入正确的页码');
+                    }
+                }
+                /*]]>*/
+            </script>
+            <div class="go-page" data-maxPage="1000" th:if="${pages.totalPages ne 0}">
+                <input id="page" placeholder="跳到.." type="text" title="跳到.."/><a href="javascript:void(0);" onclick="goPage();">GO</a>
+            </div>
+        </div>
     </div>
     <!--左侧信息结束-->
     <!--右侧信息开始-->
 	<div class="right">
+        <!-- 广告位 -->
+        <div style="width:300px;height:250px">
+            <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+        </div>
 		<dl class="other-user">
           <dt>看看他们的笑话</dt>
-		  <dd>
-               <a href="javascript:alert(1);" class="go-user-index" target="_blank">
-                  <img src="../img/avatar_2.jpg" alt="黑曜瞳"/>
+		  <dd th:each="userInfo :${userInfoList}">
+               <a href="usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}" class="go-user-index" target="_blank">
+                  <img src="../img/avatar_2.jpg" alt="黑曜瞳" th:alt="${userInfo.name}"/>
                   <i></i>
-                  <p>黑曜瞳</p>
+                  <p th:text="${userInfo.name}">黑曜瞳</p>
                </a>
-               <a href="http://user.mahua.com/40243" class="go-user-index-btn" target="_blank">去Ta首页</a>
+               <a href="usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}" class="go-user-index-btn" target="_blank">去Ta首页</a>
           </dd>
-		 </dl>		
+		 </dl>
+         <div style="width:300px;height:250px">
+             <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+         </div>
          <dl class="new-pic">
 			<dt><h2>最新的搞笑图片</h2></dt>
 			<dd>
-				<a class="new-pic-left" target="_blank" href="javascript:alert(1);">
-					<img alt="贪吃动物们的糗事" src="../img/avatar_2.jpg" />
+				<a class="new-pic-left" th:class="${stats.odd?'new-pic-left':''}" target="_blank" href="jokedetail.html" th:href="@{'/'+${joke.jid}+'/jokeDetail.html'}" th:each="joke,stats :${jokeList}">
+					<img alt="贪吃动物们的糗事" th:alt="${joke.title}" src="../img/avatar_2.jpg" th:src="${joke.picture}" />
 					<span>贪吃动物们的糗事</span>
-				</a>
-				<a  target="_blank" href="javascript:alert(1);">
-					<img alt="这社会，什么奇葩公司都有！" src="../img/avatar_2.jpg" />
-					<span>这社会，什么奇葩公司都有！</span>
 				</a>
 			</dd>
 		</dl>
+        <div style="width:300px;height:250px">
+            <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+        </div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -197,7 +229,7 @@ $(function(){
 </div>
 <!--右侧导航结束-->
 <!--底部内容开始-->
-<div class="footer" th:replace="index::index_footer">
+<div class="footer" th:fragment="index_footer">
     <div class="footer-content">
         <div class="about">
             <dl>

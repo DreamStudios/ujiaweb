@@ -50,9 +50,9 @@ public class UserInfoServiceImpl implements UserInfoService {
      * @return
      */
     @Override
-    public List<UserInfo> getTodayStar() {
+    public List<UserInfo> getTodayStar(int number) {
         String hql = " FROM UserInfo WHERE status=2 ORDER BY isVip DESC, integral DESC,sex DESC,lastLoginTime DESC";
-        List<UserInfo> list = userInfoRepository.findTopByHql(hql, 30);
+        List<UserInfo> list = userInfoRepository.findTopByHql(hql, number);
         return list;
     }
 
@@ -173,5 +173,15 @@ public class UserInfoServiceImpl implements UserInfoService {
             logger.error("修改用户密码失败",ex);
         }
         return false;
+    }
+
+    /**
+     * 通过用户ID查找用户信息
+     * @param uid 用户ID
+     * @return
+     */
+    @Override
+    public UserInfo getUserByUid(int uid) {
+        return userInfoRepository.findByUid(uid);
     }
 }
