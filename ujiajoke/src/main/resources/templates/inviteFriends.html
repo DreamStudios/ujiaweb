@@ -74,13 +74,15 @@
 	<div class="left">
         <ul class="user-nav">
             <li><a href="myJoke.html">我的投稿</a></li>
+            <li><a href="myVipJoke.html">VIP专题</a></li>
             <li><a href="profile.html">个人资料</a></li>
             <li><a href="recommended.html" >精品推荐</a></li>
             <li><a href="inviteFriends.html" class="hover">邀请好友</a></li>
         </ul>
 		<dl class="invite-friends">
 			<dt>请将以下链接复制给你的好友：</dt>
-			<dd><span id="invite-friends-url">https://passport.mahua.com/account/register?invite_code=378538</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd> 
+            <span th:text="${#httpServletRequest.getContextPath()}"></span>
+			<dd><span id="invite-friends-url" th:text="${'https://passport.mahua.com/register?invite_code='+ userInfo.inviteCode}">https://passport.mahua.com/account/register?invite_code=378538</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd>
 			<dd>不要吝啬，把快乐分享给你的好友，如果TA成功注册，你会获得<i class="s-color-red">200麻币</i>的奖励；</dd> 
 		</dl>
 	</div>

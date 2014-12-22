@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -19,6 +23,9 @@ public class JokeServiceImpl implements JokeService {
 
     @Autowired
     JokeRepository jokeRepository;
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     /**
      * 按照更新时间倒叙
@@ -68,5 +75,29 @@ public class JokeServiceImpl implements JokeService {
      */
     public Joke getJokeById(int id){
         return jokeRepository.findOne(id);
+    }
+
+    /**
+     * 通过UID获取笑话总数、笑话未通过总数
+     * @param uid
+     * @return
+     */
+    public HashMap<String, Integer> getJokeSumNumberById(int uid){
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        String sql_joke = "SELECT COUNT(*),IFNULL(SUM(IF(STATUS=2,1,0)),0) FROM joke WHERE uid="+uid;
+        String sql_joke_vip = "SELECT COUNT(*),IFNULL(SUM(IF(STATUS=2,1,0)),0) FROM vipjoke WHERE uid="+uid;
+        Query query = entityManager.createNativeQuery(sql_joke);
+        List<Object[]> list = query.getResultList();
+        Object[] obj = list.get(0);
+
+        Query query_vip = entityManager.createNativeQuery(sql_joke_vip);
+        List<Object[]> list_vip = query_vip.getResultList();
+        Object[] obj_vip = list_vip.get(0);
+
+        int sum = Integer.parseInt(obj[0].toString()) + Integer.parseInt(obj_vip[0].toString());
+        int pass_sum = Integer.parseInt(obj[1].toString()) + Integer.parseInt(obj_vip[1].toString());
+        map.put("sum", sum);
+        map.put("pass_sum", pass_sum);
+        return map;
     }
 }

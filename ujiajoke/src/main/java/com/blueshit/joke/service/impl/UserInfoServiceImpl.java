@@ -183,4 +183,8 @@ public class UserInfoServiceImpl implements UserInfoService {
     public UserInfo getUserByUid(int uid) {
         return userInfoRepository.findByUid(uid);
     }
+
+
+    public void save(UserInfo userInfo){ userInfoRepository.save(userInfo); }
+
 }

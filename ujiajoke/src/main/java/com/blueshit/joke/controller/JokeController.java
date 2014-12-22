@@ -2,6 +2,7 @@ package com.blueshit.joke.controller;
 
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.JokeService;
+import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.AuthorizationUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -19,6 +20,9 @@ public class JokeController {
 
     @Autowired
     JokeService jokeService;
+
+    @Autowired
+    VipJokeService vipJokeService;
 
     /** 首页 */
     @RequestMapping(value = {"/","/index"})
@@ -105,5 +109,24 @@ public class JokeController {
         model.addAttribute("newPage",pagenumber);
         model.addAttribute("status", status);
         return "myJoke";
+    }
+
+    /**************************************************vip joke***************************************************/
+    /**
+     * myVipJoke 分类分页
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
+     */
+    @RequestMapping("/myVipJoke")
+    public String myVipJoke(Authentication authentication, Model model, Integer status, String page){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
+        UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
+        int pagenumber = getStringParseInt(page);
+        status = status==null?3:status;
+        model.addAttribute("pages", vipJokeService.getVipJokePagesAll_byType(userInfo, status, pagenumber));
+        model.addAttribute("newPage",pagenumber);
+        model.addAttribute("status", status);
+        return "myVipJoke";
     }
 }

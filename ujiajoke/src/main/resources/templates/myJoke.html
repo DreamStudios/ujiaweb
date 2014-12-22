@@ -77,6 +77,7 @@
 	<div class="left">
 		<ul class="user-nav">
             <li><a href="myJoke.html" class="hover">我的投稿</a></li>
+            <li><a href="myVipJoke.html">VIP专题</a></li>
             <li><a href="profile.html">个人资料</a></li>
             <li><a href="recommended.html" >精品推荐</a></li>
             <li><a href="inviteFriends.html" >邀请好友</a></li>
@@ -89,23 +90,14 @@
 				<a href="myJoke.html?status=0" th:class="${status eq 0?'hover':''}" >未通过</a>
                 <input type="hidden" id="status" th:value="${status}"/>
 			</li>
-            <li> <!-- 显示内容  <p class="no-myinfo">哥们新来的吧，啥也没有啊！</p> -->
+            <li th:if="${pages.totalElements == 0}"><p class="no-myinfo">哥们新来的吧，啥也没有啊！</p></li>
+            <li th:if="${pages.totalElements > 0}">
                 <dl th:each="page :${pages}">
-                    <dt th:text="${page.title}">真会走位的小兵</dt>
-                    <dd class="content">
-                        <img th:if="${page.style eq 1}" th:src="${page.picture}" src="http://i1.mhimg.com/M01/05/EB/CgAAhlSSQCCAdx6pABQzSRPCBvA804.gif"
-                             alt="【桃姐淘新闻】北京马拉松看醉众人" />
-                        <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
-                    </dd>
-                    <dd class="results" th:if="${page.status eq 2}">
-                        <div class="results-left">
-                            <span>恭喜！您的投稿已通过审核，获得500麻币</span>
-                            <!--<a href="http://www.mahua.com/xiaohua/923084.htm" target="_blank">http://www.mahua.com/xiaohua/923084.htm</a>-->
-                        </div>
-                        <!--<div class="results-right">
-                            <a href="http://user.mahua.com/common/share?obj_type=joke&obj_id=923084&type=weibo&title=真会走位的小兵" class="results-weibo" rel="nofollow" target="_blank">分享到微博</a>
-                            <a href="http://user.mahua.com/common/share?obj_type=joke&obj_id=923084&type=qzone&title=真会走位的小兵" class="results-qq" rel="nofollow" target="_blank">分享到QQ空间</a>
-                        </div>-->
+                    <dt><a href="detail/jokedetail.html" th:href="${page.jid+'/jokeDetail.html'}" th:text="${page.title}">真会走位的小兵</a></dt>
+                    <dd class="results" th:switch="${page.status}" >
+                        <div th:case="2" class="results-left"><span>恭喜！您的投稿已通过审核！</span></div>
+                        <div th:case="1" class="results-left"><span>正在审核！</span></div>
+                        <div th:case="0" class="results-left"><span>审核未通过！</span></div>
                     </dd>
                     <hr/>
                 </dl>

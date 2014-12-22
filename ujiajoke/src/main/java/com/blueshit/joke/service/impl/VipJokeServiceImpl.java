@@ -1,6 +1,7 @@
 package com.blueshit.joke.service.impl;
 
 import com.blueshit.joke.entity.Joke;
+import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.entity.VipJoke;
 import com.blueshit.joke.repository.VipJokeRepository;
 import com.blueshit.joke.service.VipJokeService;
@@ -33,5 +34,20 @@ public class VipJokeServiceImpl implements VipJokeService{
      */
     public VipJoke getVipJokeById(int id){
         return vipJokeRepository.findOne(id);
+    }
+
+    /**
+     * 根据用户查询vip笑话分页，按状态查询
+     * @param userInfo
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
+     * @param page
+     */
+    public Page<VipJoke> getVipJokePagesAll_byType(UserInfo userInfo, int status, int page){
+        StringBuffer hql = new StringBuffer("From VipJoke where userInfo.uid="+userInfo.getUid());
+        if (status != 3){
+            hql.append(" and status="+status);
+        }
+        hql.append(" order by updateTime desc");
+        return vipJokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
 }

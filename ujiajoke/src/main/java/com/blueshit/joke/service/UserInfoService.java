@@ -70,4 +70,10 @@ public interface UserInfoService {
      * @return
      */
     public UserInfo getUserByUid(int uid);
+
+    /**
+     * 保存或修改用户对象
+     * @param userInfo
+     */
+    public void save(UserInfo userInfo);
 }

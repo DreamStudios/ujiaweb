@@ -4,6 +4,7 @@ import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import org.springframework.data.domain.Page;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -42,4 +43,11 @@ public interface JokeService {
      * @return
      */
     public Joke getJokeById(int id);
+
+    /**
+     * 通过UID获取笑话总数、笑话未通过总数
+     * @param uid
+     * @return
+     */
+    public HashMap<String, Integer> getJokeSumNumberById(int uid);
 }
