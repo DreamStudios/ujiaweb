@@ -8,97 +8,128 @@
     <meta name="description" content="您可以在这发布笑话，然后有机会被广大麻花所看见喔，快来投稿吧" />
     <meta name="keywords" content="投稿,发笑话,上传笑话" />
     <link type="text/css" href="css/tougao.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/ujiajoke.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/uploadify.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.uploadify.js" type="text/javascript"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var contexPath = /*[[${#httpServletRequest.getContextPath()}]]*/'';
+        var sessionid = /*[[${#httpSession.id}]]*/"";
+        $(function() {
+            $("#jokePicture").uploadify(
+                {
+                    'method': 'post',
+                    'formData': {
+                        'sessionId': 'goodsIcon',
+                        'extName': '.png'
+                    },
+                    'fileObjName': 'file',
+                    'swf': 'js/uploadify.swf',
+                    'fileTypeExts': '*.png',
+                    'fileSizeLimit': '100k',
+                    'buttonImage': 'img/uploadButton.png',
+                    'uploader': contexPath + '/fileUpload;jsessionid=' + sessionid
+                });
+        });
+        /*]]>*/
+    </script>
 </head>
 <body>
 <!--头部信息开始-->
-<div class="header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin">
-                <div class="my-center">
-                    <i title="个人中心"></i>
-                    <ul>
-                        <li><a href="http://user.mahua.com/my/joke">我的投稿</a></li>
-                        <li><a href="http://user.mahua.com/my/gift">兑换礼品</a></li>
-                        <li><a href="http://user.mahua.com/my/info">个人资料</a></li>
-                        <li><a href="http://user.mahua.com/my/task">今日任务</a></li>
-                        <li><a href="http://user.mahua.com/my/invite">邀请好友</a></li>
-                        <li class="noborder"><a href="http://user.mahua.com/member/logout" rel="nofollow">退出</a></li>
-                    </ul>
-                </div>
-                <div class="my-message">
-                    <a href="http://user.mahua.com/home" target="_blank"><i class="message-new" title="没有新消息"></i></a>
-                </div>
-                <span class="username-top"><a href="http://user.mahua.com/home">JackAn</a>，欢迎回来!</span>
+                <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
+                <a href="login.html" class="top-login loginClick" rel="nofollow">登录</a>
             </div>
-            
         </div>
     </div>
     <!--标题结束-->
     <!--导航菜单开始-->
     <div class="header-nav">
-      <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
-      <ul>
-          <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="newjokes/index.html" title="按时间先后排序">囧图</a></li>
-            <li><a href="shenhuifu.html" >糗事</a></li>
-            <li><a href="user/lipin/index.html" >内涵图</a></li>
-            <li><a href="user/lipin/index.html" >会员专享<i></i></a></li>
+        <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
+        <ul>
+            <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="qiushi.html" >糗事</a></li>
+            <li><a href="neihan.html" >内涵图</a></li>
+            <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
-      <div class="mahua-slogan"></div>
+        <div class="mahua-slogan"></div>
     </div>
     <!--导航菜单结束-->
 </div>
 <!--头部信息结束-->
 <!--主要内容开始-->
 <div class="main">
-	<!--左侧信息开始-->
-	<div class="left">
-		<form id="publish-joke" onSubmit="return publishJoke(this);">
-          <dl class="publish-title">
-              <dt>笑话标题：</dt>
-              <dd><input type="text" name="title" value="起个逗逼点的标题" id="title"/></dd>
-              <dd class="publish-message message-title">错误提示</dd>
-          </dl>
-          <dl class="publish-content">
-              <dt>
-                  <span>输入内容：</span><span id="fileuploader">插入图片</span>
-              </dt>
-              <dd>
-                  <textarea>内容</textarea>
-              </dd>
-              <dd class="publish-message message-content"></dd>
-              <dd class="publish-btn">
-                  <input type="submit" value="投稿"/>
-              </dd>
-          </dl>
-		</form>
-		<dl class="publish-reward-malicious">
-			<dt>奖励规则</dt>
-			<dd>
-				<p>1、被审核通过后，可获得500麻币奖励。</p>
-				<p>2、好笑的投稿通过率高，而且更容易获得其它用户的麻币打赏哦。</p>
-				<p>3、投稿的数量有等级限制，详情请参考<a href="http://www.mahua.com/about/shengjiguize.htm" target="_blank">等级规则</a>。</p>
-				<p>4、你可以勾选“<i class="s-color-red">我想被包养</i>”，把你的投稿标一个买断价。如果有别的用户看中，他会出价买断，当然，后续这条投稿赚到的打赏就跟您没关系啦。</p>
-			</dd>
-		</dl>
-	</div>
+    <!--左侧信息开始-->
+    <div class="left">
+        <div class="joketitle">您的笑话只要足够搞笑，就会自动展示在有家笑话首页</div>
+        <form th:action="@{releaseJoke.html}" th:object="${joke}" method="post"  id="publish-joke" name="publish-joke">
+            <dl class="publish-title">
+                <dt>展示位置：</dt>
+                <dd>
+                    <select id="type" name="type">
+                        <option value="1" th:selected="${joke.type eq 1}">囧图模块</option>
+                        <option value="2" th:selected="${joke.type eq 2}">糗事模块</option>
+                        <option value="3" th:selected="${joke.type eq 3}">内涵图模块</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="publish-title">
+                <dt>笑话类型：</dt>
+                <dd>
+                    <select id="style" name="style">
+                        <option value="1" th:selected="${joke.style eq 1}">图片笑话</option>
+                        <option value="2" th:selected="${joke.style eq 2}">纯文字笑话</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="publish-title">
+                <dt>笑话标题：</dt>
+                <dd><input type="text" name="title" placeholder="起个逗逼点的标题哦" id="title" th:value="${joke.title}"/></dd>
+                <dd class="publish-message message-title">错误提示</dd>
+            </dl>
+            <dl class="publish-content">
+                <dt>
+                    <span>输入内容：</span>
+                    <input id="jokePicture" name="file" type="file" multiple="true" />
+                </dt>
+                <dd>
+                    <textarea id="content" name="content" th:text="${joke.content}"></textarea>
+                </dd>
+                <dd class="publish-message message-content"></dd>
+                <dd class="publish-btn">
+                    <input type="submit" value="投稿"/>
+                </dd>
+            </dl>
+        </form>
+        <dl class="publish-reward-malicious">
+            <dt>奖励规则</dt>
+            <dd>
+                <p>1、被审核通过后，可获得500麻币奖励。</p>
+                <p>2、好笑的投稿通过率高，而且更容易获得其它用户的麻币打赏哦。</p>
+                <p>3、投稿的数量有等级限制，详情请参考<a href="about/tougaoguize.html" target="_blank">投稿规则</a>。</p>
+                <p>4、你可以勾选“<i class="s-color-red">我想被包养</i>”，把你的投稿标一个买断价。如果有别的用户看中，他会出价买断，当然，后续这条投稿赚到的打赏就跟您没关系啦。</p>
+            </dd>
+        </dl>
+    </div>
     <!--左侧信息结束-->
-	<div class="right">
-		<div class="publish-rules">
-			<p>1、麻花是快乐分享网站，只要搞笑就可以发！</p>
-			<p>2、千万别投涉政治、色情、暴力、陪聊、广告等内容，小心封号哦。</p>
-			<p>3、我们是个搞笑类网站，非搞笑的投稿就算通过也会被删掉的哦。</p>
-			<p>4、分享你身边的趣事、糗事，鼓励原创，反对转载。</p>
-			<p>5、带水印图片审核是不会通过的，图片越清晰越好。</p>
-			<p>6、不要投重复的内容，会自动过滤掉的。</p>
-			<p>7、最多只允许上传3M的图片。</p>
-			<p class="more"><a href="javascript:alert(1);" target="_blank">查看详细规则>></a></p>
-		</div>
-	</div>
+    <div class="right">
+        <div class="publish-rules">
+            <p>1、麻花是快乐分享网站，只要搞笑就可以发！</p>
+            <p>2、千万别投涉政治、色情、暴力、陪聊、广告等内容，小心封号哦。</p>
+            <p>3、我们是个搞笑类网站，非搞笑的投稿就算通过也会被删掉的哦。</p>
+            <p>4、分享你身边的趣事、糗事，鼓励原创，反对转载。</p>
+            <p>5、带水印图片审核是不会通过的，图片越清晰越好。</p>
+            <p>6、不要投重复的内容，会自动过滤掉的。</p>
+            <p>7、最多只允许上传3M的图片。</p>
+            <p class="more"><a href="javascript:alert(1);" target="_blank">查看详细规则>></a></p>
+        </div>
+    </div>
 </div>
 <!--右侧导航结束-->
 <!--底部内容开始-->
@@ -132,7 +163,7 @@
 </div>
 <!--底部内容结束-->
 <!--[if IE 6]>
-	<script>document.execCommand("BackgroundImageCache",false,true)</script>
+<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
 </body>
 </html>
