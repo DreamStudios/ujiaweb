@@ -17,7 +17,6 @@
         var parameterName=/*[[${_csrf.parameterName}]]*/'';
         var token=/*[[${_csrf.token}]]*/'';
         var sessionid = /*[[${#httpSession.id}]]*/"";
-        var message = /*[[${#message}]]*/"";
         $(function() {
             $('#jokePicture').uploadify({
                 'method'   : 'post',
@@ -79,7 +78,7 @@
     <div class="left">
         <div class="joketitle">您的笑话只要足够搞笑，就会自动展示在有家笑话首页！<span style="color: red;">恶意投稿,立即封号！</span></div>
         <form th:object="${joke}"  id="form" name="form" method="post" enctype="multipart/form-data"
-              th:action="@{releaseJoke.html}">
+              th:action="@{releaseJoke.html(${_csrf.parameterName}=${_csrf.token})}">
             <dl class="publish-title">
                 <dt>展示位置：</dt>
                 <dd>
