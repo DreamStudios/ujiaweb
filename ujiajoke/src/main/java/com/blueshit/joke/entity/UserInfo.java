@@ -43,7 +43,7 @@ public class UserInfo implements Serializable {
 
     //用户头像
     @Column(nullable = false, length = 255)
-    private String photo = "img/login/person.jpg"; //默认头像
+    private String photo = "/img/login/person.jpg"; //默认头像
 
     //性别(0:男性 1:女性)
     @Column(nullable = false, columnDefinition = "int(11) default 0")

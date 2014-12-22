@@ -36,11 +36,11 @@ public interface UserInfoService {
 
     /**
      * 用户激活接口
-     * @param email
+     * @param userInfo
      * @param activeCode
      * @return
      */
-    public boolean active(String email, String activeCode);
+    public boolean active(UserInfo userInfo, String activeCode);
 
     /**
      * 重新发送激活邮件

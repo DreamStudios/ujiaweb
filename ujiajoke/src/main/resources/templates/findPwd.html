@@ -101,16 +101,19 @@
     </div>
     <!--左侧结束-->
     <!--广告位-->
-    <div class="rightimg"><span>广告位</span></div>
+    <div class="rightimg">
+        <img src="img/ad.png" />
+    </div>
     <!--推荐校友开始-->
     <div class="rightuser">
-      <span class="titleright"><a href="javascript:alert(1);" title="更多">推荐校友</a></span>
-      <p class="morelist"><a href="javascript:alert(1);">更多>></a></p>
-      <ul class="userlist">
-        <li><a href="javascript:alert(1);"><img width="64" height="64" src="images/register/1.png" alt="校友" /></a></li>
-        <li><a href="javascript:alert(1);"><img width="64" height="64" src="images/register/1.png" alt="校友" /></a></li>
-        <li><a href="javascript:alert(1);"><img width="64" height="64" src="images/register/1.png" alt="校友" /></a></li>
-      </ul>
+        <span class="titleright"><a href="#" title="更多快乐家族成员">看看他们的笑话</a></span>
+        <ul class="userlist">
+            <li th:each="userInfo :${userInfoList}">
+                <a href="detail/usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}">
+                    <img width="64" height="64" src="img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
+                </a>
+            </li>
+        </ul>
     </div>    
     <!--推荐校友结束-->
   </div>

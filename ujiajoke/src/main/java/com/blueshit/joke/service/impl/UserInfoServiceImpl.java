@@ -88,14 +88,13 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     /**
      * 用户激活接口
-     * @param email
+     * @param userInfo
      * @param activeCode
      * @return
      */
     @Override
-    public boolean active(String email, String activeCode) {
+    public boolean active(UserInfo userInfo, String activeCode) {
         try{
-            UserInfo userInfo = userInfoRepository.findByEmail(email);
             if (userInfo != null && passwordEncoder.matches(userInfo.getCreateTime() + "", activeCode)) {
                 userInfo.setStatus(2); //用户状态(0:禁用 1:未激活 2:启用)
                 userInfo.setInviteCode(userInfo.getUid() + "100000");//激活时生成邀请码

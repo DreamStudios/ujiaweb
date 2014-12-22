@@ -47,6 +47,9 @@ public class UserInfoController {
     public String register(Model model) {
         UserInfo userInfo = new UserInfo();
         model.addAttribute("userInfo", userInfo);// 返回一个空用户对象,用于前台界面填充input框内容
+
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
         return "register";
     }
 
@@ -68,6 +71,8 @@ public class UserInfoController {
             result.reject("kaptcha", "验证码错误");
             model.addAttribute("kaptcha", "验证码错误");
         }
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
         if (result.hasErrors()) {
             return "register";
         } else {
@@ -89,12 +94,13 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping("/account_active")
-    public String accountActive(String username, String activeCode) {
-        if (userInfoService.active(username, activeCode)) {
+    public String accountActive(Model model,String username, String activeCode) {
+        UserInfo userInfo = userInfoService.getUserByEmail(username);
+        if (userInfoService.active(userInfo, activeCode)) {
             return "redirect:/login.html";
-        }
-        else {
-            //激活失败
+        }else {//激活失败
+            List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+            model.addAttribute("userInfoList",userInfoList);
             return "activeError";
         }
     }
@@ -106,15 +112,29 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping("/resendActiveMail")
-    public String resendActiveMail(HttpServletRequest request,
+    public String resendActiveMail(HttpServletRequest request,Model model,
                                    @RequestParam(value = "username", required = true) String username){
         boolean result = userInfoService.resendActiveMail(username);
         if(result){
+            List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+            model.addAttribute("userInfoList",userInfoList);
             return "mailSuccess";
         }else {
             request.getSession().setAttribute("loginMsg", "请求失败,请稍后再试");
             return "redirect:/login.html";
         }
+    }
+
+    /**
+     * 进入找回密码页面
+     * @param model
+     * @return
+     */
+    @RequestMapping("/findPwd")
+    public String findPassword(Model model){
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
+        return "findPwd";
     }
 
     /**
@@ -134,6 +154,8 @@ public class UserInfoController {
             model.addAttribute("kaptcha","验证码错误");
             result = false;
         }
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
         if(result) {
             boolean findResult = userInfoService.findPassword(email);
             if (findResult) {
@@ -156,6 +178,8 @@ public class UserInfoController {
     @RequestMapping(value = "/resetPassword", method = RequestMethod.GET)
     public String resetPassword(Model model,@RequestParam(value = "username", required = true) String username,
                                 @RequestParam(value = "resetCode", required = true)String resetCode){
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
         model.addAttribute("username",username);
         model.addAttribute("resetCode",resetCode);
         return "updatePwd";
@@ -167,14 +191,17 @@ public class UserInfoController {
     @RequestMapping(value = "/resetPassword", method = RequestMethod.POST)
     public String resetPassword(Model model,String username,
                                 String resetCode,String password){
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
         if(password == null || "".equals(password) || password.length() < 6 || password.length() > 32){
             model.addAttribute("password","密码不能为空且长度为6-32位");
+            model.addAttribute("userInfoList",userInfoList);
             return "updatePwd";
         }else {
             boolean result = userInfoService.updatePassword(username,resetCode,password);
             if(result){
                 return "redirect:/login.html";
             }else {
+                model.addAttribute("userInfoList",userInfoList);
                 model.addAttribute("title", "找回密码");
                 return "activeError";
             }

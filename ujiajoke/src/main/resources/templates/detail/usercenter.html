@@ -177,7 +177,7 @@
           <dt>看看他们的笑话</dt>
 		  <dd th:each="userInfo :${userInfoList}">
                <a href="usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}" class="go-user-index" target="_blank">
-                  <img src="../img/avatar_2.jpg" alt="黑曜瞳" th:alt="${userInfo.name}"/>
+                  <img src="../img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}"/>
                   <i></i>
                   <p th:text="${userInfo.name}">黑曜瞳</p>
                </a>
