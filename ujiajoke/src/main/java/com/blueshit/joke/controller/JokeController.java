@@ -1,15 +1,22 @@
 package com.blueshit.joke.controller;
 
+import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.AuthorizationUser;
+import com.blueshit.joke.validator.JokeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * 前台页面，笑话Controller
@@ -18,11 +25,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JokeController {
 
-    @Autowired
-    JokeService jokeService;
+    private JokeValidator jokeValidator;
+    private JokeService jokeService;
+    private VipJokeService vipJokeService;
 
     @Autowired
-    VipJokeService vipJokeService;
+    public JokeController(JokeValidator jokeValidator, JokeService jokeService, VipJokeService vipJokeService) {
+        this.jokeValidator = jokeValidator;
+        this.jokeService = jokeService;
+        this.vipJokeService = vipJokeService;
+    }
 
     /** 首页 */
     @RequestMapping(value = {"/","/index"})
@@ -128,5 +140,53 @@ public class JokeController {
         model.addAttribute("newPage",pagenumber);
         model.addAttribute("status", status);
         return "myVipJoke";
+    }
+
+    /**
+     * 进入添加笑话页面
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value="/releaseJoke", method = RequestMethod.GET)
+    public String addGoodsStatusGet(Authentication authentication,Model model,HttpSession session){
+        /*if(authentication==null){
+            return "redirect:/login.html";
+        }*/
+        session.removeAttribute("jokePicture");
+        Joke joke = new Joke();
+        model.addAttribute("joke",joke);
+        return "releaseJoke";
+    }
+
+    /**
+     * 添加笑话
+     * @param model
+     * @param joke
+     * @param session
+     * @return
+     */
+    @RequestMapping(value="/releaseJoke", method = RequestMethod.POST)
+    public String addGoodsStatusPost(Authentication authentication,HttpSession session,Model model,@ModelAttribute("joke") Joke joke, BindingResult result){
+        /*if(authentication==null){
+            return "redirect:/login.html";
+        }*/
+        String jokePicture = (String) session.getAttribute("jokePicture");
+        session.getAttributeNames();
+        joke.setPicture(jokePicture);
+
+        jokeValidator.validate(joke,result);
+        if (!result.hasErrors()) {
+            UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
+            joke.setUserInfo(userInfo);
+            boolean jokeResult = jokeService.saveJoke(joke);
+            if(jokeResult){
+                return "redirect:/success.html";
+            }else {
+                return "redirect:/failure.html";
+            }
+        }
+        session.removeAttribute("jokePicture");
+        return "releaseJoke";
     }
 }

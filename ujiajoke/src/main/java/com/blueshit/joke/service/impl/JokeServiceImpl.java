@@ -5,6 +5,8 @@ import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.repository.JokeRepository;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.utils.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ import java.util.List;
  */
 @Service
 public class JokeServiceImpl implements JokeService {
+    private static final Logger logger = LoggerFactory.getLogger(JokeServiceImpl.class);
 
     @Autowired
     JokeRepository jokeRepository;
@@ -34,8 +37,8 @@ public class JokeServiceImpl implements JokeService {
     @Override
     public Page<Joke> getJokePages_byType(int type, int page) {
         StringBuffer hql = new StringBuffer("From Joke where status=2");
-        if (type != 0){
-            hql.append(" and type="+type);
+        if (type != 0) {
+            hql.append(" and type=" + type);
         }
         hql.append(" order by updateTime desc");
         return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
@@ -46,8 +49,8 @@ public class JokeServiceImpl implements JokeService {
      * @param status 0:审核未通过 1:待审核 2:审核通过 3:全部
      * @return
      */
-    public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page){
-        StringBuffer hql = new StringBuffer("From Joke where userInfo.uid="+userInfo.getUid());
+    public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page) {
+        StringBuffer hql = new StringBuffer("From Joke where userInfo.uid=" + userInfo.getUid());
         if (status != 3){
             hql.append(" and status="+status);
         }
@@ -65,7 +68,7 @@ public class JokeServiceImpl implements JokeService {
     public List<Joke> getOtherUserJokeList(int uid, int number) {
         StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND userInfo.uid != "+uid);
         hql.append("ORDER BY updateTime DESC");
-        return jokeRepository.findTopByHql(hql.toString(),number);
+        return jokeRepository.findTopByHql(hql.toString(), number);
     }
 
     /**
@@ -99,5 +102,20 @@ public class JokeServiceImpl implements JokeService {
         map.put("sum", sum);
         map.put("pass_sum", pass_sum);
         return map;
+    }
+
+    /**
+     * 保存普通笑话信息
+     * @param joke
+     * @return
+     */
+    public boolean saveJoke(Joke joke){
+        try{
+            jokeRepository.save(joke);
+        }catch (Exception ex){
+            logger.error("保存普通笑话失败",ex);
+            return false;
+        }
+        return true;
     }
 }

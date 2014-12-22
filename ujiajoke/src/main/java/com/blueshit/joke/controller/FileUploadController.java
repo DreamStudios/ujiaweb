@@ -18,17 +18,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.UUID;
 
-
 /**
- * <p>
- * Company: 北京东方达技有限公司
- * </p>
- * 
- * @author rock
- * @version 1.0 创建时间：2014-11-24
- *          <p>
- *          文件上传工具
- *          </p>
+ * 文件上传工具类
  */
 @Controller
 public class FileUploadController {
@@ -70,7 +61,7 @@ public class FileUploadController {
                 
                 /* 构造文件路径 */
                 String webRoot = realPath + uri;
-                if(sessionId.equals("lockPhoto")){
+                if(sessionId.equals("jokePictrue")){
                     //  图标解析
                     BufferedImage bufferedImage = ImageIO.read(new File(webRoot));
                     int width = bufferedImage.getWidth();
@@ -83,7 +74,6 @@ public class FileUploadController {
                 return request.getContextPath()+uri;
             } catch (Exception e) {
                 return "You failed to upload " + name + " => " + e.getMessage();
-            } finally{
             }
         } else {
             return "You failed to upload " + name + " because the file was empty.";

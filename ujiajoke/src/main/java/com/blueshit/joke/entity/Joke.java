@@ -32,7 +32,7 @@ public class Joke implements Serializable {
 
     //展示方式：1:图文 2:纯文字
     @Column(nullable = false)
-    private int style;
+    private int style = 1;
 
     //笑话标题
     @Column(nullable = false, length = 255)

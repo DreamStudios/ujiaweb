@@ -50,4 +50,11 @@ public interface JokeService {
      * @return
      */
     public HashMap<String, Integer> getJokeSumNumberById(int uid);
+
+    /**
+     * 保存普通笑话信息
+     * @param joke
+     * @return
+     */
+    public boolean saveJoke(Joke joke);
 }

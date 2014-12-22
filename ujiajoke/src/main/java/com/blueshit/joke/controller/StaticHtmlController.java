@@ -62,6 +62,30 @@ public class StaticHtmlController {
         return "/" + name;
     }
 
+    /**
+     * 处理成功页面
+     * @param model
+     * @return
+     */
+    @RequestMapping("/success")
+    public String proSuccess(Model model){
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
+        return "success";
+    }
+
+    /**
+     * 处理失败页面
+     * @param model
+     * @return
+     */
+    @RequestMapping("/failure")
+    public String proFailure(Model model){
+        List<UserInfo> userInfoList = userInfoService.getTodayStar(15);
+        model.addAttribute("userInfoList",userInfoList);
+        return "failure";
+    }
+
 
     //测试跳转到外部网页
     @RequestMapping({"/aa"})

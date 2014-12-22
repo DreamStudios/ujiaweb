@@ -2626,3 +2626,7 @@ dd.publish-message {
 .publish-success dd a:hover {
 	color: #03a8b1;
 }
+.taghidden{
+    display: none;
+}
+.rightimg{width:296px; background:#fff; height:216px; border-right:solid 1px #dededf;border-bottom:solid 1px #dbdcde;float:right;}

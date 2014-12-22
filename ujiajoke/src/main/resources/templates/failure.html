@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="applicable-device" content="pc"/>
+    <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
+    <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
+    <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+    <link href="img/register/uimaker.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<!--头部开始-->
+<div class="header">
+  <div class="headerdown">
+    <a href="index.html"><span class="logo"></span></a>
+    <div class="fright">
+      <ul class="rlist">
+      <li><a href="index.html"  target="_blank" class="flink1">首页</a></li>
+      <li><a href="javascript:alert('筹建中');"  target="_blank" class="flink2">Android</a></li>
+      <li><a href="javascript:alert('筹建中');" class="flink3">应用市场</a></li>
+      <li><a href="javascript:alert('筹建中');" target="_blank" class="flink4">精品推荐</a></li>
+      </ul>
+      
+      <ul class="fimg">
+      <li><a href="javascript:alert('筹建中');" class="fimglink1" title="关注微信"></a></li>
+      <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b" class="fimglink2" title="加入校友群" target="_blank"></a></li>
+      <li><a href="javascript:alert('筹建中');"  target="_blank" class="fimglink3" title="新浪微博"></a></li>
+      </ul>
+    </div> 
+  </div> 
+</div>
+<!--头部结束-->
+<!--正文开始-->
+<div class="main">
+  <!--广告列表-->
+  <div class="navbar">
+     <a href="javascript:alert(1);">链接1</a>
+     <a href="javascript:alert(1);">链接2</a>
+     <a href="javascript:alert(1);">链接3</a>
+     <a href="javascript:alert(1);">链接4</a>
+  </div>  
+  <div class="userlogin">
+    <!--左侧开始-->
+    <div class="regleft">
+      <!--随机banner广告代码-->
+      <div>
+        <script language="JavaScript" type="text/javascript">
+			tips = new Array(4);
+			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863530.jpg" border="0" /></a>';
+			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863531.jpg" border="0" /></a>';
+			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863532.jpg" border="0" /></a>';
+			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863533.jpg" border="0" /></a>';
+			index = Math.floor(Math.random() * tips.length);
+			document.write(tips[index]);
+		</script>
+      </div>
+      <ul>
+        <span class="ftitle">服务器处理结果</span>
+        <span class="ftitle2">点击图片或者上述链接，就有机会赚取高额奖励,动动手指赶快行动吧!</span>
+      </ul>
+      <div class="logind_con clearfix">
+        <div class="gotoemail_box">
+          <h3>处理失败</h3>
+          <span class="find_pwd_span">非常抱歉,您的请求服务器未能正确处理！</span>
+          <img src="img/register/register_error.gif" width="77" height="77" />
+          <h3 class="tit">非常抱歉,服务器开小差了,请将意见反馈给站长：<span><a href="#">立即反馈</a></span></h3>
+          <span class="gotoemail_span">生活无限精彩，笑友带来精彩无限。注册有家，寻找一生笑友！</span>
+        </div>
+      </div>
+    </div>
+    <!--左侧结束-->
+    <!--广告位-->
+    <div class="rightimg">
+        <img src="img/ad.png" />
+    </div>
+    <!--推荐校友开始-->
+    <div class="rightuser">
+      <span class="titleright"><a href="#" title="更多快乐家族成员">看看他们的笑话</a></span>
+      <ul class="userlist">
+        <li th:each="userInfo :${userInfoList}">
+            <a href="detail/usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}">
+                <img width="64" height="64" src="img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
+            </a>
+        </li>
+      </ul>
+    </div>    
+    <!--推荐校友结束-->
+  </div>
+</div>
+<!--正文结束-->
+<!--底部开始-->
+<div class="footer" th:replace="register::register_footer">
+    <div class="foot">
+        <div class="fleft">
+            <span class="flogotext">加入有家笑话，成为有家一族，成就快乐家族！</span>
+            <ul class="flist">
+                <li><a href="about/youjiajianjie.html" target="_blank">家族简介</a></li>
+                <li><a href="about/youjiagonggao.html" target="_blank">家族公告</a></li>
+                <li><a href="about/mianzeshengming.html" target="_blank">免责声明</a></li>
+                <li><a href="about/fankuiyijian.html" target="_blank">反馈意见</a></li>
+                <li>|</li>
+                <li><a href="about/tougaoguize.html" target="_blank">投稿规则</a></li>
+                <li><a href="about/shengaoguize.html" target="_blank">审稿规则</a></li>
+                <li><a href="about/shengjiguize.html" target="_blank">升级规则</a></li>
+                <li><a href="about/xiaobiguize.html" target="_blank">笑币规则</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--底部结束-->
+</body>
+</html>

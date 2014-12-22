@@ -52,7 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/vip/*.html","/*/vipJokeDetail.html").hasAuthority("userIsLogin");
         //设置允许访问的资源
         String[] matchers = {
-                "/", "/upload/**", "/*.html", "/kaptcha.jpg", "/about/**", "/img/**", "/css/**", "/js/**"  ,
+                "/", "/upload/**", "/*.html", "/kaptcha.jpg", "/about/**", "/img/**", "/css/**", "/js/**",
                 "/*/userCenter.html","/*/jokeDetail.html"
         };
         http.authorizeRequests().antMatchers(matchers)
