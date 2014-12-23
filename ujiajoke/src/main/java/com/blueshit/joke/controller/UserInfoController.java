@@ -235,6 +235,15 @@ public class UserInfoController {
         //查询非此用户的笑话列表
         List<Joke> jokeList = jokeService.getOtherUserJokeList(userInfo.getUid(),10);
 
+        HashMap<String, Integer> map = jokeService.getJokeSumNumberById(id);
+        model.addAttribute("jokeSum", map.get("sum"));
+        model.addAttribute("jokePassSum", map.get("pass_sum"));
+        float passRate = 0;
+        if(map.get("sum") > 0){
+            passRate = (float)map.get("pass_sum") / map.get("sum") *100;
+        }
+        model.addAttribute("passRate", passRate);
+
         model.addAttribute("userInfo",userInfo);
         model.addAttribute("pages",pages);
         model.addAttribute("userInfoList",userInfoList);

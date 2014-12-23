@@ -87,10 +87,10 @@
                 积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
 				等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
 			</dd>
-			<dd class="mymabi">Ta的笑话：<span>8424</span></dd>
+			<dd class="mymabi">Ta的笑话总量：<span th:text="${jokeSum}">8424</span></dd>
 			<dd class="obtain">
-				通过的笑话：<span class="in">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				通过率：<span class="out">88%</span>
+				通过的笑话：<span class="in" th:text="${jokePassSum}">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				通过率：<span class="out" th:text="${passRate}">88%</span>
 			</dd>
 		</dl>
 	</div>
