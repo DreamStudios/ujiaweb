@@ -42,7 +42,7 @@ public class ShareController {
             VipJoke vipJoke = vipJokeService.getVipJokeById(jid);
             return vipJokeShare(vipJoke,type);
         }else {
-            Joke joke = jokeService.getJokeById(jid);
+            Joke joke = jokeService.getJokeById(jid,0);
             return jokeShare(joke,type);
         }
     }

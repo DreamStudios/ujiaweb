@@ -5190,30 +5190,15 @@ $(function(){
 	})
 	
 	//评论
-	$('.comment-input').find('.comment-input-text').live('focus',function(){
-		if($(this).val()==$(this).attr('title')){$(this).val('').css('color','#333')};
-		commentInputFocus=1;
-	})
-	$('.comment-input').find('.comment-input-text').live('blur',function(){
-		if($(this).val()==''){$(this).val($(this).attr('title')).css('color','#c9c9c9')};
-		commentInputFocus=0;
-	})
 	$('.comment-input').find('.comment-input-text').live('keyup',function(){
 		var textLength=$(this).val().length;
 		if($('#text-length').length>0){
-			if(textLength<=140){
-				$('#text-length').html(textLength+'/140字')
+			if(textLength<=50){
+				$('#text-length').html(textLength+'/50字')
 			}else{
-				$(this).parent().find('.message').text('最多输入140个字');
-				$(this).val($(this).val().substring(0,140));
-				$('#text-length').html('140/140字');
-			}
-		}else{
-			if(textLength<=140){
-				$(this).next('.text-length').css('color','#969696').html(textLength+'/140字')
-			}else{
-				$(this).next('.text-length').text('最多输入140个字').css('color','#ff4000');
-				$(this).val($(this).val().substring(0,140));
+				$(this).parent().find('.message').text('最多输入50个字');
+				$(this).val($(this).val().substring(0,50));
+				$('#text-length').html('50/50字');
 			}
 		}
 	})
@@ -5223,53 +5208,6 @@ $(function(){
 		commentVote($(this));
 		return false;
 	})
-	
-	//列表页评论
-	$('.commentClick').click(function(){
-		var jokeListComment=$(this).parent('.operation').next('.joke-list-comment');
-		if(jokeListComment.length>0){
-			if(jokeListComment.css('display')=='none'){
-				var t=1;
-			}else{
-				var t=2;
-			}
-			listCommentShow(t,$(this));
-		}else{
-			if(typeof($(this).attr('isgo'))=='undefined'){
-				var tthis=$(this);
-				var obj_info=$(this).attr('obj_info');
-				tthis.attr('isgo','1');
-				$.ajax({
-					dataType: "jsonp", 
-					url: commentInitUrl,
-					data: "obj_info="+obj_info,
-					success: function(ret) {
-						if(ret.html!=''){
-							tthis.parent('.operation').after(ret.html);
-							listCommentShow(1,tthis);
-							$('.comment_packUp').click(function(){
-								listCommentShow(3,tthis);
-							})
-						}
-					}
-				});
-			}
-		}
-		return false;
-	})
-	function listCommentShow(type,tthis){
-		var obj=tthis.parent('.operation').next('.joke-list-comment');
-		if(type==1){
-			obj.slideDown(500);
-		}else{
-			obj.slideUp(500);
-			if(type==3){
-				if(($(window).scrollTop()>(tthis.offset().top+tthis.outerHeight()))||($(window).scrollTop()+$(window).height()<tthis.offset().top)){
-					$('body,html').animate({scrollTop:tthis.offset().top},100);
-				}
-			}
-		}
-	}
 	
 	//笑点页面背景图片放大
 	$('.main-tags li').hover(function(){

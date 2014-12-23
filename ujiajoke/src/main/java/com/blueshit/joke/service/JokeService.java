@@ -39,10 +39,11 @@ public interface JokeService {
 
     /**
      * 通过ID获取笑话内容
-     * @param id
+     * @param id 笑话ID
+     * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
-    public Joke getJokeById(int id);
+    public Joke getJokeById(int id,int flag);
 
     /**
      * 通过UID获取笑话总数、笑话未通过总数

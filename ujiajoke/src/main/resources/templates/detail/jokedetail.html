@@ -4,10 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
-    <meta http-equiv="mobile-agent" content="format=html5;url=http://m.mahua.com/xiaohua/905492.htm" />
-    <title>小六小七，你们不要撇下我！[1P]_快乐麻花</title>
-    <meta name="description" content="小六小七，你们不要撇下我！[1P]" />
-    <meta name="keywords" content="小六小七，你们不要撇下我！[1P],动态图" />
+    <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
+    <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
+    <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
     <link rel="stylesheet" type="text/css" href="../css/indexb6f1.css" />
     <script type="text/javascript" src="../js/ujiajoke.js"></script>
 </head>
@@ -17,7 +16,7 @@
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin">
                 <a href="../register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
                 <a href="../login.html" class="top-login loginClick" rel="nofollow">登录</a>
@@ -45,15 +44,18 @@
 	<div class="left">
 		<!-- 笑话 -->
 		<dl class="mahua mahua-view" id="joke_905492" mahua="905492">
-			<dt><h1 class="joke-title">小六小七，你们不要撇下我！</h1></dt>
+			<dt><h1 class="joke-title" th:text="${joke.title}">笑话标题</h1></dt>
 			<dd class="content">
-				<div class="joke-content" onClick="javascript:location.href='905491.html'" style="cursor:url(http://static.mhimg.com/www/default/img/right.cur),auto;" title="下一条笑话">
-					<img src="../img/11.gif" alt=""  width="440" height="307"/>
-                </div>
+                <a th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}" href="#">
+				    <div class="joke-content" title="点击进入下一条笑话">
+                        <img th:if="${joke.style eq 1}" th:src="${joke.picture}" width="440" height="307" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                        <span th:if="${joke.style eq 2}" th:text="${joke.content}">内容</span>
+                    </div>
+                </a>
 			</dd>
 			<dd class="joke-ba">
-				<a href="9054940b16.html?_page=2" class="joke-before"></a>
-				<a href="9054918c1e.html?_page=1" class="joke-after"></a>
+				<a href="#" class="joke-before" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=-1'}"></a>
+				<a href="#" class="joke-after" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}"></a>
 				<p>
 					<span class="joke-view-tags">笑点：<a href="../tags/6727_1.html">动态图</a></span>
 					<span>提示：按 ← → 方向键也可以换笑话哦</span>
@@ -77,406 +79,72 @@
 				<div class="buy"></div>
 			</dd>
 		</dl>
+        <!--其它笑话开始-->
 		<div id="recomment_hot" class="mahua mahua-view" style="height:410px">
-			<div id="recomment_hot_1"><ul class="recomment-tag" style="overflow: hidden;">
-			<li class="marginbottom">
-		<a href="http://www.meiwei123.com/qiquyangsheng/1721564.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_1','','']);">
-			<img alt="全球最奇葩工作：妓女导师听过吗" src="http://i1.mhimg.com/M00/06/9E/CgAAhlSX1jaAR2YRAAAeb4oe0Pw785.jpg">
-			<p>全球最奇葩工作：妓女导师听过吗</p>
-		</a>
-	
-			</li><li class="marginbottom">
-		<a href="http://www.51pzh.com/tu/xinniangbeiguanzuixingqinxinlangpangguanpaizhao.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_2','','']);">
-			<img alt="新娘被灌醉性侵新郎旁观拍照" src="http://i2.mhimg.com/M00/07/30/CgAAilSSbJeAGPYrAAAhJihEp_c383.jpg">
-			<p>新娘被灌醉性侵新郎旁观拍照</p>
-		</a>
-	
-			</li><li class="nomargin marginbottom">
-		<a href="http://www.51pzh.com/tu/pandianquanqiuxingwenhuazhandedouyan.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_3','','']);">
-			<img alt="盘点全球性文化展的斗艳" src="http://i2.mhimg.com/M00/07/30/CgAAilSSbduAf2JnAAAgvJk1tUw077.jpg">
-			<p>盘点全球性文化展的斗艳</p>
-		</a>
-	</li></ul></div>
-			<div style="width:640px;height:60px;margin-top:10px">
-				<script type="text/javascript">
-					if (!issoimg){
-						document.write('<script type="text\/javascript">var cpro_id = "u1847102";<\/script><script src="http:\/\/cpro.baidustatic.com\/cpro\/ui\/c.js" type="text\/javascript"><\/script>');
-					}
-				</script><script type="text/javascript">var cpro_id = "u1847102";</script><script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1847102_0"><iframe id="cproIframe_u1847102" width="640" height="60" src="http://pos.baidu.com/acom?adn=3&amp;at=65&amp;aurl=&amp;cad=1&amp;ccd=24&amp;cec=UTF-8&amp;cfv=16&amp;ch=0&amp;col=zh-CN&amp;conOP=0&amp;cpa=1&amp;dai=2&amp;dis=0&amp;ltr=&amp;ltu=&amp;lunum=6&amp;n=39087017_cpr&amp;pcs=1685x994&amp;pis=10000x10000&amp;ps=1207x357&amp;psr=1920x1080&amp;pss=1685x1633&amp;qn=81dfa3d5e3bd5737&amp;rad=&amp;rsi0=640&amp;rsi1=60&amp;rsi5=4&amp;rss0=%23FFFFFF&amp;rss1=%23FFFFFF&amp;rss2=%230000ff&amp;rss3=%23444444&amp;rss4=%23008000&amp;rss5=&amp;rss6=%23e10900&amp;rss7=&amp;scale=&amp;skin=&amp;td_id=1847102&amp;tn=text_default_640_60&amp;tpr=1419308953941&amp;ts=1&amp;xuanting=0&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1847102" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="http://pos.baidu.com/acom?di=u1847102&amp;dcb=BAIDU_DUP2_define&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dbv=2&amp;dci=0&amp;dri=0&amp;dis=0&amp;dai=2&amp;dds=&amp;drs=1&amp;dvi=1419217976&amp;ltu=file%3A%2F%2F%2FE%3A%2Fwebsit%2Fxiaohua%2Fwww.mahua.com%2Fxiaohua%2F36264.html&amp;liu=&amp;ltr=&amp;lcr=&amp;ps=1207x357&amp;psr=1920x1080&amp;par=1920x1040&amp;pcs=1685x994&amp;pss=1685x1633&amp;pis=-1x-1&amp;cfv=16&amp;ccd=24&amp;chi=1&amp;cja=true&amp;cpl=30&amp;cmi=75&amp;cce=true&amp;col=zh-CN&amp;cec=UTF-8&amp;cdo=-1&amp;tsr=1040&amp;tlm=1419308954&amp;tcn=1419308955&amp;tpr=1419308953941&amp;dpt=none&amp;coa=&amp;baidu_id="></script>
+			<div id="recomment_hot_1">
+                <ul class="recomment-tag" style="overflow: hidden;">
+                  <li class="marginbottom">
+                    <a href="" target="_blank">
+                        <img alt="全球最奇葩工" src="../img/ad.png" />
+                        <p>全球最奇葩工</p>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+			<div style="width:640px;height:60px;margin-top:10px;margin-bottom: 50px;">
+                 <img src="../img/ad2.png"/>
 			</div>
-			<div id="recomment_hot_2" style="margin-top:20px"><ul class="recomment-tag" style="overflow: hidden;">
-			<li>
-		<a href="http://www.mahua.com/xiaohua/908423.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_4','','']);">
-			<img alt="现在小孩子，不得了啊" src="http://i1.mhimg.com/M01/05/E9/CgAAhlSSNbKAGnh5AAAi75CGQeI215.jpg">
-			<p>现在小孩子，不得了啊</p>
-		</a>
-	
-			</li><li>
-		<a href="http://www.mahua.com/xiaohua/909911.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_5','','']);">
-			<img alt="这是什么情况" src="http://i1.mhimg.com/M00/05/E9/CgAAhlSSNiSAHJWwAAAkE2Y6wBo954.jpg">
-			<p>这是什么情况</p>
-		</a>
-	
-			</li><li class="nomargin">
-		<a href="http://www.mahua.com/xiaohua/907211.htm" target="_blank" onclick="_czc.push(['_trackEvent','笑话详情页','主站-内容区下方推荐位','推荐位_6','','']);">
-			<img alt="骚年，你的JJ还好吧！" src="http://i1.mhimg.com/M01/05/E9/CgAAhlSSN8yAeKMdAAAnQ9vqric951.jpg">
-			<p>骚年，你的JJ还好吧！</p>
-		</a>
-	</li></ul></div>
-		</div>
-		<a name="comment"></a>
-		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1">		<div class="title" total="33" page-size="50">麻花评论(<span>33</span>条评论)</div>
-	<div class="comment-input">
-		<form id="comment" onsubmit="return submit_comment();">
-			<textarea name="content" id="comment-content" class="comment-input-text" title="吐槽一下吧，您的神回复将名垂青史">吐槽一下吧，您的神回复将名垂青史</textarea>
-			<p id="text-length">0/140字</p>
-			<div>
-				<p><span>发评论，奖麻币，麻币可以换礼品哦!</span><span class="message"></span></p>
-				<input type="submit" id="comment-submit" value="评论">
-			</div>
-		</form>
-	</div>
-		<ul class="comment-list" id="comment-list">
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_4.jpg" alt="北京海淀麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">北京海淀麻花</a></p>
-						<p>  邪恶的小姐理解成了：“吸阳具”！！哈哈，笑死了！</p>
-			<em></em>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-232375">152</a>
-		</div>
-	</li>
-	
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_10.jpg" alt="北京麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">北京麻花</a></p>
-						<p>不看评论，我还真不知道为什么挨打。</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-1855699">2</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_7.jpg" alt="广东东莞麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">广东东莞麻花</a></p>
-						<p>哈哈哈哈。。。够内涵</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-986116">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="安徽合肥麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">安徽合肥麻花</a></p>
-						<p>西洋剧，不爱国</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-967564">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="河北张家口麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">河北张家口麻花</a></p>
-						<p>操...</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-885404">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_3.jpg" alt="浙江温州麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">浙江温州麻花</a></p>
-						<p>麻痹，当时没反应过来，想的是西洋剧=外国话剧，一看评论，我擦了，我承认，我少根筋</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-871610">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_10.jpg" alt="广东广州海珠麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">广东广州海珠麻花</a></p>
-						<p>我也喜欢欧美片</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-778587">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_9.jpg" alt="江苏宿迁麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">江苏宿迁麻花</a></p>
-						<p>你女女吗</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-771033">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="新疆乌鲁木齐麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">新疆乌鲁木齐麻花</a></p>
-						<p>我也爱吃。。。</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-761255">4</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_5.jpg" alt="四川德阳麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">四川德阳麻花</a></p>
-						<p>爱吃大鸡巴那家伙的名字亮了</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-753269">1</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_10.jpg" alt="广东惠州麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">广东惠州麻花</a></p>
-						<p>我表示我早都不纯洁了你12才这样还有机会</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-745860">1</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_3.jpg" alt="湖北麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">湖北麻花</a></p>
-						<p>你给我滚！</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-573489">1</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_5.jpg" alt="浙江台州麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">浙江台州麻花</a></p>
-						<p>完了  一年前  我看过 不懂什么意思  一年后 我懂了  我才12啊  </p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-569485">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_4.jpg" alt="湖北武汉麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">湖北武汉麻花</a></p>
-						<p>1l无敌了</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-451365">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_10.jpg" alt="安徽麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">安徽麻花</a></p>
-						<p>吸阳具  我擦</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-446636">10</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_8.jpg" alt="湖南益阳麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">湖南益阳麻花</a></p>
-						<p>洗阳具</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-445839">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_6.jpg" alt="上海麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">上海麻花</a></p>
-						<p>恩</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-419561">3</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_2.jpg" alt="江苏无锡麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">江苏无锡麻花</a></p>
-						<p>到底是谁下流</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-413402">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_4.jpg" alt="福建厦门麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">福建厦门麻花</a></p>
-						<p>了</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-357781">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="福建厦门麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">福建厦门麻花</a></p>
-						<p>男：小姐，你喜欢西洋剧（吸阳具）吗？女：不，我喜欢韩剧（含具）！</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-357778">2</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="河南洛阳麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">河南洛阳麻花</a></p>
-						<p>就是啊，普通人怎么可能理解为那个，分明是自己心里有问题。</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-350360">2</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_4.jpg" alt="内蒙古赤峰麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">内蒙古赤峰麻花</a></p>
-						<p>你给我滚！</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-350335">61</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_1.jpg" alt="山东临沂麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">山东临沂麻花</a></p>
-						<p>吸啥呀</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-301146">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_8.jpg" alt="六安麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">六安麻花</a></p>
-						<p>你够含蓄啊六安</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-285276">15</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_2.jpg" alt="山东济南麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">山东济南麻花</a></p>
-						<p>男人本色啊</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-272244">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="天线宝宝之不能容忍麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">天线宝宝之不能容忍麻花</a></p>
-						<p>尼玛 这女的果然色</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-260660">2</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_3.jpg" alt="鸡巴麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">鸡巴麻花</a></p>
-						<p>我爱吃大鸡巴</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-245351">2</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_9.jpg" alt="郑吒麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">郑吒麻花</a></p>
-						<p>很明显啊 都给吸字了 后面的就不用说了</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-240238">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_10.jpg" alt="偶只是麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">偶只是麻花</a></p>
-						<p>我反倒觉得那女的才下流</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-235267">80</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="湖南蛋卷麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">湖南蛋卷麻花</a></p>
-						<p>口交？</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-234614">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="安徽六安麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">安徽六安麻花</a></p>
-						<p>吸氧具</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-234421">1</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_11.jpg" alt="山东济宁麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">山东济宁麻花</a></p>
-						<p>一楼真邪恶</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-234364">0</a>
-		</div>
-	</li>
-		<li>
-		<div class="comment-content">
-							<img src="http://static.mhimg.com/www/face/avatar_1.jpg" alt="浙江杭州麻花"><i></i>
-				<p class="comment-username"><a href="javascript:void(0);">浙江杭州麻花</a></p>
-						<p>西洋剧是不是指欧美毛片</p>
-		</div>
-		<div class="comment-ding">
-			<a href="javascript:void(0);" rel="nofollow" comment_info="36264-1-232773">8</a>
-		</div>
-	</li>
-		</ul>
-	<div id="pagination" class="page" style="display: none;"><span class="current">1</span></div></div>
+			<div id="recomment_hot_2" style="margin-top:20px">
+            	<ul class="recomment-tag" style="overflow: hidden;">
+                  <li class="marginbottom">
+                    <a href="" target="_blank">
+                        <img alt="全球最奇葩工" src="../img/ad.png" />
+                        <p>全球最奇葩工</p>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+		</div>
+        <!--其它笑话结束-->
+        <!--评论开始-->
+		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() ne 'anonymousUser'}">
+          <div class="comment-input">
+              <form id="comment">
+                  <textarea name="commentcontent" id="commentcontent" class="comment-input-text" maxlength="50" placeholder="期待大神您的点评..."></textarea>
+                  <p id="text-length">0/50字</p>
+                  <div>
+                      <p><span>发表积极有效评论,有机会赚礼品哦!</span><span class="message"></span></p>
+                      <input type="button" id="commentsubmit" value="我要点评" onclick="submitFrom()" />
+                  </div>
+
+              </form>
+          </div>
+          <ul class="comment-list" id="comment-list">
+            <li th:each="page :${pages}">
+              <div class="comment-content">
+                  <img src="../img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}" alt="快乐家族" /><i></i>
+                  <p class="comment-username"><a href="usercenter.html" th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank" th:text="${page.userInfo.name}">快乐家族</a></p>
+                  <p th:text="${page.content}">不看评论，我还真不知道为什么挨打。</p>
+              </div>
+            </li>
+            <li th:if="${pages.totalPages eq 0}">
+                <div class="comment-content">
+                   暂无评论,赶紧抢沙发吧！
+                </div>
+            </li>
+		  </ul>
+	      <div id="pagination" class="page" th:if="${pages.totalPages ne 0}">分页</div>
+        </div>
+        <div class="mahua comment mahua-view" id="null-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() eq 'anonymousUser'}">
+            <span>登陆之后才能评论<a href="../login.html" style="margin-left: 20px;color: #03a8b1;">立即登陆</a></span>
+        </div>
+        <!--评论结束-->
 	</div>
     <!--左侧信息结束-->
     <!--右侧信息开始-->
 	<div class="right" id="main-right">
 		<div style="width:300px;height:250px">
-			广告位置
+			<img src="../img/ad.png"/>
 		</div>
 		<!-- 客户端下载 -->
         <div class="platform">
@@ -490,10 +158,10 @@
             </ul>
         </div>
         <div style="width:300px;height:250px">
-			广告位置
+            <img src="../img/ad.png"/>
 		</div>
-        <div style="width:300px;height:250px">
-			广告位置
+        <div style="width:300px;height:250px;margin-top: 15px;">
+            <img src="../img/ad.png"/>
 		</div>
 	</div>
 </div>
@@ -531,5 +199,46 @@
 <!--[if IE 6]>
 	<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
+<script type="text/javascript" th:inline="javascript">
+    var email=/*[[${#authentication.getName()}]]*/'';
+    var jid=/*[[${joke.jid}]]*/'';
+    function submitFrom() {
+        var content = $.trim($("#commentcontent").val());
+        if(content==""){
+            $(".message").text("评论内容不能为空");
+        }else{
+            buttonOption(0);
+            $.ajax({
+                url:"../addComment.html",
+                data: {"email":email,"jid":jid,"content":content},
+                type: "GET",
+                dataType:"text",
+                timeout:18000,
+                success:function(data){
+                    if(data == "2"){
+                        $(".message").text("已经点评过,不要重复点评");
+                    }else if(data == "0"){
+                        $(".message").text("点评失败,时候再试");
+                        buttonOption(1);
+                    }else{
+                        $(".message").text("点评成功，稍后您的点评就会展现");
+                    }
+                },
+                error: function(){ //请求失败
+                    $(".message").text("点评失败,时候再试");
+                    buttonOption(1);
+                }
+            });
+        }
+    }
+    function buttonOption(flag) {
+        if(flag == 1){
+            $('#commentsubmit').show();
+        }else{
+            $(".message").text("正在提交点评...");
+            $('#commentsubmit').hide();
+        }
+    }
+</script>
 </body>
 </html>

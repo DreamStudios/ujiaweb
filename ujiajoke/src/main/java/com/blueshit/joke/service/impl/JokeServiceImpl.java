@@ -74,10 +74,23 @@ public class JokeServiceImpl implements JokeService {
     /**
      * 通过ID获取笑话内容
      * @param id
+     * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
-    public Joke getJokeById(int id){
-        return jokeRepository.findOne(id);
+    public Joke getJokeById(int id,int flag){
+        Joke joke = null;
+        switch (flag){
+            case -1:
+                joke = jokeRepository.findOne(id-1 > 0 ? id-1 : 1);
+                break;
+            case 0:
+                joke = jokeRepository.findOne(id);
+                break;
+            case 1:
+                joke = jokeRepository.findOne(id + 1);
+                break;
+        }
+        return joke;
     }
 
     /**

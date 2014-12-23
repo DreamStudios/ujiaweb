@@ -33,7 +33,7 @@
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content"  th:with="logged=${#authentication.getName() ne 'anonymousUser'}">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin" th:if="${logged eq false}">
                 <a href="../register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
                 <a href="../login.html" class="top-login" rel="nofollow">登录</a>
@@ -85,7 +85,7 @@
 			<dd class="obtain">
 				经验值：<span class="in" th:text="${userInfo.experience}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
                 积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
+				等级：<span class="out" th:text="${userInfo.level}">实习生</span>
 			</dd>
 			<dd class="mymabi">Ta的笑话总量：<span th:text="${jokeSum}">8424</span></dd>
 			<dd class="obtain">

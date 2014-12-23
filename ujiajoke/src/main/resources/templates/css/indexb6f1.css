@@ -991,7 +991,7 @@ avatar_60x60  60*60的头像
 .mahua dt .joke-uname,.mahua dt .joke-title{float:left;width:570px;height:21px;line-height:21px;margin-top:7px;overflow:hidden;font-size:14px}
 .mahua dt .joke-uname a{color:#03a8b1;float:left;margin-right:20px}
 .mahua dt .joke-uname a:hover{color:#04ce9b;}
-.mahua dt .joke-title{height:34px;line-height:34px;font-size:18px;margin-top:0}
+.mahua dt .joke-title{height:40px;line-height:40px;font-size:18px;margin-top:0}
 .mahua .content{overflow:hidden;margin:20px 0;font-size:14px;line-height:28px;color:#666}
 .mahua .operation{border-top:1px solid #f3f2f2;width:640px;padding:10px 15px;margin:0 -15px -15px;height:36px;background:#fafafa;position:relative}
 .mahua .operation a{float:left;color:#888}
@@ -1538,7 +1538,7 @@ body{}
 #text-length{text-align:right;color:#969696;padding-right:5px;font-size:12px;height:26px;line-height:26px;width:631px}
 #comment div{background:#f1f1f1;height:36px;padding:7px 10px;overflow:hidden;}
 #comment div p{width:520px;height:36px;line-height:36px;float:left;color:#969696;overflow:hidden}
-#comment div input{cursor:pointer;width:80px;height:36px;float:right;text-align:center;line-height:36px;color:#fff;font-size:18px;border:none;background:#04ce9b;overflow:hidden}
+#comment div input{cursor:pointer;width:80px;height:36px;float:right;text-align:center;line-height:36px;color:#fff;font-size:18px;border:none;background:#03a8b1;overflow:hidden}
 .comment-input .message{color:#ff4000;float:right}
 
 /*未登录评论框*/

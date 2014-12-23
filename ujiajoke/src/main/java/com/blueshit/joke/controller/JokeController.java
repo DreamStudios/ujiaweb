@@ -2,6 +2,7 @@ package com.blueshit.joke.controller;
 
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.service.JokeCommentService;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.AuthorizationUser;
@@ -11,10 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -28,12 +26,15 @@ public class JokeController {
     private JokeValidator jokeValidator;
     private JokeService jokeService;
     private VipJokeService vipJokeService;
+    private JokeCommentService jokeCommentService;
 
     @Autowired
-    public JokeController(JokeValidator jokeValidator, JokeService jokeService, VipJokeService vipJokeService) {
+    public JokeController(JokeValidator jokeValidator, JokeService jokeService,
+                          VipJokeService vipJokeService,JokeCommentService jokeCommentService) {
         this.jokeValidator = jokeValidator;
         this.jokeService = jokeService;
         this.vipJokeService = vipJokeService;
+        this.jokeCommentService = jokeCommentService;
     }
 
     /** 首页 */
@@ -87,11 +88,19 @@ public class JokeController {
 
     /**
      * 普通笑话详情
-     * @param id
+     * @param id 笑话ID
+     * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
     @RequestMapping({"{id}/jokeDetail.html"})
-    public String jokeDetail(@PathVariable int id){
+    public String jokeDetail(@PathVariable int id,@RequestParam(value = "flag", required = true) int flag,String page,Model model){
+        Joke joke = jokeService.getJokeById(id,flag);
+
+        //评论内容
+        int pagenumber = getStringParseInt(page);
+        model.addAttribute("pages",jokeCommentService.getPageJokeCommentByJid(id,pagenumber));
+        model.addAttribute("newPage",pagenumber);
+        model.addAttribute("joke",joke);
         return "/detail/jokedetail";
     }
 

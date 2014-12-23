@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 普通笑话评论
@@ -28,6 +29,10 @@ public class JokeComment implements Serializable {
     //评论内容
     @Column(nullable = true, length = 255)
     private String content;
+
+    //评论时间
+    @Column(nullable = false)
+    private Date createTime = new Date();
 
     //用户信息
     @ManyToOne
@@ -71,5 +76,13 @@ public class JokeComment implements Serializable {
 
     public void setJoke(Joke joke) {
         this.joke = joke;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
