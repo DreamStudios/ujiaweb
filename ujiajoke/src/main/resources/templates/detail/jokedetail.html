@@ -80,22 +80,9 @@
 			</dd>
 		</dl>
         <!--其它笑话开始-->
-		<div id="recomment_hot" class="mahua mahua-view" style="height:410px">
+		<div id="recomment_hot" class="mahua mahua-view" style="height:150px">
 			<div id="recomment_hot_1">
                 <ul class="recomment-tag" style="overflow: hidden;">
-                  <li class="marginbottom">
-                    <a href="" target="_blank">
-                        <img alt="全球最奇葩工" src="../img/ad.png" />
-                        <p>全球最奇葩工</p>
-                    </a>
-                  </li>
-                </ul>
-            </div>
-			<div style="width:640px;height:60px;margin-top:10px;margin-bottom: 50px;">
-                 <img src="../img/ad2.png"/>
-			</div>
-			<div id="recomment_hot_2" style="margin-top:20px">
-            	<ul class="recomment-tag" style="overflow: hidden;">
                   <li class="marginbottom">
                     <a href="" target="_blank">
                         <img alt="全球最奇葩工" src="../img/ad.png" />
@@ -107,8 +94,8 @@
 		</div>
         <!--其它笑话结束-->
         <!--评论开始-->
-		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() ne 'anonymousUser'}">
-          <div class="comment-input">
+		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1">
+          <div class="comment-input" th:if="${#authentication.getName() ne 'anonymousUser'}">
               <form id="comment">
                   <textarea name="commentcontent" id="commentcontent" class="comment-input-text" maxlength="50" placeholder="期待大神您的点评..."></textarea>
                   <p id="text-length">0/50字</p>
