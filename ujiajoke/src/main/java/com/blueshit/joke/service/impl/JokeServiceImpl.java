@@ -136,4 +136,15 @@ public class JokeServiceImpl implements JokeService {
         }
         return true;
     }
+
+    /**
+     * 获取此笑话外的其它笑话
+     * @param jid
+     * @return
+     */
+    public List<Joke> getOtherJokeList(int jid,int number){
+        StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND jid != " + jid);
+        hql.append("ORDER BY updateTime DESC");
+        return jokeRepository.findTopByHql(hql.toString(), number);
+    }
 }

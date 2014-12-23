@@ -110,7 +110,7 @@ public class ShareController {
     //腾讯微博
     private String shareQweibo(String title,String url,String picture){
         return "http://share.v.t.qq.com/index.php?c=share&a=index&title=" + title +
-        "&url=" + url + "&pic=" + picture;
+                "&url=" + url + "&pic=" + picture;
     }
 
     //新浪微博

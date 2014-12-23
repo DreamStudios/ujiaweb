@@ -58,4 +58,11 @@ public interface JokeService {
      * @return
      */
     public boolean saveJoke(Joke joke);
+
+    /**
+     * 获取此笑话外的其它笑话
+     * @param jid
+     * @return
+     */
+    public List<Joke> getOtherJokeList(int jid,int number);
 }

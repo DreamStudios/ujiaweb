@@ -80,15 +80,15 @@
 			</dd>
 		</dl>
         <!--其它笑话开始-->
-		<div id="recomment_hot" class="mahua mahua-view" style="height:150px">
+		<div id="recomment_hot" class="mahua mahua-view" style="height:350px">
 			<div id="recomment_hot_1">
-                <ul class="recomment-tag" style="overflow: hidden;">
-                  <li class="marginbottom">
-                    <a href="" target="_blank">
-                        <img alt="全球最奇葩工" src="../img/ad.png" />
-                        <p>全球最奇葩工</p>
-                    </a>
-                  </li>
+                <ul class="recomment-tag" style="overflow: hidden;" th:with="list=${@jokeService.getOtherJokeList(joke.jid,6)}">
+                    <li class="marginbottom" th:each="us,stat :${list}" th:class="${stat.count%3 eq 0?'nomargin marginbottom':'marginbottom'}">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/ad.png" th:src="${us.picture}" />
+                            <p th:text="${us.title}">全球最奇葩工作</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
 		</div>
