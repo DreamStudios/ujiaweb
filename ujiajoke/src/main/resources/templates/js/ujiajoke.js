@@ -5209,6 +5209,53 @@ $(function(){
 		return false;
 	})
 	
+	//列表页评论
+	$('.commentClick').click(function(){
+		var jokeListComment=$(this).parent('.operation').next('.joke-list-comment');
+		if(jokeListComment.length>0){
+			if(jokeListComment.css('display')=='none'){
+				var t=1;
+			}else{
+				var t=2;
+			}
+			listCommentShow(t,$(this));
+		}else{
+			if(typeof($(this).attr('isgo'))=='undefined'){
+				var tthis=$(this);
+				var obj_info=$(this).attr('obj_info');
+				tthis.attr('isgo','1');
+				$.ajax({
+					dataType: "jsonp", 
+					url: commentInitUrl,
+					data: "obj_info="+obj_info,
+					success: function(ret) {
+						if(ret.html!=''){
+							tthis.parent('.operation').after(ret.html);
+							listCommentShow(1,tthis);
+							$('.comment_packUp').click(function(){
+								listCommentShow(3,tthis);
+							})
+						}
+					}
+				});
+			}
+		}
+		return false;
+	})
+	function listCommentShow(type,tthis){
+		var obj=tthis.parent('.operation').next('.joke-list-comment');
+		if(type==1){
+			obj.slideDown(500);
+		}else{
+			obj.slideUp(500);
+			if(type==3){
+				if(($(window).scrollTop()>(tthis.offset().top+tthis.outerHeight()))||($(window).scrollTop()+$(window).height()<tthis.offset().top)){
+					$('body,html').animate({scrollTop:tthis.offset().top},100);
+				}
+			}
+		}
+	}
+	
 	//笑点页面背景图片放大
 	$('.main-tags li').hover(function(){
 		$(this).find('img').stop().animate({
