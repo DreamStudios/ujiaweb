@@ -85,8 +85,8 @@ public class JokeServiceImpl implements JokeService {
      * @param uid
      * @return
      */
-    public HashMap<String, Integer> getJokeSumNumberById(int uid){
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
+    public HashMap<String, Object> getJokeSumNumberById(int uid){
+        HashMap<String, Object> map = new HashMap<String, Object>();
         String sql_joke = "SELECT COUNT(*),IFNULL(SUM(IF(STATUS=2,1,0)),0) FROM joke WHERE uid="+uid;
         String sql_joke_vip = "SELECT COUNT(*),IFNULL(SUM(IF(STATUS=2,1,0)),0) FROM vipjoke WHERE uid="+uid;
         Query query = entityManager.createNativeQuery(sql_joke);
@@ -99,8 +99,13 @@ public class JokeServiceImpl implements JokeService {
 
         int sum = Integer.parseInt(obj[0].toString()) + Integer.parseInt(obj_vip[0].toString());
         int pass_sum = Integer.parseInt(obj[1].toString()) + Integer.parseInt(obj_vip[1].toString());
-        map.put("sum", sum);
-        map.put("pass_sum", pass_sum);
+        map.put("jokeSum", sum);
+        map.put("jokePassSum", pass_sum);
+        float passRate = 0;
+        if(Integer.parseInt(map.get("jokeSum").toString()) > 0){
+            passRate = (float)(Integer.parseInt(map.get("jokePassSum").toString())) / (Integer.parseInt(map.get("jokeSum").toString())) *100;
+        }
+        map.put("passRate", passRate);
         return map;
     }
 

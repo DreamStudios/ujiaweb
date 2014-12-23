@@ -51,7 +51,7 @@
 <!--主要内容开始-->
 <div class="main">
     <!--个人信息开始-->
-	<div class="user-banner">
+	<div class="user-banner" th:replace="myJoke::myJoke_user">
 		<span id="editImg">
 			<img src="img/avatar_2.jpg"/>
 		</span>
@@ -88,7 +88,7 @@
 	</div>
 	<!--左侧信息结束-->
     <!--右侧信息开始-->
-	<div class="right">
+	<div class="right" th:replace="myJoke::myJoke_right">
 		<div class="publish-audit">
 	      <a href="javascript:alert(1);" class="publish" target="_blank"><i></i><span>投稿</span></a>
           <a href="javascript:alert(1);" class="audit" target="_blank"><i></i><span>审稿</span></a>

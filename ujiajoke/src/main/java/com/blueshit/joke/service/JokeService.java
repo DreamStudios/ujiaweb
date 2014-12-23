@@ -49,7 +49,7 @@ public interface JokeService {
      * @param uid
      * @return
      */
-    public HashMap<String, Integer> getJokeSumNumberById(int uid);
+    public HashMap<String, Object> getJokeSumNumberById(int uid);
 
     /**
      * 保存普通笑话信息

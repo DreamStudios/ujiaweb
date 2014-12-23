@@ -1,10 +1,17 @@
 package com.blueshit.joke;
 
 import com.blueshit.joke.repository.BaseRepositoryFactoryBean;
+import com.blueshit.joke.repository.UserInfoRepository;
 import com.blueshit.joke.security.LoginFilter;
+import com.blueshit.joke.service.JokeService;
+import com.blueshit.joke.service.UserInfoService;
+import com.blueshit.joke.service.impl.JokeServiceImpl;
+import com.blueshit.joke.service.impl.UserInfoServiceImpl;
+import com.blueshit.joke.utils.AuthorizationUser;
 import com.blueshit.joke.utils.Constants;
 import org.apache.catalina.connector.Connector;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -142,5 +149,24 @@ public class Application extends SpringBootServletInitializer {
         factory.setMaxFileSize("104857600KB");
         factory.setMaxRequestSize("104857600KB");
         return factory.createMultipartConfig();
+    }
+
+
+    /** top几的UserInfo对象接口  */
+    @Bean
+    public UserInfoService userInfoService() {
+        return new UserInfoServiceImpl();
+    }
+
+    /** 获取session中的登陆对象(UserInfo)*/
+    @Bean
+    public AuthorizationUser authorizationUserService(){
+        return new AuthorizationUser();
+    }
+
+    /** 获取笑话接口对象*/
+    @Bean
+    public JokeService jokeService(){
+        return new JokeServiceImpl();
     }
 }

@@ -33,17 +33,12 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Value("${PASSWORD}")
     private              String PASSWORD = "itboys";
 
-    private   UserInfoRepository userInfoRepository;
-    private   PasswordEncoder    passwordEncoder;
-    protected MessageSource      resource;
-
     @Autowired
-    public UserInfoServiceImpl(UserInfoRepository userInfoRepository, PasswordEncoder passwordEncoder,
-                               MessageSource resource) {
-        this.userInfoRepository = userInfoRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.resource = resource;
-    }
+    private   UserInfoRepository userInfoRepository;
+    @Autowired
+    private   PasswordEncoder    passwordEncoder;
+    @Autowired
+    protected MessageSource      resource;
 
     /**
      * 获取今日之星

@@ -54,23 +54,23 @@
 <!--主要内容开始-->
 <div class="main">
     <!--个人信息开始-->
-	<div class="user-banner">
+	<div class="user-banner" th:fragment="myJoke_user" th:with="userInfo=${@authorizationUserService.getUserEntity()}">
 		<span id="editImg">
 			<img src="img/avatar_2.jpg"/>
 		</span>
-		<dl class="user-info">
-			<script type="text/javascript">var score=0;</script>
-			<dt><span>阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
-			<dd class="obtain">
-				积分：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				等级：<span class="out">初出茅庐</span>
-			</dd>
-			<dd class="mymabi">Ta的笑话：<span>8424</span></dd>
-			<dd class="obtain">
-				通过的笑话：<span class="in">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				通过率：<span class="out">88%</span>
-			</dd>
-		</dl>
+        <dl class="user-info" th:with="map=${@jokeService.getJokeSumNumberById(userInfo.uid)}">
+            <script type="text/javascript">var score=0;</script>
+            <dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
+            <dd class="obtain">
+                积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
+            </dd>
+            <dd class="mymabi">Ta的笑话：<span th:text="${map.get('jokeSum')}">8424</span></dd>
+            <dd class="obtain">
+                通过的笑话：<span class="in" th:text="${map.get('jokePassSum')}">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                通过率：<span class="out" th:text="${#numbers.formatDecimal(map.get('passRate'), 1, 2)+'%'}">88%</span>
+            </dd>
+        </dl>
 	</div>
     <!--个人信息结束-->
     <!--左侧信息开始-->
@@ -145,20 +145,20 @@
 
     <!--左侧信息结束-->
     <!--右侧信息开始-->
-	<div class="right">
+	<div class="right" th:fragment="myJoke_right">
 		<div class="publish-audit">
 	      <a href="javascript:alert(1);" class="publish" target="_blank"><i></i><span>投稿</span></a>
           <a href="javascript:alert(1);" class="audit" target="_blank"><i></i><span>审稿</span></a>
         </div>		
-        <dl class="other-user">
+        <dl class="other-user" th:with="list=${@userInfoService.getTodayStar(9)}">
             <dt>看看他们的笑话</dt>
-            <dd>
-                <a href="javascript:alert(1);" class="go-user-index" target="_blank">
-                    <img src="img/avatar_2.jpg" alt="独创KISS洋洋"/>
+            <dd th:each="us :${list}" >
+                <a href="detail/jokedetail.html" th:href="${us.uid+'/userCenter.html'}" class="go-user-index" target="_blank" >
+                    <img src="img/avatar_2.jpg" th:src="${us.photo}" th:alt="${us.name}" alt="独创KISS洋洋"/>
                     <i></i>
-                    <p>独创KISS洋洋</p>
+                    <p th:text="${us.name}">独创KISS洋洋</p>
                 </a>
-                <a href="javascript:alert(1);" class="go-user-index-btn" target="_blank">去Ta首页</a>
+                <a href="detail/userCenter.html" th:href="${us.uid+'/userCenter.html'}" class="go-user-index-btn" target="_blank">去Ta首页</a>
             </dd>  
         </dl>	
     </div>

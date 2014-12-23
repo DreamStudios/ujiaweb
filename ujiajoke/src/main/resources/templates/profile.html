@@ -104,23 +104,23 @@
 <!--主要内容开始-->
 <div class="main">
     <!--个人信息开始-->
-	<div class="user-banner">
+	<div class="user-banner" th:replace="myJoke::myJoke_user">
 		<span id="editImg">
 			<img src="img/avatar_2.jpg"/>
 		</span>
-		<dl class="user-info">
-			<script type="text/javascript">var score=0;</script>
-			<dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
-			<dd class="obtain">
-				积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
-			</dd>
-			<dd class="mymabi">Ta的笑话：<span th:text="${jokeSum}">8424</span></dd>
-			<dd class="obtain">
-				通过的笑话：<span class="in" th:text="${jokePassSum}">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				通过率：<span class="out" th:text="${#numbers.formatDecimal(passRate, 1, 2)+'%'}">88%</span>
-			</dd>
-		</dl>
+        <dl class="user-info">
+            <script type="text/javascript">var score=0;</script>
+            <dt><span>阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
+            <dd class="obtain">
+                积分：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                等级：<span class="out">初出茅庐</span>
+            </dd>
+            <dd class="mymabi">Ta的笑话：<span>8424</span></dd>
+            <dd class="obtain">
+                通过的笑话：<span class="in">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                通过率：<span class="out">88%</span>
+            </dd>
+        </dl>
 	</div>
     <!--个人信息结束-->
     <!--左侧信息开始-->
@@ -162,7 +162,7 @@
 	</div>
     <!--左侧信息结束-->
 	<!--右侧信息开始-->
-	<div class="right">
+	<div class="right" th:replace="myJoke::myJoke_right">
 		<div class="publish-audit">
 	      <a href="javascript:alert(1);" class="publish" target="_blank"><i></i><span>投稿</span></a>
           <a href="javascript:alert(1);" class="audit" target="_blank"><i></i><span>审稿</span></a>
