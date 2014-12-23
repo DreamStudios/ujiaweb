@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //设置需要权限的地址
-        http.authorizeRequests().antMatchers("/vip/*.html","/*/vipJokeDetail.html").hasAuthority("userIsLogin");
+        http.authorizeRequests().antMatchers("/vip/*.html","/*/vipJokeDetail.html","/releaseJoke.html").hasAuthority("userIsLogin");
         //设置允许访问的资源
         String[] matchers = {
                 "/", "/upload/**", "/*.html", "/kaptcha.jpg", "/about/**", "/img/**", "/css/**", "/js/**",

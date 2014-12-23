@@ -29,13 +29,19 @@ public class JokeValidator implements Validator {
     public void validate(Object target, Errors errors) {
         Joke joke = (Joke) target;
         if (joke != null) {
-            if(joke.getStyle() == 1 && (joke.getPicture() == null || joke.getPicture().isEmpty())){//图片
-                errors.rejectValue("picture","图片不能为空","图片不能为空");
+            if(joke.getStyle() == 1){//图片
+                if(joke.getPicture() == null || joke.getPicture().isEmpty()) {
+                    errors.rejectValue("picture", "图片不能为空", "图片不能为空");
+                }else if(joke.getPicture().equals("sizeError")){
+                    errors.rejectValue("picture", "图片最大(800*4000)", "图片最大(800*4000)");
+                }
             }
-            if(joke.getStyle() == 2 && (joke.getContent() == null || joke.getContent().isEmpty())){
-                errors.rejectValue("content","内容不能为空","内容不能为空");
-            }else if(joke.getContent().length()>200 || joke.getContent().length()<10){
-                errors.rejectValue("content","字数限制(10-200)","字数限制(10-200)");
+            if(joke.getStyle() == 2){
+                if(joke.getContent() == null || joke.getContent().isEmpty()) {
+                    errors.rejectValue("content", "内容不能为空", "内容不能为空");
+                }else if(joke.getContent().length()>200 || joke.getContent().length()<10){
+                    errors.rejectValue("content","字数限制(10-200)","字数限制(10-200)");
+                }
             }
             if(joke.getTitle() == null || joke.getTitle().isEmpty()){
                 errors.rejectValue("title","标题不能为空","标题不能为空");

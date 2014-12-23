@@ -150,10 +150,10 @@ public class JokeController {
      */
     @RequestMapping(value="/releaseJoke", method = RequestMethod.GET)
     public String addGoodsStatusGet(Authentication authentication,Model model,HttpSession session){
-        /*if(authentication==null){
+        if(authentication==null){
             return "redirect:/login.html";
-        }*/
-        session.removeAttribute("jokePicture");
+        }
+        session.removeAttribute("picture");
         Joke joke = new Joke();
         model.addAttribute("joke",joke);
         return "releaseJoke";
@@ -168,11 +168,10 @@ public class JokeController {
      */
     @RequestMapping(value="/releaseJoke", method = RequestMethod.POST)
     public String addGoodsStatusPost(Authentication authentication,HttpSession session,Model model,@ModelAttribute("joke") Joke joke, BindingResult result){
-        /*if(authentication==null){
+        if(authentication==null){
             return "redirect:/login.html";
-        }*/
-        String jokePicture = (String) session.getAttribute("jokePicture");
-        session.getAttributeNames();
+        }
+        String jokePicture = (String) session.getAttribute("picture");
         joke.setPicture(jokePicture);
 
         jokeValidator.validate(joke,result);
