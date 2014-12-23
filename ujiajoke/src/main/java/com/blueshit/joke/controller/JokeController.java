@@ -93,8 +93,11 @@ public class JokeController {
      * @return
      */
     @RequestMapping({"{id}/jokeDetail.html"})
-    public String jokeDetail(@PathVariable int id,@RequestParam(value = "flag", required = true) int flag,String page,Model model){
-        Joke joke = jokeService.getJokeById(id,flag);
+    public String jokeDetail(@PathVariable int id,String flag,String page,Model model){
+        if(flag == null || "".equals(flag)){
+            flag = "0";
+        }
+        Joke joke = jokeService.getJokeById(id,Integer.parseInt(flag));
 
         //评论内容
         int pagenumber = getStringParseInt(page);
