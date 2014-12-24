@@ -8,7 +8,12 @@
     <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
     <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
     <link rel="stylesheet" type="text/css" href="../css/indexb6f1.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
     <script type="text/javascript" src="../js/ujiajoke.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-paginator.min.js"></script>
+    <script type="text/javascript">
+        var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
+    </script>
 </head>
 <body>
 <!--头部信息开始-->
@@ -64,16 +69,16 @@
 			<dd class="operation">
 				<a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i>0</i></a>
 				<a href="javascript:void(0)" rel="nofollow"  class="cai" title="踩"><img src="../img/cai.png" /><i>0</i></a>
-				<a href="905492.html#comment" class="comment" title="评论"><img src="../img/comment.png" /><i>0条评论</i></a>
+				<a href="#object-comment" class="comment" title="评论"><img src="../img/comment.png" /><i th:text="${pages.totalElements+'条评论'}">0条评论</i></a>
 				<div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">
                         <span>分享到：</span>
-                        <a href="javascript:alert(1);" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                        <a href="javascript:void(0)" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" data-url="http://www.mahua.com/xiaohua/905491.htm">复制网址</a>
+                        <a href="#" th:href="@{'../'+share.html(type=1,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
+                        <a href="#" th:href="@{'../'+share.html(type=2,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
+                        <a href="#" th:href="@{'../'+share.html(type=3,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
+                        <a href="#" th:href="@{'../'+share.html(type=4,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://10.0.3.73:10012/'+${joke.jid}+'/jokeDetail.html'">复制网址</a>
                     </div>
                 </div>
 				<div class="buy"></div>

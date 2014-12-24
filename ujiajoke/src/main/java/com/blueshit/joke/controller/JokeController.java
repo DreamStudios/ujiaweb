@@ -104,6 +104,7 @@ public class JokeController {
         model.addAttribute("pages",jokeCommentService.getPageJokeCommentByJid(id,pagenumber));
         model.addAttribute("newPage",pagenumber);
         model.addAttribute("joke",joke);
+        model.addAttribute("jokeType",0);//普通笑话
         return "/detail/jokedetail";
     }
 
@@ -113,7 +114,8 @@ public class JokeController {
      * @return
      */
     @RequestMapping({"{id}/vipJokeDetail.html"})
-    public String vipJokeDetail(@PathVariable int id){
+    public String vipJokeDetail(@PathVariable int id,String flag,String page,Model model){
+        model.addAttribute("jokeType",1);//会员笑话
         return "/detail/jokedetail";
     }
 

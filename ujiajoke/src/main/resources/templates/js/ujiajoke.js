@@ -5092,7 +5092,7 @@ $(function(){
 	
 	//复制笑话网址
 	$('.share-copy').click(function(){
-		copy_text_ie($(this).attr('data-url'));
+		copy_text_ie($(this).attr('name'));
 		return false;
 	});
 	$('#invite-friends-btn').click(function(){
