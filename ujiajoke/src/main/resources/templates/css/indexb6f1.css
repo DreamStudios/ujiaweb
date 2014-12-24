@@ -945,7 +945,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .about dd a{margin-right:20px;color:#999}
 .about dd a:hover{color:#03a8b1;}
 .about dd a.a-color-red{color:#03a8b1}
-.about dd a.a-color-red:hover{color:#e05857}
+.about dd a.a-color-red:hover{color:#699f00}
 
 .footer-weibo,.footer-qzone,.footer-QQweibo,.footer-weixin{height:32px;display:inline-block;padding-left:25px;background:url(../img/mahua_common.png) -975px -561px no-repeat}
 .footer-qzone{background-position:-975px -591px}
@@ -1023,7 +1023,7 @@ avatar_60x60  60*60的头像
 .reward-box{display:none;float:right;margin-top:5px;height:26px;width:69px;}
 .mahua .operation .buy{text-indent:35px;margin-top:5px;line-height:26px;height:26px;width:69px;float:right;}
 .mahua .operation .buy,.mahua .operation .buyed{margin-right:10px}
-.mahua .operation .buy a{color:#ff845b;margin-top:0}
+.mahua .operation .buy a{color:#03a8b1;margin-top:0}
 .mahua .operation .reward{margin-top:5px;color:#04ce9b;background-position:-630px -215px}
 .mahua .operation .buy a:hover,.mahua .operation .buyed a{color:#fff;background-position:-561px -215px}
 .mahua .operation .reward:hover,.mahua .operation .rewarded{color:#fff;background-position:-699px -215px}
@@ -1079,7 +1079,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 /*收藏的弹出框*/
 #collection_tips{position:absolute;z-index:20;text-align:center;background:#fff8da;width:165px;height:32px;line-height:32px;color:#666;font-size:12px;border:1px solid #ecdcb4}
 #collection_tips a{color:#03a8b1}
-#collection_tips a:hover{color:#e05857}
+#collection_tips a:hover{color:#699f00}
 #collection_tips i{position:absolute;top:32px;left:75px;display:block;width:15px;height:5px;background:url(../img/joke.24.png) -485px 0 no-repeat;_background:url(../img/joke.24.ie6.png) -485px 0 no-repeat}
 
 
@@ -1291,7 +1291,7 @@ body{}
 .main .right{width:300px;margin-right:0;overflow:hidden}
 .user-operation{overflow:hidden}
 .user-operation li{float:left;width:100%;overflow:hidden}
-.user-show{width:268px;height:80px;padding:15px 16px;background:url(../img/mahua_common.png) #fff 0 -243px no-repeat;overflow:hidden}
+.user-show{width:270px;height:80px;padding:15px 16px;background:url(../img/mahua_common.png) #fff 0 -2411px ;overflow:hidden}
 .user-show img,.user-show i,.right-top-avatar{display:block;width:60px;height:60px;float:left;}
 .user-show a.right-login-web{text-align:center;display:block;width:60px;height:90px;line-height:150px;overflow:hidden;float:left}
 .user-show a.right-login-qq,.user-show a.right-login-weibo{display:block;width:60px;height:90px;overflow:hidden;float:left}
@@ -1300,7 +1300,7 @@ body{}
 .user-show a.right-login-qq i,.user-show a.right-login-weibo i{background:url(../img/mahua_common.png) -352px -459px no-repeat}
 .user-show a.right-login-weibo i{background-position:-290px -459px}
 .user-show a.right-login-web{background:url(../img/mahua_common.png) -16px -259px no-repeat;margin-right:32px;color:#03a8b1}
-.user-show a.right-login-web:hover{color:#e05857}
+.user-show a.right-login-web:hover{color:#699f00}
 .user-show a.right-login-qq,.user-show a.right-login-weibo{margin-right:18px}
 .user-show a.right-login-weibo{margin-right:0}
 .user-show span{display:block;margin-right:32px;float:left;border-right:1px solid #eee;width:1px;height:60px;}
@@ -1309,7 +1309,7 @@ body{}
 .user-show dt{font-size:20px;margin:8px 0;color:#444}
 .user-show dd{float:left;margin-bottom:10px;width:88px;height:14px;line-height:14px;color:#969696;border-left:1px solid #ccc;padding-left:15px;overflow:hidden}
 .user-show dd.noborder{border:none;padding-left:0}
-.user-show dd em{font-style:normal;color:#ff845b}
+.user-show dd em{font-style:normal;color:#03a8b1}
 
 .user-btn{padding:10px 1px;background:#fafafa;border-bottom:2px solid #e4e4e2;border-top:1px solid #f1f1f1;width:298px;text-align:center;}
 .user-operation .checkin-right-top , .user-operation .do-task,.user-operation .friends{display:inline-block;width:96px;*width:92px;height:16px;line-height:16px;padding-top:50px;background:url(../img/mahua_common.png) -430px 0 no-repeat}
@@ -1326,7 +1326,7 @@ body{}
 .right-top-avatar{float:left;width:195px}
 .right-top-avatar-a{display:block;width:60px;height:60px;margin-right:10px;float:left}
 .right-top-avatar-a a{color:#03a8b1;}
-.right-top-avatar-a a:hover{color:#be321c;}
+.right-top-avatar-a a:hover{color:#699f00;}
 
 .user-show .right-top-avatar-a i{display:block;margin-top:-60px;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
 .user-show .right-top-avatar-a em{text-align:center;font-style:normal;float:left;width:60px;height:26px;line-height:28px;display:block;}
@@ -1571,7 +1571,7 @@ body{}
 
 .comment .page{padding:20px 0 10px;}
 .comment .page a,.comment .page .current{border:1px solid #f1f1f1;border-bottom:2px solid #e8e7e6;padding:0 14px}
-.comment .page .current,.comment .page a:hover{border-color:#ff845b;background:#03a8b1;color:#fff}
+.comment .page .current,.comment .page a:hover{border-color:#03a8b1;background:#03a8b1;color:#fff}
 .comment .page .current{padding:0 8px}
 
 /*搜索结果*/

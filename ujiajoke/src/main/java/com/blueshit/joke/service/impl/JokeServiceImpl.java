@@ -143,7 +143,19 @@ public class JokeServiceImpl implements JokeService {
      * @return
      */
     public List<Joke> getOtherJokeList(int jid,int number){
-        StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND jid != " + jid);
+        StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND status=2 AND jid != " + jid);
+        hql.append("ORDER BY updateTime DESC");
+        return jokeRepository.findTopByHql(hql.toString(), number);
+    }
+
+    /**
+     * 根据笑话类型查询笑话信息
+     * @param number 数据条数
+     * @param style 1:图文 2:纯文字
+     * @return
+     */
+    public List<Joke> getTopJokeList(int number,int style){
+        StringBuffer hql = new StringBuffer("From Joke WHERE style="+ style +" AND status=2");
         hql.append("ORDER BY updateTime DESC");
         return jokeRepository.findTopByHql(hql.toString(), number);
     }

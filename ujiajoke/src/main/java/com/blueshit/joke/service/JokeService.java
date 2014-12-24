@@ -65,4 +65,13 @@ public interface JokeService {
      * @return
      */
     public List<Joke> getOtherJokeList(int jid,int number);
+
+    /**
+     * 根据笑话类型查询笑话信息
+     * @param number 数据条数
+     * @param style 1:图文 2:纯文字
+     * @return
+     */
+    public List<Joke> getTopJokeList(int number,int style);
+
 }
