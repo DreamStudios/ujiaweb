@@ -38,6 +38,7 @@ public class JokeCommentServiceImpl implements JokeCommentService {
      * @param page 页码
      * @return
      */
+    @Override
     public Page<JokeComment> getPageJokeCommentByJid(int jid, int page) {
         StringBuffer hql = new StringBuffer("From JokeComment WHERE joke.jid=" + jid);
         hql.append(" order by createTime desc");
@@ -50,6 +51,7 @@ public class JokeCommentServiceImpl implements JokeCommentService {
      * @param jid
      * @return
      */
+    @Override
     public boolean isComment(int uid,int jid){
         try {
             String hql = " FROM JokeComment WHERE joke.jid=" + jid + " AND userInfo.uid=" + uid;
@@ -66,6 +68,7 @@ public class JokeCommentServiceImpl implements JokeCommentService {
      * @param jokeComment
      * @return
      */
+    @Override
     public boolean addJokeComment(JokeComment jokeComment){
         try{
             jokeCommentRepository.save(jokeComment);

@@ -1,7 +1,9 @@
 package com.blueshit.joke.service.impl;
 
+import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.repository.AdRepository;
 import com.blueshit.joke.repository.JokeRepository;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.utils.Constants;
@@ -26,6 +28,8 @@ public class JokeServiceImpl implements JokeService {
 
     @Autowired
     JokeRepository jokeRepository;
+    @Autowired
+    AdRepository adRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -49,6 +53,7 @@ public class JokeServiceImpl implements JokeService {
      * @param status 0:审核未通过 1:待审核 2:审核通过 3:全部
      * @return
      */
+    @Override
     public Page<Joke> getJokePagesAll_byType(UserInfo userInfo, int status, int page) {
         StringBuffer hql = new StringBuffer("From Joke where userInfo.uid=" + userInfo.getUid());
         if (status != 3){
@@ -77,6 +82,7 @@ public class JokeServiceImpl implements JokeService {
      * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
+    @Override
     public Joke getJokeById(int id,int flag){
         Joke joke = null;
         switch (flag){
@@ -98,6 +104,7 @@ public class JokeServiceImpl implements JokeService {
      * @param uid
      * @return
      */
+    @Override
     public HashMap<String, Object> getJokeSumNumberById(int uid){
         HashMap<String, Object> map = new HashMap<String, Object>();
         String sql_joke = "SELECT COUNT(*),IFNULL(SUM(IF(STATUS=2,1,0)),0) FROM joke WHERE uid="+uid;
@@ -127,6 +134,7 @@ public class JokeServiceImpl implements JokeService {
      * @param joke
      * @return
      */
+    @Override
     public boolean saveJoke(Joke joke){
         try{
             jokeRepository.save(joke);
@@ -142,6 +150,7 @@ public class JokeServiceImpl implements JokeService {
      * @param jid
      * @return
      */
+    @Override
     public List<Joke> getOtherJokeList(int jid,int number){
         StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND status=2 AND jid != " + jid);
         hql.append("ORDER BY updateTime DESC");
@@ -154,9 +163,23 @@ public class JokeServiceImpl implements JokeService {
      * @param style 1:图文 2:纯文字
      * @return
      */
+    @Override
     public List<Joke> getTopJokeList(int number,int style){
         StringBuffer hql = new StringBuffer("From Joke WHERE style="+ style +" AND status=2");
         hql.append("ORDER BY updateTime DESC");
         return jokeRepository.findTopByHql(hql.toString(), number);
+    }
+
+    /**
+     * 获取广告列表
+     * @param number
+     * @param type
+     * @return
+     */
+    @Override
+    public List<Ad> getTopAdList(int number,int type){
+        StringBuffer hql = new StringBuffer("From Ad WHERE adStatus = 3 AND type=" + type);
+        hql.append("ORDER BY updateTime DESC");
+        return adRepository.findTopByHql(hql.toString(),number);
     }
 }

@@ -138,101 +138,81 @@
 	</div>
     <!--左侧信息结束-->
     <!--右侧信息开始-->
-	<div class="right" id="main-right">
-		<!-- 用户信息 -->
-		<ul class="user-operation" id="user-show-ajax">
-            <li class="user-show">
-                <a href="javascript:void(0)" class="right-login-web loginClick">点击登录</a>
-                <span><em>或</em></span>
-                <a href="javascript:alert(1);" target="_blank" rel="nofollow" class="right-login-qq"><i></i><span>QQ登录</span></a>
-                <a href="javascript:alert(1);" target="_blank" rel="nofollow" class="right-login-weibo"><i></i><span>微博登录</span></a>
+    <div class="right" id="main-right" th:replace="index::index_right">
+        <!-- 用户信息 -->
+        <ul class="user-operation" id="user-show-ajax">
+            <li class="user-show" >
+                <div class="right-top-avatar-a">
+                    <a href="profile.html" target="_blank">
+                        <img alt="JackAn" src="img/avatar_2.jpg" />
+                    </a>
+                    <a href="#" target="_blank"><em>修改头像</em></a>
+                </div>
+                <dl class="right-top-avatar">
+                    <dt><a href="profile.html" target="_blank">JackAn</a><p></p>
+                    </dt><dd class="noborder">经验值：<em>500</em></dd>
+                    <dd>等级：实习生</dd>
+                    <dd class="noborder">积分：<em>0</em></dd>
+                    <dd>投稿量：0</dd>
+                </dl>
             </li>
             <li class="user-btn">
                 <div class="publish-audit">
-                    <a href="javascript:alert(1);" class="publish" target="_blank" rel="nofollow"><i></i><span>投稿</span></a>
+                    <a href="#" class="publish" target="_blank" rel="nofollow"><i></i><span>投稿</span></a>
                     <a href="javascript:alert(1);" class="audit" target="_blank" rel="nofollow"><i></i><span>审稿</span></a>
                 </div>
             </li>
             <li class="user-operation-bottom">
                 <a href="javascript:alert(1);" rel="nofollow" class="checkin-right-top checkinClick"><span>每日签到<br/>赚笑币</span></a>
-                <a href="javascript:alert(1);" class="do-task" target="_blank" rel="nofollow"><span>做任务<br/>赚笑币</span></a>
-                <a href="javascript:alert(1);" class="friends" target="_blank" rel="nofollow"><span>邀请好友<br/>赚笑币</span></a>
+                <a href="#" class="do-task" target="_blank" rel="nofollow"><span>做任务<br/>赚笑币</span></a>
+                <a href="#" class="friends" target="_blank" rel="nofollow"><span>邀请好友<br/>赚笑币</span></a>
             </li>
-		</ul>		
+        </ul>
         <div style="margin-top:20px;width:300px;height:250px">
-            广告
+            <img src="img/ad.png" />
         </div>
-        <!-- 麻花笑点 -->
-        <dl class="tags-list"><dt><a href="tags.html" target="_blank"><h2>笑点</h2></a><a href="tags.html" class="more" target="_blank">更多</a></dt>
-            <dd>
-                <a href="newjokes/pic/index.html" target="_blank">搞笑图片</a>
-                <a href="newjokes/text/index.html" target="_blank">文字笑话</a>
-                <a href="lishixiaohua.html" target="_blank">时光倒流</a>
-                <a  target="_blank" href="tags/199_1.html">美女</a>
-                <a  target="_blank" href="tags/9380_1.html">性感</a>
-                <a  target="_blank" href="tags/8932_1.html">女汉子</a>
-                <a  target="_blank" href="tags/8929_1.html">屌丝</a>
-                <a  target="_blank" href="tags/8933_1.html">土豪</a>
-                <a  target="_blank" href="tags/8092_1.html">重口味</a>
-                <a  target="_blank" href="tags/6727_1.html">动态图</a>
-                <a  target="_blank" href="tags/8908_1.html">雷人恶搞</a>
-                <a  target="_blank" href="tags/7048_1.html">内涵</a>
-                <a  target="_blank" href="tags/7567_1.html">卖萌</a>
-                <a  target="_blank" href="tags/8930_1.html">节操</a>
-                <a  target="_blank" href="tags/8946_1.html">熊孩子</a>
-                <a  target="_blank" href="tags/8931_1.html">碉堡</a>
-                <a  target="_blank" href="tags/8979_1.html">坑爹</a>
-                <a  target="_blank" href="tags/8954_1.html">作死</a>
-            </dd>
-         </dl>
-         <!-- 广告位 -->
-         <div style="margin-top:20px;width:300px;height:250px">
-            广告
-         </div>
-		 <!--精彩文字笑话-->
-         <dl class="new-pic-text">
+        <!--精彩文字笑话-->
+        <dl class="new-pic-text">
             <dt>
-              <a href="newjokes/text.html" target="_blank"><h2>精彩文字笑话</h2></a><a href="newjokes/text.html" target="_blank" class="more">更多</a>
+                <a href="#" target="_blank"><h2>精彩文字笑话</h2></a><a href="#" target="_blank" class="more">更多</a>
             </dt>
-            <dd>
-                <a target="_blank" class="title" href="xiaohua/906082.html">那谁的表情才是搞笑</a>
+            <dd th:each="us:${list}">
+                <a target="_blank" class="title" href="detail/jokedetail.html">那谁的表情才是搞笑</a>
             </dd>
-         </dl>
-         <!-- 广告位 -->
-         <div style="margin-top:20px;width:300px;height:250px">
-            广告
-         </div>
-		<!-- 最新搞笑图片 -->
-        <dl class="new-pic">
-            <dt><a href="newjokes/pic.html" target="_blank"><h2>精彩搞笑图片</h2></a><a href="newjokes/pic.html" target="_blank" class="more">更多</a></dt>
+        </dl>
+        <!-- 广告位 -->
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.png" />
+        </div>
+        <!-- 最新搞笑图片 -->
+        <dl class="new-pic" >
+            <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
-                <a class="new-pic-left" target="_blank" href="xiaohua/193343.html">
-                    <img alt="贪吃动物们的糗事" src="img/11.gif"/>
+                <a target="_blank" href="detail/jokedetail.html" >
+                    <img alt="贪吃动物们的糗事" src="img/11.gif" />
                     <span>贪吃动物们的糗事</span>
                 </a>
-                <a  target="_blank" href="xiaohua/803534.html">
-                    <img alt="这社会，什么奇葩公司都有！" src="img/11.gif"/>
-                    <span>这社会，什么奇葩公司都有！</span>
-                </a>
-             </dd>
+            </dd>
         </dl>
         <!-- 客户端下载 -->
         <div class="platform">
             <div class="platform-mobilePhone-web">
                 <img src="img/erweima.png" alt="m.mahua.com"/>
-                <p class="title">扫二维码，用手机看麻花</p>
+                <p class="title">扫二维码，用手机看笑话</p>
             </div>
             <ul class="platform-other">
-                <li class="app-ios"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装iPhone 手机客户端</a></li>
-                <li class="app-android"><a href="javascript:alert(1);" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
+                <li class="app-android"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
             </ul>
         </div>
         <!-- 广告位 -->
-        <div style="margin-top:20px;width:300px;height:510px" id="rightad">
-            广告
-        </div>	
-	</div>
-	<!--右侧信息结束-->
+        <div style="margin-top:20px;width:300px;height:250px" id="rightad">
+            <img src="img/ad.png" />
+        </div>
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.png" />
+        </div>
+    </div>
+    <!--右侧信息结束-->
 </div>
 <!--主要内容结束-->
 <script type="text/javascript">

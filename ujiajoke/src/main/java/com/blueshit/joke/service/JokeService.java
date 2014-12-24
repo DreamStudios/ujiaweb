@@ -1,5 +1,6 @@
 package com.blueshit.joke.service;
 
+import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import org.springframework.data.domain.Page;
@@ -73,5 +74,13 @@ public interface JokeService {
      * @return
      */
     public List<Joke> getTopJokeList(int number,int style);
+
+    /**
+     * 获取广告列表
+     * @param number
+     * @param style
+     * @return
+     */
+    public List<Ad> getTopAdList(int number,int style);
 
 }

@@ -80,18 +80,15 @@
 	<div class="left">
 		<!-- 轮播开始-->
 		<div class="list-top-focus" id="listTopFocus">
-            <ul>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
-                </li>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
-                </li>
-                <li>
-                  <a href="topic/2.html" target="_blank" class="f_img_668_150"><img src="img/logo.png" alt="一起赚笑币，赢取iPhone6！" /><span>一起赚笑币，赢取iPhone6！</span></a>
+            <ul th:with="list=${@jokeService.getTopAdList(5,1)}">
+                <li th:each="us:${list}">
+                    <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
+                        <img src="img/logo.png" alt="有家笑话" th:src="${us.adPhoto}" th:alt="${us.adTitle}" />
+                        <span th:text="${us.adTitle}">一起赚笑币，赢取iPhone6！</span>
+                    </a>
                 </li>
             </ul>
-		</div>	
+		</div>
         <!--轮播结束-->	
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
@@ -164,7 +161,7 @@
 	</div>
     <!--左侧信息结束-->
     <!--右侧信息开始-->
-	<div class="right" id="main-right">
+	<div class="right" id="main-right" th:fragment="index_right">
 		<!-- 用户信息 -->
 		<ul class="user-operation" id="user-show-ajax">
             <li class="user-show" th:if="${#authentication.getName() eq 'anonymousUser'}">
@@ -219,7 +216,7 @@
         <dl class="new-pic" th:with="list=${@jokeService.getTopJokeList(10,1)}">
             <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
-                <a target="_blank" href="detail/jokedetail.html" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
+                <a target="_blank" href="detail/jokedetail.html" th:href="@{'/'+${us.jid}+'/jokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
                     <img alt="贪吃动物们的糗事" src="img/11.gif" th:alt="${us.title}" th:src="@{us.picture}"/>
                     <span th:text="${us.title}">贪吃动物们的糗事</span>
                 </a>
@@ -229,11 +226,10 @@
         <div class="platform">
             <div class="platform-mobilePhone-web">
                 <img src="img/erweima.png" alt="m.mahua.com"/>
-                <p class="title">扫二维码，用手机看麻花</p>
+                <p class="title">扫二维码，用手机看笑话</p>
             </div>
             <ul class="platform-other">
-                <li class="app-ios"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装iPhone 手机客户端</a></li>
-                <li class="app-android"><a href="javascript:alert(1);" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
+                <li class="app-android"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
             </ul>
         </div>
         <!-- 广告位 -->
@@ -274,6 +270,35 @@ $(function(){
 	</div>
 </div>
 <!--右侧导航结束-->
+<!---友情链接开始-->
+<div class="links-block" th:with="list=${@jokeService.getTopAdList(20,2)}">
+    <div class="links-list-block">
+        <div class="likes-title">友情链接：</div>
+        <div class="links" id="links_list">
+            <div class="likes-list">
+                <a target="_blank" href="http://www.baidu.com" th:each="us:${list}" th:text="${us.adTitle}" th:href="${us.adUrl}">小说</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    rolling_y('links_list',50,3000)
+    function rolling_y(id, height, rolltime) {
+        h = height,
+                tnode = document.getElementById(id),
+                scrollID = id + '_v',
+                F_rad = scrollID + '_f',
+                F_o = scrollID + '_o',
+                F_rol = rolltime,
+                F_t = scrollID + '_t',
+                _ = Function;
+        _('if(typeof ' + F_t + ' !=="undefined"){clearTimeout(' + F_t + ')}')();
+        _(scrollID + '=0;' + F_rad + '=function(){}')();
+        _('with(' + F_o + '=tnode){innerHTML+=innerHTML;onmouseover=_(\'' + scrollID + '=1\');onmouseout=_(\'' + scrollID + '=0\')}')();
+        _('(' + F_rad + '=_(("if(#%' + h + '||!' + scrollID + ')#++,#%=' + F_o + '.scrollHeight>>1;' + F_t + '=setTimeout(' + F_rad + ',#%' + h + '?10:' + F_rol + ');").replace(/#/g,"' + F_o + '.scrollTop")))()')()
+    }
+</script>
+<!---友情链接结束-->
 <!--底部内容开始-->
 <div class="footer" th:fragment="index_footer">
     <div class="footer-content">

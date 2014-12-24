@@ -32,6 +32,7 @@ public class VipJokeServiceImpl implements VipJokeService{
      * @param id
      * @return
      */
+    @Override
     public VipJoke getVipJokeById(int id){
         return vipJokeRepository.findOne(id);
     }
@@ -42,6 +43,7 @@ public class VipJokeServiceImpl implements VipJokeService{
      * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
      * @param page
      */
+    @Override
     public Page<VipJoke> getVipJokePagesAll_byType(UserInfo userInfo, int status, int page){
         StringBuffer hql = new StringBuffer("From VipJoke where userInfo.uid="+userInfo.getUid());
         if (status != 3){

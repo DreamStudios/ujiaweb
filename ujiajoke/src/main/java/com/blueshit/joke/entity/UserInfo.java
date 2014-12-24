@@ -111,6 +111,10 @@ public class UserInfo implements Serializable {
     @Column(nullable = true)
     private Date vipEndDate;
 
+    //最后一次签到时间
+    @Column(nullable = false)
+    private long LastSign = 0;
+
     public int getUid() {
         return uid;
     }
@@ -285,6 +289,14 @@ public class UserInfo implements Serializable {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public long getLastSign() {
+        return LastSign;
+    }
+
+    public void setLastSign(long lastSign) {
+        LastSign = lastSign;
     }
 }
 

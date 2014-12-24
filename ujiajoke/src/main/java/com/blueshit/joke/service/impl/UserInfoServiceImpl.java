@@ -179,7 +179,11 @@ public class UserInfoServiceImpl implements UserInfoService {
         return userInfoRepository.findByUid(uid);
     }
 
-
+    /**
+     * 保存或修改用户对象
+     * @param userInfo
+     */
+    @Override
     public void save(UserInfo userInfo){ userInfoRepository.save(userInfo); }
 
 }
