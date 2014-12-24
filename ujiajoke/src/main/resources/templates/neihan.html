@@ -64,20 +64,20 @@
 	<div class="left">
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
-			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="img/toux.jpg" alt="你丫才是逗比"/><i></i></a>
-				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
-				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
-			</dt>
-			<dd class="content">
-				<img th:if="${page.style eq 1}" th:src="${page.picture}" src="http://i2.mhimg.com/kl688file/2014-10/2014102017204963227.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+            <dt>
+                <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+            <p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
+            <span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+            </dt>
+            <dd class="content">
+                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
-			</dd>
+            </dd>
 			<!-- 神回复  -->
             <dd class="operation">
                 <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i>0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="img/comment.png" /><i>0条评论</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" obj_info="905491-1-list"><img src="img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">

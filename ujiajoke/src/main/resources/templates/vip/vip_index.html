@@ -74,11 +74,11 @@
 	<div class="left">
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
-			<dt>
-				<a href="javascript:alert(1);" target="_blank"><img src="../img/toux.jpg" th:src="${page.userInfo.photo}" alt="你丫才是逗比"/><i></i></a>
-				<p class="joke-uname"><a href="http://user.mahua.com/283068" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" class="level_icon icon_lv65" title="麻花掌门" target="_blank"></a></p>
-				<span class="joke-title"><a href="xiaohua/905491.html" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
-			</dt>
+            <dt>
+                <a th:href="@{'../'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="../img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+            <p class="joke-uname"><a th:href="@{'../'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="../about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
+            <span class="joke-title"><a th:href="@{'..//'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+            </dt>
             <dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
@@ -87,7 +87,7 @@
             <dd class="operation">
                 <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i>0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="../img/cai.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="../img/comment.png" /><i>0条评论</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" obj_info="905491-1-list"><img src="../img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">
@@ -148,18 +148,18 @@
         <ul class="user-operation" id="user-show-ajax">
             <li class="user-show" th:if="${#authentication.getName() eq 'anonymousUser'}">
                 <dl class="right-top-avatar">
-                    <a href="login.html" class="right-login-web loginClick">点击登录</a>
+                    <a href="../login.html" class="right-login-web loginClick">点击登录</a>
                 </dl>
             </li>
             <li class="user-show" th:if="${#authentication.getName() ne 'anonymousUser'}">
                 <div class="right-top-avatar-a">
                     <a href="profile.html" target="_blank">
-                        <img alt="JackAn" src="img/avatar_2.jpg" />
+                        <img alt="JackAn" src="../img/avatar_2.jpg" />
                     </a>
                     <a href="#" target="_blank"><em>修改头像</em></a>
                 </div>
                 <dl class="right-top-avatar">
-                    <dt><a href="profile.html" target="_blank">JackAn</a><p></p>
+                    <dt><a href="../profile.html" target="_blank">JackAn</a><p></p>
                     </dt><dd class="noborder">经验值：<em>500</em></dd>
                     <dd>等级：实习生</dd>
                     <dd class="noborder">积分：<em>0</em></dd>
@@ -271,33 +271,32 @@ $(function(){
 <!--右侧导航结束-->
 <!--底部内容开始-->
 <div class="footer" th:fragment="index_footer">
-	<div class="footer-content">
+    <div class="footer-content">
         <div class="about">
             <dl>
-                <dt>关于有家</dt>
-                <dd><a href="about/mahuajianjie.html" target="_blank">有家简介</a><a href="about/mahuagonggao.html" target="_blank">有家公告</a></dd>
-                <dd><a href="about/mianzeshengming.html" target="_blank">免责声明</a><a href="about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
+                <dt>关于快乐家族</dt>
+                <dd><a href="../about/youjiajianjie.html" target="_blank">家族简介</a><a href="../about/youjiagonggao.html" target="_blank">家族公告</a></dd>
+                <dd><a href="../about/mianzeshengming.html" target="_blank">免责声明</a><a href="../about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
             </dl>
             <dl>
                 <dt>互动规则</dt>
-                <dd><a href="about/tougaoguize.html" target="_blank">投稿规则</a><a href="about/shengaoguize.html" target="_blank">审稿规则</a></dd>
-                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/mabiguize.html" target="_blank">笑币规则</a></dd>
+                <dd><a href="../about/tougaoguize.html" target="_blank">投稿规则</a><a href="../about/shengaoguize.html" target="_blank">审稿规则</a></dd>
+                <dd><a href="../about/shengjiguize.html" target="_blank">升级规则</a><a href="../about/xiaobiguize.html" target="_blank">笑币规则</a></dd>
             </dl>
             <dl>
                 <dt>关注</dt>
-                <dd><a href="http://e.weibo.com/kuailemahua" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="http://user.qzone.qq.com/320182733" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
-                <dd><a href="http://t.qq.com/kuailemahua?lang=zh_CN" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="user/weixin.html" target="_blank" class="footer-weixin" rel="nofollow">微信订阅</a></dd>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weixin" rel="nofollow" style="color: #03a8b1;">官方微站</a></dd>
             </dl>
             <dl class="about-contact">
-                <dt>麻花合作</dt>
-                <dd>麻花粉丝QQ群:<i></i>95773113<i></i>253814987</dd>
-                <dd>合作：kuailemahua@163.com</dd>
+                <dt>有家合作</dt>
+                <dd>合作：youjiaxiaohua@163.com</dd>
             </dl>
-        </div>		
-      <div class="coypright">
-       	<p>Copyright 2005-2014 mahua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
-      </div>
-	</div>
+        </div>
+        <div class="coypright">
+            <p>Copyright 2014-2024 youjiaxiaohua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
+        </div>
+    </div>
 </div>
 <!--底部内容结束-->
 <!--[if IE 6]>

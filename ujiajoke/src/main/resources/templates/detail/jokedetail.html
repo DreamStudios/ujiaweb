@@ -62,8 +62,7 @@
 				<a href="#" class="joke-before" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=-1'}"></a>
 				<a href="#" class="joke-after" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}"></a>
 				<p>
-					<span class="joke-view-tags">笑点：<a href="../tags/6727_1.html">动态图</a></span>
-					<span>提示：按 ← → 方向键也可以换笑话哦</span>
+					<span>提示：直接点击笑话内容也可以切换图片哦！</span>
 				</p>
 			</dd>
 			<dd class="operation">
@@ -98,6 +97,9 @@
             </div>
 		</div>
         <!--其它笑话结束-->
+        <div style="width:640px;height:150px;background:#fff;border-bottom:1px solid #e8e7e6;padding:15px;">
+            广告
+        </div>
         <!--评论开始-->
 		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1">
           <div class="comment-input" th:if="${#authentication.getName() ne 'anonymousUser'}">
@@ -184,8 +186,7 @@
                 <p class="title">扫二维码，用手机看麻花</p>
             </div>
             <ul class="platform-other">
-                <li class="app-ios"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装iPhone 手机客户端</a></li>
-                <li class="app-android"><a href="javascript:alert(1);" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
+                <li class="app-android"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
             </ul>
         </div>
         <div style="width:300px;height:250px">
