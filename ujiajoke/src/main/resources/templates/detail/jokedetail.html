@@ -112,20 +112,59 @@
               </form>
           </div>
           <ul class="comment-list" id="comment-list">
-            <li th:each="page :${pages}">
+            <li th:if="${pages.totalElements > 0}" th:each="page :${pages}">
               <div class="comment-content">
                   <img src="../img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}" alt="快乐家族" /><i></i>
                   <p class="comment-username"><a href="usercenter.html" th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank" th:text="${page.userInfo.name}">快乐家族</a></p>
                   <p th:text="${page.content}">不看评论，我还真不知道为什么挨打。</p>
+                  <input type="hidden" id="jokeurl" th:value="${#httpServletRequest.getContextPath() + '/'+joke.jid +'/'+ (jokeType eq 0?'jokeDetail.html':'vipJokeDetail.html')}" />
               </div>
             </li>
-            <li th:if="${pages.totalPages eq 0}">
+            <li th:if="${pages.totalElements > 0}">
+                <div class="pagination pagination-right">
+                    <div id="example" style="float: left;"></div>
+                    <script th:inline="javascript">
+                        /*<![CDATA[*/
+                        $(function () {
+                            var totalPages = /*[[${pages.totalPages}]]*/1;
+                            var newPage = /*[[${newPage}]]*/1;
+                            $.ajaxSetup({
+                                cache: false
+                            });
+                            var options = {
+                                currentPage: newPage,
+                                totalPages: totalPages,
+                                onPageClicked: function (e, originalEvent, type, page) {
+                                    window.location.href = $("#jokeurl").val()+"?page=" + page;
+                                }
+                            }
+                            $('#example').bootstrapPaginator(options);
+                        })
+                        function goPage(){
+                            var pageValue=$('#page').val();
+                            if(!isNaN(pageValue) && parseInt(pageValue)>0){
+                                if(parseInt(pageValue) == 1){
+                                    window.location.href = $("#jokeurl").val();
+                                }else{
+                                    window.location.href = $("#jokeurl").val()+"?page=" + pageValue;
+                                }
+                            }else{
+                                alert('请输入正确的页码');
+                            }
+                        }
+                        /*]]>*/
+                    </script>
+                    <div class="go-page" data-maxPage="1000">
+                        <input id="page" placeholder="跳到.." type="text" title="跳到.."/><a href="javascript:void(0);" onclick="goPage();">GO</a>
+                    </div>
+                </div>
+            </li>
+            <li  th:if="${pages.totalElements == 0}">
                 <div class="comment-content">
                    暂无评论,赶紧抢沙发吧！
                 </div>
             </li>
 		  </ul>
-	      <div id="pagination" class="page" th:if="${pages.totalPages ne 0}">分页</div>
         </div>
         <div class="mahua comment mahua-view" id="null-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() eq 'anonymousUser'}">
             <span>登陆之后才能评论<a href="../login.html" style="margin-left: 20px;color: #03a8b1;">立即登陆</a></span>

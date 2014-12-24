@@ -84,10 +84,10 @@
         </ul>		
         <ul class="content myinfo my-published">
 			<li class="tab">
-				<a href="myJoke.html?status=3" th:class="${status eq 3?'hover':''}" class="hover">全部</a>
-				<a href="myJoke.html?status=2" th:class="${status eq 2?'hover':''}" >通过</a>
-				<a href="myJoke.html?status=1" th:class="${status eq 1?'hover':''}" >待审核</a>
-				<a href="myJoke.html?status=0" th:class="${status eq 0?'hover':''}" >未通过</a>
+				<a href="myVipJoke.html?status=3" th:class="${status eq 3?'hover':''}" class="hover">全部</a>
+				<a href="myVipJoke.html?status=2" th:class="${status eq 2?'hover':''}" >通过</a>
+				<a href="myVipJoke.html?status=1" th:class="${status eq 1?'hover':''}" >待审核</a>
+				<a href="myVipJoke.html?status=0" th:class="${status eq 0?'hover':''}" >未通过</a>
                 <input type="hidden" id="status" th:value="${status}"/>
 			</li>
             <li> <!-- 显示内容  <p class="no-myinfo">哥们新来的吧，啥也没有啊！</p> -->
