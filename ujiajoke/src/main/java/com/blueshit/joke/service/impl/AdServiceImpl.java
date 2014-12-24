@@ -4,6 +4,7 @@ import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.repository.AdRepository;
 import com.blueshit.joke.service.AdService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @created 2014/12/24 19:23
  * @description
  */
+@Service
 public class AdServiceImpl implements AdService{
 
     private AdRepository adRepository;

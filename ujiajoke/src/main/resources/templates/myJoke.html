@@ -59,11 +59,11 @@
 			<img src="img/avatar_2.jpg"/>
 		</span>
         <dl class="user-info" th:with="map=${@jokeService.getJokeSumNumberById(userInfo.uid)}">
-            <script type="text/javascript">var score=0;</script>
-            <dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
+            <dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="../about/shengjiguize.html" th:text="${'家族级别：'+userInfo.level}" target="_blank">实习生</a></dt>
             <dd class="obtain">
+                经验值：<span class="in" th:text="${userInfo.experience}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
                 积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                等级：<span class="out" th:text="${userInfo.level}">初出茅庐</span>
+                等级：<span class="out" th:text="${userInfo.level}">实习生</span>
             </dd>
             <dd class="mymabi">Ta的笑话：<span th:text="${map.get('jokeSum')}">8424</span></dd>
             <dd class="obtain">

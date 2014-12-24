@@ -56,17 +56,17 @@
 			<img src="img/avatar_2.jpg"/>
 		</span>
 		<dl class="user-info">
-			<script type="text/javascript">var score=0;</script>
-			<dt><span>阿狸爱桃子</span><a href="http://www.mahua.com/about/shengjiguize.htm" class="level_icon icon_lv89" title="麻花盟主" target="_blank"></a></dt>
-			<dd class="obtain">
-				积分：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				等级：<span class="out">初出茅庐</span>
-			</dd>
-			<dd class="mymabi">Ta的笑话：<span>8424</span></dd>
-			<dd class="obtain">
-				通过的笑话：<span class="in">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				通过率：<span class="out">88%</span>
-			</dd>
+            <dt><span>阿狸爱桃子</span><a href="../about/shengjiguize.html" target="_blank">实习生</a></dt>
+            <dd class="obtain">
+                经验值：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                积分：<span class="in">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                等级：<span class="out">实习生</span>
+            </dd>
+            <dd class="mymabi">Ta的笑话：<span>8424</span></dd>
+            <dd class="obtain">
+                通过的笑话：<span class="in">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                通过率：<span class="out">88%</span>
+            </dd>
 		</dl>
 	</div>
     <!--个人信息结束-->
@@ -82,8 +82,8 @@
 		<dl class="invite-friends">
 			<dt>请将以下链接复制给你的好友：</dt>
             <span th:text="${#httpServletRequest.getContextPath()}"></span>
-			<dd><span id="invite-friends-url" th:text="${'https://passport.mahua.com/register?invite_code='+ userInfo.inviteCode}">https://passport.mahua.com/account/register?invite_code=378538</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd>
-			<dd>不要吝啬，把快乐分享给你的好友，如果TA成功注册，你会获得<i class="s-color-red">200麻币</i>的奖励；</dd> 
+			<dd><span id="invite-friends-url" th:text="${'http://10.0.3.76:10012/register?invite_code='+ userInfo.inviteCode}">http://youjia.com?invite_code=8888</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd>
+			<dd>把快乐分享给您的好友，如果TA成功注册，你会获得<i class="s-color-red">2元</i>的奖励；</dd>
 		</dl>
 	</div>
 	<!--左侧信息结束-->

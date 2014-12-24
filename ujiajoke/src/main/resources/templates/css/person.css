@@ -1643,19 +1643,19 @@ a.comment_packUp {
 	left: 868px; top: 32px; width: 50px; height: 70px; line-height: 130px; overflow: hidden; font-size: 12px;
 }
 #newbieGuide2 {
-	background: url("../img/baoyang.png") no-repeat; width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
+	width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide2 .newbieGuideClose {
 	left: 340px; top: 45px;
 }
 #newbieGuide3 {
-	background: url("../img/dashang.png") no-repeat; width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
+	width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide3 .newbieGuideClose {
 	left: 325px; top: 40px;
 }
 #newbieGuide4 {
-	background: url("../img/qiubaoyang.png") no-repeat; width: 380px; height: 320px; position: absolute; z-index: 1000;
+	 width: 380px; height: 320px; position: absolute; z-index: 1000;
 }
 #newbieGuide4 .newbieGuideClose {
 	left: 310px; top: 40px;

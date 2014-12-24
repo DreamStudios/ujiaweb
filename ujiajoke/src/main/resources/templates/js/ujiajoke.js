@@ -5498,8 +5498,8 @@ function page_comment(){
 						items_per_page:1,
 						prev_text : '上一页',
 						next_text : '下一页',
-						prev_show_always :　false,
-						next_show_always :　false,
+						prev_show_always :false,
+						next_show_always :false,
 						items_per_page : pageSize
 					});
 				}();
@@ -5728,7 +5728,7 @@ function joke_data(){
 	var joke_ids='',joke_id,voteArr=$.cookie('MH_VOTE_JOKES'),keptTipArr=$.cookie('MH_KEPT_TIP_CLOSE');
 	$("dl.mahua").each(function(){
 		joke_id=Number($(this).attr('mahua'));
-		if(!isNaN(joke_id) &&　joke_id > 0){
+		if(!isNaN(joke_id) &&joke_id>0){
 			joke_ids+=joke_id+',';
 			if(voteArr){
 				if(voteArr.indexOf(','+joke_id+',')>-1){
@@ -8364,7 +8364,7 @@ function checkCoordsA(){
 //提交评审员申请
 function submit_auditPrompt(a){
 	var len=a.qqtext.value.length;
-	if(!isNaN(a.qqtext.value) &&　a.qqtext.value > 0 && len>4 && len<12){
+	if(!isNaN(a.qqtext.value) &&a.qqtext.value > 0 && len>4 && len<12){
 		$.ajax({
 			type : 'POST',
 			url : auditPromptUrl,

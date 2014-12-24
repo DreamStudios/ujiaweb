@@ -47,6 +47,10 @@ public class Ad implements Serializable {
     @Column(nullable = false, length = 255)
     private String adTitle = "";
 
+    //广告简介
+    @Column(nullable = true,length = 255)
+    private String content;
+
     /**
      * 广告创建时间
      */
@@ -142,5 +146,13 @@ public class Ad implements Serializable {
 
     public void setAdvertiser(Advertiser advertiser) {
         this.advertiser = advertiser;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
