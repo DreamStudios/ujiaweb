@@ -653,16 +653,16 @@ a {
 	color: rgb(51, 51, 51); text-decoration: none;
 }
 a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 h1 a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 h3 a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .mahua a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 input {
 	
@@ -680,7 +680,7 @@ textarea {
 	resize: none;
 }
 .s-color-red {
-	color: rgb(255, 126, 105); font-style: normal;
+	color: #03a8b1; font-style: normal;
 }
 .title {
 	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
@@ -806,10 +806,10 @@ a.top-login:hover {
 	margin: 12px 6px 0px 0px; width: 10px; height: 10px; float: right; display: block; cursor: pointer;
 }
 .my-message li a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .my-message li a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .my-center {
 	width: 36px; float: right; position: relative;
@@ -833,7 +833,7 @@ a.top-login:hover {
 	width: 100%; height: 100%; color: rgb(102, 102, 102); display: block;
 }
 .my-center li a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .header-nav {
 	width: 1000px; height: 100px;
@@ -884,7 +884,7 @@ a.top-login:hover {
 	padding: 0px; width: auto; height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 16px; display: block;
 }
 .header-nav li .joke-hot-list a:hover {
-	background: rgb(246, 246, 246); border: currentColor; color: rgb(255, 126, 105);
+	background: rgb(246, 246, 246); border: currentColor; color: #03a8b1;
 }
 .header-nav li i {
 	background: url("../img/mahua_common.png") no-repeat -391px -223px; margin: -75px 0px 0px 50px; width: 26px; height: 13px; overflow: hidden; display: block; position: relative;
@@ -908,7 +908,7 @@ a.top-login:hover {
 	width: 16px; height: 34px; cursor: pointer;
 }
 .header-view {
-	background: rgb(255, 126, 105); height: 40px;
+	background: #03a8b1; height: 40px;
 }
 .header-top-view {
 	width: 1000px; height: 40px;
@@ -923,7 +923,7 @@ a.top-login:hover {
 	width: 80px; height: 40px; text-align: center; line-height: 40px; float: left;
 }
 .header-view-nav li a {
-	width: 100%; height: 38px; color: rgb(255, 255, 255); font-size: 16px; border-bottom-color: rgb(255, 126, 105); border-bottom-width: 2px; border-bottom-style: solid; display: block;
+	width: 100%; height: 38px; color: rgb(255, 255, 255); font-size: 16px; border-bottom-color: #03a8b1; border-bottom-width: 2px; border-bottom-style: solid; display: block;
 }
 .header-view-nav li a:hover {
 	color: rgb(255, 255, 255); border-bottom-color: rgb(213, 53, 0);
@@ -938,7 +938,7 @@ a.top-login:hover {
 	background: url("../img/mahua_common.png") no-repeat -196px -474px; position: relative;
 }
 .header-view .joke-hot a:hover {
-	border-color: rgb(255, 126, 105);
+	border-color: #03a8b1;
 }
 .header-view .joke-hot em {
 	display: none;
@@ -950,7 +950,7 @@ a.top-login:hover {
 	border: currentColor; height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 14px;
 }
 .header-view li .joke-hot-list a:hover {
-	background: rgb(246, 246, 246); color: rgb(255, 126, 105);
+	background: rgb(246, 246, 246); color: #03a8b1;
 }
 .links-block {
 	background: rgb(241, 241, 241); margin: 20px 0px -21px; border-top-color: rgb(217, 217, 217); border-top-width: 1px; border-top-style: solid; position: relative;
@@ -971,7 +971,7 @@ a.top-login:hover {
 	color: rgb(153, 153, 153); margin-right: 25px; display: inline-block;
 }
 .likes-list a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .footer {
 	width: 100%; overflow: hidden; margin-top: 20px; border-top-color: rgb(217, 217, 217); border-top-width: 1px; border-top-style: solid;
@@ -1001,10 +1001,10 @@ a.top-login:hover {
 	color: rgb(153, 153, 153); margin-right: 20px;
 }
 .about dd a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .about dd a.a-color-red {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .about dd a.a-color-red:hover {
 	color: rgb(224, 88, 87);
@@ -1070,7 +1070,7 @@ a.top-login:hover {
 	background: rgb(252, 78, 77); color: rgb(255, 255, 255);
 }
 .audit:hover {
-	background: rgb(0, 183, 137); color: rgb(255, 255, 255);
+	background: #03a8b1; color: rgb(255, 255, 255);
 }
 .publish span {
 	height: 40px; line-height: 40px; float: left; display: block;
@@ -1163,10 +1163,10 @@ a.top-login:hover {
 	color: rgb(146, 207, 235);
 }
 .mahua .ding:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .mahua .comment:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .mahua .comment {
 	width: 94px; height: 24px; line-height: 24px; _width: 105px;
@@ -1322,10 +1322,10 @@ a.top-login:hover {
 	width: 200px; height: 30px; text-align: right; overflow: hidden; margin-bottom: -4px;
 }
 .mahua .operation .kepted a {
-	width: auto; color: rgb(255, 126, 105); text-indent: 0px; margin-right: 5px; float: right;
+	width: auto; color: #03a8b1; text-indent: 0px; margin-right: 5px; float: right;
 }
 .mahua .operation .kepted a:hover {
-	width: auto; color: rgb(255, 126, 105); text-indent: 0px; margin-right: 5px; float: right;
+	width: auto; color: #03a8b1; text-indent: 0px; margin-right: 5px; float: right;
 }
 .mahua .operation .kepted a {
 	height: 30px; line-height: 30px; text-indent: 0px; float: right;
@@ -1418,7 +1418,7 @@ dl.mahua-view {
 	background: rgb(4, 206, 155); border: currentColor; width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
 }
 .joke-list-comment .comment-submit:hover {
-	background: rgb(0, 183, 137);
+	background: #03a8b1;
 }
 .joke-list-comment .text-length {
 	background: rgb(255, 255, 255); top: 2px; height: 36px; right: 110px; color: rgb(150, 150, 150); line-height: 40px; display: block; position: absolute;
@@ -1445,7 +1445,7 @@ a.comment_packUp {
 	background: rgb(255, 248, 218); border: 1px solid rgb(236, 220, 180); width: 165px; height: 32px; text-align: center; color: rgb(102, 102, 102); line-height: 32px; font-size: 12px; position: absolute; z-index: 20;
 }
 #collection_tips a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 #collection_tips a:hover {
 	color: rgb(224, 88, 87);
@@ -1460,7 +1460,7 @@ a.comment_packUp {
 	width: 100%; height: 90px; color: rgb(110, 110, 110); display: block;
 }
 .go-user-index:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .go-user-index img {
 	margin: 0px auto; width: 60px; height: 60px;
@@ -1475,7 +1475,7 @@ a.comment_packUp {
 	background: rgb(163, 171, 175); margin: 6px auto 0px; width: 60px; height: 24px; text-align: center; color: rgb(255, 255, 255); line-height: 24px;
 }
 .go-user-index-btn:hover {
-	background: rgb(255, 126, 105); color: rgb(255, 255, 255);
+	background: #03a8b1; color: rgb(255, 255, 255);
 }
 .mahua .tags-share-btn {
 	border: currentColor; width: 270px; margin-top: 5px;
@@ -1493,7 +1493,7 @@ a.comment_packUp {
 	background: url("../img/mahua_common.24.png") no-repeat -205px -15px; padding: 0px 10px 10px 35px; width: 400px; margin-left: -15px; float: left; _background: url(../img/mahua_common.24.ie6.png) -205px -15px no-repeat;
 }
 .tags-info dt {
-	height: 36px; color: rgb(255, 126, 105); line-height: 36px; font-size: 20px; margin-bottom: 5px;
+	height: 36px; color: #03a8b1; line-height: 36px; font-size: 20px; margin-bottom: 5px;
 }
 .tags-info dt h1 {
 	font-size: 20px;
@@ -1502,7 +1502,7 @@ a.comment_packUp {
 	color: rgb(150, 150, 150); margin-right: 20px;
 }
 .tags-info dd i {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .tags-info dd.tags-info-content {
 	height: 96px; overflow: hidden; padding-bottom: 10px; margin-bottom: 15px; border-bottom-color: rgb(210, 210, 210); border-bottom-width: 1px; border-bottom-style: dashed;
@@ -1745,7 +1745,7 @@ a.comment_packUp {
 	height: 50px; color: rgb(204, 204, 204); line-height: 80px; font-size: 14px;
 }
 .reg-guide-lucky-content p a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .reg-guide-lucky-content p a:hover {
 	color: rgb(224, 88, 87);
@@ -1766,7 +1766,7 @@ a.comment_packUp {
 	color: rgb(102, 102, 102); margin-top: 20px;
 }
 .reg-guide-lucky-content dt {
-	color: rgb(255, 126, 105); font-size: 16px; margin-bottom: 10px;
+	color: #03a8b1; font-size: 16px; margin-bottom: 10px;
 }
 .reg-guide-lucky-content dd {
 	width: 380px; line-height: 26px; font-size: 14px;
@@ -2483,22 +2483,22 @@ a.comment_packUp {
 	color: rgb(204, 204, 204); font-family: "Arial"; font-size: 12px; margin-left: 20px; _font-weight: normal;
 }
 .mymabi a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .user-info .level a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .mymabi {
 	color: rgb(153, 153, 153); font-size: 16px; margin-top: 15px;
 }
 .mymabi span {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .obtain {
 	height: 24px; color: rgb(153, 153, 153); line-height: 24px; font-size: 12px; margin-top: 5px;
 }
 .obtain .in {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .obtain .out {
 	color: rgb(0, 0, 0);
@@ -2519,7 +2519,7 @@ a.comment_packUp {
 	height: 55px; color: rgb(0, 0, 0); border-bottom-color:#03a8b1; border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
 }
 .user-nav li a:hover {
-	height: 55px; color: rgb(0, 0, 0); border-bottom-color: rgb(255, 126, 105); border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
+	height: 55px; color: rgb(0, 0, 0); border-bottom-color: #03a8b1; border-bottom-width: 2px; border-bottom-style: solid; position: relative; z-index: 2;
 }
 .right {
 	width: 300px; float: left;
@@ -2552,7 +2552,7 @@ a.comment_packUp {
 	
 }
 #editImgBox .head a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 #editImgBox .head a.hover {
 	color: #03a8b1;
@@ -2591,7 +2591,7 @@ a.comment_packUp {
 	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; cursor: pointer;
 }
 .imgsubmit:hover {
-	background: rgb(0, 183, 137);
+	background: #03a8b1;
 }
 #message {
 	width: 350px; height: 40px; color: rgb(255, 32, 32); overflow: hidden; font-size: 12px; margin-left: 20px; float: left; _margin-left: 10px;
@@ -2708,7 +2708,7 @@ ul.content li .tab {
 	margin: 0px 6px; color: rgb(51, 51, 51);
 }
 .myinfo .content-details a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .myinfo .content-details img {
 	width: 80px; height: 80px; margin-top: 8px;
@@ -2753,19 +2753,19 @@ ul.content li .tab {
 	background: url("../img/mahua_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .editPassword-reset {
-	background: rgb(255, 126, 105); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
+	background: rgb(163, 171, 175); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .editPassword-submit {
-	background: rgb(255, 126, 105); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
+	background: #03a8b1; border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .editPassword-submit {
 	background: rgb(4, 206, 155); margin-right: 30px;
 }
 .editPassword-reset:hover {
-	background: rgb(229, 106, 86);
+	background: #03a8b1;
 }
 .editPassword-submit:hover {
-	background: rgb(0, 183, 137);
+	background: #03a8b1;
 }
 .editInfo .pass-value {
 	height: 43px; text-align: left; color: rgb(198, 198, 198); line-height: 43px; font-size: 14px; margin-left: -260px; float: left; display: block; position: relative; z-index: 1;
@@ -2861,13 +2861,13 @@ ul.content li .tab {
 	background-position: -975px -846px; margin-right: 0px;
 }
 .results-right a:hover {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .results p {
 	width: 570px; line-height: 18px; float: left;
 }
 .results p a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .results p a:hover {
 	color: rgb(224, 88, 87);
@@ -2915,7 +2915,7 @@ ul.content li .tab {
 	color: rgb(150, 150, 150); line-height: 18px;
 }
 .task-details a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .task-details a:hover {
 	color: rgb(224, 88, 87);
@@ -3014,7 +3014,7 @@ ul.content li.noborder {
 	width: 500px; height: 370px; float: left;
 }
 .activation-success dt {
-	height: 60px; color: rgb(255, 126, 105); line-height: 60px; overflow: hidden; font-size: 20px;
+	height: 60px; color: #03a8b1; line-height: 60px; overflow: hidden; font-size: 20px;
 }
 .activation-success dd {
 	font-size: 16px;
@@ -3029,7 +3029,7 @@ ul.content li.noborder {
 	
 }
 .activation-success dd a {
-	color: rgb(255, 126, 105);
+	color: #03a8b1;
 }
 .audit-prompt {
 	background: rgb(255, 255, 255); padding: 20px 0px 100px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
