@@ -36,4 +36,13 @@ public class TypeInfoServiceImpl implements TypeInfoService{
         hql.append(flag == 0 ? "DESC" : "ASC");
         return typeInfoRepository.findTopByHql(hql.toString(),number);
     }
+
+    /**
+     * 通过ID查询类型信息
+     * @param id
+     * @return
+     */
+    public TypeInfo getTypeInfoById(int id){
+        return typeInfoRepository.findOne(id);
+    }
 }

@@ -21,4 +21,11 @@ public interface TypeInfoService {
      * @return
      */
     public List<TypeInfo> getTopTypeInfoList(int number, int flag);
+
+    /**
+     * 通过ID查询类型信息
+     * @param id
+     * @return
+     */
+    public TypeInfo getTypeInfoById(int id);
 }

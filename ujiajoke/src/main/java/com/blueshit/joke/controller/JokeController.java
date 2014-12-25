@@ -1,9 +1,11 @@
 package com.blueshit.joke.controller;
 
 import com.blueshit.joke.entity.Joke;
+import com.blueshit.joke.entity.TypeInfo;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.JokeCommentService;
 import com.blueshit.joke.service.JokeService;
+import com.blueshit.joke.service.TypeInfoService;
 import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.AuthorizationUser;
 import com.blueshit.joke.validator.JokeValidator;
@@ -14,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -27,14 +30,16 @@ public class JokeController {
     private JokeService jokeService;
     private VipJokeService vipJokeService;
     private JokeCommentService jokeCommentService;
+    private TypeInfoService typeInfoService;
 
     @Autowired
     public JokeController(JokeValidator jokeValidator, JokeService jokeService,
-                          VipJokeService vipJokeService,JokeCommentService jokeCommentService) {
+                          VipJokeService vipJokeService,JokeCommentService jokeCommentService,TypeInfoService typeInfoService) {
         this.jokeValidator = jokeValidator;
         this.jokeService = jokeService;
         this.vipJokeService = vipJokeService;
         this.jokeCommentService = jokeCommentService;
+        this.typeInfoService = typeInfoService;
     }
 
     /** 首页 */
@@ -188,13 +193,12 @@ public class JokeController {
 
     /**
      * 添加笑话
-     * @param model
      * @param joke
      * @param session
      * @return
      */
     @RequestMapping(value="/releaseJoke", method = RequestMethod.POST)
-    public String addGoodsStatusPost(Authentication authentication,HttpSession session,Model model,@ModelAttribute("joke") Joke joke, BindingResult result){
+    public String addGoodsStatusPost(Authentication authentication,HttpSession session,HttpServletRequest request,@ModelAttribute("joke") Joke joke, BindingResult result){
         if(authentication==null){
             return "redirect:/login.html";
         }
@@ -203,8 +207,11 @@ public class JokeController {
 
         jokeValidator.validate(joke,result);
         if (!result.hasErrors()) {
+            String tid = request.getParameter("tid");
+            TypeInfo typeInfo = typeInfoService.getTypeInfoById(Integer.parseInt(tid));
             UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
             joke.setUserInfo(userInfo);
+            joke.setTypeInfo(typeInfo);
             boolean jokeResult = jokeService.saveJoke(joke);
             if(jokeResult){
                 return "redirect:/success.html";
