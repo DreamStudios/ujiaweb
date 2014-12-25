@@ -169,17 +169,4 @@ public class JokeServiceImpl implements JokeService {
         hql.append("ORDER BY updateTime DESC");
         return jokeRepository.findTopByHql(hql.toString(), number);
     }
-
-    /**
-     * 获取广告列表
-     * @param number
-     * @param type
-     * @return
-     */
-    @Override
-    public List<Ad> getTopAdList(int number,int type){
-        StringBuffer hql = new StringBuffer("From Ad WHERE adStatus = 3 AND type=" + type);
-        hql.append("ORDER BY updateTime DESC");
-        return adRepository.findTopByHql(hql.toString(),number);
-    }
 }

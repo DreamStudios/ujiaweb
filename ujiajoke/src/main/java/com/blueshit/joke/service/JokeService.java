@@ -75,12 +75,4 @@ public interface JokeService {
      */
     public List<Joke> getTopJokeList(int number,int style);
 
-    /**
-     * 获取广告列表
-     * @param number
-     * @param style
-     * @return
-     */
-    public List<Ad> getTopAdList(int number,int style);
-
 }

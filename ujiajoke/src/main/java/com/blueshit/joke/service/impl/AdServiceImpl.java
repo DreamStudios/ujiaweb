@@ -19,12 +19,8 @@ import java.util.List;
 @Service
 public class AdServiceImpl implements AdService{
 
-    private AdRepository adRepository;
-
     @Autowired
-    public AdServiceImpl(AdRepository adRepository) {
-        this.adRepository = adRepository;
-    }
+    private AdRepository adRepository;
 
     /**
      * 获取广告列表

@@ -80,7 +80,7 @@
 	<div class="left">
 		<!-- 轮播开始-->
 		<div class="list-top-focus" id="listTopFocus">
-            <ul th:with="list=${@jokeService.getTopAdList(5,1)}">
+            <ul th:with="list=${@adService.getTopAdList(5,1)}">
                 <li th:each="us:${list}">
                     <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
                         <img src="img/logo.png" alt="有家笑话" th:src="${us.adPhoto}" th:alt="${us.adTitle}" />
@@ -259,7 +259,7 @@ $(function(){
 </div>
 <!--右侧导航结束-->
 <!---友情链接开始-->
-<div class="links-block" th:with="list=${@jokeService.getTopAdList(20,2)}">
+<div class="links-block" th:with="list=${@adService.getTopAdList(20,2)}">
     <div class="links-list-block">
         <div class="likes-title">友情链接：</div>
         <div class="links" id="links_list">
