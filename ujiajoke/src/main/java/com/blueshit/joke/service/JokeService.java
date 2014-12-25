@@ -1,6 +1,5 @@
 package com.blueshit.joke.service;
 
-import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import org.springframework.data.domain.Page;
@@ -75,4 +74,12 @@ public interface JokeService {
      */
     public List<Joke> getTopJokeList(int number,int style);
 
+    /**
+     * 分页查询其它笑话
+     * @param page 当前页
+     * @param type 查询类型(1:文字笑话 2:笑点)
+     * @param value 查询条件值
+     * @return
+     */
+    public Page<Joke> getOtherJokePages(int page,int type,String value);
 }

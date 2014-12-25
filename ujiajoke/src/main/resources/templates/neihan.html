@@ -13,20 +13,6 @@
     <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-    var jokesDynamic 	= 'http://user.mahua.com/ajax/joke/checkjokesdynamic';
-	var keptUrl			= 'http://user.mahua.com/ajax/joke/keptjoke';
-	var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
-	var favoriteUrl		= 'http://user.mahua.com/ajax/joke/favorite';
-	var unfavoriteUrl 	= 'http://user.mahua.com/ajax/joke/unfavorite';
-	var maryaneUrl		= 'http://user.mahua.com/ajax/joke/maryane';
-	var getUserInfoUrl  = "http://user.mahua.com/ajax/user/getactiveuserinfo";
-	//评论
-	var commentInitUrl	= 'http://user.mahua.com/comment/getcommentHtml';
-	var getCommentsUrl = 'http://user.mahua.com/comment/getComments';
-	var addCommentUrl = 'http://user.mahua.com/comment/addComment';
-	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
-</script>
 <!--头部信息开始-->
 <div class="header" th:replace="index::index_header">
     <!--标题开始-->
@@ -75,8 +61,8 @@
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">
-                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i>0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i th:text="${page.up}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i th:text="${page.down}">0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" obj_info="905491-1-list"><img src="img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>

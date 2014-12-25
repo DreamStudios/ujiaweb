@@ -152,7 +152,10 @@ public class JokeController {
      */
     @RequestMapping("/otherJoke")
     public String otherJoke(Model model, String page,int type,String value){
-        return null;
+        model.addAttribute("pages",jokeService.getOtherJokePages(getStringParseInt(page),type,value));
+        model.addAttribute("type",type);
+        model.addAttribute("value",value);
+        return "otherJoke";
     }
 
     /**************************************************vip joke***************************************************/

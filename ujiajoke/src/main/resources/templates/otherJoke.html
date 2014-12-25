@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="applicable-device" content="pc"/>
@@ -14,31 +13,29 @@
     <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+    var jokesDynamic 	= 'http://user.mahua.com/ajax/joke/checkjokesdynamic';
+	var keptUrl			= 'http://user.mahua.com/ajax/joke/keptjoke';
+	var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
+	var favoriteUrl		= 'http://user.mahua.com/ajax/joke/favorite';
+	var unfavoriteUrl 	= 'http://user.mahua.com/ajax/joke/unfavorite';
+	var maryaneUrl		= 'http://user.mahua.com/ajax/joke/maryane';
+	var getUserInfoUrl  = "http://user.mahua.com/ajax/user/getactiveuserinfo";
+	//评论
+	var commentInitUrl	= 'http://user.mahua.com/comment/getcommentHtml';
+	var getCommentsUrl = 'http://user.mahua.com/comment/getComments';
+	var addCommentUrl = 'http://user.mahua.com/comment/addComment';
+	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
+</script>
 <!--头部信息开始-->
-<div class="header" th:fragment="index_header">
+<div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
-        <div class="header-top-content"  th:with="logged=${#authentication.getName() ne 'anonymousUser'}">
+        <div class="header-top-content">
             <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
-            <div id="islogin" class="islogin" th:if="${logged eq false}">
+            <div id="islogin" class="islogin">
                 <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
-                <a href="login.html" class="top-login" rel="nofollow">登录</a>
-            </div>
-            <div class="islogin" th:if="${logged eq true}">
-                <div class="my-center">
-                    <i title="个人中心"></i>
-                    <ul>
-                        <li><a href="myJoke.html">我的投稿</a></li>
-                        <li><a href="myVipJoke.html">VIP专题</a></li>
-                        <li><a href="profile.html">个人资料</a></li>
-                        <li><a href="inviteFriends.html">邀请好友</a></li>
-                        <li class="noborder"><a href="logout.html" rel="nofollow">退出</a></li>
-                    </ul>
-                </div>
-                <div class="my-message">
-                    <a href="recommended.html" target="_blank"><i class="message-new" title="精品推荐"></i></a>
-                </div>
-                <span class="username-top"><a href="profile.html" th:text="${#authentication.getName()}">JackAn</a>，欢迎回来!</span>
+                <a href="login.html" class="top-login loginClick" rel="nofollow">登录</a>
             </div>
         </div>
     </div>
@@ -47,11 +44,11 @@
     <div class="header-nav">
         <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
         <ul>
-          <li><a href="index.html" th:class="${type eq 0?'hover':''}" class="hover" title="按热门程度排序">首页</a></li>
-            <li><a href="jiongtu.html" th:class="${type eq 1?'hover':''}" title="按时间先后排序">囧图</a></li>
-            <li><a href="qiushi.html" th:class="${type eq 2?'hover':''}" >糗事</a></li>
-            <li><a href="neihan.html" th:href="@{neihan.html}" th:class="${type eq 3?'hover':''}" >内涵图</a></li>
-            <li><a href="vip/vip_index.html" th:class="${type eq 4?'hover':''}" >会员专享<i></i></a></li>
+          <li> <a href="index.html" title="按热门程度排序">首页</a></li>
+            <li><a href="jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="xiushi.html">糗事</a></li>
+            <li><a href="neihan.html">内涵图</a></li>
+            <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
         <div class="mahua-slogan"></div>
     </div>
@@ -62,25 +59,13 @@
 <div class="main">
     <!--左侧信息开始-->
 	<div class="left">
-		<!-- 轮播开始-->
-		<div class="list-top-focus" id="listTopFocus">
-            <ul th:with="list=${@adService.getTopAdList(5,1)}">
-                <li th:each="us:${list}">
-                    <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
-                        <img src="img/logo.png" alt="有家笑话" th:src="${us.adPhoto}" th:alt="${us.adTitle}" />
-                        <span th:text="${us.adTitle}">一起赚笑币，赢取iPhone6！</span>
-                    </a>
-                </li>
-            </ul>
-		</div>
-        <!--轮播结束-->	
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
-			<dt>
-				<a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
-				<p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
-				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
-			</dt>
+            <dt>
+                <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+            <p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
+            <span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+            </dt>
             <dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
@@ -104,10 +89,11 @@
                 <div class="reward-box"></div>
             </dd>
          </dl>
-		<!-- 分页 -->
-        <div class="pagination pagination-right">
+        <div class="pagination pagination-right"><!-- class="page" -->
             <div id="example" style="float: left;"></div>
             <script th:inline="javascript">
+                var type = /*[[${type}]]*/1;
+                var value = /*[[${value}]]*/'';
                 /*<![CDATA[*/
                 $(function () {
                     var totalPages = /*[[${pages.totalPages}]]*/1;
@@ -119,7 +105,7 @@
                         currentPage: newPage,
                         totalPages: totalPages,
                         onPageClicked: function (e, originalEvent, type, page) {
-                            window.location.href = "index.html?page=" + page ;
+                            window.location.href = "otherJoke.html?page=" + page + "type=" + type + "value=" + value;
                         }
                     }
                     $('#example').bootstrapPaginator(options);
@@ -128,9 +114,9 @@
                     var pageValue=$('#page').val();
                     if(!isNaN(pageValue) && parseInt(pageValue)>0){
                         if(parseInt(pageValue) == 1){
-                            window.location.href = "index.html";
+                            window.location.href = "qiushi.html";
                         }else{
-                            window.location.href = "index.html?page=" + pageValue;
+                            window.location.href = "otherJoke.html?page=" + pageValue + "type=" + type + "value=" + value;;
                         }
                     }else{
                         alert('请输入正确的页码');
@@ -145,15 +131,10 @@
 	</div>
     <!--左侧信息结束-->
     <!--右侧信息开始-->
-	<div class="right" id="main-right" th:fragment="index_right">
-		<!-- 用户信息 -->
-		<ul class="user-operation" id="user-show-ajax">
-            <li class="user-show" th:if="${#authentication.getName() eq 'anonymousUser'}">
-               <dl class="right-top-avatar">
-                <a href="login.html" class="right-login-web loginClick">点击登录</a>
-                </dl>
-            </li>
-            <li class="user-show" th:if="${#authentication.getName() ne 'anonymousUser'}">
+    <div class="right" id="main-right" th:replace="index::index_right">
+        <!-- 用户信息 -->
+        <ul class="user-operation" id="user-show-ajax">
+            <li class="user-show" >
                 <div class="right-top-avatar-a">
                     <a href="profile.html" target="_blank">
                         <img alt="JackAn" src="img/avatar_2.jpg" />
@@ -170,46 +151,41 @@
             </li>
             <li class="user-btn">
                 <div class="publish-audit">
-                    <a href="#" th:href="@{releaseJoke.html}" class="publish" target="_blank" rel="nofollow"><i></i><span>投稿</span></a>
+                    <a href="#" class="publish" target="_blank" rel="nofollow"><i></i><span>投稿</span></a>
                     <a href="javascript:alert(1);" class="audit" target="_blank" rel="nofollow"><i></i><span>审稿</span></a>
                 </div>
             </li>
             <li class="user-operation-bottom">
                 <a href="javascript:alert(1);" rel="nofollow" class="checkin-right-top checkinClick"><span>每日签到<br/>赚笑币</span></a>
-                <a href="#" th:href="@{recommended.html}" class="do-task" target="_blank" rel="nofollow"><span>做任务<br/>赚笑币</span></a>
-                <a href="#" th:href="@{inviteFriends.html}" class="friends" target="_blank" rel="nofollow"><span>邀请好友<br/>赚笑币</span></a>
+                <a href="#" class="do-task" target="_blank" rel="nofollow"><span>做任务<br/>赚笑币</span></a>
+                <a href="#" class="friends" target="_blank" rel="nofollow"><span>邀请好友<br/>赚笑币</span></a>
             </li>
-		</ul>
-        <dl class="tags-list"><dt><h2>猜你喜欢</h2></dt>
-            <dd th:with="list=${@typeInfoServiceImpl.getTopTypeInfoList(10,1)}">
-                <a th:each="us:${list}" target="_blank" href="#" th:href="@{otherJoke.html(page=1,type=2,value=${us.typeName})}" th:text="${us.typeName}">美女</a>
-            </dd>
-        </dl>
+        </ul>
         <div style="margin-top:20px;width:300px;height:250px">
             <img src="img/ad.png" />
         </div>
-		 <!--精彩文字笑话-->
-         <dl class="new-pic-text" th:with="list=${@jokeService.getTopJokeList(15,2)}">
+        <!--精彩文字笑话-->
+        <dl class="new-pic-text">
             <dt>
-              <a href="#" th:href="@{otherJoke.html(page=1,type=1)}" target="_blank"><h2>精彩文字笑话</h2></a><a href="#" th:href="@{otherJoke.html(page=1,type=1)}" target="_blank" class="more">更多</a>
+                <a href="#" target="_blank"><h2>精彩文字笑话</h2></a><a href="#" target="_blank" class="more">更多</a>
             </dt>
             <dd th:each="us:${list}">
-                <a target="_blank" class="title" href="detail/jokedetail.html" th:href="@{'/'+${us.jid}+'/jokeDetail.html'}" th:text="${us.title}">那谁的表情才是搞笑</a>
+                <a target="_blank" class="title" href="detail/jokedetail.html">那谁的表情才是搞笑</a>
             </dd>
-         </dl>
-         <!-- 广告位 -->
-         <div style="margin-top:20px;width:300px;height:250px">
-             <img src="img/ad.png" />
-         </div>
-		<!-- 最新搞笑图片 -->
-        <dl class="new-pic" th:with="list=${@jokeService.getTopJokeList(10,1)}">
+        </dl>
+        <!-- 广告位 -->
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.png" />
+        </div>
+        <!-- 最新搞笑图片 -->
+        <dl class="new-pic" >
             <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
-                <a target="_blank" href="detail/jokedetail.html" th:href="@{'/'+${us.jid}+'/jokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
-                    <img alt="贪吃动物们的糗事" src="img/11.gif" th:alt="${us.title}" th:src="@{us.picture}"/>
-                    <span th:text="${us.title}">贪吃动物们的糗事</span>
+                <a target="_blank" href="detail/jokedetail.html" >
+                    <img alt="贪吃动物们的糗事" src="img/11.gif" />
+                    <span>贪吃动物们的糗事</span>
                 </a>
-             </dd>
+            </dd>
         </dl>
         <!-- 客户端下载 -->
         <div class="platform">
@@ -228,10 +204,9 @@
         <div style="margin-top:20px;width:300px;height:250px">
             <img src="img/ad.png" />
         </div>
-	</div>
-	<!--右侧信息结束-->
+    </div>
+    <!--右侧信息结束-->
 </div>
-<!--主要内容结束-->
 <script type="text/javascript">
 $(function(){
 	joke_content_area();
@@ -239,45 +214,16 @@ $(function(){
 </script>
 <!--右侧导航开始-->
 <div id="fixed-box">
-	<div class="feedback">
-		<a href="about/fankuiyijian.html" target="_blank" title="新版建议反馈"></a>
-	</div>
-	<div class="return-top">
-		<a href="javascript:void(0);" rel="nofollow" title="返回顶部"></a>
-	</div>
-</div>
-<!--右侧导航结束-->
-<!---友情链接开始-->
-<div class="links-block" th:with="list=${@adService.getTopAdList(20,2)}">
-    <div class="links-list-block">
-        <div class="likes-title">友情链接：</div>
-        <div class="links" id="links_list">
-            <div class="likes-list">
-                <a target="_blank" href="http://www.baidu.com" th:each="us:${list}" th:text="${us.adTitle}" th:href="${us.adUrl}">小说</a>
-            </div>
-        </div>
+    <div class="feedback">
+        <a href="about/fankuiyijian.html" target="_blank" title="宝贵意见箱"></a>
+    </div>
+    <div class="return-top">
+        <a href="javascript:void(0);" rel="nofollow" title="返回顶部"></a>
     </div>
 </div>
-<script type="text/javascript">
-    rolling_y('links_list',50,3000)
-    function rolling_y(id, height, rolltime) {
-        h = height,
-                tnode = document.getElementById(id),
-                scrollID = id + '_v',
-                F_rad = scrollID + '_f',
-                F_o = scrollID + '_o',
-                F_rol = rolltime,
-                F_t = scrollID + '_t',
-                _ = Function;
-        _('if(typeof ' + F_t + ' !=="undefined"){clearTimeout(' + F_t + ')}')();
-        _(scrollID + '=0;' + F_rad + '=function(){}')();
-        _('with(' + F_o + '=tnode){innerHTML+=innerHTML;onmouseover=_(\'' + scrollID + '=1\');onmouseout=_(\'' + scrollID + '=0\')}')();
-        _('(' + F_rad + '=_(("if(#%' + h + '||!' + scrollID + ')#++,#%=' + F_o + '.scrollHeight>>1;' + F_t + '=setTimeout(' + F_rad + ',#%' + h + '?10:' + F_rol + ');").replace(/#/g,"' + F_o + '.scrollTop")))()')()
-    }
-</script>
-<!---友情链接结束-->
+<!--右侧导航结束-->
 <!--底部内容开始-->
-<div class="footer" th:fragment="index_footer">
+<div class="footer" th:replace="index::index_footer">
     <div class="footer-content">
         <div class="about">
             <dl>

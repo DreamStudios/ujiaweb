@@ -1,6 +1,5 @@
 package com.blueshit.joke.service.impl;
 
-import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.repository.AdRepository;
@@ -168,5 +167,23 @@ public class JokeServiceImpl implements JokeService {
         StringBuffer hql = new StringBuffer("From Joke WHERE style="+ style +" AND status=2");
         hql.append("ORDER BY updateTime DESC");
         return jokeRepository.findTopByHql(hql.toString(), number);
+    }
+
+    /**
+     * 分页查询其它笑话
+     * @param page 当前页
+     * @param type 查询类型(1:文字笑话 2:笑点)
+     * @param value 查询条件值
+     * @return
+     */
+    public Page<Joke> getOtherJokePages(int page,int type,String value){
+        StringBuffer hql = new StringBuffer("From Joke WHERE status=2 ");
+        if(type == 1){
+            hql.append(" AND style=2 ");
+        }else{
+            hql.append(" AND typeInfo.typeName='"+value+"'");
+        }
+        hql.append(" ORDER BY updateTime DESC ");
+        return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
 }
