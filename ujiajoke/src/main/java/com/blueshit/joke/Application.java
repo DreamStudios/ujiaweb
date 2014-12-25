@@ -5,9 +5,11 @@ import com.blueshit.joke.repository.UserInfoRepository;
 import com.blueshit.joke.security.LoginFilter;
 import com.blueshit.joke.service.AdService;
 import com.blueshit.joke.service.JokeService;
+import com.blueshit.joke.service.TypeInfoService;
 import com.blueshit.joke.service.UserInfoService;
 import com.blueshit.joke.service.impl.AdServiceImpl;
 import com.blueshit.joke.service.impl.JokeServiceImpl;
+import com.blueshit.joke.service.impl.TypeInfoServiceImpl;
 import com.blueshit.joke.service.impl.UserInfoServiceImpl;
 import com.blueshit.joke.utils.AuthorizationUser;
 import com.blueshit.joke.utils.Constants;
@@ -179,5 +181,14 @@ public class Application extends SpringBootServletInitializer {
     @Bean
     public AdService adService(){
         return new AdServiceImpl();
+    }
+
+    /**
+     * 获取笑点分类接口对象
+     * @return
+     */
+    @Bean
+    public TypeInfoService typeInfoService(){
+        return new TypeInfoServiceImpl();
     }
 }

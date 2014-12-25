@@ -99,6 +99,14 @@
                 </dd>
             </dl>
             <dl class="publish-title">
+                <dt>主要笑点：</dt>
+                <dd>
+                    <select id="tid" name="tid" th:with="list=${@typeInfoServiceImpl.getTopTypeInfoList(10,1)}">
+                        <option value="1" th:each="us:${list}" th:value="${us.id}" th:text="${us.typeName}">图片笑话</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="publish-title">
                 <dt>笑话标题：</dt>
                 <dd><input type="text" name="title" placeholder="起个逗逼点的标题哦" id="title" th:value="*{title}" maxlength="50"/></dd>
                 <dd class="publish-message message-title" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">错误提示</dd>

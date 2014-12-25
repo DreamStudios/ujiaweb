@@ -197,19 +197,8 @@
             </li>
 		</ul>
         <dl class="tags-list"><dt><a href="#" target="_blank"><h2>猜你喜欢</h2></a></dt>
-            <dd>
-                <a  target="_blank" href="#">美女</a>
-                <a  target="_blank" href="#">性感</a>
-                <a  target="_blank" href="#">女汉子</a>
-                <a  target="_blank" href="#">屌丝</a>
-                <a  target="_blank" href="#">动态图</a>
-                <a  target="_blank" href="#">雷人恶搞</a>
-                <a  target="_blank" href="#">内涵</a>
-                <a  target="_blank" href="#">卖萌</a>
-                <a  target="_blank" href="#">无节操</a>
-                <a  target="_blank" href="#">熊孩子</a>
-                <a  target="_blank" href="#">坑爹</a>
-                <a  target="_blank" href="#">作死</a>
+            <dd th:with="list=${@typeInfoServiceImpl.getTopTypeInfoList(10,1)}">
+                <a th:each="us:${list}" target="_blank" href="#" th:text="${us.typeName}">美女</a>
             </dd>
         </dl>
         <div style="margin-top:20px;width:300px;height:250px">

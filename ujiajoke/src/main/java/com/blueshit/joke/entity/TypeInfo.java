@@ -2,6 +2,7 @@ package com.blueshit.joke.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 笑点分类实体
@@ -31,6 +32,10 @@ public class TypeInfo implements Serializable {
     @Column(nullable = false)
     private String typeName;
 
+    //创建时间
+    @Column(nullable = false)
+    private Date createTime;
+
     public Integer getId() {
         return id;
     }
@@ -45,5 +50,13 @@ public class TypeInfo implements Serializable {
 
     public void setTypeName(String typeName) {
         this.typeName = typeName;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

@@ -173,4 +173,12 @@ public class Joke implements Serializable {
     public void setDown(int down) {
         this.down = down;
     }
+
+    public TypeInfo getTypeInfo() {
+        return typeInfo;
+    }
+
+    public void setTypeInfo(TypeInfo typeInfo) {
+        this.typeInfo = typeInfo;
+    }
 }
