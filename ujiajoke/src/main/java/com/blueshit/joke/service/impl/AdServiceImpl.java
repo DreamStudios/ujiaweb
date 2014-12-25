@@ -3,7 +3,9 @@ package com.blueshit.joke.service.impl;
 import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.repository.AdRepository;
 import com.blueshit.joke.service.AdService;
+import com.blueshit.joke.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,5 +35,13 @@ public class AdServiceImpl implements AdService{
         StringBuffer hql = new StringBuffer("From Ad WHERE adStatus = 3 AND type=" + type);
         hql.append("ORDER BY updateTime DESC");
         return adRepository.findTopByHql(hql.toString(),number);
+    }
+
+    /**
+     * 获取精品推荐分页
+     */
+    public Page<Ad> getAdPage(int page){
+        String hql = "From Ad WHERE adStatus = 3 AND type=1 ORDER BY weight";
+        return adRepository.findByHql(hql, Constants.Common.PAGE_SIZE, page);
     }
 }

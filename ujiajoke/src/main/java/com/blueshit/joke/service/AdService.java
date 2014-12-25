@@ -1,6 +1,7 @@
 package com.blueshit.joke.service;
 
 import com.blueshit.joke.entity.Ad;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -21,4 +22,9 @@ public interface AdService {
      * @return
      */
     public List<Ad> getTopAdList(int number,int style);
+
+    /**
+     * 获取精品推荐分页
+     */
+    public Page<Ad> getAdPage(int page);
 }
