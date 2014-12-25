@@ -3,6 +3,8 @@ package com.blueshit.joke.service;
 import com.blueshit.joke.entity.JokeComment;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 /**
  * 笑话评论接口
  * @author 9527
@@ -35,4 +37,12 @@ public interface JokeCommentService {
      * @return
      */
     public boolean addJokeComment(JokeComment jokeComment);
+
+    /**
+     * 获取笑话评论内容
+     * @param jid 笑话ID
+     * @Param number 数据条数
+     * @return
+     */
+    public List<JokeComment> getJokeCommentList(int jid,int number);
 }

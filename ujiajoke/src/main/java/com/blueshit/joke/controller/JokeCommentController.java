@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
 /**
  * 笑话评论
  * @author 9527
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class JokeCommentController {
+    private static final String addr = "http://10.0.3.73:10012/ujiajoke/";
 
     private UserInfoService userInfoService;
     private JokeService jokeService;
@@ -59,5 +63,53 @@ public class JokeCommentController {
                 }
             }
         }
+    }
+
+    /**
+     * 查看评论内容
+     * @param jid
+     * @return
+     */
+    @RequestMapping("/getComment")
+    public String getComment(int jid){
+        List<JokeComment> list = jokeCommentService.getJokeCommentList(jid, 5);
+        String info = "";
+
+        String footer =
+                "<div class='list_comment_all'>" +
+                "  <a href='"+addr+jid+"/jokeDetail.html#comment' target='_blank' class='comment_all'>查看全部评论</a>" +
+                "  <a href='javascript:void(0);' rel='nofollow' class='comment_packUp'>收起↑</a>" +
+                "</div>";
+
+
+        if(null == list || 0 == list.size()){
+            info = "<li class='nocomment'>还没有人评论过，赶快抢沙发吧！</li>";
+        }else {
+            for(JokeComment jk : list){
+                info =
+                "<li>" +
+                "  <div class='comment-content'>" +
+                "    <a href='"+addr+jk.getUserInfo().getUid()+"/userCenter.html'><img src='"+addr + jk.getUserInfo().getPhoto()+"' alt='testa'><i></i></a>" +
+                "    <p class='comment-username'><a href='"+addr+jk.getUserInfo().getUid()+"/userCenter.html'>"+jk.getUserInfo().getName()+"</a></p>" +
+                "    <p>"+jk.getContent()+"</p>" +
+                "  </div>" +
+                "</li>";
+            }
+        }
+        String content =
+                "<dd class='joke-list-comment' id='comment_905491-1-list' style='display: block;'>" +
+                "  <div class='comment-input'>" +
+                "    <form onsubmit='return jokeListSubmitComment(this)'>" +
+                "      <input name='comment' class='comment-input-text'>" +
+                "      <span class='text-length'>0/50字</span>" +
+                "      <input type='submit' class='comment-submit' value='评论'>" +
+                "    </form>" +
+                "  </div>" +
+                "  <ul class='comment-list' id='comment-list'>" +
+                      info +
+                "  </ul>" +
+                   footer +
+                "</dd>";
+        return content;
     }
 }

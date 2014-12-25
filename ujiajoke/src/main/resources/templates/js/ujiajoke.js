@@ -5212,7 +5212,7 @@ $(function(){
 	//列表页评论
 	$('.commentClick').click(function(){
 		var jokeListComment=$(this).parent('.operation').next('.joke-list-comment');
-		if(jokeListComment.length>0){
+		if(jokeListComment.length>0){//已经加载过
 			if(jokeListComment.css('display')=='none'){
 				var t=1;
 			}else{
@@ -5220,26 +5220,24 @@ $(function(){
 			}
 			listCommentShow(t,$(this));
 		}else{
-			if(typeof($(this).attr('isgo'))=='undefined'){
-				var tthis=$(this);
-				var obj_info=$(this).attr('obj_info');
-				tthis.attr('isgo','1');
-                var commentInitUrl	= 'http://user.mahua.com/comment/getcommentHtml';
-				$.ajax({
-					dataType: "jsonp", 
-					url: commentInitUrl,
-					data: "obj_info="+obj_info,
-					success: function(ret) {
-						if(ret.html!=''){
-							tthis.parent('.operation').after(ret.html);
-							listCommentShow(1,tthis);
-							$('.comment_packUp').click(function(){
-								listCommentShow(3,tthis);
-							})
-						}
-					}
-				});
-			}
+            var tthis=$(this);
+            var obj_info=$(this).attr('name');
+            var commentInitUrl	= 'getComment.html';
+            $.ajax({
+                dataType: "text",
+                contentType:"text/html; charset=utf-8",
+                url: commentInitUrl,
+                data: "jid="+obj_info,
+                success: function(ret) {
+                    if(ret!=''){
+                        tthis.parent('.operation').after(ret);
+                        listCommentShow(1,tthis);
+                        $('.comment_packUp').click(function(){
+                            listCommentShow(3,tthis);
+                        })
+                    }
+                }
+            });
 		}
 		return false;
 	});

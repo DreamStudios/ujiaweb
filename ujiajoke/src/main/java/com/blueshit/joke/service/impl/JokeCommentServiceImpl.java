@@ -78,4 +78,22 @@ public class JokeCommentServiceImpl implements JokeCommentService {
         }
         return true;
     }
+
+    /**
+     * 获取笑话评论内容
+     * @param jid 笑话ID
+     * @Param number 数据条数
+     * @return
+     */
+    public List<JokeComment> getJokeCommentList(int jid,int number){
+        List<JokeComment> list = null;
+        try {
+            StringBuffer hql = new StringBuffer("From JokeComment WHERE joke.jid=" + jid);
+            hql.append(" order by createTime desc");
+            list = jokeCommentRepository.findTopByHql(hql.toString(), number);
+        }catch (Exception ex){
+            logger.info("异步获取评论列表失败",ex);
+        }
+        return list;
+    }
 }
