@@ -1,7 +1,9 @@
 package com.blueshit.joke.controller;
 
+import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.service.AdService;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.UserInfoService;
 import com.blueshit.joke.utils.AuthorizationUser;
@@ -39,13 +41,15 @@ public class UserInfoController {
     private UserInfoService   userInfoService;
     private JokeService jokeService;
     private PasswordEncoder passwordEncoder;
+    private AdService adService;
 
     @Autowired
-    public UserInfoController(UserInfoValidator userInfoValidator, UserInfoService userInfoService, JokeService jokeService,PasswordEncoder passwordEncoder) {
+    public UserInfoController(UserInfoValidator userInfoValidator, UserInfoService userInfoService, JokeService jokeService,PasswordEncoder passwordEncoder,AdService adService) {
         this.userInfoValidator = userInfoValidator;
         this.userInfoService = userInfoService;
         this.jokeService = jokeService;
         this.passwordEncoder = passwordEncoder;
+        this.adService = adService;
     }
 
     /**
@@ -256,11 +260,24 @@ public class UserInfoController {
     }
     /** 精品推荐 */
     @RequestMapping({"recommended"})
-    public String recommended(Model model, Authentication authentication){
+    public String recommended(Model model, Authentication authentication, String page){
         if(authentication==null){
             return "redirect:/login.html";
         }
+        int pageNo = 1;
+        try{
+            pageNo = Integer.parseInt(page);
+        }catch (Exception e){}
+
+        Page<Ad> pages = adService.getAdPage(pageNo);
+        model.addAttribute("pages", pages);
+        model.addAttribute("newPage",pageNo);
         return "recommended";
+    }
+
+    @RequestMapping({"download"})
+    public String download(String url){
+        return "redirect:"+url;
     }
 
     /**
