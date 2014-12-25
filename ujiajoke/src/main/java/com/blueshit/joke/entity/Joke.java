@@ -72,6 +72,12 @@ public class Joke implements Serializable {
     @JsonIgnore
     private UserInfo userInfo;
 
+    //笑话分类信息
+    @ManyToOne
+    @JoinColumn(name = "tid", nullable = false)
+    @JsonIgnore
+    private TypeInfo typeInfo;
+
     public int getJid() {
         return jid;
     }

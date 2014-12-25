@@ -109,7 +109,7 @@ public class JokeController {
     }
 
     /**
-     * 普通笑话详情
+     * VIP笑话详情
      * @param id
      * @return
      */
@@ -135,6 +135,19 @@ public class JokeController {
         model.addAttribute("newPage",pagenumber);
         model.addAttribute("status", status);
         return "myJoke";
+    }
+
+    /**
+     * 文字笑话、根据笑点查询笑话
+     * @param model
+     * @param page 当前页
+     * @param type 查询类型(1:文字笑话 2:笑点)
+     * @param value 查询条件值
+     * @return
+     */
+    @RequestMapping("/otherJoke")
+    public String otherJoke(Model model, String page,int type,String value){
+        return null;
     }
 
     /**************************************************vip joke***************************************************/

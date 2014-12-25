@@ -69,6 +69,10 @@ public class Ad implements Serializable {
     @Column(nullable = false)
     private int adStatus = 2;
 
+    //广告权重：排序用
+    @Column(nullable = false, columnDefinition = "int(11) default 1")
+    private int weight = 1;
+
     /**
      * 广告主
      */
@@ -154,5 +158,13 @@ public class Ad implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }
