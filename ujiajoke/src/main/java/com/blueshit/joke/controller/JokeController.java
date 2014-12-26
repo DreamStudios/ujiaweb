@@ -6,7 +6,6 @@ import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.JokeCommentService;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.TypeInfoService;
-import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.AuthorizationUser;
 import com.blueshit.joke.validator.JokeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,16 +27,14 @@ public class JokeController {
 
     private JokeValidator jokeValidator;
     private JokeService jokeService;
-    private VipJokeService vipJokeService;
     private JokeCommentService jokeCommentService;
     private TypeInfoService typeInfoService;
 
     @Autowired
     public JokeController(JokeValidator jokeValidator, JokeService jokeService,
-                          VipJokeService vipJokeService,JokeCommentService jokeCommentService,TypeInfoService typeInfoService) {
+                          JokeCommentService jokeCommentService,TypeInfoService typeInfoService) {
         this.jokeValidator = jokeValidator;
         this.jokeService = jokeService;
-        this.vipJokeService = vipJokeService;
         this.jokeCommentService = jokeCommentService;
         this.typeInfoService = typeInfoService;
     }
@@ -114,17 +111,6 @@ public class JokeController {
     }
 
     /**
-     * VIP笑话详情
-     * @param id
-     * @return
-     */
-    @RequestMapping({"{id}/vipJokeDetail.html"})
-    public String vipJokeDetail(@PathVariable int id,String flag,String page,Model model){
-        model.addAttribute("jokeType",1);//会员笑话
-        return "/detail/jokedetail";
-    }
-
-    /**
      * myJoke 分类分页
      * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
      */
@@ -156,25 +142,6 @@ public class JokeController {
         model.addAttribute("type",type);
         model.addAttribute("value",value);
         return "otherJoke";
-    }
-
-    /**************************************************vip joke***************************************************/
-    /**
-     * myVipJoke 分类分页
-     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过 3:全部)
-     */
-    @RequestMapping("/myVipJoke")
-    public String myVipJoke(Authentication authentication, Model model, Integer status, String page){
-        if(authentication==null){
-            return "redirect:/login.html";
-        }
-        UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
-        int pagenumber = getStringParseInt(page);
-        status = status==null?3:status;
-        model.addAttribute("pages", vipJokeService.getVipJokePagesAll_byType(userInfo, status, pagenumber));
-        model.addAttribute("newPage",pagenumber);
-        model.addAttribute("status", status);
-        return "myVipJoke";
     }
 
     /**

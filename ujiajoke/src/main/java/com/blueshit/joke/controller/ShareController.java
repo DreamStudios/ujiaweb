@@ -41,7 +41,7 @@ public class ShareController {
     @RequestMapping("/share")
     public String share(int type, int jid, int flag) {
         if (flag == 1) {
-            VipJoke vipJoke = vipJokeService.getVipJokeById(jid);
+            VipJoke vipJoke = vipJokeService.getVipJokeById(jid,0);
             return vipJokeShare(vipJoke, type);
         } else {
             Joke joke = jokeService.getJokeById(jid,0);

@@ -1,6 +1,5 @@
 package com.blueshit.joke.service.impl;
 
-import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.entity.VipJoke;
 import com.blueshit.joke.repository.VipJokeRepository;
@@ -28,13 +27,26 @@ public class VipJokeServiceImpl implements VipJokeService{
     }
 
     /**
-     * 通过笑话ID获取笑话内容
+     * 通过ID获取笑话内容
      * @param id
+     * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
     @Override
-    public VipJoke getVipJokeById(int id){
-        return vipJokeRepository.findOne(id);
+    public VipJoke getVipJokeById(int id,int flag){
+        VipJoke joke = null;
+        switch (flag){
+            case -1:
+                joke = vipJokeRepository.findOne(id-1 > 0 ? id-1 : 1);
+                break;
+            case 0:
+                joke = vipJokeRepository.findOne(id);
+                break;
+            case 1:
+                joke = vipJokeRepository.findOne(id + 1);
+                break;
+        }
+        return joke;
     }
 
     /**

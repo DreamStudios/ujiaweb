@@ -5209,7 +5209,7 @@ $(function(){
 		return false;
 	})
 	
-	//列表页评论
+	//普通列表页评论
 	$('.commentClick').click(function(){
 		var jokeListComment=$(this).parent('.operation').next('.joke-list-comment');
 		if(jokeListComment.length>0){//已经加载过
@@ -5241,6 +5241,37 @@ $(function(){
 		}
 		return false;
 	});
+    $('.commentClick2').click(function(){
+        var jokeListComment=$(this).parent('.operation').next('.joke-list-comment');
+        if(jokeListComment.length>0){//已经加载过
+            if(jokeListComment.css('display')=='none'){
+                var t=1;
+            }else{
+                var t=2;
+            }
+            listCommentShow(t,$(this));
+        }else{
+            var tthis=$(this);
+            var obj_info=$(this).attr('name');
+            var commentInitUrl	= 'getVipComment.html';
+            $.ajax({
+                dataType: "text",
+                contentType:"text/html; charset=utf-8",
+                url: commentInitUrl,
+                data: "jid="+obj_info,
+                success: function(ret) {
+                    if(ret!=''){
+                        tthis.parent('.operation').after(ret);
+                        listCommentShow(1,tthis);
+                        $('.comment_packUp').click(function(){
+                            listCommentShow(3,tthis);
+                        })
+                    }
+                }
+            });
+        }
+        return false;
+    });
 	function listCommentShow(type,tthis){
 		var obj=tthis.parent('.operation').next('.joke-list-comment');
 		if(type==1){

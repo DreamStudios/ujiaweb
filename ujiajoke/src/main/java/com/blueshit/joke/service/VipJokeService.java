@@ -18,11 +18,12 @@ public interface VipJokeService {
     public Page<VipJoke> getVipJokePage(int page);
 
     /**
-     * 通过笑话ID获取笑话内容
+     * 通过ID获取笑话内容
      * @param id
+     * @param flag 标识：-1：前一条笑话 0：当前笑话 1:下一条笑话
      * @return
      */
-    public VipJoke getVipJokeById(int id);
+    public VipJoke getVipJokeById(int id,int flag);
 
     /**
      * 根据用户查询vip笑话分页，按状态查询

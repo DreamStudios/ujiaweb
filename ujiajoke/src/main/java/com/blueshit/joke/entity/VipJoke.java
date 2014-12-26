@@ -46,6 +46,14 @@ public class VipJoke implements Serializable {
     @Column(nullable = false, columnDefinition = "int(11) default 1")
     private int status = 1;
 
+    //顶数量
+    @Column(nullable = false, columnDefinition = "int(11) default 237")
+    private int up = (int)(Math.random()*500);
+
+    //踩数量
+    @Column(nullable = false, columnDefinition = "int(11) default 13")
+    private int down = (int)(Math.random()*20);
+
     //创建时间
     @Column(nullable = false)
     private Date createTime = new Date();
@@ -130,5 +138,21 @@ public class VipJoke implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public int getUp() {
+        return up;
+    }
+
+    public void setUp(int up) {
+        this.up = up;
+    }
+
+    public int getDown() {
+        return down;
+    }
+
+    public void setDown(int down) {
+        this.down = down;
     }
 }

@@ -19,7 +19,7 @@
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content"  th:with="logged=${#authentication.getName() ne 'anonymousUser'}">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin" th:if="${logged eq false}">
                 <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
                 <a href="login.html" class="top-login" rel="nofollow">登录</a>
@@ -309,5 +309,36 @@ $(function(){
 <!--[if IE 6]>
 	<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $('.comment-submit').live('click',function(){
+        var content = $(this).parent().children(":first").val();
+        content = $.trim(content);
+        if(content==""){
+            alert("评论内容不能为空!");
+        }else{
+            $.ajax({
+                url:"addComment.html",
+                data: {"email":$(this).attr("name"),"jid":$(this).attr("id"),"content":content},
+                type: "GET",
+                dataType:"text",
+                timeout:18000,
+                success:function(data){
+                    if(data == "2"){
+                        alert("已经点评过,不要重复点评");
+                    }else if(data == "0"){
+                        alert("点评失败,稍后再试");
+                    }else{
+                        alert("点评成功，稍后您的点评就会展现");
+                    }
+                },
+                error: function(){ //请求失败
+                    alert("点评失败,时候再试");
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
 </body>
 </html>

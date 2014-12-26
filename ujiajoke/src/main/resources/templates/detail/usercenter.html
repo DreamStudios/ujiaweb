@@ -80,18 +80,18 @@
 			<img src="../img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + userInfo.photo}"/>
 			<i></i>
 		</span>
-		<dl class="user-info">
+		<dl class="user-info" th:with="map=${@jokeService.getJokeSumNumberById(userInfo.uid)}">
 			<dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="../about/shengjiguize.html" th:text="${'家族级别：'+userInfo.level}" target="_blank">实习生</a></dt>
 			<dd class="obtain">
 				经验值：<span class="in" th:text="${userInfo.experience}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
                 积分：<span class="in" th:text="${userInfo.integral}">100</span>&nbsp;&nbsp;&nbsp;&nbsp;
 				等级：<span class="out" th:text="${userInfo.level}">实习生</span>
 			</dd>
-			<dd class="mymabi">Ta的笑话总量：<span th:text="${jokeSum}">8424</span></dd>
-			<dd class="obtain">
-				通过的笑话：<span class="in" th:text="${jokePassSum}">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				通过率：<span class="out" th:text="${passRate}">88%</span>
-			</dd>
+            <dd class="mymabi">Ta的笑话：<span th:text="${map.get('jokeSum')}">8424</span></dd>
+            <dd class="obtain">
+                通过的笑话：<span class="in" th:text="${map.get('jokePassSum')}">7451</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                通过率：<span class="out" th:text="${#numbers.formatDecimal(map.get('passRate'), 1, 2)+'%'}">88%</span>
+            </dd>
 		</dl>
 	</div>
     <!--个人信息结束-->

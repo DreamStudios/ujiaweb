@@ -13,32 +13,15 @@
     <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-    var jokesDynamic 	= 'http://user.mahua.com/ajax/joke/checkjokesdynamic';
-	var keptUrl			= 'http://user.mahua.com/ajax/joke/keptjoke';
-	var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
-	var favoriteUrl		= 'http://user.mahua.com/ajax/joke/favorite';
-	var unfavoriteUrl 	= 'http://user.mahua.com/ajax/joke/unfavorite';
-	var maryaneUrl		= 'http://user.mahua.com/ajax/joke/maryane';
-	var getUserInfoUrl  = "http://user.mahua.com/ajax/user/getactiveuserinfo";
-	//评论
-	var commentInitUrl	= 'http://user.mahua.com/comment/getcommentHtml';
-	var getCommentsUrl = 'http://user.mahua.com/comment/getComments';
-	var addCommentUrl = 'http://user.mahua.com/comment/addComment';
-	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
-</script>
 <!--头部信息开始-->
 <div class="header" th:replace="index::index_header">
     <!--标题开始-->
     <div class="header-top">
         <div class="header-top-content">
-            <p class="header-top-title">有家笑话—分享身边搞笑事，收获笑币好心情</p>
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
             <div id="islogin" class="islogin">
-                <a href="https://passport.mahua.com/account/register" class="top-reg" target="_blank" rel="nofollow">注册</a>
-                <a href="javascript:void(0);" class="top-login loginClick" rel="nofollow">登录</a>
-                <span class="border-nav-top">|</span>
-                <a href="http://user.mahua.com/connect/weibo" target="_blank" class="top-login-weibo" title="新浪微博登录" rel="nofollow">微博登录</a>
-                <a href="http://user.mahua.com/connect/tencent" target="_blank" class="top-login-qq" title="QQ登录" rel="nofollow">QQ登录</a>
+                <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
+                <a href="login.html" class="top-login loginClick" rel="nofollow">登录</a>
             </div>
         </div>
     </div>
@@ -77,7 +60,7 @@
             <dd class="operation">
                 <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i th:text="${page.up}">0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i th:text="${page.down}">0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" obj_info="905491-1-list"><img src="img/comment.png" /><i>点评一下</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" th:name="${page.jid}"><img src="img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">
@@ -256,5 +239,36 @@ $(function(){
 <!--[if IE 6]>
 	<script>document.execCommand("BackgroundImageCache",false,true)</script>
 <![endif]-->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $('.comment-submit').live('click',function(){
+        var content = $(this).parent().children(":first").val();
+        content = $.trim(content);
+        if(content==""){
+            alert("评论内容不能为空!");
+        }else{
+            $.ajax({
+                url:"addComment.html",
+                data: {"email":$(this).attr("name"),"jid":$(this).attr("id"),"content":content},
+                type: "GET",
+                dataType:"text",
+                timeout:18000,
+                success:function(data){
+                    if(data == "2"){
+                        alert("已经点评过,不要重复点评");
+                    }else if(data == "0"){
+                        alert("点评失败,稍后再试");
+                    }else{
+                        alert("点评成功，稍后您的点评就会展现");
+                    }
+                },
+                error: function(){ //请求失败
+                    alert("点评失败,时候再试");
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
 </body>
 </html>
