@@ -53,7 +53,7 @@
            <span class="getpassword">
                <span style="float:left;margin-right: 28px;" th:if="${session['loginStatus'] eq 'false'}">
                    <input type="text" id="kaptcha" name="kaptcha" class="kaptcha" maxlength="5" style="width: 80px;"  placeholder="请输入验证码" />
-                   <img th:src="@{/kaptcha.jpg}" src="developer/home-img/yzm.png" width="110" height="40" id="kaptchaImage" />
+                   <img th:src="kaptcha.jpg" src="developer/home-img/yzm.png" width="110" height="40" id="kaptchaImage" />
                    <script type="text/javascript">
                        $(function () {
                            $('#kaptchaImage').click(function () {

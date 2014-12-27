@@ -98,7 +98,7 @@
                         <li>
                             <span>验证码</span>
                             <input class="inputbtn2" type="input"  id="kaptcha" name="kaptcha" maxlength="5" placeholder="请输入验证码" />
-                            <img class="yanzhengma" th:src="@{/kaptcha.jpg}" src="img/register/aa.png" id="kaptchaImage" />
+                            <img class="yanzhengma" th:src="kaptcha.jpg" src="img/register/aa.png" id="kaptchaImage" />
                             <em class="red">*看不清,换一张</em>
                             <em class="red2" th:if="${kaptcha ne null}" th:text="${kaptcha}">验证码不能为空</em>
                             <script type="text/javascript">
