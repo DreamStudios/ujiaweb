@@ -5,6 +5,8 @@ import com.blueshit.joke.entity.VipJoke;
 import com.blueshit.joke.repository.VipJokeRepository;
 import com.blueshit.joke.service.VipJokeService;
 import com.blueshit.joke.utils.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class VipJokeServiceImpl implements VipJokeService{
+    private Logger logger = LoggerFactory.getLogger(VipJokeServiceImpl.class);
 
     @Autowired
     VipJokeRepository vipJokeRepository;
@@ -33,11 +36,11 @@ public class VipJokeServiceImpl implements VipJokeService{
      * @return
      */
     @Override
-    public VipJoke getVipJokeById(int id,int flag){
+    public VipJoke getVipJokeById(int id, int flag) {
         VipJoke joke = null;
-        switch (flag){
+        switch (flag) {
             case -1:
-                joke = vipJokeRepository.findOne(id-1 > 0 ? id-1 : 1);
+                joke = vipJokeRepository.findOne(id - 1 > 0 ? id-1 : 1);
                 break;
             case 0:
                 joke = vipJokeRepository.findOne(id);
@@ -63,5 +66,21 @@ public class VipJokeServiceImpl implements VipJokeService{
         }
         hql.append(" order by updateTime desc");
         return vipJokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
+    }
+
+    /**
+     * 保存VIP笑话信息
+     * @param joke
+     * @return
+     */
+    @Override
+    public boolean saveVipJoke(VipJoke joke){
+        try{
+            vipJokeRepository.save(joke);
+        }catch (Exception ex){
+            logger.error("保存VIP笑话失败",ex);
+            return false;
+        }
+        return true;
     }
 }

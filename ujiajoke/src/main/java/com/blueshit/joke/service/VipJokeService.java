@@ -33,4 +33,11 @@ public interface VipJokeService {
      * @return
      */
     public Page<VipJoke> getVipJokePagesAll_byType(UserInfo userInfo, int status, int page);
+
+    /**
+     * 保存VIP笑话信息
+     * @param joke
+     * @return
+     */
+    public boolean saveVipJoke(VipJoke joke);
 }

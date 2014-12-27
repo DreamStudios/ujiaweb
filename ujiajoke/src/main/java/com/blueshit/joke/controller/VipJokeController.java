@@ -1,16 +1,24 @@
 package com.blueshit.joke.controller;
 
+import com.blueshit.joke.entity.Joke;
+import com.blueshit.joke.entity.TypeInfo;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.entity.VipJoke;
 import com.blueshit.joke.service.*;
 import com.blueshit.joke.utils.AuthorizationUser;
+import com.blueshit.joke.validator.VipJokeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * 会员专享模块controller
@@ -23,15 +31,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class VipJokeController {
 
-
-
     private VipJokeService vipJokeService;
     private VipJokeCommentService vipJokeCommentService;
+    private VipJokeValidator vipJokeValidator;
 
     @Autowired
-    public VipJokeController(VipJokeService vipJokeService, VipJokeCommentService vipJokeCommentService) {
+    public VipJokeController(VipJokeService vipJokeService, VipJokeCommentService vipJokeCommentService,
+                             VipJokeValidator vipJokeValidator) {
         this.vipJokeService = vipJokeService;
         this.vipJokeCommentService = vipJokeCommentService;
+        this.vipJokeValidator = vipJokeValidator;
     }
 
     /**
@@ -40,6 +49,9 @@ public class VipJokeController {
      */
     @RequestMapping(value = "/vip/vip_index", method = RequestMethod.GET)
     public String memberShip(Authentication authentication,Model model, String page){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
         int pagenumber = getStringParseInt(page);
         model.addAttribute("pages", vipJokeService.getVipJokePage(pagenumber));
         model.addAttribute("newPage",pagenumber);
@@ -63,11 +75,14 @@ public class VipJokeController {
      * @return
      */
     @RequestMapping({"{id}/vipJokeDetail.html"})
-    public String vipJokeDetail(@PathVariable int id,String flag,String page,Model model){
+    public String vipJokeDetail(Authentication authentication,@PathVariable int id,String flag,String page,Model model){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
         if(flag == null || "".equals(flag)){
             flag = "0";
         }
-        VipJoke joke = vipJokeService.getVipJokeById(id,Integer.parseInt(flag));
+        VipJoke joke = vipJokeService.getVipJokeById(id, Integer.parseInt(flag));
 
         //评论内容
         int pagenumber = getStringParseInt(page);
@@ -94,5 +109,51 @@ public class VipJokeController {
         model.addAttribute("newPage",pagenumber);
         model.addAttribute("status", status);
         return "myVipJoke";
+    }
+
+    /**
+     * 进入添加笑话页面
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value="/releaseVipJoke", method = RequestMethod.GET)
+    public String addGoodsStatusGet(Authentication authentication,Model model,HttpSession session){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
+        session.removeAttribute("picture");
+        Joke joke = new Joke();
+        model.addAttribute("joke",joke);
+        return "releaseVipJoke";
+    }
+
+    /**
+     * 添加笑话
+     * @param joke
+     * @param session
+     * @return
+     */
+    @RequestMapping(value="/releaseVipJoke", method = RequestMethod.POST)
+    public String addGoodsStatusPost(Authentication authentication,HttpSession session,HttpServletRequest request,@ModelAttribute("joke") VipJoke joke, BindingResult result){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
+        String jokePicture = (String) session.getAttribute("picture");
+        joke.setPicture(jokePicture);
+
+        vipJokeValidator.validate(joke,result);
+        if (!result.hasErrors()) {
+            UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
+            joke.setUserInfo(userInfo);
+            boolean jokeResult = vipJokeService.saveVipJoke(joke);
+            if(jokeResult){
+                return "redirect:/success.html";
+            }else {
+                return "redirect:/failure.html";
+            }
+        }
+        session.removeAttribute("jokePicture");
+        return "releaseVipJoke";
     }
 }

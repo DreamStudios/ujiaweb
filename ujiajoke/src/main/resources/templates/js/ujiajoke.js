@@ -5518,15 +5518,7 @@ function jokeVote(i,t){
 	var id=t.parent().parent('dl').attr('mahua');
 	t.find('i').text(Number(t.find('i').text())+1);
 	
-	$.ajax({
-		url : voteUrl+'?callback=?',
-		dataType : 'jsonp',
-		data : {
-			'joke_id':id,'type': i
-		},
-		success: function(ret){
-		}
-	})
+	alert(1);
 	
 	var this_parent=t.parent('.operation');
 	this_parent.find('.ding').unbind('click').addClass('ding-hover').removeClass('ding').find('img').remove();	

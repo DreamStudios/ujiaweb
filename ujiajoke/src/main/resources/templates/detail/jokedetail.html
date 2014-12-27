@@ -62,6 +62,7 @@
 				<a href="#" class="joke-before" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=-1'}"></a>
 				<a href="#" class="joke-after" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}"></a>
 				<p>
+                    <span class="joke-view-tags">笑点：<a href="#" th:href="@{'../'+otherJoke.html(page=1,type=2,value=${joke.typeInfo.typeName})}" th:text="${joke.typeInfo.typeName}">牛人</a></span>
 					<span>提示：直接点击笑话内容也可以切换图片哦！</span>
 				</p>
 			</dd>

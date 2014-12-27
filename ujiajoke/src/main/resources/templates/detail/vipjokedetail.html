@@ -51,7 +51,7 @@
 		<dl class="mahua mahua-view" id="joke_905492" mahua="905492">
 			<dt><h1 class="joke-title" th:text="${joke.title}">笑话标题</h1></dt>
 			<dd class="content">
-                <a th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}" href="#">
+                <a th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=1'}" href="#">
 				    <div class="joke-content" title="点击进入下一条笑话">
                         <img th:if="${joke.style eq 1}" th:src="${joke.picture}" width="440" height="307" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                         <span th:if="${joke.style eq 2}" th:text="${joke.content}">内容</span>
@@ -59,8 +59,8 @@
                 </a>
 			</dd>
 			<dd class="joke-ba">
-				<a href="#" class="joke-before" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=-1'}"></a>
-				<a href="#" class="joke-after" th:href="@{'/'+${joke.jid}+'/jokeDetail.html?flag=1'}"></a>
+				<a href="#" class="joke-before" th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=-1'}"></a>
+				<a href="#" class="joke-after" th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=1'}"></a>
 				<p>
 					<span>提示：直接点击笑话内容也可以切换图片哦！</span>
 				</p>
@@ -77,7 +77,7 @@
                         <a href="#" th:href="@{'../'+share.html(type=2,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
                         <a href="#" th:href="@{'../'+share.html(type=3,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
                         <a href="#" th:href="@{'../'+share.html(type=4,jid=${joke.jid},flag=${jokeType})}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://10.0.3.73:10012/'+${joke.jid}+'/jokeDetail.html'">复制网址</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://10.0.3.73:10012/'+${joke.jid}+'/vipJokeDetail.html'">复制网址</a>
                     </div>
                 </div>
 				<div class="buy"></div>
@@ -119,7 +119,7 @@
                   <img src="../img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}" alt="快乐家族" /><i></i>
                   <p class="comment-username"><a href="usercenter.html" th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank" th:text="${page.userInfo.name}">快乐家族</a></p>
                   <p th:text="${page.content}">不看评论，我还真不知道为什么挨打。</p>
-                  <input type="hidden" id="jokeurl" th:value="${#httpServletRequest.getContextPath() + '/'+joke.jid +'/'+ (jokeType eq 0?'jokeDetail.html':'vipJokeDetail.html')}" />
+                  <input type="hidden" id="jokeurl" th:value="${#httpServletRequest.getContextPath() + '/'+joke.jid +'/'+ (jokeType eq 0?'vipJokeDetail.html':'vipvipJokeDetail.html')}" />
               </div>
             </li>
             <li th:if="${pages.totalElements > 0}">

@@ -39,7 +39,7 @@ public class VipJokeCommentServiceImpl implements VipJokeCommentService {
      */
     @Override
     public Page<VipJokeComment> getPageJokeCommentByJid(int jid, int page) {
-        StringBuffer hql = new StringBuffer("From VipJokeComment WHERE joke.jid=" + jid);
+        StringBuffer hql = new StringBuffer("From VipJokeComment WHERE vipJoke.jid=" + jid);
         hql.append(" order by createTime desc");
         return vipJokeCommentRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
