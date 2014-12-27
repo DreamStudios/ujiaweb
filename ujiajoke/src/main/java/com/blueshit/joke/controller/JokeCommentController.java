@@ -30,7 +30,7 @@ import java.util.List;
  */
 @Controller
 public class JokeCommentController {
-    private static final String addr = "http://10.0.3.73:10012/ujiajoke/";
+    private static final String addr = "http://www.xiaoujia.com/";
 
     private UserInfoService userInfoService;
     private JokeService jokeService;

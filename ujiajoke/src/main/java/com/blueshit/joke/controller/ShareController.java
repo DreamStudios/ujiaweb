@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ShareController {
     @Value("${SHARE}")
-    private String SHARE = "http://10.0.3.73:10012/";
+    private String SHARE = "http://www.xiaoujia.com/";
 
     private JokeService    jokeService;
     private VipJokeService vipJokeService;
