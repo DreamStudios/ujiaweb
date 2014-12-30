@@ -115,6 +115,10 @@ public class UserInfo implements Serializable {
     @Column(nullable = false)
     private long LastSign = 0;
 
+    //用于激活账户的时间戳(一般取 帐号建立时间)
+    @Column(nullable = false)
+    private long timestamp = createTime.getTime();
+
     public int getUid() {
         return uid;
     }
@@ -297,6 +301,14 @@ public class UserInfo implements Serializable {
 
     public void setLastSign(long lastSign) {
         LastSign = lastSign;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 }
 
