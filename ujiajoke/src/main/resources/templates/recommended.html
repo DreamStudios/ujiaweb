@@ -90,7 +90,7 @@
 				<div class="task-icon"><img src="img/avatar_2.jpg" th:src="${page.adPhoto}"/></div>
 				<dl class="task-details">
 					<dt th:text="${page.adTitle}">投稿</dt>
-					<dd th:text="${page.content}">去投稿页面分享身边的趣事、糗事、囧图，即可获得20麻币，投稿审核通过后还会获得麻币；</dd>
+					<dd th:text="${page.content}">去投稿页面分享身边的趣事、糗事、囧图</dd>
 				</dl>
 				<div class="task-right">
 					<a href="javascript:alert(1);" th:href="@{download.html(url=${page.adUrl})}" val="publish" class="start-task task-btn">我要看看</a>

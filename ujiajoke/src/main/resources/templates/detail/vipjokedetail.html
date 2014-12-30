@@ -54,7 +54,7 @@
                 <a th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=1'}" href="#">
 				    <div class="joke-content" title="点击进入下一条笑话">
                         <img th:if="${joke.style eq 1}" th:src="${joke.picture}" width="440" height="307" alt="【桃姐淘新闻】北京马拉松看醉众人" />
-                        <span th:if="${joke.style eq 2}" th:text="${joke.content}">内容</span>
+                        <span th:if="${joke.style eq 2}" th:utext="${joke.content}">内容</span>
                     </div>
                 </a>
 			</dd>

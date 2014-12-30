@@ -14,19 +14,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	var jokesDynamic 	= 'http://user.mahua.com/ajax/joke/checkjokesdynamic';
-	var keptUrl			= 'http://user.mahua.com/ajax/joke/keptjoke';
 	var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
-	var favoriteUrl		= 'http://user.mahua.com/ajax/joke/favorite';
-	var unfavoriteUrl 	= 'http://user.mahua.com/ajax/joke/unfavorite';
-	var maryaneUrl		= 'http://user.mahua.com/ajax/joke/maryane';
-	var getUserInfoUrl  = "http://user.mahua.com/ajax/user/getactiveuserinfo";
-	
-	//评论
-	var commentInitUrl	= 'http://user.mahua.com/comment/getcommentHtml';
-	var getCommentsUrl = 'http://user.mahua.com/comment/getComments';
-	var addCommentUrl = 'http://user.mahua.com/comment/addComment';
-	var upCommentUrl = 'http://user.mahua.com/comment/upComment';
 </script>
 <!--头部信息开始-->
 <div class="header" th:fragment="index_header">
@@ -105,7 +93,7 @@
 			</dt>
 			<dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
-                <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
+                <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">

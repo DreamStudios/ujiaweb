@@ -67,7 +67,7 @@
             </dt>
             <dd class="content">
                 <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
-                <span th:if="${page.style eq 2}" th:text="${page.content}"></span>
+                <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">
@@ -191,7 +191,7 @@
             <dd>
                 <a target="_blank" href="../detail/vipJokeDetail.html" th:href="@{'/'+${us.jid}+'/vipJokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
                     <img alt="贪吃动物们的糗事" src="../img/11.gif" th:alt="${us.title}" th:src="@{us.picture}"/>
-                    <span th:text="${us.title}">贪吃动物们的糗事</span>
+                    <span th:utext="${us.title}">贪吃动物们的糗事</span>
                 </a>
             </dd>
         </dl>
