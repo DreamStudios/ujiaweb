@@ -973,6 +973,16 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .publish i,.audit i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;_background:url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat}
 .audit i{background-position:-32px 4px}
 
+.publish-audit2{overflow:hidden;text-align:center;margin-bottom: 10px;}
+.publish2,.audit2{display:inline-block;text-align:left;width:175px;padding: 5px 0 5px 10px ;height:40px;overflow:hidden;font-size:22px;color:#fff}
+.publish2{background:#ff6766;}
+.audit2{background:#04ce9b}
+.publish2:hover{background:#fc4e4d;color:#fff}
+.audit2:hover{background:#00b789;color:#fff}
+.publish2 span,.audit2 span{display:block;float:left;height:40px;line-height:40px;}
+.publish2 i,.audit2 i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;_background:url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat}
+.audit2 i{background-position:-32px 4px}
+
 /*
 头像样式
 avatar_30x30  30*30的头像

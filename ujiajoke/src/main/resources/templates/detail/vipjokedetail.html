@@ -48,7 +48,7 @@
 <div class="main main-view">
 	<div class="left">
 		<!-- 笑话 -->
-		<dl class="mahua mahua-view" id="joke_905492" mahua="905492">
+		<dl class="mahua mahua-view" th:name="${joke.jid}">
 			<dt><h1 class="joke-title" th:text="${joke.title}">笑话标题</h1></dt>
 			<dd class="content">
                 <a th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=1'}" href="#">
@@ -66,8 +66,8 @@
 				</p>
 			</dd>
 			<dd class="operation">
-				<a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i th:text="${joke.up}">0</i></a>
-				<a href="javascript:void(0)" rel="nofollow"  class="cai" title="踩"><img src="../img/cai.png" /><i th:text="${joke.down}">0</i></a>
+				<a href="javascript:void(0)" rel="nofollow" class="ding" flag="1" title="顶"><img src="../img/ding.png" /><i th:text="${joke.up}">0</i></a>
+				<a href="javascript:void(0)" rel="nofollow"  class="cai" flag="1" title="踩"><img src="../img/cai.png" /><i th:text="${joke.down}">0</i></a>
 				<a href="#object-comment" class="comment" title="评论"><img src="../img/comment.png" /><i th:text="${pages.totalElements+'条评论'}">0条评论</i></a>
 				<div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>

@@ -22,4 +22,11 @@ public interface UserInfoRepository extends BaseRepository<UserInfo, Integer>  {
      * @return
      */
     public UserInfo findByUid(int uid);
+
+    /**
+     * 根据父类邀请码查询用户信息
+     * @param parentInviteCode 父类邀请码
+     * @return
+     */
+    public UserInfo findByParentInviteCode(String parentInviteCode);
 }

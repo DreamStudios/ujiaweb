@@ -57,13 +57,13 @@ public class UserInfo implements Serializable {
     @Column(nullable = true, length = 255)
     private String qq;
 
-    //积分(U币 1U币=1角，注册送5元，邀请得两元)
+    //积分(U币 1U币=1角，注册送5元)
     @Column(nullable = false, columnDefinition = "int(11) default 50")
     private int integral = 50;
 
     //经验值
-    @Column(nullable = false, columnDefinition = "int(11) default 0")
-    private int experience = 0;
+    @Column(nullable = false, columnDefinition = "int(11) default 50")
+    private int experience = 50;
 
     //快乐家族级别
     @Column(nullable = false, columnDefinition = "varchar(255) default '实习生'")

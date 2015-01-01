@@ -83,4 +83,19 @@ public class VipJokeServiceImpl implements VipJokeService{
         }
         return true;
     }
+
+    /**
+     * 顶、踩笑话
+     * @param jid 笑话ID
+     * @param flag 1：顶 0：踩
+     */
+    public void upDownVipJoke(int jid,int flag){
+        String hql ;
+        if(flag == 1){
+            hql = "UPDATE VipJoke SET up=up+1 WHERE jid="+jid;
+        }else {
+            hql = "UPDATE VipJoke SET down=down+1 WHERE jid="+jid;
+        }
+        vipJokeRepository.updateBySql(hql);
+    }
 }

@@ -1,6 +1,7 @@
 package com.blueshit.joke.utils;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -29,5 +30,16 @@ public class DateUtils {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("".equals(partten) ? Constants.DatePartten.LINK_DATE_TIME : partten);
         return dateFormat.format(date);
+    }
+
+    /**
+     * 给定日期与当前日期间隔
+     * @param t
+     * @return
+     */
+    public static int diffDate(long t){
+        Calendar cal =Calendar.getInstance();
+        cal.setTimeInMillis(t);
+        return Calendar.getInstance().get(Calendar.DAY_OF_YEAR)-cal.get(Calendar.DAY_OF_YEAR);
     }
 }

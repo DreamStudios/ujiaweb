@@ -186,4 +186,19 @@ public class JokeServiceImpl implements JokeService {
         hql.append(" ORDER BY updateTime DESC ");
         return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
+
+    /**
+     * 顶、踩笑话
+     * @param jid 笑话ID
+     * @param flag 1：顶 0：踩
+     */
+    public void upDownJoke(int jid,int flag){
+        String hql ;
+        if(flag == 1){
+            hql = "UPDATE Joke SET up=up+1 WHERE jid="+jid;
+        }else {
+            hql = "UPDATE Joke SET down=down+1 WHERE jid="+jid;
+        }
+        jokeRepository.updateBySql(hql);
+    }
 }

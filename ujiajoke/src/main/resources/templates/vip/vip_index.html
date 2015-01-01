@@ -59,7 +59,7 @@
     <!--左侧信息开始-->
 	<div class="left">
         <!-- 笑话列表开始 -->
-		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
+		<dl class="mahua" th:name="${page.jid}" th:each="page :${pages}">
             <dt>
                 <a th:href="@{'../'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="../img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
             <p class="joke-uname"><a th:href="@{'../'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="../about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
@@ -71,8 +71,8 @@
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">
-                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i th:text="${page.up}">0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="../img/cai.png" /><i th:text="${page.down}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="ding" flag="1" title="顶"><img src="../img/ding.png" /><i th:text="${page.up}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" flag="1" title="踩"><img src="../img/cai.png" /><i th:text="${page.down}">0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="comment commentClick2" title="点评一下" th:name="${page.jid}"><img src="img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
@@ -130,6 +130,34 @@
     <!--左侧信息结束-->
     <!--右侧信息开始-->
     <div class="right" id="main-right" th:fragment="index_right">
+        <script type="text/javascript" th:inline="javascript">
+            var email=/*[[${#authentication.getName()}]]*/'';
+            function sinIn() {
+                if(email=="anonymousUser"){
+                    window.location.href = "../login.html";
+                }else{
+                    $.ajax({
+                        url:"../signIn.html",
+                        data: {"email":email},
+                        type: "GET",
+                        dataType:"text",
+                        timeout:18000,
+                        success:function(data){
+                            if(data == "2"){
+                                alert("签到成功！");
+                            }else if(data == "1"){
+                                alert("不要重复签到！");
+                            }else{
+                                window.location.href = "../login.html";
+                            }
+                        },
+                        error: function(){ //请求失败
+                            alert("签到失败,时候再试");
+                        }
+                    });
+                }
+            }
+        </script>
         <!-- 用户信息 -->
         <ul class="user-operation" id="user-show-ajax">
             <li class="user-show" th:if="${#authentication.getName() eq 'anonymousUser'}">
@@ -153,9 +181,11 @@
                 </dl>
             </li>
             <li class="user-btn">
-                <div class="publish-audit">
-                    <a href="#" th:href="@{releaseJoke.html}" class="publish" target="_blank" rel="nofollow"><i></i><span>投稿</span></a>
-                    <a href="javascript:alert(1);" class="audit" target="_blank" rel="nofollow"><i></i><span>审稿</span></a>
+                <div class="publish-audit2">
+                    <a href="#" th:href="releaseVipJoke.html" class="publish2" target="_blank" rel="nofollow"><i></i><span>投会员稿</span></a>
+                </div>
+                <div class="publish-audit2">
+                    <a href="javascript:alert(1);" class="audit2" target="_blank" rel="nofollow"><i></i><span>审会员稿</span></a>
                 </div>
             </li>
             <li class="user-operation-bottom">

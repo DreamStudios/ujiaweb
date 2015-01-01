@@ -4,16 +4,16 @@ import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.JokeComment;
 import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.entity.VipJokeComment;
-import com.blueshit.joke.service.JokeCommentService;
-import com.blueshit.joke.service.JokeService;
-import com.blueshit.joke.service.UserInfoService;
-import com.blueshit.joke.service.VipJokeCommentService;
+import com.blueshit.joke.service.*;
 import com.blueshit.joke.utils.AuthorizationUser;
+import com.blueshit.joke.utils.Constants;
+import com.blueshit.joke.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,14 +34,16 @@ public class JokeCommentController {
 
     private UserInfoService userInfoService;
     private JokeService jokeService;
+    private VipJokeService vipJokeService;
     private JokeCommentService jokeCommentService;
     private VipJokeCommentService vipJokeCommentService;
 
     @Autowired
-    public JokeCommentController(UserInfoService userInfoService, JokeService jokeService,
+    public JokeCommentController(UserInfoService userInfoService, JokeService jokeService,VipJokeService vipJokeService,
                                  JokeCommentService jokeCommentService,VipJokeCommentService vipJokeCommentService) {
         this.userInfoService = userInfoService;
         this.jokeService = jokeService;
+        this.vipJokeService = vipJokeService;
         this.jokeCommentService = jokeCommentService;
         this.vipJokeCommentService = vipJokeCommentService;
     }
@@ -181,6 +183,58 @@ public class JokeCommentController {
                         footer +
                         "</dd>";
         printContentToPage(response,content);
+        return null;
+    }
+
+    /**
+     * 用户签到
+     * @return
+     */
+    @RequestMapping(value = "/signIn")
+    public String signIn(Authentication authentication,HttpServletResponse response){
+        String result = "0"; //未登陆
+        if(authentication != null){
+            UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
+            UserInfo ui = userInfoService.getUserByEmail(userInfo.getEmail());
+            if(DateUtils.diffDate(ui.getLastSign()) > 0){
+                ui.setLastSign(System.currentTimeMillis());
+                ui.setExperience(ui.getExperience() + 5);
+                ui.setLevel(Constants.getLevel(ui.getExperience()));
+                userInfoService.save(ui);
+                result = "2";
+            }else{
+                result = "1"; //今天已经签到
+            }
+        }
+        printContentToPage(response,result);
+        return null;
+    }
+
+    /**
+     * 顶、踩
+     * @param request
+     * @param response
+     * @param flag 是否是VIP 1:是 0:否
+     * @param jid 笑话ID
+     * @return
+     */
+    @RequestMapping(value = {"/up","/down"})
+    public String updown(HttpServletRequest request,HttpServletResponse response,int flag,int jid){
+        String action = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/")+1);
+        if ("up.html".equals(action)) { //顶
+            if(1 == flag){
+                vipJokeService.upDownVipJoke(jid,1);
+            }else {
+                jokeService.upDownJoke(jid,1);
+            }
+        }else{//踩
+            if(1 == flag){
+                vipJokeService.upDownVipJoke(jid,0);
+            }else {
+                jokeService.upDownJoke(jid,0);
+            }
+        }
+        printContentToPage(response,"1");
         return null;
     }
 

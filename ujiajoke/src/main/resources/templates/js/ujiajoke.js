@@ -5024,12 +5024,12 @@ $(function(){
 	})
 	$('.ding').click(function(){
 		votingNum('<b style="color:red;">+1</b>',$(this));
-		jokeVote('up',$(this));
+		jokeVote('up',$(this),$(this).attr('flag'));
 		return false;
 	})
 	$('.cai').click(function(){
 		votingNum('<b style="color:#00acfb;">-1</b>',$(this));
-		jokeVote('down',$(this));
+		jokeVote('down',$(this),$(this).attr('flag'));
 		return false;
 	})
 	$('.collection').click(function(){
@@ -5514,11 +5514,42 @@ function commentVote(t){
 }
 
 //笑话顶采提交
-function jokeVote(i,t){
-	var id=t.parent().parent('dl').attr('mahua');
+function jokeVote(i,t,flag){
+	var id=t.parent().parent('dl').attr('name');
 	t.find('i').text(Number(t.find('i').text())+1);
-	
-	alert(1);
+    var var_url;
+    var vip_flag;
+    if(i=="down"){
+        if(flag=='0'){//普通笑话
+            var_url = "down.html";
+            vip_flag = 0;
+        }else if(flag=='2'){//普通笑话详情
+            var_url = "../down.html";
+            vip_flag = 0;
+        }else{//会员笑话
+            var_url = "../down.html";
+            vip_flag = 1;
+        }
+    }else{
+        if(flag=='0'){//普通笑话
+            var_url = "up.html";
+            vip_flag = 0;
+        }else if(flag=='2'){//普通笑话详情
+            var_url = "../up.html";
+            vip_flag = 0;
+        }else{//会员笑话
+            var_url = "../up.html";
+            vip_flag = 1;
+        }
+    }
+    $.ajax({
+        dataType: "text",
+        contentType:"text/html; charset=utf-8",
+        url: var_url,
+        data: {jid:id,flag:vip_flag},
+        success: function(ret) {
+        }
+    });
 	
 	var this_parent=t.parent('.operation');
 	this_parent.find('.ding').unbind('click').addClass('ding-hover').removeClass('ding').find('img').remove();	
@@ -5920,49 +5951,17 @@ function newbieGuide(){
 		if($('.publish-audit .audit').length>0){isgo_e=true;}
 		if($('.sell-joke').length>0){isgo_d=true;}
 	}
-//	if(isgo_a && !isgo_d){
-//		var top=($(window).height()-650)/2;
-//		var left=($(window).width()-980)/2;
-//		$('body').append('<div id="newbieGuide1" data-newbie-id="1"><img src="http://static.mahua.com/www/default/img/allup.png"/><a href="javascript:void(0);" rel="nofollow" class="newbieGuideStart">开始体验</a><a href="javascript:void(0);" rel="nofollow" class="newbieGuideClose">关闭</a></div>')
-//		newbieGuideF(1,top,left,'a');
-//	}
+
 	if(!isgo_a && isgo_b){
 		newbieGuide_b();
 	}
 	if(!isgo_a && isgo_c){
 		newbieGuide_c();
 	}
-	//if(!isgo_a && isgo_e){
-	//	newbieGuide_e();
-	//}
 	if(isgo_d){
 		newbieGuide_d();
 	}
 }
-//
-function luckyReg(){
-	var mhRegGuide = parseInt($.cookie('MH_REG_GUIDE'));
-	if(isNaN(mhRegGuide)) mhRegGuide=0;
-	
-	var mhUserId = parseInt($.cookie('MH_USER_ID'));
-	if(isNaN(mhUserId)) mhUserId=0;
-	
-	if(mhUserId<=0 && mhRegGuide<=0 && parseInt($.cookie('MH_PAGE_NUM_ALL'))==2){
-		//if(Math.floor(Math.random()*10)>8){
-			regGuideLucky();
-		//}
-		$.cookie('MH_PAGE_NUM_ALL',3,{expires:365,path:'/',domain:'.mahua.com'});
-	}else{
-		if(isNaN(parseInt($.cookie('MH_PAGE_NUM_ALL')))){
-			$.cookie('MH_PAGE_NUM_ALL',1,{expires:365,path:'/',domain:'.mahua.com'});
-		}else{
-			if(parseInt($.cookie('MH_PAGE_NUM_ALL'))<4){
-				$.cookie('MH_PAGE_NUM_ALL',parseInt($.cookie('MH_PAGE_NUM_ALL'))+1,{expires:365,path:'/',domain:'.mahua.com'});
-			}
-		}
-	}
-}
-
 
 //注册引导
 function regGuideLucky(){
@@ -7346,391 +7345,6 @@ $.format = $.validator.format;
 		}
 	});
 }(jQuery));
-//页面登录
-function login(){
-	loginQ();
-	//登录的提交操作
-	$.validator.setDefaults({       
-		submitHandler: function() {
-			$('#form_login').find(".btn").attr("disabled", true).val('登录中...').css('background','#bcbcbd');
-			$.ajax({
-				type : 'POST',
-				url : loginUrl,
-				dataType : 'json',
-				data : $('#form_login').serialize(),
-				success : function(response){
-					if(response.code > 0) {
-						if(response.data.redirectUrl==''){
-							window.location.reload();
-						}else{
-							window.location.href=response.data.redirectUrl;
-						}
-					} else {
-						$('li').find('span.valid').removeClass('valid').addClass('error');
-						$('.username').parent('li').find('span').html(response.message);
-						$('#form_login').find(".btn").attr("disabled", false).val('登录').css('background','#04ce9b');
-					}
-				}
-			})
-		}
-	}),
-	//登录的文本验证
-	$('#form_login').validate({
-		onkeyup : false,
-		rules:{
-			email : {
-				required : true
-				//email : true,
-				//remote : checkUserEmailExistUrl
-			},
-			password : {
-				required : true,
-				minlength : 5
-			}
-		},
-		messages : {
-			email : {
-				required : '邮箱不能为空'
-				//email : '请输入正确的邮箱地址',
-				//remote : '该邮箱未注册过'
-			},
-			password : {
-				required : '密码不能为空',
-				minlength : '不能小于5位'
-			}
-		},
-		errorElement: "span",
-		errorPlacement: function (error, element) { 
-      		if (element.is(':radio') || element.is(':checkbox')) {
-          		var eid = element.attr('name');
-          		error.appendTo(element.parent());
-      		} else {
-          		error.appendTo(element.closest("li"));
-     		}
-		},
-		focusInvalid: true,
-		success:function(e)
-		{
-			e.html('&nbsp;').addClass('valid');
-		}
-	})
-}
-
-//注册
-function reg(){
-	loginQ();
-	//性别选择
-	$('#female').click(function(){
-		$('#female').addClass('female-hover');
-		$('.male-hover').removeClass('male-hover');
-		$('#gender').val(1);
-	})
-	$('#male').click(function(){
-		$('#male').addClass('male-hover');
-		$('.female-hover').removeClass('female-hover');
-		$('#gender').val(2);
-	})
-	//注册的提交操作
-	$.validator.setDefaults({       
-		submitHandler: function() {
-			$('#form_reg').find(".btn").attr("disabled", true).val('注册中...').css('background','#bcbcbd');
-			$.ajax({
-				type : 'POST',
-				url : registerUrl,
-				dataType : 'json',
-				data : $('#form_reg').serialize(),
-				success : function(data){
-					if(data.code > 0) {
-						var url = registerSuccessUrl + '?email=' + data.data.email+'&email_website=' + data.data.email_website;
-						window.location.href=url;
-					}else{
-						if(data.data.email!=''){
-							$('.email').parent('li').find('span.valid').removeClass('valid').addClass('error').html(data.data.email)
-						}
-						if(data.data.nick_name!=''){
-							$('.nick_name').parent('li').find('span.valid').removeClass('valid').addClass('error').html(data.data.nick_name)
-						}
-						if(data.data.password!=''){
-							$('.password').parent('li').find('span.valid').removeClass('valid').addClass('error').html(data.data.password)
-						}
-						if(data.data.passconf!=''){
-							$('.passconf').parent('li').find('span.valid').removeClass('valid').addClass('error').html(data.data.passconf)
-						}
-						if(data.data.gender!=''){
-							$('.gender').find('span.valid').removeClass('valid').addClass('error').html(data.data.gender)
-						}
-						$('#form_reg').find(".btn").attr("disabled", false).val('注册').css('background','#FF7E69');
-					}
-				}
-			})
-	   }
-	}),
-	//注册的文本验证
-	$('#form_reg').validate({
-		onkeyup : false,
-		rules:{
-			email : {
-				required : true,
-				email : true,
-				remote : checkUserEmailExistUrl
-			},
-			password : {
-				required : true,
-				minlength : 5
-			},
-			passconf : {
-				equalTo : '.pasw'
-			},
-			nick_name : {
-				required : true,
-				rangelength : [2,8],
-				remote : checkNickNameExistUrl
-			},
-			gender : {
-				range : [1,2]
-			}
-		},
-		messages : {
-			email : {
-				required : '邮箱不能为空',
-				email : '请输入正确的邮箱地址',
-				remote : '该邮箱已经注册过'
-			},
-			password : {
-				required : '密码不能为空',
-				minlength : '不能小于5位'
-			},
-			passconf : {
-				equalTo : '两次密码不一致'
-			},
-			nick_name : {
-				required : '昵称不能为空',
-				rangelength : '昵称应在2-8位之间',
-				remote : '该昵称已经注册过'
-			},
-			gender : {
-				range : '性别还没选呢'
-			}
-		},
-		errorElement: "span",
-		errorPlacement: function (error, element) { 
-      		if (element.is(':radio') || element.is(':checkbox')) {
-          		var eid = element.attr('name');
-          		error.appendTo(element.parent());
-      		} else {
-          		error.appendTo(element.closest("li"));
-     		}
-		},
-		focusInvalid: true,
-		success:function(e)
-		{
-    		e.html('&nbsp;').addClass('valid');
-		}
-	})
-}
-
-//等三方登录后修改昵称
-function submit_name(){
-	//性别选择
-	$('#female').click(function(){
-		$('#female').addClass('female-hover');
-		$('.male-hover').removeClass('male-hover');
-		$('#gender').val(1);
-	})
-	$('#male').click(function(){
-		$('#male').addClass('male-hover');
-		$('.female-hover').removeClass('female-hover');
-		$('#gender').val(2);
-	})
-	//注册的提交操作
-	$.validator.setDefaults({       
-		submitHandler: function() {    
-			$.ajax({
-				type : 'POST',
-				url : registerUrl,
-				dataType : 'json',
-				data : $('#form_submit_name').serialize(),
-				success : function(data){
-					if(data.code > 0) {
-						self.location=data.data.url;
-					}else{
-						if(data.data.nick_name!=''){
-							$('.nick_name').parent('li').find('span.valid').removeClass('valid').addClass('error').html(data.data.nick_name)
-						}
-						if(data.data.gender!=''){
-							$('.gender').find('span.valid').removeClass('valid').addClass('error').html(data.data.gender)
-						}
-					}
-				}
-			})
-	   }
-	}),
-	//注册的文本验证
-	$('#form_submit_name').validate({
-		onkeyup : false,
-		rules:{
-			nick_name : {
-				required : true,
-				rangelength : [2,8],
-				remote : checkNickNameExistUrl
-			},
-			gender : {
-				range : [1,2]
-			}
-		},
-		messages : {
-			nick_name : {
-				required : '昵称不能为空',
-				rangelength : '昵称应在2-8位之间',
-				remote : '该昵称已经注册过'
-			},
-			gender : {
-				range : '性别还没选呢'
-			}
-		},
-		errorElement: "span",
-		errorPlacement: function (error, element) { 
-      		if (element.is(':radio') || element.is(':checkbox')) {
-          		var eid = element.attr('name');
-          		error.appendTo(element.parent());
-      		} else {
-          		error.appendTo(element.closest("li"));
-     		}
-		},
-		focusInvalid: true,
-		success:function(e)
-		{
-    		e.html('&nbsp;').addClass('valid');
-		}
-	})
-}
-
-//忘记密码提交邮箱
-function back_password_email(){
-	//验证邮箱
-	$.validator.setDefaults({       
-		submitHandler: function() {    
-			$.ajax({
-				type : 'POST',
-				url : findPassword,
-				dataType : 'json',
-				data : $('#form_back_password_email').serialize(),
-				success : function(ret){
-					if(ret.code > 0) {
-						window.location.href=ret.data.redirectUrl;
-					} else if(ret.message!=''){
-						$('.email').parent('li').find('span.valid').removeClass('valid').addClass('error').html(ret.message)
-					}
-				}
-			})
-	   }
-	}),
-	$('#form_back_password_email').validate({
-		onkeyup : false,
-		rules:{
-			email : {
-				required : true,
-				email : true,
-				remote : checkEmailExist
-			},
-			captcha_code : {
-				required : true,
-				remote : vcodeUrl
-			}
-		},
-		messages : {
-			email : {
-				required : '邮箱不能为空',
-				rangelength : '请输入正确的邮箱',
-				remote : '请输入您注册时用的邮箱'
-			},
-			captcha_code : {
-				required : '验证码不能为空',
-				remote : '验证码不正确'
-			}
-		},
-		errorElement: "span",
-		errorPlacement: function (error, element) { 
-      		if (element.is(':radio') || element.is(':checkbox')) {
-          		var eid = element.attr('name');
-          		error.appendTo(element.parent());
-      		} else {
-          		error.appendTo(element.closest("li"));
-     		}
-		},
-		focusInvalid: true,
-		success:function(e)
-		{
-    		e.html('&nbsp;').addClass('valid');
-		}
-	})
-}
-
-//验证码换一换
-function refresh_vcode(){
-	$('#refresh_btn , #vcode').click(function(){
-		$('#vcode').attr('src',vcodeShowUrl+'?d='+Math.random());
-		$('.vcode').val('');
-		return false;	
-	})
-}
-
-//重置密码
-function back_password(){
-	$.validator.setDefaults({       
-		submitHandler: function() {  
-			mahuaDialog(800,350,'#reset_prompt_box');
-			setTimeout(function(){
-				window.location.href='https://passport.mahua.com/account/login';
-			},3000)
-			
-			$.ajax({
-				type : 'POST',
-				url : backPasswordUrl,
-				dataType : 'json',
-				data : $('#form_back_password').serialize(),
-				success : function(data){
-				}
-			})
-	   }
-	}),
-	$('#form_back_password').validate({
-		onkeyup : false,
-		rules:{
-			password : {
-				required : true,
-				minlength : 5
-			},
-			passconf : {
-				equalTo : '.pasw'
-			}
-		},
-		messages : {
-			password : {
-				required : '密码不能为空',
-				minlength : '不能小于5位'
-			},
-			passconf : {
-				equalTo : '两次密码不一致'
-			}
-		},
-		errorElement: "span",
-		errorPlacement: function (error, element) { 
-      		if (element.is(':radio') || element.is(':checkbox')) {
-          		var eid = element.attr('name');
-          		error.appendTo(element.parent());
-      		} else {
-          		error.appendTo(element.closest("li"));
-     		}
-		},
-		focusInvalid: true,
-		success:function(e)
-		{
-    		e.html('&nbsp;').addClass('valid');
-		}
-	})
-}
-
 $(function(){	
 	//修改头像弹框
 	$('#editImg').click(function(){
