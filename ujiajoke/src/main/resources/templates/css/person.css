@@ -1064,10 +1064,10 @@ a.top-login:hover {
 	background: #03a8b1; margin-right: 15px;
 }
 .audit {
-	background: rgb(4, 206, 155);
+	background: #699f00;
 }
 .publish:hover {
-	background: rgb(252, 78, 77); color: rgb(255, 255, 255);
+	background: #699f00; color: rgb(255, 255, 255);
 }
 .audit:hover {
 	background: #03a8b1; color: rgb(255, 255, 255);
@@ -1289,7 +1289,7 @@ a.top-login:hover {
 	color: rgb(255, 132, 91); margin-top: 0px;
 }
 .mahua .operation .reward {
-	background-position: -630px -215px; color: rgb(4, 206, 155); margin-top: 5px;
+	background-position: -630px -215px; color: #699f00; margin-top: 5px;
 }
 .mahua .operation .buy a:hover {
 	background-position: -561px -215px; color: rgb(255, 255, 255);
@@ -1415,7 +1415,7 @@ dl.mahua-view {
 	background: rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(232, 231, 230) currentColor rgb(232, 231, 230) rgb(232, 231, 230); padding: 0px 70px 0px 10px; width: 455px; height: 38px; color: rgb(201, 201, 201); line-height: 38px; float: left;
 }
 .joke-list-comment .comment-submit {
-	background: rgb(4, 206, 155); border: currentColor; width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
+	background: #699f00; border: currentColor; width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
 }
 .joke-list-comment .comment-submit:hover {
 	background: #03a8b1;
@@ -2588,7 +2588,7 @@ a.comment_packUp {
 	margin-left: 0px;
 }
 .imgsubmit {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; cursor: pointer;
+	background: #699f00; border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; cursor: pointer;
 }
 .imgsubmit:hover {
 	background: #03a8b1;
@@ -2759,7 +2759,7 @@ ul.content li .tab {
 	background: #03a8b1; border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .editPassword-submit {
-	background: rgb(4, 206, 155); margin-right: 30px;
+	background: #699f00; margin-right: 30px;
 }
 .editPassword-reset:hover {
 	background: #03a8b1;
@@ -2795,7 +2795,7 @@ ul.content li .tab {
 	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(226, 226, 226) currentColor rgb(226, 226, 226) rgb(226, 226, 226); width: 523px; height: 48px; line-height: 48px; padding-left: 5px; font-size: 14px; float: left; display: block;
 }
 .invite-friends dd input {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 50px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-size: 20px; float: left; cursor: pointer;
+	background: #699f00; border: currentColor; width: 120px; height: 50px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-size: 20px; float: left; cursor: pointer;
 }
 .my-invite-friends {
 	margin: 0px auto; padding: 30px 0px; width: 669px; border-top-color: rgb(214, 214, 214); border-top-width: 1px; border-top-style: dashed;
@@ -2933,7 +2933,7 @@ ul.content li .tab {
 	background: rgb(231, 231, 231); color: #03a8b1; text-shadow: none;
 }
 .task-right a.hover-receive {
-	background: rgb(4, 206, 155); text-shadow: 0 1px 0 #069a75;
+	background: #699f00; text-shadow: 0 1px 0 #069a75;
 }
 .task-right span {
 	background: rgb(255, 248, 218); border: 1px solid rgb(236, 220, 180); height: 32px; color: rgb(73, 73, 73); line-height: 32px; padding-left: 13px; margin-right: 10px; float: right; display: none; position: relative;
@@ -3074,7 +3074,7 @@ ul.content li.noborder {
 	border: 1px solid rgb(226, 226, 226); width: 188px; height: 42px; color: rgb(51, 51, 51); padding-left: 10px; font-size: 14px; margin-right: 10px; float: left; position: relative; z-index: 2;
 }
 .audit-prompt-submit {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 45px; color: rgb(255, 255, 255); font-size: 20px; float: left; cursor: pointer;
+	background: #699f00; border: currentColor; width: 120px; height: 45px; color: rgb(255, 255, 255); font-size: 20px; float: left; cursor: pointer;
 }
 .audit-prompt-content .pass-value {
 	height: 45px; text-align: left; color: rgb(198, 198, 198); line-height: 45px; font-size: 14px; margin-left: -225px; float: left; display: block; position: relative; z-index: 1;
