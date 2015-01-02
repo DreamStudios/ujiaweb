@@ -58,7 +58,7 @@
     <!--个人信息开始-->
 	<div class="user-banner" th:fragment="myJoke_user" th:with="userInfo=${@authorizationUserService.getUserEntity()}">
 		<span id="editImg">
-			<img src="img/avatar_2.jpg"/>
+			<img id="myphoto" src="img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + userInfo.photo}" th:alt="${userInfo.name}"/>
 		</span>
         <dl class="user-info" th:with="map=${@jokeService.getJokeSumNumberById(userInfo.uid)}">
             <dt><span th:text="${userInfo.name}">阿狸爱桃子</span><a href="../about/shengjiguize.html" th:text="${'家族级别：'+userInfo.level}" target="_blank">实习生</a></dt>
@@ -149,7 +149,7 @@
     <!--右侧信息开始-->
 	<div class="right" th:fragment="myJoke_right">
 		<div class="publish-audit">
-	      <a href="javascript:alert(1);" class="publish" target="_blank"><i></i><span>投稿</span></a>
+	      <a href="releaseJoke.html" class="publish" target="_blank"><i></i><span>投稿</span></a>
           <a href="javascript:alert(1);" class="audit" target="_blank"><i></i><span>审稿</span></a>
         </div>		
         <dl class="other-user" th:with="list=${@userInfoService.getTodayStar(9)}">

@@ -53,18 +53,23 @@ public class FileUploadController {
         String fullName = realPath + uri;
         if (!file.isEmpty()) {
             try {
-                byte[] bytes = file.getBytes();
-                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(fullName)));
-                stream.write(bytes);
-                stream.close();
+                long fileSize = file.getSize(); //图片字节数
+                if(fileSize <= 1024 * 1024){ //图片小于1M
+                    byte[] bytes = file.getBytes();
+                    BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(fullName)));
+                    stream.write(bytes);
+                    stream.close();
 
-                session.setAttribute(sessionId, uri);
-                //图片大小判定
-                BufferedImage bufferedImage = ImageIO.read(new File(fullName));
-                int width = bufferedImage.getWidth();
-                int height = bufferedImage.getHeight();
-                //  像素限制
-                if(width >800 || height > 4200){
+                    session.setAttribute(sessionId, uri);
+                    //图片大小判定
+                    BufferedImage bufferedImage = ImageIO.read(new File(fullName));
+                    int width = bufferedImage.getWidth();
+                    int height = bufferedImage.getHeight();
+                    //  像素限制
+                    if(width >800 || height > 4200){
+                        session.setAttribute(sessionId, "sizeError");
+                    }
+                }else{
                     session.setAttribute(sessionId, "sizeError");
                 }
                 return request.getContextPath()+uri;

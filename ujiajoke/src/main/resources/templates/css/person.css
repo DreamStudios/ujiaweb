@@ -1061,7 +1061,7 @@ a.top-login:hover {
 	padding: 5px 0px 5px 10px; width: 115px; height: 40px; text-align: left; color: rgb(255, 255, 255); overflow: hidden; font-size: 22px; display: inline-block;
 }
 .publish {
-	background: rgb(255, 103, 102); margin-right: 15px;
+	background: #03a8b1; margin-right: 15px;
 }
 .audit {
 	background: rgb(4, 206, 155);
@@ -2772,6 +2772,9 @@ ul.content li .tab {
 }
 .editInfoPhone dd {
 	height: 40px; line-height: 40px; margin-bottom: 0px;
+}
+.editInfoPhone dd div {
+    float:left;
 }
 .editInfo .editInfo-btn {
 	margin-top: 20px;

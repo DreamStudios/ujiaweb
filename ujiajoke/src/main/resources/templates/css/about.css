@@ -967,7 +967,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .publish,.audit{display:inline-block;text-align:left;width:115px;padding: 5px 0 5px 10px ;height:40px;overflow:hidden;font-size:22px;color:#fff}
 .publish{background:#ff6766;margin-right:15px}
 .audit{background:#04ce9b}
-.publish:hover{background:#fc4e4d;color:#fff}
+.publish:hover{background:#03a8b1;color:#fff}
 .audit:hover{background:#00b789;color:#fff}
 .publish span,.audit span{display:block;float:left;height:40px;line-height:40px;}
 .publish i,.audit i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;_background:url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat}

@@ -183,11 +183,11 @@
                </dl>
             </li>
             <li class="user-show" th:if="${#authentication.getName() ne 'anonymousUser'}">
-                <div class="right-top-avatar-a">
+                <div class="right-top-avatar-a" th:with="user=${@userInfoService.getUserByEmail(#authentication.getName())}">
                     <a href="profile.html" target="_blank">
-                        <img alt="JackAn" src="img/avatar_2.jpg" />
+                        <img alt="JackAn" th:alt="${user.name}" src="img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + user.photo}" />
                     </a>
-                    <a href="#" target="_blank"><em>修改头像</em></a>
+                    <a href="profile.html" target="_blank"><em>修改头像</em></a>
                 </div>
                 <dl class="right-top-avatar">
                     <dt><a href="profile.html" target="_blank">JackAn</a><p></p>

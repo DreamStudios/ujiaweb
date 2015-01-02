@@ -1053,7 +1053,7 @@ a.top-login:hover {
 	padding: 5px 0px 5px 10px; width: 115px; height: 40px; text-align: left; color: rgb(255, 255, 255); overflow: hidden; font-size: 22px; display: inline-block;
 }
 .publish {
-	background: rgb(255, 103, 102); margin-right: 15px;
+	background: #03a8b1; margin-right: 15px;
 }
 .audit {
 	background: rgb(4, 206, 155);

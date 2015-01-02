@@ -42,8 +42,10 @@ public class JokeServiceImpl implements JokeService {
         StringBuffer hql = new StringBuffer("From Joke where status=2");
         if (type != 0) {
             hql.append(" and type=" + type);
+        }else {
+            hql.append(" and type not in (1,2,3)");
         }
-        hql.append(" order by updateTime desc");
+        hql.append(" order by updateTime desc,up desc");
         return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
     }
 

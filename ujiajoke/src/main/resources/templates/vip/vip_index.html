@@ -166,15 +166,16 @@
                 </dl>
             </li>
             <li class="user-show" th:if="${#authentication.getName() ne 'anonymousUser'}">
-                <div class="right-top-avatar-a">
-                    <a href="profile.html" target="_blank">
-                        <img alt="JackAn" src="../img/avatar_2.jpg" />
+                <div class="right-top-avatar-a" th:with="user=${@userInfoService.getUserByEmail(#authentication.getName())}">
+                    <a href="../profile.html" target="_blank">
+                        <img alt="JackAn" th:alt="${user.name}" src="../img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + user.photo}" />
                     </a>
-                    <a href="#" target="_blank"><em>修改头像</em></a>
+                    <a href="../profile.html" target="_blank"><em>修改头像</em></a>
                 </div>
                 <dl class="right-top-avatar">
                     <dt><a href="../profile.html" target="_blank">JackAn</a><p></p>
-                    </dt><dd class="noborder">经验值：<em>500</em></dd>
+                    </dt>
+                    <dd class="noborder">经验值：<em>500</em></dd>
                     <dd>等级：实习生</dd>
                     <dd class="noborder">积分：<em>0</em></dd>
                     <dd>投稿量：0</dd>
@@ -220,7 +221,7 @@
             <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
                 <a target="_blank" href="../detail/vipJokeDetail.html" th:href="@{'/'+${us.jid}+'/vipJokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
-                    <img alt="贪吃动物们的糗事" src="../img/11.gif" th:alt="${us.title}" th:src="@{us.picture}"/>
+                    <img alt="贪吃动物们的糗事" src="../img/11.gif" th:alt="${us.title}" th:src="${#httpServletRequest.getContextPath() + us.picture}"/>
                     <span th:utext="${us.title}">贪吃动物们的糗事</span>
                 </a>
             </dd>

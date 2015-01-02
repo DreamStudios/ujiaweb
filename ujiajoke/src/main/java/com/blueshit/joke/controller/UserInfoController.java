@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 
@@ -288,13 +289,14 @@ public class UserInfoController {
      * @param model
      */
     @RequestMapping({"profile"})
-    public String profile(Model model, Authentication authentication){
+    public String profile(Model model,HttpSession session, Authentication authentication){
         if(authentication==null){
             return "redirect:/login.html";
         }
         UserInfo session_user = AuthorizationUser.getUserInfoEntity(authentication);
         UserInfo userInfo = userInfoService.getUserByUid(session_user.getUid());
         model.addAttribute("userInfo",userInfo);
+        session.removeAttribute("photo");
         return "profile";
     }
 
@@ -303,20 +305,42 @@ public class UserInfoController {
      * @param model
      */
     @RequestMapping(value = {"redactUserInfo"}, method = RequestMethod.POST)
-    public String redactUserInfo(Model model, Authentication authentication, String qq, String phone){
+    public String redactUserInfo(Model model,HttpSession session, Authentication authentication, String qq, String phone){
         if(authentication==null){
             return "redirect:/login.html";
         }
         try{
             UserInfo session_user = AuthorizationUser.getUserInfoEntity(authentication);
             UserInfo userInfo = userInfoService.getUserByUid(session_user.getUid());
-            userInfo.setQq(qq);
-            userInfo.setPhone(phone);
-            userInfoService.save(userInfo);
+            String photo = (String) session.getAttribute("photo");
+            boolean result = true;
+            if("sizeError".equals(photo)){
+                model.addAttribute("photo","图片过大");
+                result = false;
+            }else if(null != photo){
+                userInfo.setPhoto(photo);
+            }
+            if(qq == null || qq.equals("")){
+                model.addAttribute("qq_info","QQ不能为空");
+                result = false;
+            }
+            if(phone == null || phone.equals("")){
+                model.addAttribute("phone_info","手机号不能为空");
+                result = false;
+            }
+            model.addAttribute("userInfo",userInfo);
+            if(result){
+                userInfo.setQq(qq);
+                userInfo.setPhone(phone);
+                userInfoService.save(userInfo);
+                return "redirect:/success.html";
+            }else{
+                return "profile";
+            }
         }catch(Exception e){
             logger.error("修改个人信息出错",e);
+            return "redirect:/failure.html";
         }
-        return "redirect:/profile.html";
     }
 
     /**
