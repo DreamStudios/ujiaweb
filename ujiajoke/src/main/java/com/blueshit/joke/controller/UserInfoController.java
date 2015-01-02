@@ -59,8 +59,11 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String register(Model model) {
+    public String register(Model model,String parentInviteCode) {
         UserInfo userInfo = new UserInfo();
+        if(null != parentInviteCode && parentInviteCode.length()>0){
+            userInfo.setParentInviteCode(parentInviteCode);
+        }
         model.addAttribute("userInfo", userInfo);// 返回一个空用户对象,用于前台界面填充input框内容
 
         List<UserInfo> userInfoList = userInfoService.getTodayStar(15);

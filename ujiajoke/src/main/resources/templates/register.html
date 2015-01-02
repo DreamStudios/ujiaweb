@@ -19,14 +19,14 @@
         <div class="fright">
             <ul class="rlist">
                 <li><a href="index.html"  target="_blank" class="flink1">首页</a></li>
-                <li><a href="javascript:alert('筹建中');"  target="_blank" class="flink2">会员专享</a></li>
+                <li><a href="vip/vip_index.html"  target="_blank" class="flink2">会员专享</a></li>
                 <li><a href="javascript:alert('筹建中');" class="flink3">应用市场</a></li>
-                <li><a href="javascript:alert('筹建中');" target="_blank" class="flink4">精品推荐</a></li>
+                <li><a href="recommended.html" target="_blank" class="flink4">精品推荐</a></li>
             </ul>
 
             <ul class="fimg">
                 <li><a href="javascript:alert('筹建中');" class="fimglink1" title="关注微信"></a></li>
-                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=c15f036935867ecc343c63d7ce703a7e8f08d04d5ee45dcff291988b4b4e1f4b" class="fimglink2" title="加入校友群" target="_blank"></a></li>
+                <li><a href="javascript:alert('筹建中');" class="fimglink2" title="加入快乐家族" target="_blank"></a></li>
                 <li><a href="javascript:alert('筹建中');"  target="_blank" class="fimglink3" title="新浪微博"></a></li>
             </ul>
         </div>
@@ -37,10 +37,7 @@
 <div class="main">
     <!--广告列表-->
     <div class="navbar">
-        <a href="javascript:alert(1);">链接1</a>
-        <a href="javascript:alert(1);">链接2</a>
-        <a href="javascript:alert(1);">链接3</a>
-        <a href="javascript:alert(1);">链接4</a>
+        <a href="javascript:alert(1);">友情链接</a>
     </div>
     <div class="userlogin">
         <!--左侧开始-->
@@ -49,10 +46,10 @@
             <div>
                 <script language="JavaScript" type="text/javascript">
                     tips = new Array(4);
-                    tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863530.jpg" border="0" /></a>';
-                    tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863531.jpg" border="0" /></a>';
-                    tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863532.jpg" border="0" /></a>';
-                    tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863533.jpg" border="0" /></a>';
+                    tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+                    tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+                    tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+                    tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
                     index = Math.floor(Math.random() * tips.length);
                     document.write(tips[index]);
                 </script>
@@ -111,12 +108,13 @@
                             </script>
                         </li>
                         <li>
+                            <input  id="parentInviteCode" name="parentInviteCode" th:value="*{parentInviteCode}" />
                             <span>&nbsp;</span>
                             <input name="" type="submit" class="rlogin" value="注册" /><cite><b>已经有账号？</b><a href="login.html" class="alogin">请登录</a>&nbsp;&nbsp;<a href="findPwd.html">忘记密码？</a></cite>
                         </li>
                         <li>
                             <span>&nbsp;</span>
-                            <input type="checkbox" value="" checked="checked" id="agree" name="agree"/>&nbsp;&nbsp;<cite>我已阅读并接受<a href="javascript:alert(1);" class="alogin">&lt;&lt;山中医校友网版权声明&gt;&gt;</a></cite>
+                            <input type="checkbox" value="" checked="checked" id="agree" name="agree"/>&nbsp;&nbsp;<cite>我已阅读并接受<a href="javascript:alert('支持原创,遵纪守法');" class="alogin">&lt;&lt;有家笑话网版权声明&gt;&gt;</a></cite>
                         </li>
                     </ul>
                 </div>
@@ -125,7 +123,7 @@
         <!--左侧结束-->
         <!--广告位-->
         <div class="rightimg">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
         <!--推荐校友开始-->
         <div class="rightuser">
@@ -133,7 +131,7 @@
             <ul class="userlist">
                 <li th:each="userInfo :${userInfoList}">
                     <a href="detail/usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}">
-                        <img width="64" height="64" src="img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
+                        <img width="64" height="64" src="img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
                     </a>
                 </li>
             </ul>

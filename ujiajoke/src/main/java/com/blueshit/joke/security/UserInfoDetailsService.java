@@ -50,7 +50,7 @@ public class UserInfoDetailsService implements UserDetailsService {
         userInfo.setLastLoginTime(System.currentTimeMillis());
         userInfoRepository.save(userInfo);
         //如果是第一次登陆且有父类邀请码，父类邀请码奖励50经验
-        if(0 == lastLoginTime && null != userInfo.getParentInviteCode()){
+        if(0 == lastLoginTime && null != userInfo.getParentInviteCode() && 0 < userInfo.getParentInviteCode().length()){
             UserInfo ui = userInfoRepository.findByParentInviteCode(userInfo.getParentInviteCode());
             ui.setExperience(ui.getExperience() + 50);
             ui.setLevel(Constants.getLevel(ui.getExperience()));

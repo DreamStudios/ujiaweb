@@ -84,7 +84,7 @@
 		<dl class="invite-friends">
 			<dt>请将以下链接复制给你的好友：</dt>
             <span th:text="${#httpServletRequest.getContextPath()}"></span>
-			<dd><span id="invite-friends-url" th:text="${'http://www.xiaoujia.com/ujiajoke/register?invite_code='+ userInfo.inviteCode}">http://youjia.com?invite_code=8888</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd>
+			<dd><span id="invite-friends-url" th:text="${'http://www.xiaoujia.com/ujiajoke/register?parentInviteCode='+ userInfo.inviteCode}">http://youjia.com?invite_code=8888</span><input type="button" value="复制链接" id="invite-friends-btn"/></dd>
 			<dd>把快乐分享给您的好友，如果TA成功注册，你会获得<i class="s-color-red">2元</i>的奖励；</dd>
 		</dl>
 	</div>

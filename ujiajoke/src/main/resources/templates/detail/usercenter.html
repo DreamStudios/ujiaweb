@@ -92,26 +92,27 @@
 				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
 			<dd class="content">
-                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + page.picture}" src="../img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
-			<!-- 神回复  -->
+            <!-- 神回复  -->
             <dd class="operation">
-                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="../img/ding.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="../img/cai.png" /><i>0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="评论" obj_info="905491-1-list"><img src="../img/comment.png" /><i>0条评论</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="ding" flag="0" title="顶"><img src="../img/ding.png" /><i th:text="${page.up}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" flag="0" title="踩"><img src="../img/cai.png" /><i th:text="${page.down}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" th:name="${page.jid}"><img src="../img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
                     <div class="share-btn">
                         <span>分享到：</span>
-                        <a href="javascript:alert(1);" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
-                        <a href="javascript:alert(1);" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                        <a href="javascript:void(0)" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" data-url="http://www.mahua.com/xiaohua/905491.htm">复制网址</a>
-                     </div>
-                 </div>
-             </dd>
+                        <a href="#" th:href="@{share.html(type=1,jid=${page.jid},flag=0)}" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
+                        <a href="#" th:href="@{share.html(type=2,jid=${page.jid},flag=0)}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
+                        <a href="#" th:href="@{share.html(type=3,jid=${page.jid},flag=0)}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
+                        <a href="#" th:href="@{share.html(type=4,jid=${page.jid},flag=0)}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com/ujiajoke/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
+                    </div>
+                </div>
+                <div class="reward-box"></div>
+            </dd>
 		</dl>
         <p class="no-myinfo" th:if="${pages.totalPages eq 0}">快乐家族的这位笑友新来的吧，啥也没有啊！<br/><a href="../neihan.html">还是随便逛逛吧</a></p>
 	    <!-- 分页 -->
@@ -159,13 +160,13 @@
 	<div class="right">
         <!-- 广告位 -->
         <div style="width:300px;height:250px">
-            <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+            <img src="../img/ad.jpg" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.jpg'}" />
         </div>
 		<dl class="other-user">
           <dt>看看他们的笑话</dt>
 		  <dd th:each="userInfo :${userInfoList}">
                <a href="usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}" class="go-user-index" target="_blank">
-                  <img src="../img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}"/>
+                  <img src="../img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}"/>
                   <i></i>
                   <p th:text="${userInfo.name}">黑曜瞳</p>
                </a>
@@ -173,19 +174,19 @@
           </dd>
 		 </dl>
          <div style="width:300px;height:250px">
-             <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+             <img src="../img/ad.jpg" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.jpg'}" />
          </div>
          <dl class="new-pic">
 			<dt><h2>最新的搞笑图片</h2></dt>
 			<dd>
 				<a class="new-pic-left" th:class="${stats.odd?'new-pic-left':''}" target="_blank" href="jokedetail.html" th:href="@{'/'+${joke.jid}+'/jokeDetail.html'}" th:each="joke,stats :${jokeList}">
-					<img alt="贪吃动物们的糗事" th:alt="${joke.title}" src="../img/avatar_2.jpg" th:src="${joke.picture}" />
+					<img alt="贪吃动物们的糗事" th:alt="${joke.title}" src="../img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + joke.picture}" />
 					<span>贪吃动物们的糗事</span>
 				</a>
 			</dd>
 		</dl>
         <div style="width:300px;height:250px">
-            <img src="../img/ad.png" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.png'}" />
+            <img src="../img/ad.jpg" th:src = "${#httpServletRequest.getContextPath() + '/img/ad.jpg'}" />
         </div>
 	</div>
 </div>

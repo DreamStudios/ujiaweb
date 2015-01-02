@@ -50,10 +50,10 @@
       <div>
         <script language="JavaScript" type="text/javascript">
 			tips = new Array(4);
-			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863530.jpg" border="0" /></a>';
-			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863531.jpg" border="0" /></a>';
-			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863532.jpg" border="0" /></a>';
-			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="http://www.lanrentuku.com/down/js/images/12498863533.jpg" border="0" /></a>';
+			tips[0] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+			tips[1] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+			tips[2] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
+			tips[3] = '<a href="javascript:alert(1);" target="_blank"><img width="874" height="100" src="img/ad2.jpg" border="0" /></a>';
 			index = Math.floor(Math.random() * tips.length);
 			document.write(tips[index]);
 		</script>
@@ -102,7 +102,7 @@
     <!--左侧结束-->
     <!--广告位-->
     <div class="rightimg">
-        <img src="img/ad.png" />
+        <img src="img/ad.jpg" />
     </div>
     <!--推荐校友开始-->
     <div class="rightuser">
@@ -110,7 +110,7 @@
         <ul class="userlist">
             <li th:each="userInfo :${userInfoList}">
                 <a href="detail/usercenter.html" th:href="@{'/'+${userInfo.uid}+'/userCenter.html'}">
-                    <img width="64" height="64" src="img/avatar_2.jpg" th:src="${userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
+                    <img width="64" height="64" src="img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + userInfo.photo}" alt="黑曜瞳" th:alt="${userInfo.name}" />
                 </a>
             </li>
         </ul>

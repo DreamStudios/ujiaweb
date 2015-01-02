@@ -67,7 +67,7 @@
             <ul th:with="list=${@adService.getTopAdList(5,1)}">
                 <li th:each="us:${list}">
                     <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
-                        <img src="img/logo.png" alt="有家笑话" th:src="${us.adPhoto}" th:alt="${us.adTitle}" />
+                        <img src="img/logo.png" alt="有家笑话" th:src="${#httpServletRequest.getContextPath() + us.adPhoto}" th:alt="${us.adTitle}" />
                         <span th:text="${us.adTitle}">一起赚笑币，赢取iPhone6！</span>
                     </a>
                 </li>
@@ -77,12 +77,12 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" th:name="${page.jid}" th:each="page :${pages}">
 			<dt>
-				<a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+				<a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${#httpServletRequest.getContextPath() + page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
 				<p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
 				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
             <dd class="content">
-                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + #httpServletRequest.getContextPath() + page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
@@ -98,7 +98,7 @@
                         <a href="#" th:href="@{share.html(type=2,jid=${page.jid},flag=0)}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
                         <a href="#" th:href="@{share.html(type=3,jid=${page.jid},flag=0)}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
                         <a href="#" th:href="@{share.html(type=4,jid=${page.jid},flag=0)}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com/ujiajoke/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
                     </div>
                 </div>
                 <div class="reward-box"></div>
@@ -215,7 +215,7 @@
             </dd>
         </dl>
         <div style="margin-top:20px;width:300px;height:250px">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
 		 <!--精彩文字笑话-->
          <dl class="new-pic-text" th:with="list=${@jokeService.getTopJokeList(15,2)}">
@@ -228,14 +228,14 @@
          </dl>
          <!-- 广告位 -->
          <div style="margin-top:20px;width:300px;height:250px">
-             <img src="img/ad.png" />
+             <img src="img/ad.jpg" />
          </div>
 		<!-- 最新搞笑图片 -->
         <dl class="new-pic" th:with="list=${@jokeService.getTopJokeList(10,1)}">
             <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
                 <a target="_blank" href="detail/jokedetail.html" th:href="@{'/'+${us.jid}+'/jokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">
-                    <img alt="贪吃动物们的糗事" src="img/11.gif" th:alt="${us.title}" th:src="${us.picture}"/>
+                    <img alt="贪吃动物们的糗事" src="img/11.gif" th:alt="${us.title}" th:src="${#httpServletRequest.getContextPath() + us.picture}"/>
                     <span th:text="${us.title}">贪吃动物们的糗事</span>
                 </a>
              </dd>
@@ -252,10 +252,10 @@
         </div>
         <!-- 广告位 -->
         <div style="margin-top:20px;width:300px;height:250px" id="rightad">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
         <div style="margin-top:20px;width:300px;height:250px">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
 	</div>
 	<!--右侧信息结束-->

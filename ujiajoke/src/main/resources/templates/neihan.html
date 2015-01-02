@@ -48,12 +48,12 @@
         <!-- 笑话列表开始 -->
 		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
             <dt>
-                <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+                <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${#httpServletRequest.getContextPath() + page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
             <p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
             <span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
             </dt>
             <dd class="content">
-                <img th:if="${page.style eq 1}" th:src="${page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
@@ -69,7 +69,7 @@
                         <a href="#" th:href="@{share.html(type=2,jid=${page.jid},flag=0)}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
                         <a href="#" th:href="@{share.html(type=3,jid=${page.jid},flag=0)}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
                         <a href="#" th:href="@{share.html(type=4,jid=${page.jid},flag=0)}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
-                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com/ujiajoke/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
                     </div>
                 </div>
                 <div class="reward-box"></div>
@@ -146,7 +146,7 @@
             </li>
         </ul>
         <div style="margin-top:20px;width:300px;height:250px">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
         <!--精彩文字笑话-->
         <dl class="new-pic-text">
@@ -159,7 +159,7 @@
         </dl>
         <!-- 广告位 -->
         <div style="margin-top:20px;width:300px;height:250px">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
         <!-- 最新搞笑图片 -->
         <dl class="new-pic" >
@@ -183,10 +183,10 @@
         </div>
         <!-- 广告位 -->
         <div style="margin-top:20px;width:300px;height:250px" id="rightad">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
         <div style="margin-top:20px;width:300px;height:250px">
-            <img src="img/ad.png" />
+            <img src="img/ad.jpg" />
         </div>
     </div>
     <!--右侧信息结束-->

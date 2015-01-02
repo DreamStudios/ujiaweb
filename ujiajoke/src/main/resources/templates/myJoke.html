@@ -156,7 +156,7 @@
             <dt>看看他们的笑话</dt>
             <dd th:each="us :${list}" >
                 <a href="detail/jokedetail.html" th:href="${us.uid+'/userCenter.html'}" class="go-user-index" target="_blank" >
-                    <img src="img/avatar_2.jpg" th:src="${us.photo}" th:alt="${us.name}" alt="独创KISS洋洋"/>
+                    <img src="img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + us.photo}" th:alt="${us.name}" alt="独创KISS洋洋"/>
                     <i></i>
                     <p th:text="${us.name}">独创KISS洋洋</p>
                 </a>
