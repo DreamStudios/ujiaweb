@@ -4901,20 +4901,6 @@ $(function(){
 		$(this).find('.joke-hot-list').stop().fadeOut(100);
 	})
 	
-	//头部导搜索框
-	$('.search-text').focus(function(){
-		if($(this).val()==$(this).attr('title')){
-			$(this).val('');
-			$(this).css('color','#666');
-		}
-	})
-	$('.search-text').blur(function(){
-		if($(this).val()==''){
-			$(this).val($(this).attr('title'));
-			$(this).css('color','#ccc');
-		}
-	})
-	
 	//右侧浮框（签到、二维码、返回顶部）
 	var height=$(window).height();
 	var width=$(window).width();
@@ -4997,14 +4983,7 @@ $(function(){
 	$(".return-top").click(function(){
 		$('body,html').animate({scrollTop:0},500);
 		return false;
-	});	
-	
-	//“本文赚取麻币”、“打赏”模块的隐藏显示
-	$('.yojiastyle').hover(function(){
-		$(this).find('.obtain').stop().fadeIn(200);
-	},function(){
-		$(this).find('.obtain').stop().fadeOut(200);
-	})
+	});
 		
 	//顶采动态效果
 	$('.cai , .ding , .operation .comment').hover(function(){
@@ -5042,7 +5021,7 @@ $(function(){
 	//分享的动态效果
 	//分享list展开
 	$('.share').hover(function(){
-		$(this).css('width','280px').css('border-color','#e7e7e7');
+		$(this).css('width','280px').css('border-color','#03a8b1');
 		$(this).find('.share-btn').css('border-left-color','#e7e7e7').stop().animate({
 			width:'240px'
 		},150);
@@ -5133,61 +5112,12 @@ $(function(){
 		}
 	})
 	
-	//首页右侧
-	//达人榜tab切换
-	$('.user-list-head a').hover(function(){
-		var className=$(this).attr('data-class');
-		$('.user-list-head a.hover').removeClass('hover');
-		$(this).addClass('hover');
-		$('.user-list').find('ul.hover').removeClass('hover');
-		$('.'+className+'').addClass('hover');
-	})
-	
-	//图片推荐区域；鼠标经过给图片加#ff8c66边框
-//	$('.new-pic a').hover(function(){
-//		$(this).find('img').css('width','112px').css('height','72px').css('border','4px solid #ff8c66')
-//	},function(){
-//		$(this).find('img').css('width','120px').css('height','80px').css('border','none')
-//	})
-	
-	//搞笑图文推荐；鼠标经过展示笑话详情
-//	$('.new-pic-text dd').hover(function(){
-//		$('.new-pic-text dd.hover').removeClass('hover');
-//		$(this).addClass('hover')
-//	})
-	
-	//首页右侧打赏榜、最佳评审官排行榜
-	$('.a-m-sorting-head a').hover(function(){
-		var className=$(this).attr('data-class');
-		$(this).parent().find('a.hover').removeClass('hover');
-		$(this).addClass('hover');
-		$(this).parent().parent().nextAll('ul.hover').removeClass('hover');
-		$('.'+className+'').addClass('hover');
-	})
-	$('.a-m-sorting li').hover(function(){
-		$(this).css('background','#fafafa');
-	},function(){
-		$(this).css('background','#fff');
-	})
-	$('.a-m-sorting').find('li:last-child').css('border-color','#fff');
-	
 	//笑话详情页内容部分左右箭头翻页IE6情况下给内容区域加高度
 	if(ie6){
 		window.onload = function(){
 			$('.beforeCursor , .afterCursor').height($('.joke-content').height());
 		}
 	}
-	
-	//笑话详情页强力推荐Tab切换
-	$('.recomment-head a').live({
-		mouseenter:function(){
-			var className=$(this).attr('data-title');
-			$('.recomment-head a.hover').removeClass('hover');
-			$(this).addClass('hover');
-			$('.recomment').find('ul.hover').removeClass('hover');
-			$('.'+className+'').addClass('hover');
-		}
-	})
 	
 	//评论
 	$('.comment-input').find('.comment-input-text').live('keyup',function(){
@@ -5253,7 +5183,7 @@ $(function(){
         }else{
             var tthis=$(this);
             var obj_info=$(this).attr('name');
-            var commentInitUrl	= 'getVipComment.html';
+            var commentInitUrl	= '../getVipComment.html';
             $.ajax({
                 dataType: "text",
                 contentType:"text/html; charset=utf-8",
@@ -5328,64 +5258,11 @@ $(function(){
 	if(parseInt($.cookie('MH_USER_ID'))>0){
 		$('#view-user-show-ajax').hide();
 	}
-
-	
-	//包养后赚取麻币提示框
-	$('.buy-tips-close').live('click',function(){
-		$(this).parent().css('display','none');
-		var id = $(this).attr('data-id');
-		var keptTip=[];
-		if(!$.cookie('MH_KEPT_TIP_CLOSE')){
-			keptTip=','+id+',';
-		}else{
-			keptTip=','+id+$.cookie('MH_KEPT_TIP_CLOSE');
-		}
-		$.cookie('MH_KEPT_TIP_CLOSE',keptTip,{expires:365,path:'/',domain:'.yojiastyle.com'});
-	})
 	
 	//列表页图片滚动推荐
 	if($('#listTopFocus').length>0){
 		listTopFocus();
 	}
-
-	//列表页 跳页
-	var goPageInput=0;
-	$('#goPage').find('input').focus(function(){
-		if($(this).val()==$(this).attr('title')){$(this).val('').css('color','#666')};
-		goPageInput=1;
-		document.onkeydown = function (e) { 
-			var theEvent = window.event || e; 
-			var code = theEvent.keyCode || theEvent.which; 
-			if (code == 13 && goPageInput==1) { 
-				goPagef();
-			} 
-		}
-	})
-	$('#goPage').find('input').blur(function(){
-		if($(this).val()==''){$(this).val($(this).attr('title')).css('color','#999')};
-		goPageInput=0;
-	})
-	$('#goPage').find('a').click(function(){
-		goPagef();
-		return false;	
-	})
-	function goPagef(){
-		var pageValue=$('#goPage').find('input').val();
-		if(!isNaN(pageValue)){
-			if(parseInt(pageValue)<=parseInt($('#goPage').attr('data-maxPage')) && parseInt(pageValue)>0){
-				if(parseInt(pageValue) == 1){
-					window.location.href = firstUrl;
-				}else{
-					window.location.href = baseUrl.replace('PAGENUM',parseInt(pageValue));
-				}
-			}else{
-				alert('请输入有效的页码值');
-			}
-		}else{
-			alert('请输入正确的页码');
-		}
-	}
-
 })
 
 /*==========================================
@@ -5412,16 +5289,6 @@ function yojiastyleDialog(w,h,t){
 		$('.ui-widget-overlay').css('height',$(window).height()).css('top',$(window).scrollTop());
 	}
 }
-
-//导航搜索的验证
-function searchValidate(t){
-	if(t.key.value=='' || t.key.value==t.key.title){
-		alert('请输入搜索关键字');
-		return false;
-	}
-	return true;
-}
-
 //笑话模块的展开，收起
 function joke_content_area(){
 	$('dl.yojiastyle').each(function() {
@@ -5502,7 +5369,7 @@ function commentVote(t){
 			success: function(ret){
 			}
 		})
-		
+
 		var vote=[];
 		if(!$.cookie('MH_VOTE_COMMENTS')){
 			vote=','+id+','

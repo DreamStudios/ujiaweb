@@ -59,8 +59,8 @@ public class JokeCommentServiceImpl implements JokeCommentService {
             return list.size() > 0;
         }catch (Exception ex){
             logger.error("获取用户是否评论失败",ex);
+            return true;
         }
-        return false;
     }
 
     /**

@@ -881,7 +881,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .header-nav .logo{float:left;position:relative;margin-left:-30px;width:365px;height:100px;background:url(../img/logo.png) no-repeat}
 .logo h1,.logo span{display:none}
 .logo a{display:block;width:100%;height:100%}
-.header-nav ul{float:left;width:520px;height:100px;line-height:100px;}
+.header-nav ul{float:left;width:460px;height:100px;line-height:100px;}
 .header-nav li{float:left;width:90px;height:100px;text-align:center;}
 .header-nav li a{display:block;width:100%;height:100px;line-height:100px;color:#666;font-size:20px}
 .header-nav li a.hover{color:#03a8b1}
@@ -894,7 +894,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .header-nav li .joke-hot-list a{width:auto;padding:0;background:none;display:block;text-align:left;text-indent:10px;height:40px;line-height:40px;font-size:16px;color:#777}
 .header-nav li .joke-hot-list a:hover{border:none;background:#f6f6f6;color:#03a8b1;}
 .header-nav li i{margin:-75px 0 0 50px;display:block;width:26px;height:13px;background:url(../img/youjia_common.png) -391px -223px no-repeat; position:relative;overflow:hidden}
-.yojiastyle-slogan{float:right;height:100px;width:135px;overflow:hidden;line-height:100px;background:url(../img/yojiastyle_slogan.png) no-repeat}
+.yojiastyle-slogan{float:right;height:100px;width:165px;overflow:hidden;line-height:100px;background:url(../img/yojiastyle_slogan.png) no-repeat}
 .yojiastyle-slogan a{display:block;width:100%;height:100%}
 
 .header-nav .search{float:right;background:url(../img/youjia_common.png) -798px -255px no-repeat;width:150px;height:35px;margin-top:38px}
@@ -965,20 +965,20 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 /*审稿、投稿按钮样式*/
 .publish-audit{overflow:hidden;text-align:center}
 .publish,.audit{display:inline-block;text-align:left;width:115px;padding: 5px 0 5px 10px ;height:40px;overflow:hidden;font-size:22px;color:#fff}
-.publish{background:#ff6766;margin-right:15px}
-.audit{background:#04ce9b}
+.publish{background:#699f00;margin-right:15px}
+.audit{background:#03a8b1}
 .publish:hover{background:#03a8b1;color:#fff}
-.audit:hover{background:#00b789;color:#fff}
+.audit:hover{background:#699f00;color:#fff}
 .publish span,.audit span{display:block;float:left;height:40px;line-height:40px;}
 .publish i,.audit i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;}
 .audit i{background-position:-32px 4px}
 
 .publish-audit2{overflow:hidden;text-align:center;margin-bottom: 10px;}
 .publish2,.audit2{display:inline-block;text-align:left;width:175px;padding: 5px 0 5px 10px ;height:40px;overflow:hidden;font-size:22px;color:#fff}
-.publish2{background:#ff6766;}
-.audit2{background:#04ce9b}
+.publish2{background:#699f00;}
+.audit2{background:#03a8b1}
 .publish2:hover{background:#03a8b1;color:#fff}
-.audit2:hover{background:#00b789;color:#fff}
+.audit2:hover{background:#699f00;color:#fff}
 .publish2 span,.audit2 span{display:block;float:left;height:40px;line-height:40px;}
 .publish2 i,.audit2 i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;}
 .audit2 i{background-position:-32px 4px}
@@ -1000,7 +1000,7 @@ avatar_60x60  60*60的头像
 .yojiastyle dt i{display:block;margin:0 10px 0 -60px;background:url(../img/youjia_common_notm.png) 0 -201px no-repeat;}
 .yojiastyle dt .joke-uname,.yojiastyle dt .joke-title{float:left;width:570px;height:21px;line-height:21px;margin-top:7px;overflow:hidden;font-size:14px}
 .yojiastyle dt .joke-uname a{color:#03a8b1;float:left;margin-right:20px}
-.yojiastyle dt .joke-uname a:hover{color:#04ce9b;}
+.yojiastyle dt .joke-uname a:hover{color:#03a8b1;}
 .yojiastyle dt .joke-title{height:40px;line-height:40px;font-size:18px;margin-top:0}
 .yojiastyle .content{overflow:hidden;margin:20px 0;font-size:14px;line-height:28px;color:#666}
 .yojiastyle .operation{border-top:1px solid #f3f2f2;width:640px;padding:10px 15px;margin:0 -15px -15px;height:36px;background:#fafafa;position:relative}
@@ -1034,7 +1034,7 @@ avatar_60x60  60*60的头像
 .yojiastyle .operation .buy{text-indent:35px;margin-top:5px;line-height:26px;height:26px;width:69px;float:right;}
 .yojiastyle .operation .buy,.yojiastyle .operation .buyed{margin-right:10px}
 .yojiastyle .operation .buy a{color:#03a8b1;margin-top:0}
-.yojiastyle .operation .reward{margin-top:5px;color:#04ce9b;background-position:-630px -215px}
+.yojiastyle .operation .reward{margin-top:5px;color:#03a8b1;background-position:-630px -215px}
 .yojiastyle .operation .buy a:hover,.yojiastyle .operation .buyed a{color:#fff;background-position:-561px -215px}
 .yojiastyle .operation .reward:hover,.yojiastyle .operation .rewarded{color:#fff;background-position:-699px -215px}
 .yojiastyle .operation .buyed a,.yojiastyle .operation .rewarded{text-indent:27px}
@@ -1074,8 +1074,8 @@ dl.yojiastyle-view{padding-top:0}
 .joke-list-comment{display:none;background:#f6f6f6;border:1px solid #e8e7e6;padding:15px;margin:15px -15px -15px;}
 .joke-list-comment .comment-input{height:40px;border:none;background:#fff;overflow:hidden;position:relative}
 .joke-list-comment .comment-input-text{float:left;width:455px;padding:0 70px 0 10px;height:38px;line-height:38px;border:1px solid #e8e7e6;border-right:none;background:#fff;color:#c9c9c9}
-.joke-list-comment .comment-submit{float:left;cursor:pointer;width:100px;height:40px;float:right;text-align:center;line-height:40px;color:#fff;font-size:18px;border:none;background:#04ce9b;overflow:hidden}
-.joke-list-comment .comment-submit:hover{background:#00b789}
+.joke-list-comment .comment-submit{float:left;cursor:pointer;width:100px;height:40px;float:right;text-align:center;line-height:40px;color:#fff;font-size:18px;border:none;background:#03a8b1;overflow:hidden}
+.joke-list-comment .comment-submit:hover{background:#699f00}
 .joke-list-comment .text-length{background:#fff;position:absolute;display:block;height:36px;line-height:40px;right:110px;top:2px;color:#969696}
 .list_comment_all{padding:15px 0 0 230px;width:410px;overflow:hidden}
 .list_comment_all a{float:left;display:block;color:#999;height:30px;line-height:30px;text-align:center;}

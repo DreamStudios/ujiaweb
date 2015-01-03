@@ -168,7 +168,7 @@
                             }
                         },
                         error: function(){ //请求失败
-                            alert("签到失败,时候再试");
+                            alert("签到失败,稍后再试");
                         }
                     });
                 }
@@ -353,6 +353,7 @@ $(function(){
                 dataType:"text",
                 timeout:18000,
                 success:function(data){
+                    alert(data);
                     if(data == "2"){
                         alert("已经点评过,不要重复点评");
                     }else if(data == "0"){

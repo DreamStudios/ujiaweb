@@ -46,7 +46,7 @@
     <!--左侧信息开始-->
 	<div class="left">
         <!-- 笑话列表开始 -->
-		<dl class="yojiastyle" id="joke_905491" yojiastyle="905491" th:each="page :${pages}">
+		<dl class="yojiastyle" th:name="${page.jid}" th:each="page :${pages}">
             <dt>
                 <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${#httpServletRequest.getContextPath() + page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
             <p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
@@ -58,8 +58,8 @@
             </dd>
 			<!-- 神回复  -->
             <dd class="operation">
-                <a href="javascript:void(0)" rel="nofollow" class="ding" title="顶"><img src="img/ding.png" /><i th:text="${page.up}">0</i></a>
-                <a href="javascript:void(0)" rel="nofollow" class="cai" title="踩"><img src="img/cai.png" /><i th:text="${page.down}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="ding" flag="0" title="顶"><img src="img/ding.png" /><i th:text="${page.up}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" flag="0" title="踩"><img src="img/cai.png" /><i th:text="${page.down}">0</i></a>
                 <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" th:name="${page.jid}"><img src="img/comment.png" /><i>点评一下</i></a>
                 <div class="share">
                     <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
@@ -75,12 +75,6 @@
                 <div class="reward-box"></div>
             </dd>
          </dl>
-		<!-- 分页 -->
-		<!--<div class="page">
-		   <div class="go-page" id="goPage" data-maxPage="1000">
-             <input value="跳到.." type="text" title="跳到.." /><a href="javascript:void(0);">GO</a>
-           </div>
-        </div>-->
         <div class="pagination pagination-right"><!-- class="page" -->
             <div id="example" style="float: left;"></div>
             <script th:inline="javascript">

@@ -53,13 +53,13 @@ public class VipJokeCommentServiceImpl implements VipJokeCommentService {
     @Override
     public boolean isComment(int uid,int jid){
         try {
-            String hql = " FROM VipJokeComment WHERE joke.jid=" + jid + " AND userInfo.uid=" + uid;
+            String hql = " FROM VipJokeComment WHERE vipJoke.jid=" + jid + " AND userInfo.uid=" + uid;
             List<VipJokeComment> list = vipJokeCommentRepository.findTopByHql(hql, 1);
             return list.size() > 0;
         }catch (Exception ex){
             logger.error("获取用户是否评论失败",ex);
+            return true;
         }
-        return false;
     }
 
     /**
@@ -79,7 +79,7 @@ public class VipJokeCommentServiceImpl implements VipJokeCommentService {
     }
 
     /**
-     * 获取笑话评论内容
+     * 获取VIP笑话评论内容
      * @param jid 笑话ID
      * @Param number 数据条数
      * @return
@@ -87,7 +87,7 @@ public class VipJokeCommentServiceImpl implements VipJokeCommentService {
     public List<VipJokeComment> getJokeCommentList(int jid,int number){
         List<VipJokeComment> list = null;
         try {
-            StringBuffer hql = new StringBuffer("From JokeComment WHERE joke.jid=" + jid);
+            StringBuffer hql = new StringBuffer("From VipJokeComment WHERE vipJoke.jid=" + jid);
             hql.append(" order by createTime desc");
             list = vipJokeCommentRepository.findTopByHql(hql.toString(), number);
         }catch (Exception ex){
