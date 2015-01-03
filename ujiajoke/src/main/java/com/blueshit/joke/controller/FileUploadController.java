@@ -49,6 +49,13 @@ public class FileUploadController {
             dir.mkdirs();
         }
         String uri = "/upload/"+ name + suffix;
+        if(sessionId.equals("photo")){//上传头像
+            File dirPhoto = new File(realPath + "/upload/photo/");
+            if (!dirPhoto.exists()) {
+                dirPhoto.mkdirs();
+            }
+            uri = "/upload/photo/"+ name + suffix;
+        }
         //文件全路径
         String fullName = realPath + uri;
         if (!file.isEmpty()) {

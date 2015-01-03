@@ -136,7 +136,7 @@
           <td valign="top" bgcolor="ffffff" id="marquePic1">
             <table width="70%" border="0" cellspacing="0">
               <tr>
-                <td align="center" th:each="sch:${list}">
+                <td align="center"th:each="sch:${list}" width="135px;">
                     <a th:title="${sch.name}" target="_blank">
                         <img src="img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + sch.photo}" width="130" height="175" border="0"/>
                     </a>
