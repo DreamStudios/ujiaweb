@@ -36,7 +36,7 @@
             <li><a href="neihan.html" >内涵图</a></li>
             <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
-        <div class="mahua-slogan"></div>
+        <div class="yojiastyle-slogan"></div>
     </div>
     <!--导航菜单结束-->
 </div>
@@ -46,7 +46,7 @@
     <!--左侧信息开始-->
 	<div class="left">
         <!-- 笑话列表开始 -->
-		<dl class="mahua" id="joke_905491" mahua="905491" th:each="page :${pages}">
+		<dl class="yojiastyle" id="joke_905491" yojiastyle="905491" th:each="page :${pages}">
             <dt>
                 <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${#httpServletRequest.getContextPath() + page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
             <p class="joke-uname"><a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a><a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a></p>
@@ -180,7 +180,7 @@
         <!-- 客户端下载 -->
         <div class="platform">
             <div class="platform-mobilePhone-web">
-                <img src="img/erweima.png" alt="m.mahua.com"/>
+                <img src="img/erweima.png" alt="m.yojiastyle.com"/>
                 <p class="title">扫二维码，用手机看笑话</p>
             </div>
             <ul class="platform-other">

@@ -12,7 +12,7 @@
     <script type="text/javascript" src="../js/ujiajoke.js"></script>
     <script type="text/javascript" src="../js/bootstrap-paginator.min.js"></script>
     <script type="text/javascript">
-        var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
+        var voteUrl 		= 'http://user.yojiastyle.com/ajax/joke/upordown';
     </script>
 </head>
 <body>
@@ -39,7 +39,7 @@
             <li><a href="../neihan.html" >内涵图</a></li>
             <li><a href="../vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
-        <div class="mahua-slogan"></div>
+        <div class="yojiastyle-slogan"></div>
     </div>
     <!--导航菜单结束-->
 </div>
@@ -48,7 +48,7 @@
 <div class="main main-view">
 	<div class="left">
 		<!-- 笑话 -->
-		<dl class="mahua mahua-view" th:name="${joke.jid}">
+		<dl class="yojiastyle yojiastyle-view" th:name="${joke.jid}">
 			<dt><h1 class="joke-title" th:text="${joke.title}">笑话标题</h1></dt>
 			<dd class="content">
                 <a th:href="@{'/'+${joke.jid}+'/vipJokeDetail.html?flag=1'}" href="#">
@@ -84,7 +84,7 @@
 			</dd>
 		</dl>
         <!--其它笑话开始-->
-		<div id="recomment_hot" class="mahua mahua-view" style="height:350px">
+		<div id="recomment_hot" class="yojiastyle yojiastyle-view" style="height:350px">
 			<div id="recomment_hot_1">
                 <ul class="recomment-tag" style="overflow: hidden;" th:with="list=${@jokeService.getOtherJokeList(joke.jid,6)}">
                     <li class="marginbottom" th:each="us,stat :${list}" th:class="${stat.count%3 eq 0?'nomargin marginbottom':'marginbottom'}">
@@ -101,7 +101,7 @@
             广告
         </div>
         <!--评论开始-->
-		<div class="mahua comment mahua-view" id="object-comment" obj_info="36264-1" is-init="1">
+		<div class="yojiastyle comment yojiastyle-view" id="object-comment" obj_info="36264-1" is-init="1">
           <div class="comment-input" th:if="${#authentication.getName() ne 'anonymousUser'}">
               <form id="comment">
                   <textarea name="commentcontent" id="commentcontent" class="comment-input-text" maxlength="50" placeholder="期待大神您的点评..."></textarea>
@@ -168,7 +168,7 @@
             </li>
 		  </ul>
         </div>
-        <div class="mahua comment mahua-view" id="null-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() eq 'anonymousUser'}">
+        <div class="yojiastyle comment yojiastyle-view" id="null-comment" obj_info="36264-1" is-init="1" th:if="${#authentication.getName() eq 'anonymousUser'}">
             <span>登陆之后才能评论<a href="../login.html" style="margin-left: 20px;color: #03a8b1;">立即登陆</a></span>
         </div>
         <!--评论结束-->
@@ -182,7 +182,7 @@
 		<!-- 客户端下载 -->
         <div class="platform">
             <div class="platform-mobilePhone-web">
-                <img src="../img/erweima.png" alt="m.mahua.com"/>
+                <img src="../img/erweima.png" alt="m.yojiastyle.com"/>
                 <p class="title">扫二维码，用手机看麻花</p>
             </div>
             <ul class="platform-other">

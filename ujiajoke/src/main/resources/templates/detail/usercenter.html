@@ -14,7 +14,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	var voteUrl 		= 'http://user.mahua.com/ajax/joke/upordown';
+	var voteUrl 		= 'http://user.yojiastyle.com/ajax/joke/upordown';
 </script>
 <!--头部信息开始-->
 <div class="header" th:fragment="index_header">
@@ -55,7 +55,7 @@
             <li><a href="../neihan.html">内涵图</a></li>
             <li><a href="../vip/vip_index.html" >会员专享<i></i></a></li>
         </ul>
-        <div class="mahua-slogan"></div>
+        <div class="yojiastyle-slogan"></div>
     </div>
     <!--导航菜单结束-->
 </div>
@@ -87,7 +87,7 @@
 	<!--左侧信息开始-->
 	<div class="left">
 	  <!-- 笑话列表开始 -->
-		<dl class="mahua" th:each="page :${pages}">
+		<dl class="yojiastyle" th:each="page :${pages}">
 			<dt>
 				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
@@ -204,7 +204,7 @@ $(function(){
 	<div class="qr-code">
 		<a href="javascript:void(0);" rel="nofollow" title="有家笑话二维码">
 			<div>
-				<img src="common/makeqrcode3013.png?url=http%253a%252f%252fuser.mahua.com%252fcommon%252fapp&amp;size=5" alt="二维码"/>
+				<img src="common/makeqrcode3013.png?url=http%253a%252f%252fuser.yojiastyle.com%252fcommon%252fapp&amp;size=5" alt="二维码"/>
 				<p>有家笑话二维码</p>
 			</div>
 		</a>

@@ -661,7 +661,7 @@ h1 a:hover {
 h3 a:hover {
 	color: #03a8b1;
 }
-.mahua a:hover {
+.yojiastyle a:hover {
 	color: #03a8b1;
 }
 input {
@@ -886,10 +886,10 @@ a.top-login:hover {
 .header-nav li i {
 	background: url("../img/youjia_common.png") no-repeat -391px -223px; margin: -75px 0px 0px 50px; width: 26px; height: 13px; overflow: hidden; display: block; position: relative;
 }
-.mahua-slogan {
-	background: url("../img/mahua_slogan.png") no-repeat; width: 135px; height: 100px; line-height: 100px; overflow: hidden; float: right;
+.yojiastyle-slogan {
+	background: url("../img/yojiastyle_slogan.png") no-repeat; width: 135px; height: 100px; line-height: 100px; overflow: hidden; float: right;
 }
-.mahua-slogan a {
+.yojiastyle-slogan a {
 	width: 100%; height: 100%; display: block;
 }
 .header-nav .search {
@@ -1108,79 +1108,79 @@ a.top-login:hover {
 .avatar_60x60 i {
 	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative;
 }
-.mahua {
+.yojiastyle {
 	background: rgb(255, 255, 255); padding: 15px; width: 640px; overflow: hidden; margin-bottom: 20px; border-bottom-color: rgb(232, 231, 230); border-bottom-width: 1px; border-bottom-style: solid;
 }
-.mahua dt {
+.yojiastyle dt {
 	height: 60px; overflow: hidden;
 }
-.mahua dt img {
+.yojiastyle dt img {
 	width: 60px; height: 60px; float: left;
 }
-.mahua dt i {
+.yojiastyle dt i {
 	width: 60px; height: 60px; float: left;
 }
-.mahua dt i {
+.yojiastyle dt i {
 	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin: 0px 10px 0px -60px; display: block;
 }
-.mahua dt .joke-uname {
+.yojiastyle dt .joke-uname {
 	width: 570px; height: 21px; line-height: 21px; overflow: hidden; font-size: 14px; margin-top: 7px; float: left;
 }
-.mahua dt .joke-title {
+.yojiastyle dt .joke-title {
 	width: 570px; height: 21px; line-height: 21px; overflow: hidden; font-size: 14px; margin-top: 7px; float: left;
 }
-.mahua dt .joke-uname a {
+.yojiastyle dt .joke-uname a {
 	color: rgb(254, 142, 105); margin-right: 20px; float: left;
 }
-.mahua dt .joke-uname a:hover {
+.yojiastyle dt .joke-uname a:hover {
 	color: #03a8b1;
 }
-.mahua dt .joke-title {
+.yojiastyle dt .joke-title {
 	height: 34px; line-height: 34px; font-size: 18px; margin-top: 0px;
 }
-.mahua .content {
+.yojiastyle .content {
 	margin: 20px 0px; color: rgb(102, 102, 102); line-height: 28px; overflow: hidden; font-size: 14px;
 }
-.mahua .operation {
+.yojiastyle .operation {
 	background: rgb(250, 250, 250); margin: 0px -15px -15px; padding: 10px 15px; width: 640px; height: 36px; border-top-color: rgb(243, 242, 242); border-top-width: 1px; border-top-style: solid; position: relative;
 }
-.mahua .operation a {
+.yojiastyle .operation a {
 	color: rgb(136, 136, 136); float: left;
 }
-.mahua .ding {
+.yojiastyle .ding {
 	width: 80px; float: left; display: block; position: relative; _width: 90px;
 }
-.mahua .cai {
+.yojiastyle .cai {
 	width: 80px; float: left; display: block; position: relative; _width: 90px;
 }
-.mahua .comment {
+.yojiastyle .comment {
 	width: 80px; float: left; display: block; position: relative; _width: 90px;
 }
-.mahua .cai:hover {
+.yojiastyle .cai:hover {
 	color: rgb(146, 207, 235);
 }
-.mahua .ding:hover {
+.yojiastyle .ding:hover {
 	color: #03a8b1;
 }
-.mahua .comment:hover {
+.yojiastyle .comment:hover {
 	color: #03a8b1;
 }
-.mahua .comment {
+.yojiastyle .comment {
 	width: 94px; height: 24px; line-height: 24px; _width: 105px;
 }
-.mahua .ding img {
+.yojiastyle .ding img {
 	margin: 5px 5px 0px 0px; left: 0px; width: 24px; height: 24px; float: left; position: absolute;
 }
-.mahua .cai img {
+.yojiastyle .cai img {
 	margin: 5px 5px 0px 0px; left: 0px; width: 24px; height: 24px; float: left; position: absolute;
 }
 .operation .comment img {
 	margin: 5px 5px 0px 0px; left: 0px; width: 24px; height: 24px; float: left; position: absolute;
 }
-.mahua .ding i {
+.yojiastyle .ding i {
 	margin: 6px 0px 0px 33px; width: 50px; height: 24px; line-height: 24px; float: left;
 }
-.mahua .cai i {
+.yojiastyle .cai i {
 	margin: 6px 0px 0px 33px; width: 50px; height: 24px; line-height: 24px; float: left;
 }
 .operation .comment i {
@@ -1189,49 +1189,49 @@ a.top-login:hover {
 .operation .comment i {
 	width: 65px;
 }
-.mahua .ding-hover {
+.yojiastyle .ding-hover {
 	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
-.mahua .cai-hover {
+.yojiastyle .cai-hover {
 	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
-.mahua .ding-hover i {
+.yojiastyle .ding-hover i {
 	margin: 0px; height: 24px; line-height: 24px; float: left;
 }
-.mahua .cai-hover i {
+.yojiastyle .cai-hover i {
 	margin: 0px; height: 24px; line-height: 24px; float: left;
 }
-.mahua .cai-hover {
+.yojiastyle .cai-hover {
 	background-position: -31px -51px; color: rgb(136, 203, 234);
 }
-.mahua .collection {
+.yojiastyle .collection {
 	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
-.mahua .share-ico {
+.yojiastyle .share-ico {
 	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
-.mahua .collection-hover {
+.yojiastyle .collection-hover {
 	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
-.mahua .collection {
+.yojiastyle .collection {
 	background-position: -30px -140px; width: 24px; height: 24px; margin-top: 6px;
 }
-.mahua .collection-hover {
+.yojiastyle .collection-hover {
 	background-position: -30px -140px; width: 24px; height: 24px; margin-top: 6px;
 }
-.mahua .collection-hover {
+.yojiastyle .collection-hover {
 	background-position: -135px -39px;
 }
-.mahua .collection:hover {
+.yojiastyle .collection:hover {
 	background-position: -135px -39px;
 }
-.mahua .share {
+.yojiastyle .share {
 	border: 1px solid rgb(250, 250, 250); left: 320px; top: 8px; height: 39px; position: absolute; z-index: 3; _left: 350px;
 }
-.mahua .share-ico {
+.yojiastyle .share-ico {
 	background: url("../img/youjia_common.png") no-repeat -24px -168px; width: 39px; height: 39px;
 }
-.mahua .share-btn {
+.yojiastyle .share-btn {
 	background: rgb(255, 255, 255); width: 0px; height: 39px; line-height: 39px; text-indent: 15px; overflow: hidden; border-left-color: rgb(250, 250, 250); border-left-width: 1px; border-left-style: solid; float: left; _height: 41px; _line-height: 41px;
 }
 .share-btn a {
@@ -1258,127 +1258,127 @@ a.top-login:hover {
 .share-btn a.share-copy {
 	background-position: -329px 0px;
 }
-.mahua .operation .reward {
+.yojiastyle .operation .reward {
 	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
-.mahua .operation .rewarded {
+.yojiastyle .operation .rewarded {
 	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
-.mahua .operation .buyed a {
+.yojiastyle .operation .buyed a {
 	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
-.mahua .operation .buy a {
+.yojiastyle .operation .buy a {
 	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .reward-box {
 	width: 69px; height: 26px; margin-top: 5px; float: right; display: none;
 }
-.mahua .operation .buy {
+.yojiastyle .operation .buy {
 	width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
-.mahua .operation .buy {
+.yojiastyle .operation .buy {
 	margin-right: 10px;
 }
-.mahua .operation .buyed {
+.yojiastyle .operation .buyed {
 	margin-right: 10px;
 }
-.mahua .operation .buy a {
+.yojiastyle .operation .buy a {
 	color: rgb(255, 132, 91); margin-top: 0px;
 }
-.mahua .operation .reward {
+.yojiastyle .operation .reward {
 	background-position: -630px -215px; color: #03a8b1; margin-top: 5px;
 }
-.mahua .operation .buy a:hover {
+.yojiastyle .operation .buy a:hover {
 	background-position: -561px -215px; color: rgb(255, 255, 255);
 }
-.mahua .operation .buyed a {
+.yojiastyle .operation .buyed a {
 	background-position: -561px -215px; color: rgb(255, 255, 255);
 }
-.mahua .operation .reward:hover {
+.yojiastyle .operation .reward:hover {
 	background-position: -699px -215px; color: rgb(255, 255, 255);
 }
-.mahua .operation .rewarded {
+.yojiastyle .operation .rewarded {
 	background-position: -699px -215px; color: rgb(255, 255, 255);
 }
-.mahua .operation .buyed a {
+.yojiastyle .operation .buyed a {
 	text-indent: 27px;
 }
-.mahua .operation .rewarded {
+.yojiastyle .operation .rewarded {
 	text-indent: 27px;
 }
-.mahua .operation .kepted {
+.yojiastyle .operation .kepted {
 	color: rgb(136, 136, 136);
 }
-.mahua .operation .kepted .avatar_30x30 {
+.yojiastyle .operation .kepted .avatar_30x30 {
 	width: 30px;
 }
-.mahua .operation .kepted .avatar_30x30 i {
+.yojiastyle .operation .kepted .avatar_30x30 i {
 	background: url("../img/youjia_common_notm.png") no-repeat -104px -952px;
 }
-.mahua .operation .kepted {
+.yojiastyle .operation .kepted {
 	width: 200px; height: 30px; text-align: right; overflow: hidden; margin-bottom: -4px;
 }
-.mahua .operation .kepted a {
+.yojiastyle .operation .kepted a {
 	width: auto; color: #03a8b1; text-indent: 0px; margin-right: 5px; float: right;
 }
-.mahua .operation .kepted a:hover {
+.yojiastyle .operation .kepted a:hover {
 	width: auto; color: #03a8b1; text-indent: 0px; margin-right: 5px; float: right;
 }
-.mahua .operation .kepted a {
+.yojiastyle .operation .kepted a {
 	height: 30px; line-height: 30px; text-indent: 0px; float: right;
 }
-.mahua .operation .kepted span {
+.yojiastyle .operation .kepted span {
 	height: 30px; line-height: 30px; text-indent: 0px; float: right;
 }
-.mahua i {
+.yojiastyle i {
 	font-style: normal;
 }
 #votingNum {
 	width: 70px; text-align: center; position: absolute;
 }
-.mahua .share .zclip {
+.yojiastyle .share .zclip {
 	overflow: hidden; cursor: pointer;
 }
-.mahua-view {
+.yojiastyle-view {
 	margin-bottom: 10px;
 }
-dl.mahua-view {
+dl.yojiastyle-view {
 	padding-top: 0px;
 }
-.mahua-view dt {
+.yojiastyle-view dt {
 	margin: 0px 0px 6px; height: 26px; overflow: hidden;
 }
-.mahua-view dt img {
+.yojiastyle-view dt img {
 	border-radius: 20px; width: 40px; height: 40px; margin-right: 10px; float: left;
 }
-.mahua-view dt .joke-uname {
+.yojiastyle-view dt .joke-uname {
 	height: 16px; line-height: 16px; font-size: 12px; margin-top: 4px;
 }
-.mahua-view dt .joke-title {
+.yojiastyle-view dt .joke-title {
 	height: 16px; line-height: 16px; font-size: 12px; margin-top: 4px;
 }
-.mahua-view dt .joke-uname a {
+.yojiastyle-view dt .joke-uname a {
 	color: rgb(153, 153, 153); font-family: "Arial"; margin-right: 20px; float: left;
 }
-.mahua-view dt .joke-uname a:hover {
+.yojiastyle-view dt .joke-uname a:hover {
 	color: rgb(254, 142, 105);
 }
-.mahua-view dt .joke-title {
+.yojiastyle-view dt .joke-title {
 	height: 26px; line-height: 26px; overflow: hidden; font-size: 18px; margin-top: 0px; _line-height: 30px;
 }
-.mahua-view dt .joke-title span {
+.yojiastyle-view dt .joke-title span {
 	color: rgb(220, 73, 79); font-size: 22px;
 }
-.mahua-view .content img {
+.yojiastyle-view .content img {
 	margin: 0px auto;
 }
-.mahua-view .content {
+.yojiastyle-view .content {
 	margin: 0px;
 }
-.mahua-view dt a {
+.yojiastyle-view dt a {
 	display: none;
 }
-.mahua-view dt .joke-uname {
+.yojiastyle-view dt .joke-uname {
 	display: none;
 }
 .joke-content {
@@ -1474,10 +1474,10 @@ a.comment_packUp {
 .go-user-index-btn:hover {
 	background: #03a8b1; color: rgb(255, 255, 255);
 }
-.mahua .tags-share-btn {
+.yojiastyle .tags-share-btn {
 	width: 270px; margin-top: 5px;
 }
-.mahua .tags-share-btn span {
+.yojiastyle .tags-share-btn span {
 	text-align: left; text-indent: 0px; margin-right: 0px;
 }
 .tags-info {

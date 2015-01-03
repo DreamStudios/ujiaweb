@@ -4947,7 +4947,7 @@ $(function(){
 			success : function(ret){
 				if(ret.code > 0) {
 					$('#checkin-box').html(ret.data.html);
-					mahuaDialog(850,530,'#checkin-box');
+					yojiastyleDialog(850,530,'#checkin-box');
 				} else {
 					alert(ret.message);
 				}
@@ -5000,7 +5000,7 @@ $(function(){
 	});	
 	
 	//“本文赚取麻币”、“打赏”模块的隐藏显示
-	$('.mahua').hover(function(){
+	$('.yojiastyle').hover(function(){
 		$(this).find('.obtain').stop().fadeIn(200);
 	},function(){
 		$(this).find('.obtain').stop().fadeOut(200);
@@ -5308,12 +5308,12 @@ $(function(){
 	function lzLoad(){
 		var line=$(window).scrollTop()+2*$(window).height();
 		//if(Loaded>=line) return false;
-		$('img[mahuaImg]').each(function(){
+		$('img[yojiastyleImg]').each(function(){
 			var top = $(this).offset().top;
 			if (top < line){
-				if($(this).attr('mahuaImg')!=''){
-					$(this).attr('src', $(this).attr('mahuaImg'));
-					$(this).removeAttr('mahuaImg');
+				if($(this).attr('yojiastyleImg')!=''){
+					$(this).attr('src', $(this).attr('yojiastyleImg'));
+					$(this).removeAttr('yojiastyleImg');
 				}
 			}
 		});
@@ -5340,7 +5340,7 @@ $(function(){
 		}else{
 			keptTip=','+id+$.cookie('MH_KEPT_TIP_CLOSE');
 		}
-		$.cookie('MH_KEPT_TIP_CLOSE',keptTip,{expires:365,path:'/',domain:'.mahua.com'});
+		$.cookie('MH_KEPT_TIP_CLOSE',keptTip,{expires:365,path:'/',domain:'.yojiastyle.com'});
 	})
 	
 	//列表页图片滚动推荐
@@ -5389,14 +5389,14 @@ $(function(){
 })
 
 /*==========================================
-	函数名 mahuaDialog
+	函数名 yojiastyleDialog
 	整合了 弹框的公用代码
 	参数：
 		w : 弹出框的宽度 如：800；（不需要加单位px）
 		h : 弹出框的高度 如：400；（不需要加单位px）
 		t : 所操作的对象 如：'#login' / '.login'
 */
-function mahuaDialog(w,h,t){
+function yojiastyleDialog(w,h,t){
 	$(t).dialog({
 		resizable:false,
 		show:true,
@@ -5424,7 +5424,7 @@ function searchValidate(t){
 
 //笑话模块的展开，收起
 function joke_content_area(){
-	$('dl.mahua').each(function() {
+	$('dl.yojiastyle').each(function() {
 		var tthis=$(this).find('dd.content');
 		var content_height=tthis.height();
 		if(content_height>900){
@@ -5509,7 +5509,7 @@ function commentVote(t){
 		}else{
 			vote=','+id+$.cookie('MH_VOTE_COMMENTS')
 		}
-		$.cookie('MH_VOTE_COMMENTS',vote,{expires:365,path:'/',domain:'.mahua.com'});
+		$.cookie('MH_VOTE_COMMENTS',vote,{expires:365,path:'/',domain:'.yojiastyle.com'});
 	}
 }
 
@@ -5561,13 +5561,13 @@ function jokeVote(i,t,flag){
 	}else{
 		vote=','+id+$.cookie('MH_VOTE_JOKES')
 	}
-	$.cookie('MH_VOTE_JOKES',vote,{expires:365,path:'/',domain:'.mahua.com'});
+	$.cookie('MH_VOTE_JOKES',vote,{expires:365,path:'/',domain:'.yojiastyle.com'});
 }
 
 //收藏提交
 function favoriteFunction(t){
 	var url,isFavorite;
-	var id=t.parent().parent('dl').attr('mahua');
+	var id=t.parent().parent('dl').attr('yojiastyle');
 	if(t.hasClass('collection-hover')){
 		url=unfavoriteUrl;
 		isFavorite=1;
@@ -5661,7 +5661,7 @@ function islogin(lUrl){
 			$('body').append('<div id="login"></div>');
 		}
 		$('#login').html(htm);
-		mahuaDialog(800,360,'#login');
+		yojiastyleDialog(800,360,'#login');
 		loginDialog(tmpUrl);
 		input_value($('#form_login'));
 		loginState=false;
@@ -5868,7 +5868,7 @@ function newbieGuideF(type,top,left,n){
 		}else{
 			newbieGuideCookie=','+x+$.cookie('MH_NEWBIE_GUIDE')
 		}
-		$.cookie('MH_NEWBIE_GUIDE',newbieGuideCookie,{expires:365,path:'/',domain:'.mahua.com'});
+		$.cookie('MH_NEWBIE_GUIDE',newbieGuideCookie,{expires:365,path:'/',domain:'.yojiastyle.com'});
 		if(n=='a'){
 			newbieGuide_b();
 			newbieGuide_c();
@@ -5985,7 +5985,7 @@ function regGuideLucky(){
 	htm+='</div>'
 	if($('#reg-guide-lucky').length<=0){$('body').append('<div id="reg-guide-lucky"></div>')}
 	$('#reg-guide-lucky').html(htm);
-	mahuaDialog(800,480,'#reg-guide-lucky');
+	yojiastyleDialog(800,480,'#reg-guide-lucky');
 	$('.btn .right-login-qq i , .btn .right-login-weibo i').hover(function(){
 		bgX=$(this).css('backgroundPositionX');
 		$(this).stop().animate({
@@ -5998,7 +5998,7 @@ function regGuideLucky(){
 			backgroundPositionY:'-472px'
 		},150)
 	})
-	$.cookie('MH_REG_GUIDE',1,{expires:365,path:'/',domain:'.mahua.com'});
+	$.cookie('MH_REG_GUIDE',1,{expires:365,path:'/',domain:'.yojiastyle.com'});
 	$.ajax({
 		url : userDomain+'stats/statsChannelPop',
 		dataType : 'jsonp',
@@ -6023,7 +6023,7 @@ function regGuide(){
 	htm+='			<dd><b>·</b>更有海量麻币来兑iPhone、三星手机、话费、Q币等豪礼！</dd>'
 	htm+='			<dd class="red-text"><b>·</b>磨刀不误砍柴工，小麻小花奉上贴心攻略，教你玩转麻花快速致富！</dd>'
 	htm+='			<dd class="btn">'
-	htm+='				<a href="http://www.mahua.com/" class="reg-guide-close">开始逗逼旅程</a>'
+	htm+='				<a href="http://www.yojiastyle.com/" class="reg-guide-close">开始逗逼旅程</a>'
 	htm+='				<a href="'+ userDomain +'guide" target="_blank" class="reg-guide-start">新手学习</a>'
 	htm+='			</dd>'
 	htm+='		</dl>'
@@ -6032,7 +6032,7 @@ function regGuide(){
 	
 	if($('#reg-guide').length<=0){$('body').append('<div id="reg-guide"></div>')}
 	$('#reg-guide').html(htm);
-	mahuaDialog(800,480,'#reg-guide');
+	yojiastyleDialog(800,480,'#reg-guide');
 }
 
 //页面信息提示框
@@ -7348,10 +7348,10 @@ $.format = $.validator.format;
 $(function(){	
 	//修改头像弹框
 	$('#editImg').click(function(){
-		mahuaDialog(800,470,'#editImgBox');
+		yojiastyleDialog(800,470,'#editImgBox');
 	})
 	$('.editAvatarClick').click(function(){
-		mahuaDialog(800,470,'#editImgBox');
+		yojiastyleDialog(800,470,'#editImgBox');
 		return false;
 	})
 
