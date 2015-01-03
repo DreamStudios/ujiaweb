@@ -2,10 +2,10 @@
 	display: none;
 }
 .ui-helper-hidden-accessible {
-	margin: -1px; padding: 0px; border: 0px currentColor; width: 1px; height: 1px; overflow: hidden; position: absolute; cliptop: 0px; clipright: 0px; clipbottom: 0px; clipleft: 0px;
+	margin: -1px; padding: 0px; border: 0px  width: 1px; height: 1px; overflow: hidden; position: absolute; cliptop: 0px; clipright: 0px; clipbottom: 0px; clipleft: 0px;
 }
 .ui-helper-reset {
-	list-style: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; line-height: 1.3; font-size: 100%; text-decoration: none;
+	list-style: none; margin: 0px; padding: 0px; outline: 0px; border: 0px  line-height: 1.3; font-size: 100%; text-decoration: none;
 }
 .ui-helper-clearfix::before {
 	display: table; border-collapse: collapse; content: "";
@@ -95,7 +95,7 @@
 	left: 0.5em; top: 50%; margin-top: -8px; position: absolute;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em; overflow: auto; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+	padding: 1em 2.2em; overflow: auto;border-top-width: 0px; border-top-style: none;
 }
 .ui-autocomplete {
 	left: 0px; top: 0px; position: absolute; cursor: default;
@@ -254,10 +254,10 @@ input.ui-button {
 	margin: 0px 0px 0.4em; width: 100%; font-size: 0.9em; border-collapse: collapse;
 }
 .ui-datepicker th {
-	padding: 0.7em 0.3em; border: 0px currentColor; text-align: center; font-weight: bold;
+	padding: 0.7em 0.3em; border: 0px  text-align: center; font-weight: bold;
 }
 .ui-datepicker td {
-	padding: 1px; border: 0px currentColor;
+	padding: 1px; border: 0px 
 }
 .ui-datepicker td span {
 	padding: 0.2em; text-align: right; text-decoration: none; display: block;
@@ -266,7 +266,7 @@ input.ui-button {
 	padding: 0.2em; text-align: right; text-decoration: none; display: block;
 }
 .ui-datepicker .ui-datepicker-buttonpane {
-	margin: 0.7em 0px 0px; padding: 0px 0.2em; border-right-color: currentColor; border-bottom-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: none; border-bottom-style: none; border-left-style: none; background-image: none;
+	margin: 0.7em 0px 0px; padding: 0px 0.2em; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: none; border-bottom-style: none; border-left-style: none; background-image: none;
 }
 .ui-datepicker .ui-datepicker-buttonpane button {
 	margin: 0.5em 0.2em 0.4em; padding: 0.2em 0.6em 0.3em; width: auto; overflow: visible; float: right; cursor: pointer;
@@ -350,7 +350,7 @@ input.ui-button {
 	margin: -10px 0px 0px; padding: 1px; top: 50%; width: 20px; height: 20px; right: 0.3em; position: absolute;
 }
 .ui-dialog .ui-dialog-content {
-	padding: 0.5em 1em; border: 0px currentColor; overflow: auto; position: relative;
+	padding: 0.5em 1em; border: 0px  overflow: auto; position: relative;
 }
 .ui-dialog .ui-dialog-buttonpane {
 	border-width: 1px 0px 0px; padding: 0.3em 1em 0.5em 0.4em; text-align: left; margin-top: 0.5em; background-image: none;
@@ -404,7 +404,7 @@ input.ui-button {
 	margin: -1px; height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("images/animated-overlay.gif"); height: 100%; filter: alpha(opacity=25); opacity: 0.25;
+	height: 100%; filter: alpha(opacity=25); opacity: 0.25;
 }
 .ui-progressbar-indeterminate .ui-progressbar-value {
 	background-image: none;
@@ -416,7 +416,7 @@ input.ui-button {
 	overflow: auto; padding-bottom: 1px; overflow-x: hidden;
 }
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
-	margin: 0.5em 0px 0px; padding: 2px 0.4em; border: 0px currentColor; height: auto; line-height: 1.5; font-size: 1em; font-weight: bold;
+	margin: 0.5em 0px 0px; padding: 2px 0.4em; border: 0px  height: auto; line-height: 1.5; font-size: 1em; font-weight: bold;
 }
 .ui-selectmenu-open {
 	display: block;
@@ -437,7 +437,7 @@ input.ui-button {
 	width: 1.2em; height: 1.2em; position: absolute; z-index: 2; cursor: default; -ms-touch-action: none; touch-action: none;
 }
 .ui-slider .ui-slider-range {
-	border: 0px currentColor; font-size: 0.7em; display: block; position: absolute; z-index: 1;
+	border: 0px  font-size: 0.7em; display: block; position: absolute; z-index: 1;
 }
 .ui-state-disabled.ui-slider .ui-slider-handle {
 	filter: inherit;
@@ -479,13 +479,13 @@ input.ui-button {
 	padding: 0px; overflow: hidden; vertical-align: middle; display: inline-block; position: relative;
 }
 .ui-spinner-input {
-	margin: 0.2em 22px 0.2em 0.4em; padding: 0px; border: currentColor; color: inherit; vertical-align: middle;
+	margin: 0.2em 22px 0.2em 0.4em; padding: 0px;color: inherit; vertical-align: middle;
 }
 .ui-spinner-button {
 	margin: 0px; padding: 0px; width: 16px; height: 50%; text-align: center; right: 0px; overflow: hidden; font-size: 0.5em; display: block; position: absolute; cursor: default;
 }
 .ui-spinner a.ui-spinner-button {
-	border-top-color: currentColor; border-right-color: currentColor; border-bottom-color: currentColor; border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none;
+	border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none;
 }
 .ui-spinner .ui-icon {
 	left: 0px; top: 50%; margin-top: -8px; position: absolute;
@@ -557,7 +557,7 @@ body .ui-tooltip {
 	margin: 0px 5px 0px 0px; padding: 4px 15px; border-radius: 4px; color: rgb(255, 255, 255); font-family: arial; font-size: 13px; font-weight: normal; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; background-color: rgb(119, 181, 90); -moz-border-radius: 4px; -webkit-border-radius: 4px; text-shadow: 0 1px 0 #5b8a3c;
 }
 .ajax-file-upload {
-	background: rgb(47, 138, 185); margin: 0px 10px 10px 0px; padding: 6px 10px 4px; border-radius: 3px; border: 0px currentColor; height: 25px; color: rgb(255, 255, 255); line-height: 20px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: 0px 2px 0px 0px #13648d; -webkit-box-shadow: 0 2px 0 0 #13648d; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 2px 0 0 #13648d;
+	background: rgb(47, 138, 185); margin: 0px 10px 10px 0px; padding: 6px 10px 4px; border-radius: 3px; border: 0px  height: 25px; color: rgb(255, 255, 255); line-height: 20px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: 0px 2px 0px 0px #13648d; -webkit-box-shadow: 0 2px 0 0 #13648d; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 2px 0 0 #13648d;
 }
 .ajax-file-upload:hover {
 	background: rgb(51, 150, 201); box-shadow: 0px 2px 0px 0px #15719f; -webkit-box-shadow: 0 2px 0 0 #15719f; -moz-box-shadow: 0 2px 0 0 #15719f;
@@ -569,10 +569,10 @@ body .ui-tooltip {
 	text-align: left;
 }
 .jcrop-vline {
-	background: url("../img/jcrop.gif") left top white; font-size: 0px; position: absolute;
+	 font-size: 0px; position: absolute;
 }
 .jcrop-hline {
-	background: url("../img/jcrop.gif") left top white; font-size: 0px; position: absolute;
+	 font-size: 0px; position: absolute;
 }
 .jcrop-vline {
 	width: 1px !important; height: 100%;
@@ -647,7 +647,7 @@ li {
 	list-style: none;
 }
 img {
-	border: 0px currentColor; display: block;
+	border: 0px  display: block;
 }
 a {
 	color: rgb(51, 51, 51); text-decoration: none;
@@ -683,31 +683,31 @@ textarea {
 	color: #03a8b1; font-style: normal;
 }
 .title {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 dt {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #checkin-box li {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .reg-guide {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header-nav li a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header-view li {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .comment-submit {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .newbieGuideStart {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .reg-guide-lucky {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header {
 	background: rgb(255, 255, 255); width: 100%; height: 130px; border-bottom-color: rgb(227, 226, 225); border-bottom-width: 1px; border-bottom-style: solid;
@@ -740,10 +740,10 @@ a.top-login-weibo {
 	height: 100%; color: rgb(255, 255, 255); float: right;
 }
 a.top-login-qq {
-	background: url("../img/mahua_common.png") no-repeat -977px -1014px; text-indent: 22px;
+	background: url("../img/youjia_common.png") no-repeat -977px -1014px; text-indent: 22px;
 }
 a.top-login-weibo {
-	background: url("../img/mahua_common.png") no-repeat -977px -1014px; text-indent: 22px;
+	background: url("../img/youjia_common.png") no-repeat -977px -1014px; text-indent: 22px;
 }
 a.top-login-weibo {
 	background-position: -977px -1044px; margin: 0px 10px 0px 15px; _margin-left: 8px;
@@ -785,22 +785,22 @@ a.top-login:hover {
 	width: 25px; margin-right: 5px; float: right; position: relative;
 }
 .my-message .message-no-new {
-	background: url("../img/mahua_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
 }
 .my-message .message-new {
-	background: url("../img/mahua_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
 }
 .my-message .message-new {
 	background-position: -308px -261px;
 }
 .my-message ul {
-	background: rgb(255, 255, 255); border-width: medium 1px 2px; border-style: none solid solid; border-color: currentColor rgb(229, 229, 229) rgb(221, 218, 218); top: 31px; width: 178px; right: -5px; padding-bottom: 5px; position: absolute; z-index: 11;
+	background: rgb(255, 255, 255); border-width: medium 1px 2px; border-style: none solid solid; border-color:rgb(229, 229, 229) rgb(221, 218, 218); top: 31px; width: 178px; right: -5px; padding-bottom: 5px; position: absolute; z-index: 11;
 }
 .my-message li {
 	height: 24px; color: rgb(73, 73, 73); line-height: 20px; text-indent: 10px; overflow: hidden;
 }
 .my-message li.my-message-close {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -1021px; margin: -4px -1px 0px; border: currentColor; width: 180px; height: 24px; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -1021px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -1021px; margin: -4px -1px 0px;width: 180px; height: 24px; position: relative;
 }
 .my-message li.my-message-close i {
 	margin: 12px 6px 0px 0px; width: 10px; height: 10px; float: right; display: block; cursor: pointer;
@@ -815,7 +815,7 @@ a.top-login:hover {
 	width: 36px; float: right; position: relative;
 }
 .my-center i {
-	background: url("../img/mahua_common.png") no-repeat -366px -261px rgb(255, 255, 255); width: 36px; height: 30px; display: block; position: relative; z-index: 12; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -366px -261px rgb(255, 255, 255); width: 36px; height: 30px; display: block; position: relative; z-index: 12; cursor: pointer;
 }
 .my-center .i-hover {
 	background-position: -975px -306px; width: 34px; height: 33px; border-right-color: rgb(229, 229, 229); border-left-color: rgb(229, 229, 229); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; _height: 30px;
@@ -825,9 +825,6 @@ a.top-login:hover {
 }
 .my-center li {
 	height: 30px; line-height: 30px; text-indent: 5px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: dashed;
-}
-.my-center li.noborder {
-	border: currentColor;
 }
 .my-center li a {
 	width: 100%; height: 100%; color: rgb(102, 102, 102); display: block;
@@ -875,7 +872,7 @@ a.top-login:hover {
 	position: relative;
 }
 .header-nav li.joke-hot a {
-	background: url("../img/mahua_common.png") no-repeat -617px -96px; width: 85px; padding-right: 15px;
+	background: url("../img/youjia_common.png") no-repeat -617px -96px; width: 85px; padding-right: 15px;
 }
 .joke-hot-list {
 	background: rgb(255, 255, 255); top: 100px; width: 88px; right: 0px; border-right-color: rgb(227, 226, 225); border-bottom-color: rgb(221, 218, 218); border-left-color: rgb(227, 226, 225); border-right-width: 1px; border-bottom-width: 2px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: none; position: absolute; z-index: 20;
@@ -884,10 +881,10 @@ a.top-login:hover {
 	padding: 0px; width: auto; height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 16px; display: block;
 }
 .header-nav li .joke-hot-list a:hover {
-	background: rgb(246, 246, 246); border: currentColor; color: #03a8b1;
+	background: rgb(246, 246, 246);color: #03a8b1;
 }
 .header-nav li i {
-	background: url("../img/mahua_common.png") no-repeat -391px -223px; margin: -75px 0px 0px 50px; width: 26px; height: 13px; overflow: hidden; display: block; position: relative;
+	background: url("../img/youjia_common.png") no-repeat -391px -223px; margin: -75px 0px 0px 50px; width: 26px; height: 13px; overflow: hidden; display: block; position: relative;
 }
 .mahua-slogan {
 	background: url("../img/mahua_slogan.png") no-repeat; width: 135px; height: 100px; line-height: 100px; overflow: hidden; float: right;
@@ -896,10 +893,10 @@ a.top-login:hover {
 	width: 100%; height: 100%; display: block;
 }
 .header-nav .search {
-	background: url("../img/mahua_common.png") no-repeat -798px -255px; width: 150px; height: 35px; margin-top: 38px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -798px -255px; width: 150px; height: 35px; margin-top: 38px; float: right;
 }
 .header-nav .search input {
-	border: currentColor; float: left;
+	float: left;
 }
 .header-nav .search-text {
 	width: 115px; height: 34px; color: rgb(204, 204, 204); line-height: 34px; padding-left: 10px;
@@ -935,7 +932,7 @@ a.top-login:hover {
 	padding-top: 5px;
 }
 .header-view .joke-hot {
-	background: url("../img/mahua_common.png") no-repeat -196px -474px; position: relative;
+	background: url("../img/youjia_common.png") no-repeat -196px -474px; position: relative;
 }
 .header-view .joke-hot a:hover {
 	border-color: #03a8b1;
@@ -947,7 +944,7 @@ a.top-login:hover {
 	top: 40px; width: 78px; _top: 42px;
 }
 .header-view li .joke-hot-list a {
-	border: currentColor; height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 14px;
+	height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 14px;
 }
 .header-view li .joke-hot-list a:hover {
 	background: rgb(246, 246, 246); color: #03a8b1;
@@ -962,7 +959,7 @@ a.top-login:hover {
 	margin: 0px auto; width: 1000px; height: 50px; line-height: 50px; overflow: hidden; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .likes-title {
-	background: url("../img/mahua_common.png") no-repeat -975px -517px; width: 100px; color: rgb(153, 153, 153); text-indent: 25px; font-weight: bold; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -975px -517px; width: 100px; color: rgb(153, 153, 153); text-indent: 25px; font-weight: bold; float: left; display: block;
 }
 .likes-list {
 	
@@ -995,7 +992,7 @@ a.top-login:hover {
 	height: 36px; color: rgb(153, 153, 153); line-height: 36px;
 }
 .about dd i {
-	background: url("../img/mahua_common.png") no-repeat -978px -500px; margin: 3px 5px 0px; width: 15px; height: 16px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -978px -500px; margin: 3px 5px 0px; width: 15px; height: 16px; display: inline-block;
 }
 .about dd a {
 	color: rgb(153, 153, 153); margin-right: 20px;
@@ -1010,16 +1007,16 @@ a.top-login:hover {
 	color: #03a8b1;
 }
 .footer-weibo {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-qzone {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-QQweibo {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-weixin {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-qzone {
 	background-position: -975px -591px;
@@ -1043,7 +1040,7 @@ a.top-login:hover {
 	display: none;
 }
 .i-dialog-close {
-	background: url("../img/mahua_common.png") no-repeat -300px -243px; border: currentColor; top: 15px; width: 16px; height: 16px; right: 15px; overflow: hidden; display: block; position: absolute; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -300px -243px;top: 15px; width: 16px; height: 16px; right: 15px; overflow: hidden; display: block; position: absolute; cursor: pointer;
 }
 .ui-widget-overlay {
 	background: rgb(0, 0, 0); filter: alpha(opacity=40); opacity: 0.4; _height: 1000px; _position: absolute; -moz-opacity: 0.4;
@@ -1079,10 +1076,10 @@ a.top-login:hover {
 	height: 40px; line-height: 40px; float: left; display: block;
 }
 .publish i {
-	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block; _background: url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat;
+	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block;
 }
 .audit i {
-	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block; _background: url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat;
+	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block;
 }
 .audit i {
 	background-position: -32px 4px;
@@ -1097,7 +1094,7 @@ a.top-login:hover {
 	width: 30px; height: 30px;
 }
 .avatar_30x30 i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -475px; margin-top: -30px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -475px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -475px; margin-top: -30px; display: block; position: relative;
 }
 .avatar_60x60 {
 	width: 60px; height: 60px;
@@ -1109,7 +1106,7 @@ a.top-login:hover {
 	width: 60px; height: 60px;
 }
 .avatar_60x60 i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative;
 }
 .mahua {
 	background: rgb(255, 255, 255); padding: 15px; width: 640px; overflow: hidden; margin-bottom: 20px; border-bottom-color: rgb(232, 231, 230); border-bottom-width: 1px; border-bottom-style: solid;
@@ -1124,7 +1121,7 @@ a.top-login:hover {
 	width: 60px; height: 60px; float: left;
 }
 .mahua dt i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin: 0px 10px 0px -60px; display: block; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin: 0px 10px 0px -60px; display: block;
 }
 .mahua dt .joke-uname {
 	width: 570px; height: 21px; line-height: 21px; overflow: hidden; font-size: 14px; margin-top: 7px; float: left;
@@ -1193,10 +1190,10 @@ a.top-login:hover {
 	width: 65px;
 }
 .mahua .ding-hover {
-	background: url("../img/mahua_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
+	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
 .mahua .cai-hover {
-	background: url("../img/mahua_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
+	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
 .mahua .ding-hover i {
 	margin: 0px; height: 24px; line-height: 24px; float: left;
@@ -1208,13 +1205,13 @@ a.top-login:hover {
 	background-position: -31px -51px; color: rgb(136, 203, 234);
 }
 .mahua .collection {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .share-ico {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .collection-hover {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .collection {
 	background-position: -30px -140px; width: 24px; height: 24px; margin-top: 6px;
@@ -1232,13 +1229,13 @@ a.top-login:hover {
 	border: 1px solid rgb(250, 250, 250); left: 320px; top: 8px; height: 39px; position: absolute; z-index: 3; _left: 350px;
 }
 .mahua .share-ico {
-	background: url("../img/mahua_common.png") no-repeat -24px -168px; width: 39px; height: 39px;
+	background: url("../img/youjia_common.png") no-repeat -24px -168px; width: 39px; height: 39px;
 }
 .mahua .share-btn {
 	background: rgb(255, 255, 255); width: 0px; height: 39px; line-height: 39px; text-indent: 15px; overflow: hidden; border-left-color: rgb(250, 250, 250); border-left-width: 1px; border-left-style: solid; float: left; _height: 41px; _line-height: 41px;
 }
 .share-btn a {
-	background: url("../img/mahua_common.png") no-repeat -174px 0px; margin: 7px 6px 0px 0px; width: 25px; height: 25px; text-indent: 999px; overflow: hidden; float: left; display: block; _margin-top: 8px;
+	background: url("../img/youjia_common.png") no-repeat -174px 0px; margin: 7px 6px 0px 0px; width: 25px; height: 25px; text-indent: 999px; overflow: hidden; float: left; display: block; _margin-top: 8px;
 }
 .share-btn a.share-copy {
 	margin-right: 0px;
@@ -1262,16 +1259,16 @@ a.top-login:hover {
 	background-position: -329px 0px;
 }
 .mahua .operation .reward {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .rewarded {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .buyed a {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .buy a {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .reward-box {
 	width: 69px; height: 26px; margin-top: 5px; float: right; display: none;
@@ -1316,7 +1313,7 @@ a.top-login:hover {
 	width: 30px;
 }
 .mahua .operation .kepted .avatar_30x30 i {
-	background: url("../img/mahua_common.24.png") no-repeat -104px -952px; _background: url(../img/mahua_common.24.ie6.png) -104px -952px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -104px -952px;
 }
 .mahua .operation .kepted {
 	width: 200px; height: 30px; text-align: right; overflow: hidden; margin-bottom: -4px;
@@ -1397,7 +1394,7 @@ dl.mahua-view {
 	left: 50%;
 }
 .joke-content-area {
-	background: url("../img/mahua_common.png") no-repeat -314px -322px; margin: -18px 0px 20px; height: 23px; color: rgb(255, 255, 255); line-height: 22px; overflow: hidden; font-size: 12px; text-shadow: 0 1px 0 #ca6745;
+	background: url("../img/youjia_common.png") no-repeat -314px -322px; margin: -18px 0px 20px; height: 23px; color: rgb(255, 255, 255); line-height: 22px; overflow: hidden; font-size: 12px; text-shadow: 0 1px 0 #ca6745;
 }
 .joke-content-area a {
 	width: 86px; height: 23px; text-align: center; color: rgb(255, 255, 255); margin-left: 207px; display: block; text-shadow: 0 1px 0 #ca6745;
@@ -1409,13 +1406,13 @@ dl.mahua-view {
 	background: rgb(246, 246, 246); margin: 15px -15px -15px; padding: 15px; border: 1px solid rgb(232, 231, 230); display: none;
 }
 .joke-list-comment .comment-input {
-	background: rgb(255, 255, 255); border: currentColor; height: 40px; overflow: hidden; position: relative;
+	background: rgb(255, 255, 255);height: 40px; overflow: hidden; position: relative;
 }
 .joke-list-comment .comment-input-text {
-	background: rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(232, 231, 230) currentColor rgb(232, 231, 230) rgb(232, 231, 230); padding: 0px 70px 0px 10px; width: 455px; height: 38px; color: rgb(201, 201, 201); line-height: 38px; float: left;
+	background: rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(232, 231, 230); padding: 0px 70px 0px 10px; width: 455px; height: 38px; color: rgb(201, 201, 201); line-height: 38px; float: left;
 }
 .joke-list-comment .comment-submit {
-	background: #03a8b1; border: currentColor; width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
+	background: #03a8b1;width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
 }
 .joke-list-comment .comment-submit:hover {
 	background: rgb(0, 183, 137);
@@ -1439,7 +1436,7 @@ a.comment_packUp {
 	width: 30px; float: right; _width: 60px;
 }
 .joke-list-comment .comment-content i {
-	background: url("../img/mahua_common.24.png") no-repeat -62px -952px; _background: url(../img/mahua_common.24.ie6.png) -62px -952px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -62px -952px;
 }
 #collection_tips {
 	background: rgb(255, 248, 218); border: 1px solid rgb(236, 220, 180); width: 165px; height: 32px; text-align: center; color: rgb(102, 102, 102); line-height: 32px; font-size: 12px; position: absolute; z-index: 20;
@@ -1451,7 +1448,7 @@ a.comment_packUp {
 	color: #03a8b1;
 }
 #collection_tips i {
-	background: url("../img/joke.24.png") no-repeat -485px 0px; left: 75px; top: 32px; width: 15px; height: 5px; display: block; position: absolute; _background: url(../img/joke.24.ie6.png) -485px 0 no-repeat;
+	left: 75px; top: 32px; width: 15px; height: 5px; display: block; position: absolute;
 }
 .go-user-index {
 	width: 100%; height: 90px; color: rgb(110, 110, 110); display: block;
@@ -1469,7 +1466,7 @@ a.comment_packUp {
 	height: 30px; text-align: center; line-height: 30px; overflow: hidden;
 }
 .go-user-index i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin: -60px auto 0px; width: 60px; height: 60px; display: block; position: relative; z-index: 2; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin: -60px auto 0px; width: 60px; height: 60px; display: block; position: relative; z-index: 2;
 }
 .go-user-index-btn {
 	background: rgb(163, 171, 175); margin: 6px auto 0px; width: 60px; height: 24px; text-align: center; color: rgb(255, 255, 255); line-height: 24px;
@@ -1478,7 +1475,7 @@ a.comment_packUp {
 	background: #03a8b1; color: rgb(255, 255, 255);
 }
 .mahua .tags-share-btn {
-	border: currentColor; width: 270px; margin-top: 5px;
+	width: 270px; margin-top: 5px;
 }
 .mahua .tags-share-btn span {
 	text-align: left; text-indent: 0px; margin-right: 0px;
@@ -1490,7 +1487,7 @@ a.comment_packUp {
 	width: 220px; height: 220px; float: left;
 }
 .tags-info dl {
-	background: url("../img/mahua_common.24.png") no-repeat -205px -15px; padding: 0px 10px 10px 35px; width: 400px; margin-left: -15px; float: left; _background: url(../img/mahua_common.24.ie6.png) -205px -15px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -205px -15px; padding: 0px 10px 10px 35px; width: 400px; margin-left: -15px; float: left;
 }
 .tags-info dt {
 	height: 36px; color: #03a8b1; line-height: 36px; font-size: 20px; margin-bottom: 5px;
@@ -1517,7 +1514,7 @@ a.comment_packUp {
 	height: 127px; margin-bottom: 5px; cursor: pointer;
 }
 #fixed-box .checkin .title {
-	background: url("../img/right_float.24.png") no-repeat -102px 0px; width: 100px; height: 100%; color: rgb(255, 255, 255); _background: url(../img/right_float.24.ie6.png) -102px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -102px 0px; width: 100px; height: 100%; color: rgb(255, 255, 255);
 }
 #fixed-box .checkin .checkin-hover {
 	color: rgb(255, 133, 117); display: none;
@@ -1538,19 +1535,19 @@ a.comment_packUp {
 	width: 56px; height: 56px; margin-bottom: 5px;
 }
 #fixed-box .qr-code a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .return-top a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .feedback a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .qr-code a:hover {
 	background-position: -204px -58px;
 }
 #fixed-box .qr-code div {
-	background: url("../img/right_float.24.png") no-repeat -378px 0px; margin: -30px 0px 0px -150px; padding: 5px 20px 0px 5px; width: 110px; height: 135px; display: none; position: absolute; z-index: 10; _background: url(../img/right_float.24.ie6.png) -378px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -378px 0px; margin: -30px 0px 0px -150px; padding: 5px 20px 0px 5px; width: 110px; height: 135px; display: none; position: absolute; z-index: 10;
 }
 #fixed-box .qr-code img {
 	width: 110px; height: 110px;
@@ -1577,19 +1574,19 @@ a.comment_packUp {
 	padding: 40px 0px 0px 43px; display: none;
 }
 .checkin-box-bg {
-	background: url("../img/checkin.24.png") no-repeat; padding: 70px 40px 0px 80px; width: 680px; height: 400px; overflow: hidden;
+	padding: 70px 40px 0px 80px; width: 680px; height: 400px; overflow: hidden;
 }
 #checkin-box .i-dialog-close {
 	top: 65px; right: 25px; _right: 40px;
 }
 .i-checkin {
-	background: url("../img/checkin.24.png") no-repeat -590px -477px; left: 4px; top: 0px; width: 210px; height: 191px; position: absolute; z-index: 6; _background: url(../img/checkin.24.ie6.png) -590px -477px no-repeat;
+	left: 4px; top: 0px; width: 210px; height: 191px; position: absolute; z-index: 6;
 }
 #checkin-box ul {
 	height: 320px; overflow: hidden;
 }
 #checkin-box li {
-	background: url("../img/checkin.24.png") no-repeat -264px -474px; margin: 0px 40px 20px 0px; padding: 0px 5px; width: 120px; height: 140px; float: left; position: relative; z-index: 7;
+	margin: 0px 40px 20px 0px; padding: 0px 5px; width: 120px; height: 140px; float: left; position: relative; z-index: 7;
 }
 #checkin-box li span {
 	height: 38px; color: rgb(255, 255, 255); line-height: 44px; overflow: hidden; font-size: 34px; display: block; text-shadow: 0 1px 0 #e08e00;
@@ -1643,25 +1640,25 @@ a.comment_packUp {
 	left: 868px; top: 32px; width: 50px; height: 70px; line-height: 130px; overflow: hidden; font-size: 12px;
 }
 #newbieGuide2 {
-	background: url("../img/baoyang.png") no-repeat; width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
+	width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide2 .newbieGuideClose {
 	left: 340px; top: 45px;
 }
 #newbieGuide3 {
-	background: url("../img/dashang.png") no-repeat; width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
+	width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide3 .newbieGuideClose {
 	left: 325px; top: 40px;
 }
 #newbieGuide4 {
-	background: url("../img/qiubaoyang.png") no-repeat; width: 380px; height: 320px; position: absolute; z-index: 1000;
+	 width: 380px; height: 320px; position: absolute; z-index: 1000;
 }
 #newbieGuide4 .newbieGuideClose {
 	left: 310px; top: 40px;
 }
 #newbieGuide5 {
-	background: url("../img/audit_tips.png") no-repeat; width: 165px; height: 100px; position: absolute; z-index: 1000;
+	 width: 165px; height: 100px; position: absolute; z-index: 1000;
 }
 #newbieGuide5 .newbieGuideClose {
 	left: 128px; top: 13px; width: 10px; height: 10px;
@@ -1709,7 +1706,7 @@ a.comment_packUp {
 	background-position: 0px -216px;
 }
 .reg-guide-lucky {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat; width: 800px; height: 470px; overflow: hidden;
+	 width: 800px; height: 470px; overflow: hidden;
 }
 .reg-guide-lucky .i-dialog-close {
 	top: 30px; right: 30px;
@@ -1721,10 +1718,10 @@ a.comment_packUp {
 	width: 60px; height: 90px; overflow: hidden; float: left; display: block;
 }
 .reg-guide-lucky a.right-login-qq i {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat 0px -472px; width: 60px; height: 60px; display: block;
+	 width: 60px; height: 60px; display: block;
 }
 .reg-guide-lucky a.right-login-weibo i {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat 0px -472px; width: 60px; height: 60px; display: block;
+	 width: 60px; height: 60px; display: block;
 }
 .reg-guide-lucky a.right-login-qq i {
 	background-position: -62px -472px;
@@ -1754,7 +1751,7 @@ a.comment_packUp {
 	margin: 20px 0px; width: 100%; overflow: hidden;
 }
 .reg-guide-lucky-login {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat -125px -472px; width: 240px; height: 60px; text-align: center; color: rgb(255, 255, 255); line-height: 56px; font-size: 32px; margin-right: 15px; float: left; text-shadow: 0 1px 0 #03b98c;
+	width: 240px; height: 60px; text-align: center; color: rgb(255, 255, 255); line-height: 56px; font-size: 32px; margin-right: 15px; float: left; text-shadow: 0 1px 0 #03b98c;
 }
 .reg-guide-lucky-login:focus {
 	-moz-outline: none;
@@ -1772,7 +1769,7 @@ a.comment_packUp {
 	width: 380px; line-height: 26px; font-size: 14px;
 }
 .level_icon {
-	background: url("../img/level_ico.png") no-repeat; width: 78px; height: 21px; overflow: hidden; display: inline-block; _background: url(../img/level_ico.ie6.png?v=01) no-repeat;
+	background: url("../img/level_ico.png") no-repeat; width: 78px; height: 21px; overflow: hidden; display: inline-block;
 }
 .icon_lv1 {
 	background-position: 0px -2px;
@@ -2072,7 +2069,7 @@ a.comment_packUp {
 	background-position: 0px -2147px;
 }
 .level_text {
-	background: url("../img/level_text.png") no-repeat; width: 25px; height: 7px; overflow: hidden; display: block; _background: url(../img/level_text.ie6.png) no-repeat;
+	background: url("../img/level_text.png") no-repeat; width: 25px; height: 7px; overflow: hidden; display: block;
 }
 .text_lv1 {
 	background-position: 0px -2px;
@@ -2375,13 +2372,13 @@ a.comment_packUp {
 	background: rgb(248, 248, 248); width: 1000px; overflow: hidden; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .publish-content dd input {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .ajax-file-upload {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .system-error-prompt {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .left {
 	background: url("../img/publish_top_bg.png") no-repeat rgb(255, 255, 255); padding: 105px 30px 30px 15px; width: 654px; overflow: hidden; border-right-color: rgb(235, 236, 239); border-right-width: 1px; border-right-style: solid; float: left; min-height: 850px;
@@ -2495,16 +2492,16 @@ a.comment_packUp {
 	border: 3px solid rgb(226, 226, 226); width: 13px; height: 13px; overflow: hidden; margin-right: 7px; vertical-align: middle; display: inline-block;
 }
 .sell-yes i {
-	background: url("../img/mahua_common.png") no-repeat -975px -970px; border: currentColor; width: 19px; height: 19px;
+	background: url("../img/youjia_common.png") no-repeat -975px -970px;width: 19px; height: 19px;
 }
 .sell-btn {
-	background: url("../img/mahua_common.png") no-repeat -968px -938px rgb(248, 248, 248); border: 1px solid rgb(231, 231, 231); width: 80px; height: 24px; color: rgb(153, 153, 153); text-indent: 25px; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -968px -938px rgb(248, 248, 248); border: 1px solid rgb(231, 231, 231); width: 80px; height: 24px; color: rgb(153, 153, 153); text-indent: 25px; cursor: pointer;
 }
 .sell-joke .hover {
-	background: url("../img/mahua_common.png") no-repeat -968px -912px rgb(248, 248, 248); color: rgb(244, 169, 11);
+	background: url("../img/youjia_common.png") no-repeat -968px -912px rgb(248, 248, 248); color: rgb(244, 169, 11);
 }
 .publish-content dd input {
-	background: #03a8b1; border: currentColor; width: 150px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: right; cursor: pointer;
+	background: #03a8b1;width: 150px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: right; cursor: pointer;
 }
 .publish-content dd input:hover {
 	background: rgb(0, 183, 137);
@@ -2543,7 +2540,7 @@ a.comment_packUp {
 	color: #03a8b1;
 }
 .right dl.publish-malicious-ranking {
-	border: currentColor; overflow: hidden;
+	overflow: hidden;
 }
 .publish-malicious-ranking li {
 	width: 110px; height: 22px; overflow: hidden; margin-right: 10px; float: left;
@@ -2570,10 +2567,10 @@ dd.publish-message {
 	background: rgb(255, 255, 255); padding: 10px; height: 20px; border-bottom-color: rgb(242, 242, 245); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .sys-head p {
-	background: url("../img/mahua_common.png") no-repeat -980px -263px; width: 288px; height: 20px; line-height: 20px; text-indent: 25px; float: left;
+	background: url("../img/youjia_common.png") no-repeat -980px -263px; width: 288px; height: 20px; line-height: 20px; text-indent: 25px; float: left;
 }
 .sys-head i {
-	background: url("../img/mahua_common.png") no-repeat -770px -270px; border: currentColor; width: 11px; height: 11px; overflow: hidden; margin-top: 5px; float: left; display: block; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -770px -270px;width: 11px; height: 11px; overflow: hidden; margin-top: 5px; float: left; display: block; cursor: pointer;
 }
 .sys-content {
 	background: rgb(255, 255, 255); padding: 30px 35px; width: 250px; height: 48px; line-height: 24px; font-size: 14px; border-bottom-color: rgb(242, 242, 245); border-bottom-width: 1px; border-bottom-style: solid;
@@ -2600,7 +2597,7 @@ dd.publish-message {
 	background: rgb(255, 255, 255); padding: 80px 170px 100px 250px; width: 580px; height: 170px; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .publish-success-icon {
-	background: url("../img/mahua_common.png") no-repeat -179px -80px; margin: 50px 30px 0px 0px; width: 50px; height: 50px; float: left;
+	background: url("../img/youjia_common.png") no-repeat -179px -80px; margin: 50px 30px 0px 0px; width: 50px; height: 50px; float: left;
 }
 .publish-success {
 	width: 500px; height: 370px; float: left;

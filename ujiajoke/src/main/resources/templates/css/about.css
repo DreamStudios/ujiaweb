@@ -595,7 +595,6 @@ button.ui-button::-moz-focus-inner {
 	height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("images/animated-overlay.html");
 	height: 100%;
 	filter: alpha(opacity=25);
 	opacity: 0.25;
@@ -845,7 +844,7 @@ textarea{resize:none}
 .islogin{float:left;width:670px;height:30px;color:#fff;line-height:30px}
 
 .islogin .border-nav-top,a.top-reg,a.top-login,a.top-login-qq,a.top-login-weibo{float:right;height:100%;color:#fff}
-a.top-login-qq,a.top-login-weibo{text-indent:22px;background:url(../img/mahua_common.png) -977px -1014px no-repeat}
+a.top-login-qq,a.top-login-weibo{text-indent:22px;background:url(../img/youjia_common.png) -977px -1014px no-repeat}
 a.top-login-weibo{margin:0 10px 0 15px;_margin-left:8px;background-position:-977px -1044px}
 a.top-login-qq{margin:0}
 a.top-login{margin-right:20px}
@@ -857,18 +856,18 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .islogin .username-top a{color:#fff;font-weight:bold;}
 .islogin .username-top a:hover{text-decoration:underline}
 .my-message{float:right;width:25px;margin-right:5px;position:relative}
-.my-message .message-no-new,.my-message .message-new{cursor:pointer;display:block;width:25px;height:30px;background:url(../img/mahua_common.png) -339px -261px no-repeat}
+.my-message .message-no-new,.my-message .message-new{cursor:pointer;display:block;width:25px;height:30px;background:url(../img/youjia_common.png) -339px -261px no-repeat}
 .my-message .message-new{background-position:-308px -261px}
 .my-message ul{border:1px solid #e5e5e5;border-top:none;padding-bottom:5px;position:absolute;top:31px;right:-5px;z-index:11;background:#fff;width:178px;border-bottom:2px solid #dddada;}
 .my-message li{color:#494949;height:24px;line-height:20px;text-indent:10px;overflow:hidden}
-.my-message li.my-message-close{margin:-4px -1px 0;width:180px;position:relative;height:24px;border:none;background:url(../img/mahua_common.24.png) 0 -1021px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -1021px no-repeat}
+.my-message li.my-message-close{margin:-4px -1px 0;width:180px;position:relative;height:24px;border:none;background:url(../img/youjia_common_notm.png) 0 -1021px no-repeat;}
 .my-message li.my-message-close i{display:block;width:10px;height:10px;float:right;margin:12px 6px 0 0;cursor:pointer}
 .my-message li a{color:#03a8b1;}
 .my-message li a:hover{color:#03a8b1}
 
 
 .my-center{float:right;width:36px;position:relative}
-.my-center i{position:relative;z-index:12;cursor:pointer;display:block;width:36px;height:30px;background:url(../img/mahua_common.png) #fff -366px -261px no-repeat}
+.my-center i{position:relative;z-index:12;cursor:pointer;display:block;width:36px;height:30px;background:url(../img/youjia_common.png) #fff -366px -261px no-repeat}
 .my-center .i-hover{width:34px;height:33px;_height:30px;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;background-position:-975px -306px;}
 .my-center ul{display:none;position:absolute;top:32px;_top:29px;right:0;z-index:11;background:#fff;width:78px;padding:5px 10px;border:1px solid #e5e5e5;border-bottom:2px solid #dddada;}
 .my-center li{height:30px;line-height:30px;text-indent:5px;border-bottom:1px dashed #e5e5e5}
@@ -888,16 +887,16 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .header-nav li a:hover,.header-nav li a.hover:hover{color:#03a8b1}
 .header-nav li em{display:none}
 .header-nav li.joke-hot{position:relative}
-.header-nav li.joke-hot a{width:85px;padding-right:15px;background:url(../img/mahua_common.png) -617px -96px no-repeat}
+.header-nav li.joke-hot a{width:85px;padding-right:15px;background:url(../img/youjia_common.png) -617px -96px no-repeat}
 
 .joke-hot-list{display:none;background:#fff;width:88px;position:absolute;z-index:20;top:100px;right:0;border-left:1px solid #e3e2e1;border-right:1px solid #e3e2e1;border-bottom:2px solid #dddada}
 .header-nav li .joke-hot-list a{width:auto;padding:0;background:none;display:block;text-align:left;text-indent:10px;height:40px;line-height:40px;font-size:16px;color:#777}
 .header-nav li .joke-hot-list a:hover{border:none;background:#f6f6f6;color:#03a8b1}
-.header-nav li i{margin:-75px 0 0 50px;display:block;width:26px;height:13px;background:url(../img/mahua_common.png) -391px -223px no-repeat; position:relative;overflow:hidden}
+.header-nav li i{margin:-75px 0 0 50px;display:block;width:26px;height:13px;background:url(../img/youjia_common.png) -391px -223px no-repeat; position:relative;overflow:hidden}
 .mahua-slogan{float:left;height:100px;width:135px;overflow:hidden;line-height:100px;background:url(../img/mahua_slogan.png) no-repeat}
 .mahua-slogan a{display:block;width:100%;height:100%}
 
-.header-nav .search{float:right;background:url(../img/mahua_common.png) -798px -255px no-repeat;width:150px;height:35px;margin-top:38px}
+.header-nav .search{float:right;background:url(../img/youjia_common.png) -798px -255px no-repeat;width:150px;height:35px;margin-top:38px}
 .header-nav .search input{float:left;border:none;background:none}
 .header-nav .search-text{width:115px;padding-left:10px;height:34px;line-height:34px;color:#ccc}
 .header-nav .search .search-submit{width:16px;height:34px;cursor:pointer}
@@ -906,14 +905,14 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 /*详情页头部*/
 .header-view{background:#03a8b1;height:40px}
 .header-top-view{width:1000px;height:40px}
-.header-view .logo{float:left;width:104px;margin-right:50px;height:40px;background:url(../img/mahua_logof609.png?ver=20141127) 0 -169px no-repeat}
+.header-view .logo{float:left;width:104px;margin-right:50px;height:40px;}
 .header-view-nav{width:466px;float:left}
 .header-view-nav li{float:left;width:80px;height:40px;line-height:40px;text-align:center;}
 .header-view-nav li a{display:block;width:100%;height:38px;border-bottom:2px solid #03a8b1;color:#fff;font-size:16px}
 .header-view-nav li a:hover{color:#fff;border-bottom-color:#d53500}
 .header-view .islogin{float:right;width:380px;float:left}
 .islogin-view{padding-top:5px}
-.header-view .joke-hot{position:relative;background:url(../img/mahua_common.png) -196px -474px no-repeat}
+.header-view .joke-hot{position:relative;background:url(../img/youjia_common.png) -196px -474px no-repeat}
 .header-view .joke-hot a:hover{border-color:#03a8b1}
 .header-view .joke-hot em{display:none}
 
@@ -927,7 +926,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .links-block{margin:20px 0 -21px;border-top:1px solid #d9d9d9;background:#f1f1f1; position:relative}
 .links{float:left;width:900px;border-bottom:1px solid #d9d9d9;margin:0 auto;height:50px;line-height:50px;overflow:hidden}
 .links-list-block{border-bottom:1px solid #d9d9d9;width:1000px;margin:0 auto;height:50px;line-height:50px;overflow:hidden}
-.likes-title{float:left;width:100px;display:block;background:url(../img/mahua_common.png) -975px -517px no-repeat;text-indent:25px;color:#999;font-weight:bold}
+.likes-title{float:left;width:100px;display:block;background:url(../img/youjia_common.png) -975px -517px no-repeat;text-indent:25px;color:#999;font-weight:bold}
 .likes-list{}
 .likes-list a{color:#999;display:inline-block;margin-right:25px}
 .likes-list a:hover{color:#03a8b1}
@@ -941,13 +940,13 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .about dl.about-contact{width:280px}
 .about dt{font-size:18px;height:24px;line-height:24px;margin-bottom:10px}
 .about dd{height:36px;line-height:36px;color:#999}
-.about dd i{margin:3px 5px 0;display:inline-block;width:15px;height:16px;background:url(../img/mahua_common.png) -978px -500px no-repeat}
+.about dd i{margin:3px 5px 0;display:inline-block;width:15px;height:16px;background:url(../img/youjia_common.png) -978px -500px no-repeat}
 .about dd a{margin-right:20px;color:#999}
 .about dd a:hover{color:#03a8b1}
 .about dd a.a-color-red{color:#03a8b1}
 .about dd a.a-color-red:hover{color:#e05857}
 
-.footer-weibo,.footer-qzone,.footer-QQweibo,.footer-weixin{height:32px;display:inline-block;padding-left:25px;background:url(../img/mahua_common.png) -975px -561px no-repeat}
+.footer-weibo,.footer-qzone,.footer-QQweibo,.footer-weixin{height:32px;display:inline-block;padding-left:25px;background:url(../img/youjia_common.png) -975px -561px no-repeat}
 .footer-qzone{background-position:-975px -591px}
 .footer-QQweibo{background-position:-975px -620px}
 .footer-weixin{background-position:-975px -650px;}
@@ -957,7 +956,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 
 #login{display:none;width:800px;height:470px;padding:5px;overflow:hidden;background:#fff;border-radius:5px}
 .ui-dialog-titlebar{display:none}
-.i-dialog-close{cursor:pointer;display:block;position:absolute;top:15px;right:15px;width:16px;height:16px;overflow:hidden;border:none;background:url(../img/mahua_common.png) -300px -243px no-repeat}
+.i-dialog-close{cursor:pointer;display:block;position:absolute;top:15px;right:15px;width:16px;height:16px;overflow:hidden;border:none;background:url(../img/youjia_common.png) -300px -243px no-repeat}
 .ui-widget-overlay{_position:absolute !important;_height:1000px !important;background:#000;filter:alpha(opacity=40);-moz-opacity:0.4;opacity:0.4}
 .ui-dialog .ui-dialog-content{padding:0;}
 
@@ -970,7 +969,7 @@ a.top-login-qq:hover,a.top-login-weibo:hover,a.top-reg:hover,a.top-login:hover{c
 .publish:hover{background:#03a8b1;color:#fff}
 .audit:hover{background:#00b789;color:#fff}
 .publish span,.audit span{display:block;float:left;height:40px;line-height:40px;}
-.publish i,.audit i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;_background:url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat}
+.publish i,.audit i{display:block;float:left;margin:0 20px 0 0;width:27px;height:40px;background:url(../img/push_btn_icon.24.png) -1px 4px no-repeat;}
 .audit i{background-position:-32px 4px}
 
 /*
@@ -979,15 +978,15 @@ avatar_30x30  30*30的头像
 avatar_60x60  60*60的头像
 */
 .avatar_30x30,.avatar_30x30 img,.avatar_30x30 i{width:30px;height:30px;}
-.avatar_30x30 i{display:block;margin-top:-30px;position:relative;background:url(../img/mahua_common.24.png) 0 -475px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -475px no-repeat}
+.avatar_30x30 i{display:block;margin-top:-30px;position:relative;background:url(../img/youjia_common_notm.png) 0 -475px no-repeat;}
 .avatar_60x60,.avatar_60x60 img,.avatar_60x60 i{width:60px;height:60px;}
-.avatar_60x60 i{display:block;margin-top:-60px;position:relative;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
+.avatar_60x60 i{display:block;margin-top:-60px;position:relative;background:url(../img/youjia_common_notm.png) 0 -201px no-repeat;}
 
 /*笑话模块*/
 .mahua{width:640px;padding:15px;margin-bottom:20px;border-bottom:1px solid #e8e7e6;background:#fff;overflow:hidden}
 .mahua dt{height:60px;overflow:hidden}
 .mahua dt img,.mahua dt i{width:60px;height:60px;float:left;}
-.mahua dt i{display:block;margin:0 10px 0 -60px;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
+.mahua dt i{display:block;margin:0 10px 0 -60px;background:url(../img/youjia_common_notm.png) 0 -201px no-repeat;}
 .mahua dt .joke-uname,.mahua dt .joke-title{float:left;width:570px;height:21px;line-height:21px;margin-top:7px;overflow:hidden;font-size:14px}
 .mahua dt .joke-uname a{color:#fe8e69;float:left;margin-right:20px}
 .mahua dt .joke-uname a:hover{color:#e05857}
@@ -1002,16 +1001,16 @@ avatar_60x60  60*60的头像
 .mahua .ding img,.mahua .cai img,.operation .comment img{position:absolute;left:0px;float:left;margin:5px 5px 0 0;width:24px;height:24px;}
 .mahua .ding i,.mahua .cai i,.operation .comment i{float:left;margin:6px 0 0 33px;height:24px;line-height:24px;width:50px}
 .operation .comment i{width:65px}
-.mahua .ding-hover,.mahua .cai-hover{padding-left:33px;margin:6px 0 0 0px;height:24px;width:47px;background:url(../img/mahua_common.png) -31px 0 no-repeat}
+.mahua .ding-hover,.mahua .cai-hover{padding-left:33px;margin:6px 0 0 0px;height:24px;width:47px;background:url(../img/youjia_common.png) -31px 0 no-repeat}
 .mahua .ding-hover i,.mahua .cai-hover i{float:left;height:24px;line-height:24px;margin:0}
 .mahua .cai-hover{background-position:-31px -51px;color:#88cbea}
-.mahua .collection,.mahua .share-ico,.mahua .collection-hover{background:url(../img/mahua_common.png) -10px 0 no-repeat}
+.mahua .collection,.mahua .share-ico,.mahua .collection-hover{background:url(../img/youjia_common.png) -10px 0 no-repeat}
 .mahua .collection,.mahua .collection-hover{background-position:-30px -140px;width:24px;height:24px;margin-top:6px;}
 .mahua .collection-hover,.mahua .collection:hover{background-position:-135px -39px}
 .mahua .share{position:absolute;left:320px;_left:350px;top:8px;z-index:3;height:39px;border:1px solid #fafafa;}
-.mahua .share-ico{width:39px;height:39px;background:url(../img/mahua_common.png) -24px -168px no-repeat;}
+.mahua .share-ico{width:39px;height:39px;background:url(../img/youjia_common.png) -24px -168px no-repeat;}
 .mahua .share-btn{float:left;border-left:1px solid #fafafa;background:#fff;height:39px;line-height:39px;_height:41px;_line-height:41px;text-indent:15px;width:0;overflow:hidden}
-.share-btn a{float:left;display:block;width:25px;height:25px;margin:7px 6px 0 0;_margin-top:8px;text-indent:999px;overflow:hidden;background:url(../img/mahua_common.png) -174px 0 no-repeat;}
+.share-btn a{float:left;display:block;width:25px;height:25px;margin:7px 6px 0 0;_margin-top:8px;text-indent:999px;overflow:hidden;background:url(../img/youjia_common.png) -174px 0 no-repeat;}
 .share-btn a.share-copy{margin-right:0}
 .share-btn span{float:left;display:inline-block;height:100%;margin-right:7px;color:#969696}
 .share-btn a.share-tqq{background-position:-205px 0}
@@ -1019,7 +1018,7 @@ avatar_60x60  60*60的头像
 .share-btn a.share-tsina{background-position:-267px 0}
 .share-btn a.share-sqq{background-position:-298px 0}
 .share-btn a.share-copy{background-position:-329px 0}
-.mahua .operation .reward,.mahua .operation .rewarded,.mahua .operation .buyed a,.mahua .operation .buy a{text-indent:35px;margin-top:5px;line-height:26px;height:26px;width:69px;float:right;background:url(../img/mahua_common.png) -492px -215px no-repeat}
+.mahua .operation .reward,.mahua .operation .rewarded,.mahua .operation .buyed a,.mahua .operation .buy a{text-indent:35px;margin-top:5px;line-height:26px;height:26px;width:69px;float:right;background:url(../img/youjia_common.png) -492px -215px no-repeat}
 .reward-box{display:none;float:right;margin-top:5px;height:26px;width:69px;}
 .mahua .operation .buy{text-indent:35px;margin-top:5px;line-height:26px;height:26px;width:69px;float:right;}
 .mahua .operation .buy,.mahua .operation .buyed{margin-right:10px}
@@ -1030,7 +1029,7 @@ avatar_60x60  60*60的头像
 .mahua .operation .buyed a,.mahua .operation .rewarded{text-indent:27px}
 .mahua .operation .kepted{color:#888}
 .mahua .operation .kepted .avatar_30x30{width:30px}
-.mahua .operation .kepted .avatar_30x30 i{background:url(../img/mahua_common.24.png) -104px -952px no-repeat;_background:url(../img/mahua_common.24.ie6.png) -104px -952px no-repeat}
+.mahua .operation .kepted .avatar_30x30 i{background:url(../img/youjia_common_notm.png) -104px -952px no-repeat;}
 .mahua .operation .kepted{height:30px;width:200px;overflow:hidden;text-align:right;background:none;margin-bottom:-4px;}
 .mahua .operation .kepted a,.mahua .operation .kepted a:hover{float:right;color:#ff865d;width:auto;color:#03a8b1;margin-right:5px;background:none;text-indent:0}
 .mahua .operation .kepted a,.mahua .operation .kepted span{height:30px;line-height:30px;float:right;text-indent:0}
@@ -1058,7 +1057,7 @@ dl.mahua-view{padding-top:0}
 .afterCursor{left:50%}
 
 /*笑话区域的展开收起*/
-.joke-content-area{margin:-18px 0 20px;color:#fff;font-size:12px; text-shadow:0 1px 0 #ca6745;line-height:22px;overflow:hidden;height:23px;background:url(../img/mahua_common.png) -314px -322px no-repeat}
+.joke-content-area{margin:-18px 0 20px;color:#fff;font-size:12px; text-shadow:0 1px 0 #ca6745;line-height:22px;overflow:hidden;height:23px;background:url(../img/youjia_common.png) -314px -322px no-repeat}
 .joke-content-area a,.joke-content-area a:hover{margin-left:207px;display:block;width:86px;height:23px;text-align:center;color:#fff;text-shadow:0 1px 0 #ca6745}
 /*笑话列表页评论列表*/
 .joke-list-comment{display:none;background:#f6f6f6;border:1px solid #e8e7e6;padding:15px;margin:15px -15px -15px;}
@@ -1072,7 +1071,7 @@ dl.mahua-view{padding-top:0}
 a.comment_all{width:150px;background:#ebebeb}
 a.comment_all:hover{background:#fff;color:#999}
 a.comment_packUp{float:right;width:30px;_width:60px;}
-.joke-list-comment .comment-content i{background:url(../img/mahua_common.24.png) -62px -952px no-repeat;_background:url(../img/mahua_common.24.ie6.png) -62px -952px no-repeat}
+.joke-list-comment .comment-content i{background:url(../img/youjia_common_notm.png) -62px -952px no-repeat;}
 
 
 
@@ -1080,7 +1079,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 #collection_tips{position:absolute;z-index:20;text-align:center;background:#fff8da;width:165px;height:32px;line-height:32px;color:#666;font-size:12px;border:1px solid #ecdcb4}
 #collection_tips a{color:#03a8b1}
 #collection_tips a:hover{color:#e05857}
-#collection_tips i{position:absolute;top:32px;left:75px;display:block;width:15px;height:5px;background:url(../img/joke.24.png) -485px 0 no-repeat;_background:url(../img/joke.24.ie6.png) -485px 0 no-repeat}
+#collection_tips i{position:absolute;top:32px;left:75px;display:block;width:15px;height:5px;}
 
 
 /*右侧用户推荐*/
@@ -1088,7 +1087,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .go-user-index:hover{color:#03a8b1}
 .go-user-index img{width:60px;height:60px;margin:0 auto}
 .go-user-index p{height:30px;line-height:30px;text-align:center;overflow:hidden}
-.go-user-index i{position:relative;z-index:2;display:block;width:60px;height:60px;margin:-60px auto 0;background:url(../img/mahua_common.24.png) 0 -201px no-repeat;_background:url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat}
+.go-user-index i{position:relative;z-index:2;display:block;width:60px;height:60px;margin:-60px auto 0;background:url(../img/youjia_common_notm.png) 0 -201px no-repeat;}
 .go-user-index-btn{margin:6px auto 0;background:#a3abaf;width:60px;height:24px;line-height:24px;text-align:center;color:#fff;}
 .go-user-index-btn:hover{color:#fff;background:#03a8b1}
 
@@ -1097,7 +1096,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .mahua .tags-share-btn span{margin-right:0;text-align:left;text-indent:0}
 .tags-info{padding:10px;width:650px;height:220px}
 .tags-info img{float:left;width:220px;height:220px}
-.tags-info dl{float:left;width:400px;padding:0 10px 10px 35px;margin-left:-15px;background:url(../img/mahua_common.24.png) -205px -15px no-repeat;_background:url(../img/mahua_common.24.ie6.png) -205px -15px no-repeat}
+.tags-info dl{float:left;width:400px;padding:0 10px 10px 35px;margin-left:-15px;background:url(../img/youjia_common_notm.png) -205px -15px no-repeat;}
 .tags-info dt{height:36px;line-height:36px;font-size:20px;color:#03a8b1;margin-bottom:5px}
 .tags-info dt h1{font-size:20px;}
 .tags-info dd span{color:#969696;margin-right:20px}
@@ -1108,14 +1107,14 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 /*右侧浮动签到、二维码、返回顶部*/
 #fixed-box{display:none;height:310px;width:100px;position:fixed;}
 #fixed-box .checkin{height:127px;margin-bottom:5px;cursor:pointer}
-#fixed-box .checkin .title{width:100px;height:100%;background:url(../img/right_float.24.png) -102px 0 no-repeat;_background:url(../img/right_float.24.ie6.png) -102px 0 no-repeat;color:#fff}
+#fixed-box .checkin .title{width:100px;height:100%;background:url(../img/right_float.24.png) -102px 0 no-repeat;color:#fff}
 #fixed-box .checkin .checkin-hover{display:none;background-position:0 0;color:#ff8575}
 #fixed-box .checkin p{font-size:20px;height:24px;line-height:24px;text-align:center}
 #fixed-box .checkin .checkin-top{padding-top:62px;}
 #fixed-box .qr-code,#fixed-box .return-top,#fixed-box .feedback{width:56px;height:56px;margin-bottom:5px}
-#fixed-box .qr-code a,#fixed-box .return-top a,#fixed-box .feedback a{display:block;width:100%;height:100%;background:url(../img/right_float.24.png) -204px 0 no-repeat;_background:url(../img/right_float.24.ie6.png) -204px 0 no-repeat}
+#fixed-box .qr-code a,#fixed-box .return-top a,#fixed-box .feedback a{display:block;width:100%;height:100%;background:url(../img/right_float.24.png) -204px 0 no-repeat;}
 #fixed-box .qr-code a:hover{background-position:-204px -58px}
-#fixed-box .qr-code div{display:none;padding:5px 20px 0 5px;width:110px;height:135px;position:absolute;z-index:10;margin:-30px 0 0 -150px;background:url(../img/right_float.24.png) -378px 0 no-repeat;_background:url(../img/right_float.24.ie6.png) -378px 0 no-repeat}
+#fixed-box .qr-code div{display:none;padding:5px 20px 0 5px;width:110px;height:135px;position:absolute;z-index:10;margin:-30px 0 0 -150px;background:url(../img/right_float.24.png) -378px 0 no-repeat;}
 #fixed-box .qr-code img{width:110px;height:110px;}
 #fixed-box .qr-code p{color:#fff;text-align:center;height:24px;line-height:24px;overflow:hidden; text-shadow:0 1px 0 #4bb697}
 
@@ -1128,11 +1127,11 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 
 /*签到的弹框*/
 #checkin-box{display:none;padding:40px 0 0 43px;}
-.checkin-box-bg{width:680px;height:400px;padding:70px 40px 0 80px;background:url(../img/checkin.24.png) no-repeat;overflow:hidden}
+.checkin-box-bg{width:680px;height:400px;padding:70px 40px 0 80px;overflow:hidden}
 #checkin-box .i-dialog-close{right:25px;top:65px;_right:40px}
-.i-checkin{position:absolute;z-index:6;height:191px;width:210px;left:4px;top:0;background:url(../img/checkin.24.png) -590px -477px no-repeat;_background:url(../img/checkin.24.ie6.png) -590px -477px no-repeat}
+.i-checkin{position:absolute;z-index:6;height:191px;width:210px;left:4px;top:0;}
 #checkin-box ul{overflow:hidden;height:320px}
-#checkin-box li{position:relative;z-index:7;padding:0 5px;width:120px;height:140px;float:left;margin:0 40px 20px 0;background:url(../img/checkin.24.png) -264px -474px no-repeat}
+#checkin-box li{position:relative;z-index:7;padding:0 5px;width:120px;height:140px;float:left;margin:0 40px 20px 0;}
 #checkin-box li span{color:#fff;height:38px;line-height:44px;overflow:hidden;font-size:34px;display:block;text-shadow:0 1px 0 #e08e00;}
 #checkin-box li span i{font-style:normal;font-size:12px}
 #checkin-box li em{font-style:normal;color:#d4d4d4;height:60px;line-height:64px;margin-top:5px;overflow:hidden;font-size:54px;width:120px;text-align:center;display:block}
@@ -1155,18 +1154,18 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .newbieGuideStart,.newbieGuideClose{display:block;width:130px;height:50px;color:#fff;font-size:20px;text-align:center;line-height:50px;position:absolute;bottom:116px;left:380px;}
 .newbieGuideStart:hover,.newbieGuideClose:hover{color:#fff}
 .newbieGuideClose{width:50px;height:70px;overflow:hidden;line-height:130px;font-size:12px;top:32px;left:868px;}
-#newbieGuide2{display:none;width:410px;height:330px;background:url(../img/baoyang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide2{display:none;width:410px;height:330px;position:absolute;z-index:1000}
 #newbieGuide2 .newbieGuideClose{top:45px;left:340px;}
-#newbieGuide3{display:none;width:400px;height:320px;background:url(../img/dashang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide3{display:none;width:400px;height:320px;position:absolute;z-index:1000}
 #newbieGuide3 .newbieGuideClose{top:40px;left:325px;}
-#newbieGuide4{width:380px;height:320px;background:url(../img/qiubaoyang.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide4{width:380px;height:320px;position:absolute;z-index:1000}
 #newbieGuide4 .newbieGuideClose{top:40px;left:310px;}
-#newbieGuide5{width:165px;height:100px;background:url(../img/audit_tips.png) no-repeat;position:absolute;z-index:1000}
+#newbieGuide5{width:165px;height:100px;position:absolute;z-index:1000}
 #newbieGuide5 .newbieGuideClose{top:13px;left:128px;width:10px;height:10px;}
 #newbieGuidebg{top:0;left:0;z-index:999;width:100%;height:100%;position:fixed;background:#000;filter:alpha(opacity=40);-moz-opacity:0.4;opacity:0.4;_position:absolute !important;_height:1000px !important}
 
 /*注册引导*/
-.reg-guide .checkin-box-bg{width:680px;height:420px;padding:50px 40px 0 80px;background:url(../img/checkin.24.png) no-repeat;overflow:hidden}
+.reg-guide .checkin-box-bg{width:680px;height:420px;padding:50px 40px 0 80px;overflow:hidden}
 .reg-guide .i-dialog-close{right:25px;top:25px;}
 .reg-guide dt{padding:20px 0 0 140px;height:130px;width:540px;background:url(../img/reg.guide.24.png) -766px 0 no-repeat;font-size:30px;color:#ff8675}
 .reg-guide dt p{height:46px;line-height:46px;overflow:hidden}
@@ -1181,10 +1180,10 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .reg-guide dd.btn a.reg-guide-start:hover{background-position:0 -216px}
 
 /*注册引导-登录注册领取麻币*/
-.reg-guide-lucky{width:800px;height:470px;background:url(../img/reg.guide.lucky.jpg) no-repeat;overflow:hidden}
+.reg-guide-lucky{width:800px;height:470px;overflow:hidden}
 .reg-guide-lucky .i-dialog-close{right:30px;top:30px;background:none}
 .reg-guide-lucky a.right-login-qq,.reg-guide-lucky a.right-login-weibo{display:block;width:60px;height:90px;overflow:hidden;float:left}
-.reg-guide-lucky a.right-login-qq i,.reg-guide-lucky a.right-login-weibo i{width:60px;height:60px;display:block;background:url(../img/reg.guide.lucky.jpg) 0 -472px no-repeat}
+.reg-guide-lucky a.right-login-qq i,.reg-guide-lucky a.right-login-weibo i{width:60px;height:60px;display:block;}
 .reg-guide-lucky a.right-login-qq i{background-position:-62px -472px}
 .reg-guide-lucky a.right-login-qq{margin-right:10px;}
 .reg-guide-lucky a.right-login-qq span,.reg-guide-lucky a.right-login-weibo span{text-align:center;width:60px;height:30px;line-height:30px;display:block}
@@ -1193,7 +1192,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .reg-guide-lucky-content p a{color:#03a8b1}
 .reg-guide-lucky-content p a:hover{color:#e05857}
 .reg-guide-lucky-content .btn{margin:20px 0;width:100%;overflow:hidden}
-.reg-guide-lucky-login{float:left;background:url(../img/reg.guide.lucky.jpg) -125px -472px no-repeat;margin-right:15px;width:240px;height:60px;line-height:56px;text-align:center;font-size:32px;color:#fff;text-shadow:0 1px 0 #03b98c}
+.reg-guide-lucky-login{float:left;margin-right:15px;width:240px;height:60px;line-height:56px;text-align:center;font-size:32px;color:#fff;text-shadow:0 1px 0 #03b98c}
 .reg-guide-lucky-login:focus{outline:none;-moz-outline:none}
 .reg-guide-lucky-login:hover{background-position:-125px -536px;color:#fff}
 .reg-guide-lucky-content dl{margin-top:20px;color:#666}
@@ -1201,7 +1200,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 .reg-guide-lucky-content dd{width:380px;font-size:14px;line-height:26px}
 
 /*等级*/
-.level_icon{display:inline-block;width:78px;height:21px;overflow:hidden;background:url(../img/level_ico.png) no-repeat;_background:url(../img/level_ico.ie66b1c.png?v=01) no-repeat}
+.level_icon{display:inline-block;width:78px;height:21px;overflow:hidden;background:url(../img/level_ico.png) no-repeat;}
 .icon_lv1{background-position:0 -2px}
 .icon_lv2{background-position:0 -24px}
 .icon_lv3{background-position:0 -46px}
@@ -1304,7 +1303,7 @@ a.comment_packUp{float:right;width:30px;_width:60px;}
 
 
 /*进度条上的等级图标*/
-.level_text{display:block;width:25px;height:7px;overflow:hidden;background:url(../img/level_text.png) no-repeat;_background:url(../img/level_text.ie6.png) no-repeat}
+.level_text{display:block;width:25px;height:7px;overflow:hidden;background:url(../img/level_text.png) no-repeat;}
 .text_lv1{background-position:0 -2px}
 .text_lv2{background-position:0 -11px}
 .text_lv3{background-position:0 -20px}
@@ -1441,7 +1440,7 @@ body{}
 #login-prompt{float:left;width:140px;height:20px;line-height:20px;font-size:12px;color:#ff2020;text-indent:25px;}
 #login-prompt .error,#login-prompt .valid{margin-top:0}
 
-.username,.password,.email,.pasw,.pasw2,.uname,.vcode{float:left;position:relative;z-index:2;display:block;width:253px;height:43px;line-height:43px;padding-left:44px;border:1px solid #e2e2e2;font-size:14px;color:#333;background:url(../img/mahua_common.png) -968px 0 no-repeat}
+.username,.password,.email,.pasw,.pasw2,.uname,.vcode{float:left;position:relative;z-index:2;display:block;width:253px;height:43px;line-height:43px;padding-left:44px;border:1px solid #e2e2e2;font-size:14px;color:#333;background:url(../img/youjia_common.png) -968px 0 no-repeat}
 .pass-value{float:left;position:relative;z-index:1;margin-left:-260px;font-size:14px;text-align:left;color:#c6c6c6}
 .pass-value-login{margin-left:-255px;height:45px;line-height:45px;}
 .pass-value-login{margin-left:-255px;height:45px;line-height:45px;}
@@ -1473,7 +1472,7 @@ dd.weibo a,dd.qq a{display:block;width:100%;height:100%;color:#666}
 dd.weibo a:hover,dd.qq a:hover,.user-action a:hover{color:#03a8b1}
 dd.weibo{margin-right:30px}
 dd.weibo span,dd.qq span{display:block;height:32px;line-height:32px;text-align:center;overflow:hidden}
-dd.weibo i,dd.qq i{display:block;width:64px;height:64px;background:url(../img/mahua_common.png) -832px 0px no-repeat}
+dd.weibo i,dd.qq i{display:block;width:64px;height:64px;background:url(../img/youjia_common.png) -832px 0px no-repeat}
 dd.qq i{background-position:-896px 0px}
 .login-right .btn{background:#03a8b1;width:160px;}
 .login-right .btn:hover{color:#fff}
@@ -1482,7 +1481,7 @@ dd.login-reg{float:left;margin-top:44px}
 #iframe-reg .login-left form{margin-top:15px;width:520px;overflow:hidden}
 #iframe-reg .login-left{width:520px;}
 #iframe-reg li{display:block;height:45px;width:500px;text-align:center;margin:5px 0 15px 5px;_margin-left:0;line-height:45px}
-span.error{float:left;display:block;height:20px;line-height:20px;overflow:hidden;margin-top:10px;text-align:left;width:175px;_width:172px;color:#ff2020;background:url(../img/mahua_common.png) -980px -263px no-repeat;text-indent:25px;}
+span.error{float:left;display:block;height:20px;line-height:20px;overflow:hidden;margin-top:10px;text-align:left;width:175px;_width:172px;color:#ff2020;background:url(../img/youjia_common.png) -980px -263px no-repeat;text-indent:25px;}
 span.valid{background-position:-980px -281px}
 .email,.pasw,.pasw2,.uname{margin-right:5px;width:253px}
 .email:focus,.pasw:focus,.pasw2:focus,.uname:focus,.vcode:focus{outline:none;border-color:#03a8b1;box-shadow:0 0 5px #03a8b1;-webkit-box-shadow:0 0 5px #03a8b1;-moz-box-shadow:0 0 5px #03a8b1}
@@ -1492,7 +1491,7 @@ span.valid{background-position:-980px -281px}
 #iframe-reg li.button{width:300px}
 #iframe-reg li.gender{width:400px;padding-left:80px;margin:20px 0 10px 5px;line-height:45px;}
 #gender{border:none;width:0;height:0;background:none;margin-right:82px;float:left;overflow:hidden}
-.female,.male{display:block;float:left;width:60px;height:27px;line-height:27px;text-indent:30px;background:url(../img/mahua_common.png) -972px -162px no-repeat;font-size:14px;margin-right:20px}
+.female,.male{display:block;float:left;width:60px;height:27px;line-height:27px;text-indent:30px;background:url(../img/youjia_common.png) -972px -162px no-repeat;font-size:14px;margin-right:20px}
 .male{background-position:-972px -233px;margin-right:0;text-indent:30px}
 .female:hover,.female-hover{background-position:-972px -125px;color:#ea689f}
 .male:hover,.male-hover{background-position:-972px -199px;color:#00b7ee}
@@ -1531,7 +1530,7 @@ span.valid{background-position:-980px -281px}
 
 /*重置密码成功弹框提示*/
 #reset_prompt_box{display:none;background:#fff; border-radius:5px;}
-#reset_prompt_box dl{padding-left:66px;width:330px;margin:150px auto 0;height:50px;background:url(../img/mahua_common.png) -178px -80px no-repeat}
+#reset_prompt_box dl{padding-left:66px;width:330px;margin:150px auto 0;height:50px;background:url(../img/youjia_common.png) -178px -80px no-repeat}
 #reset_prompt_box dt{font-size:20px}
 #reset_prompt_box dd{font-size:14px;color:#969696}
 #reset_prompt_box dd a{color:#03a8b1}

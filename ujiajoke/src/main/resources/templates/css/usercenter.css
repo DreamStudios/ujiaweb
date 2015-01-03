@@ -2,10 +2,10 @@
 	display: none;
 }
 .ui-helper-hidden-accessible {
-	margin: -1px; padding: 0px; border: 0px currentColor; width: 1px; height: 1px; overflow: hidden; position: absolute; cliptop: 0px; clipright: 0px; clipbottom: 0px; clipleft: 0px;
+	margin: -1px; padding: 0px; border: 0px; width: 1px; height: 1px; overflow: hidden; position: absolute; cliptop: 0px; clipright: 0px; clipbottom: 0px; clipleft: 0px;
 }
 .ui-helper-reset {
-	list-style: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; line-height: 1.3; font-size: 100%; text-decoration: none;
+	list-style: none; margin: 0px; padding: 0px; outline: 0px; border: 0px; line-height: 1.3; font-size: 100%; text-decoration: none;
 }
 .ui-helper-clearfix::before {
 	display: table; border-collapse: collapse; content: "";
@@ -95,7 +95,7 @@
 	left: 0.5em; top: 50%; margin-top: -8px; position: absolute;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em; overflow: auto; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+	padding: 1em 2.2em; overflow: auto;  border-top-width: 0px; border-top-style: none;
 }
 .ui-autocomplete {
 	left: 0px; top: 0px; position: absolute; cursor: default;
@@ -254,10 +254,10 @@ input.ui-button {
 	margin: 0px 0px 0.4em; width: 100%; font-size: 0.9em; border-collapse: collapse;
 }
 .ui-datepicker th {
-	padding: 0.7em 0.3em; border: 0px currentColor; text-align: center; font-weight: bold;
+	padding: 0.7em 0.3em; border: 0px; text-align: center; font-weight: bold;
 }
 .ui-datepicker td {
-	padding: 1px; border: 0px currentColor;
+	padding: 1px; border: 0px;
 }
 .ui-datepicker td span {
 	padding: 0.2em; text-align: right; text-decoration: none; display: block;
@@ -266,7 +266,7 @@ input.ui-button {
 	padding: 0.2em; text-align: right; text-decoration: none; display: block;
 }
 .ui-datepicker .ui-datepicker-buttonpane {
-	margin: 0.7em 0px 0px; padding: 0px 0.2em; border-right-color: currentColor; border-bottom-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: none; border-bottom-style: none; border-left-style: none; background-image: none;
+	margin: 0.7em 0px 0px; padding: 0px 0.2em;  border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: none; border-bottom-style: none; border-left-style: none; background-image: none;
 }
 .ui-datepicker .ui-datepicker-buttonpane button {
 	margin: 0.5em 0.2em 0.4em; padding: 0.2em 0.6em 0.3em; width: auto; overflow: visible; float: right; cursor: pointer;
@@ -350,7 +350,7 @@ input.ui-button {
 	margin: -10px 0px 0px; padding: 1px; top: 50%; width: 20px; height: 20px; right: 0.3em; position: absolute;
 }
 .ui-dialog .ui-dialog-content {
-	padding: 0.5em 1em; border: 0px currentColor; overflow: auto; position: relative;
+	padding: 0.5em 1em; border: 0px; overflow: auto; position: relative;
 }
 .ui-dialog .ui-dialog-buttonpane {
 	border-width: 1px 0px 0px; padding: 0.3em 1em 0.5em 0.4em; text-align: left; margin-top: 0.5em; background-image: none;
@@ -404,7 +404,7 @@ input.ui-button {
 	margin: -1px; height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("images/animated-overlay.gif"); height: 100%; filter: alpha(opacity=25); opacity: 0.25;
+	height: 100%; filter: alpha(opacity=25); opacity: 0.25;
 }
 .ui-progressbar-indeterminate .ui-progressbar-value {
 	background-image: none;
@@ -416,7 +416,7 @@ input.ui-button {
 	overflow: auto; padding-bottom: 1px; overflow-x: hidden;
 }
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
-	margin: 0.5em 0px 0px; padding: 2px 0.4em; border: 0px currentColor; height: auto; line-height: 1.5; font-size: 1em; font-weight: bold;
+	margin: 0.5em 0px 0px; padding: 2px 0.4em; border: 0px; height: auto; line-height: 1.5; font-size: 1em; font-weight: bold;
 }
 .ui-selectmenu-open {
 	display: block;
@@ -437,7 +437,7 @@ input.ui-button {
 	width: 1.2em; height: 1.2em; position: absolute; z-index: 2; cursor: default; -ms-touch-action: none; touch-action: none;
 }
 .ui-slider .ui-slider-range {
-	border: 0px currentColor; font-size: 0.7em; display: block; position: absolute; z-index: 1;
+	border: 0px; font-size: 0.7em; display: block; position: absolute; z-index: 1;
 }
 .ui-state-disabled.ui-slider .ui-slider-handle {
 	filter: inherit;
@@ -479,13 +479,13 @@ input.ui-button {
 	padding: 0px; overflow: hidden; vertical-align: middle; display: inline-block; position: relative;
 }
 .ui-spinner-input {
-	margin: 0.2em 22px 0.2em 0.4em; padding: 0px; border: currentColor; color: inherit; vertical-align: middle;
+	margin: 0.2em 22px 0.2em 0.4em; padding: 0px;  color: inherit; vertical-align: middle;
 }
 .ui-spinner-button {
 	margin: 0px; padding: 0px; width: 16px; height: 50%; text-align: center; right: 0px; overflow: hidden; font-size: 0.5em; display: block; position: absolute; cursor: default;
 }
 .ui-spinner a.ui-spinner-button {
-	border-top-color: currentColor; border-right-color: currentColor; border-bottom-color: currentColor; border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none;
+	 border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none;
 }
 .ui-spinner .ui-icon {
 	left: 0px; top: 50%; margin-top: -8px; position: absolute;
@@ -557,7 +557,7 @@ body .ui-tooltip {
 	margin: 0px 5px 0px 0px; padding: 4px 15px; border-radius: 4px; color: rgb(255, 255, 255); font-family: arial; font-size: 13px; font-weight: normal; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; background-color: rgb(119, 181, 90); -moz-border-radius: 4px; -webkit-border-radius: 4px; text-shadow: 0 1px 0 #5b8a3c;
 }
 .ajax-file-upload {
-	background: rgb(47, 138, 185); margin: 0px 10px 10px 0px; padding: 6px 10px 4px; border-radius: 3px; border: 0px currentColor; height: 25px; color: rgb(255, 255, 255); line-height: 20px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: 0px 2px 0px 0px #13648d; -webkit-box-shadow: 0 2px 0 0 #13648d; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 2px 0 0 #13648d;
+	background: rgb(47, 138, 185); margin: 0px 10px 10px 0px; padding: 6px 10px 4px; border-radius: 3px; border: 0px; height: 25px; color: rgb(255, 255, 255); line-height: 20px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: 0px 2px 0px 0px #13648d; -webkit-box-shadow: 0 2px 0 0 #13648d; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 2px 0 0 #13648d;
 }
 .ajax-file-upload:hover {
 	background: rgb(51, 150, 201); box-shadow: 0px 2px 0px 0px #15719f; -webkit-box-shadow: 0 2px 0 0 #15719f; -moz-box-shadow: 0 2px 0 0 #15719f;
@@ -569,10 +569,10 @@ body .ui-tooltip {
 	text-align: left;
 }
 .jcrop-vline {
-	background: url("../img/jcrop.gif") left top white; font-size: 0px; position: absolute;
+	font-size: 0px; position: absolute;
 }
 .jcrop-hline {
-	background: url("../img/jcrop.gif") left top white; font-size: 0px; position: absolute;
+	font-size: 0px; position: absolute;
 }
 .jcrop-vline {
 	width: 1px !important; height: 100%;
@@ -647,7 +647,7 @@ li {
 	list-style: none;
 }
 img {
-	border: 0px currentColor; display: block;
+	border: 0px; display: block;
 }
 a {
 	color: rgb(51, 51, 51); text-decoration: none;
@@ -683,31 +683,31 @@ textarea {
 	color: #03a8b1; font-style: normal;
 }
 .title {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 dt {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #checkin-box li {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .reg-guide {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header-nav li a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header-view li {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .comment-submit {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .newbieGuideStart {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .reg-guide-lucky {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .header {
 	background: rgb(255, 255, 255); width: 100%; height: 130px; border-bottom-color: rgb(227, 226, 225); border-bottom-width: 1px; border-bottom-style: solid;
@@ -740,10 +740,10 @@ a.top-login-weibo {
 	height: 100%; color: rgb(255, 255, 255); float: right;
 }
 a.top-login-qq {
-	background: url("../img/mahua_common.png") no-repeat -977px -1014px; text-indent: 22px;
+	background: url("../img/youjia_common.png") no-repeat -977px -1014px; text-indent: 22px;
 }
 a.top-login-weibo {
-	background: url("../img/mahua_common.png") no-repeat -977px -1014px; text-indent: 22px;
+	background: url("../img/youjia_common.png") no-repeat -977px -1014px; text-indent: 22px;
 }
 a.top-login-weibo {
 	background-position: -977px -1044px; margin: 0px 10px 0px 15px; _margin-left: 8px;
@@ -785,22 +785,22 @@ a.top-login:hover {
 	width: 25px; margin-right: 5px; float: right; position: relative;
 }
 .my-message .message-no-new {
-	background: url("../img/mahua_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
 }
 .my-message .message-new {
-	background: url("../img/mahua_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -339px -261px; width: 25px; height: 30px; display: block; cursor: pointer;
 }
 .my-message .message-new {
 	background-position: -308px -261px;
 }
 .my-message ul {
-	background: rgb(255, 255, 255); border-width: medium 1px 2px; border-style: none solid solid; border-color: currentColor rgb(229, 229, 229) rgb(221, 218, 218); top: 31px; width: 178px; right: -5px; padding-bottom: 5px; position: absolute; z-index: 11;
+	background: rgb(255, 255, 255); border-width: medium 1px 2px; border-style: none solid solid; border-color: rgb(229, 229, 229) rgb(221, 218, 218); top: 31px; width: 178px; right: -5px; padding-bottom: 5px; position: absolute; z-index: 11;
 }
 .my-message li {
 	height: 24px; color: rgb(73, 73, 73); line-height: 20px; text-indent: 10px; overflow: hidden;
 }
 .my-message li.my-message-close {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -1021px; margin: -4px -1px 0px; border: currentColor; width: 180px; height: 24px; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -1021px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -1021px; margin: -4px -1px 0px;  width: 180px; height: 24px; position: relative;
 }
 .my-message li.my-message-close i {
 	margin: 12px 6px 0px 0px; width: 10px; height: 10px; float: right; display: block; cursor: pointer;
@@ -815,7 +815,7 @@ a.top-login:hover {
 	width: 36px; float: right; position: relative;
 }
 .my-center i {
-	background: url("../img/mahua_common.png") no-repeat -366px -261px rgb(255, 255, 255); width: 36px; height: 30px; display: block; position: relative; z-index: 12; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -366px -261px rgb(255, 255, 255); width: 36px; height: 30px; display: block; position: relative; z-index: 12; cursor: pointer;
 }
 .my-center .i-hover {
 	background-position: -975px -306px; width: 34px; height: 33px; border-right-color: rgb(229, 229, 229); border-left-color: rgb(229, 229, 229); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; _height: 30px;
@@ -825,9 +825,6 @@ a.top-login:hover {
 }
 .my-center li {
 	height: 30px; line-height: 30px; text-indent: 5px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: dashed;
-}
-.my-center li.noborder {
-	border: currentColor;
 }
 .my-center li a {
 	width: 100%; height: 100%; color: rgb(102, 102, 102); display: block;
@@ -875,23 +872,23 @@ a.top-login:hover {
 	position: relative;
 }
 .header-nav li.joke-hot a {
-	background: url("../img/mahua_common.png") no-repeat -617px -96px; width: 85px; padding-right: 15px;
+	background: url("../img/youjia_common.png") no-repeat -617px -96px; width: 85px; padding-right: 15px;
 }
 .joke-hot-list {
 	background: rgb(255, 255, 255); top: 100px; width: 88px; right: 0px; border-right-color: rgb(227, 226, 225); border-bottom-color: rgb(221, 218, 218); border-left-color: rgb(227, 226, 225); border-right-width: 1px; border-bottom-width: 2px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: none; position: absolute; z-index: 20;
 }
 .header-nav li .joke-hot-list a{width:auto;padding:0;background:none;display:block;text-align:left;text-indent:10px;height:40px;line-height:40px;font-size:16px;color:#777}
 .header-nav li .joke-hot-list a:hover{border:none;background:#f6f6f6;color:#03a8b1;}
-.header-nav li i{margin:-75px 0 0 50px;display:block;width:26px;height:13px;background:url(../img/mahua_common.png) -391px -223px no-repeat; position:relative;overflow:hidden}
+.header-nav li i{margin:-75px 0 0 50px;display:block;width:26px;height:13px;background:url(../img/youjia_common.png) -391px -223px no-repeat; position:relative;overflow:hidden}
 .mahua-slogan{float:right;height:100px;width:135px;overflow:hidden;line-height:100px;background:url(../img/mahua_slogan.png) no-repeat}
 .mahua-slogan a {
 	width: 100%; height: 100%; display: block;
 }
 .header-nav .search {
-	background: url("../img/mahua_common.png") no-repeat -798px -255px; width: 150px; height: 35px; margin-top: 38px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -798px -255px; width: 150px; height: 35px; margin-top: 38px; float: right;
 }
 .header-nav .search input {
-	border: currentColor; float: left;
+	 float: left;
 }
 .header-nav .search-text {
 	width: 115px; height: 34px; color: rgb(204, 204, 204); line-height: 34px; padding-left: 10px;
@@ -906,7 +903,7 @@ a.top-login:hover {
 	width: 1000px; height: 40px;
 }
 .header-view .logo {
-	background: url("../img/mahua_logo.png?ver=20141127") no-repeat 0px -169px; width: 104px; height: 40px; margin-right: 50px; float: left;
+	width: 104px; height: 40px; margin-right: 50px; float: left;
 }
 .header-view-nav {
 	width: 466px; float: left;
@@ -927,7 +924,7 @@ a.top-login:hover {
 	padding-top: 5px;
 }
 .header-view .joke-hot {
-	background: url("../img/mahua_common.png") no-repeat -196px -474px; position: relative;
+	background: url("../img/youjia_common.png") no-repeat -196px -474px; position: relative;
 }
 .header-view .joke-hot a:hover {
 	border-color: #03a8b1;
@@ -939,7 +936,7 @@ a.top-login:hover {
 	top: 40px; width: 78px; _top: 42px;
 }
 .header-view li .joke-hot-list a {
-	border: currentColor; height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 14px;
+	 height: 40px; text-align: left; color: rgb(119, 119, 119); line-height: 40px; text-indent: 10px; font-size: 14px;
 }
 .header-view li .joke-hot-list a:hover {
 	background: rgb(246, 246, 246); color: #03a8b1;
@@ -954,7 +951,7 @@ a.top-login:hover {
 	margin: 0px auto; width: 1000px; height: 50px; line-height: 50px; overflow: hidden; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .likes-title {
-	background: url("../img/mahua_common.png") no-repeat -975px -517px; width: 100px; color: rgb(153, 153, 153); text-indent: 25px; font-weight: bold; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -975px -517px; width: 100px; color: rgb(153, 153, 153); text-indent: 25px; font-weight: bold; float: left; display: block;
 }
 .likes-list {
 	
@@ -987,7 +984,7 @@ a.top-login:hover {
 	height: 36px; color: rgb(153, 153, 153); line-height: 36px;
 }
 .about dd i {
-	background: url("../img/mahua_common.png") no-repeat -978px -500px; margin: 3px 5px 0px; width: 15px; height: 16px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -978px -500px; margin: 3px 5px 0px; width: 15px; height: 16px; display: inline-block;
 }
 .about dd a {
 	color: rgb(153, 153, 153); margin-right: 20px;
@@ -1002,16 +999,16 @@ a.top-login:hover {
 	color: rgb(224, 88, 87);
 }
 .footer-weibo {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-qzone {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-QQweibo {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-weixin {
-	background: url("../img/mahua_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
+	background: url("../img/youjia_common.png") no-repeat -975px -561px; height: 32px; padding-left: 25px; display: inline-block;
 }
 .footer-qzone {
 	background-position: -975px -591px;
@@ -1035,7 +1032,7 @@ a.top-login:hover {
 	display: none;
 }
 .i-dialog-close {
-	background: url("../img/mahua_common.png") no-repeat -300px -243px; border: currentColor; top: 15px; width: 16px; height: 16px; right: 15px; overflow: hidden; display: block; position: absolute; cursor: pointer;
+	background: url("../img/youjia_common.png") no-repeat -300px -243px;  top: 15px; width: 16px; height: 16px; right: 15px; overflow: hidden; display: block; position: absolute; cursor: pointer;
 }
 .ui-widget-overlay {
 	background: rgb(0, 0, 0); filter: alpha(opacity=40); opacity: 0.4; _height: 1000px; _position: absolute; -moz-opacity: 0.4;
@@ -1071,10 +1068,10 @@ a.top-login:hover {
 	height: 40px; line-height: 40px; float: left; display: block;
 }
 .publish i {
-	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block; _background: url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat;
+	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block;
 }
 .audit i {
-	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block; _background: url(../img/push_btn_icon.24.ie6.png) -1px 4px no-repeat;
+	background: url("../img/push_btn_icon.24.png") no-repeat -1px 4px; margin: 0px 20px 0px 0px; width: 27px; height: 40px; float: left; display: block;
 }
 .audit i {
 	background-position: -32px 4px;
@@ -1089,7 +1086,7 @@ a.top-login:hover {
 	width: 30px; height: 30px;
 }
 .avatar_30x30 i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -475px; margin-top: -30px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -475px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -475px; margin-top: -30px; display: block; position: relative;
 }
 .avatar_60x60 {
 	width: 60px; height: 60px;
@@ -1101,7 +1098,7 @@ a.top-login:hover {
 	width: 60px; height: 60px;
 }
 .avatar_60x60 i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative;
 }
 .mahua {
 	background: rgb(255, 255, 255); padding: 15px; width: 640px; overflow: hidden; margin-bottom: 20px; border-bottom-color: rgb(232, 231, 230); border-bottom-width: 1px; border-bottom-style: solid;
@@ -1116,7 +1113,7 @@ a.top-login:hover {
 	width: 60px; height: 60px; float: left;
 }
 .mahua dt i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin: 0px 10px 0px -60px; display: block; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin: 0px 10px 0px -60px; display: block;
 }
 .mahua dt .joke-uname {
 	width: 570px; height: 21px; line-height: 21px; overflow: hidden; font-size: 14px; margin-top: 7px; float: left;
@@ -1185,10 +1182,10 @@ a.top-login:hover {
 	width: 65px;
 }
 .mahua .ding-hover {
-	background: url("../img/mahua_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
+	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
 .mahua .cai-hover {
-	background: url("../img/mahua_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
+	background: url("../img/youjia_common.png") no-repeat -31px 0px; margin: 6px 0px 0px; width: 47px; height: 24px; padding-left: 33px;
 }
 .mahua .ding-hover i {
 	margin: 0px; height: 24px; line-height: 24px; float: left;
@@ -1200,13 +1197,13 @@ a.top-login:hover {
 	background-position: -31px -51px; color: rgb(136, 203, 234);
 }
 .mahua .collection {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .share-ico {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .collection-hover {
-	background: url("../img/mahua_common.png") no-repeat -10px 0px;
+	background: url("../img/youjia_common.png") no-repeat -10px 0px;
 }
 .mahua .collection {
 	background-position: -30px -140px; width: 24px; height: 24px; margin-top: 6px;
@@ -1224,13 +1221,13 @@ a.top-login:hover {
 	border: 1px solid rgb(250, 250, 250); left: 320px; top: 8px; height: 39px; position: absolute; z-index: 3; _left: 350px;
 }
 .mahua .share-ico {
-	background: url("../img/mahua_common.png") no-repeat -24px -168px; width: 39px; height: 39px;
+	background: url("../img/youjia_common.png") no-repeat -24px -168px; width: 39px; height: 39px;
 }
 .mahua .share-btn {
 	background: rgb(255, 255, 255); width: 0px; height: 39px; line-height: 39px; text-indent: 15px; overflow: hidden; border-left-color: rgb(250, 250, 250); border-left-width: 1px; border-left-style: solid; float: left; _height: 41px; _line-height: 41px;
 }
 .share-btn a {
-	background: url("../img/mahua_common.png") no-repeat -174px 0px; margin: 7px 6px 0px 0px; width: 25px; height: 25px; text-indent: 999px; overflow: hidden; float: left; display: block; _margin-top: 8px;
+	background: url("../img/youjia_common.png") no-repeat -174px 0px; margin: 7px 6px 0px 0px; width: 25px; height: 25px; text-indent: 999px; overflow: hidden; float: left; display: block; _margin-top: 8px;
 }
 .share-btn a.share-copy {
 	margin-right: 0px;
@@ -1254,16 +1251,16 @@ a.top-login:hover {
 	background-position: -329px 0px;
 }
 .mahua .operation .reward {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .rewarded {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .buyed a {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .mahua .operation .buy a {
-	background: url("../img/mahua_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
+	background: url("../img/youjia_common.png") no-repeat -492px -215px; width: 69px; height: 26px; line-height: 26px; text-indent: 35px; margin-top: 5px; float: right;
 }
 .reward-box {
 	width: 69px; height: 26px; margin-top: 5px; float: right; display: none;
@@ -1308,7 +1305,7 @@ a.top-login:hover {
 	width: 30px;
 }
 .mahua .operation .kepted .avatar_30x30 i {
-	background: url("../img/mahua_common.24.png") no-repeat -104px -952px; _background: url(../img/mahua_common.24.ie6.png) -104px -952px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -104px -952px;
 }
 .mahua .operation .kepted {
 	width: 200px; height: 30px; text-align: right; overflow: hidden; margin-bottom: -4px;
@@ -1389,7 +1386,7 @@ dl.mahua-view {
 	left: 50%;
 }
 .joke-content-area {
-	background: url("../img/mahua_common.png") no-repeat -314px -322px; margin: -18px 0px 20px; height: 23px; color: rgb(255, 255, 255); line-height: 22px; overflow: hidden; font-size: 12px; text-shadow: 0 1px 0 #ca6745;
+	background: url("../img/youjia_common.png") no-repeat -314px -322px; margin: -18px 0px 20px; height: 23px; color: rgb(255, 255, 255); line-height: 22px; overflow: hidden; font-size: 12px; text-shadow: 0 1px 0 #ca6745;
 }
 .joke-content-area a {
 	width: 86px; height: 23px; text-align: center; color: rgb(255, 255, 255); margin-left: 207px; display: block; text-shadow: 0 1px 0 #ca6745;
@@ -1401,13 +1398,13 @@ dl.mahua-view {
 	background: rgb(246, 246, 246); margin: 15px -15px -15px; padding: 15px; border: 1px solid rgb(232, 231, 230); display: none;
 }
 .joke-list-comment .comment-input {
-	background: rgb(255, 255, 255); border: currentColor; height: 40px; overflow: hidden; position: relative;
+	background: rgb(255, 255, 255);  height: 40px; overflow: hidden; position: relative;
 }
 .joke-list-comment .comment-input-text {
-	background: rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(232, 231, 230) currentColor rgb(232, 231, 230) rgb(232, 231, 230); padding: 0px 70px 0px 10px; width: 455px; height: 38px; color: rgb(201, 201, 201); line-height: 38px; float: left;
+	background: rgb(255, 255, 255); border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(232, 231, 230); padding: 0px 70px 0px 10px; width: 455px; height: 38px; color: rgb(201, 201, 201); line-height: 38px; float: left;
 }
 .joke-list-comment .comment-submit {
-	background: rgb(4, 206, 155); border: currentColor; width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 100px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
 }
 .joke-list-comment .comment-submit:hover {
 	background: rgb(0, 183, 137);
@@ -1431,7 +1428,7 @@ a.comment_packUp {
 	width: 30px; float: right; _width: 60px;
 }
 .joke-list-comment .comment-content i {
-	background: url("../img/mahua_common.24.png") no-repeat -62px -952px; _background: url(../img/mahua_common.24.ie6.png) -62px -952px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -62px -952px;
 }
 #collection_tips {
 	background: rgb(255, 248, 218); border: 1px solid rgb(236, 220, 180); width: 165px; height: 32px; text-align: center; color: rgb(102, 102, 102); line-height: 32px; font-size: 12px; position: absolute; z-index: 20;
@@ -1443,7 +1440,7 @@ a.comment_packUp {
 	color: rgb(224, 88, 87);
 }
 #collection_tips i {
-	background: url("../img/joke.24.png") no-repeat -485px 0px; left: 75px; top: 32px; width: 15px; height: 5px; display: block; position: absolute; _background: url(../img/joke.24.ie6.png) -485px 0 no-repeat;
+	left: 75px; top: 32px; width: 15px; height: 5px; display: block; position: absolute;
 }
 .go-user-index {
 	width: 100%; height: 90px; color: rgb(110, 110, 110); display: block;
@@ -1461,7 +1458,7 @@ a.comment_packUp {
 	height: 30px; text-align: center; line-height: 30px; overflow: hidden;
 }
 .go-user-index i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin: -60px auto 0px; width: 60px; height: 60px; display: block; position: relative; z-index: 2; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin: -60px auto 0px; width: 60px; height: 60px; display: block; position: relative; z-index: 2;
 }
 .go-user-index-btn {
 	background: rgb(163, 171, 175); margin: 6px auto 0px; width: 60px; height: 24px; text-align: center; color: rgb(255, 255, 255); line-height: 24px;
@@ -1470,7 +1467,7 @@ a.comment_packUp {
 	background: #03a8b1; color: rgb(255, 255, 255);
 }
 .mahua .tags-share-btn {
-	border: currentColor; width: 270px; margin-top: 5px;
+	 width: 270px; margin-top: 5px;
 }
 .mahua .tags-share-btn span {
 	text-align: left; text-indent: 0px; margin-right: 0px;
@@ -1482,7 +1479,7 @@ a.comment_packUp {
 	width: 220px; height: 220px; float: left;
 }
 .tags-info dl {
-	background: url("../img/mahua_common.24.png") no-repeat -205px -15px; padding: 0px 10px 10px 35px; width: 400px; margin-left: -15px; float: left; _background: url(../img/mahua_common.24.ie6.png) -205px -15px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -205px -15px; padding: 0px 10px 10px 35px; width: 400px; margin-left: -15px; float: left;
 }
 .tags-info dt {
 	height: 36px; color: #03a8b1; line-height: 36px; font-size: 20px; margin-bottom: 5px;
@@ -1509,7 +1506,7 @@ a.comment_packUp {
 	height: 127px; margin-bottom: 5px; cursor: pointer;
 }
 #fixed-box .checkin .title {
-	background: url("../img/right_float.24.png") no-repeat -102px 0px; width: 100px; height: 100%; color: rgb(255, 255, 255); _background: url(../img/right_float.24.ie6.png) -102px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -102px 0px; width: 100px; height: 100%; color: rgb(255, 255, 255);
 }
 #fixed-box .checkin .checkin-hover {
 	color: rgb(255, 133, 117); display: none;
@@ -1530,19 +1527,19 @@ a.comment_packUp {
 	width: 56px; height: 56px; margin-bottom: 5px;
 }
 #fixed-box .qr-code a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .return-top a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .feedback a {
-	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block; _background: url(../img/right_float.24.ie6.png) -204px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -204px 0px; width: 100%; height: 100%; display: block;
 }
 #fixed-box .qr-code a:hover {
 	background-position: -204px -58px;
 }
 #fixed-box .qr-code div {
-	background: url("../img/right_float.24.png") no-repeat -378px 0px; margin: -30px 0px 0px -150px; padding: 5px 20px 0px 5px; width: 110px; height: 135px; display: none; position: absolute; z-index: 10; _background: url(../img/right_float.24.ie6.png) -378px 0 no-repeat;
+	background: url("../img/right_float.24.png") no-repeat -378px 0px; margin: -30px 0px 0px -150px; padding: 5px 20px 0px 5px; width: 110px; height: 135px; display: none; position: absolute; z-index: 10;
 }
 #fixed-box .qr-code img {
 	width: 110px; height: 110px;
@@ -1569,19 +1566,19 @@ a.comment_packUp {
 	padding: 40px 0px 0px 43px; display: none;
 }
 .checkin-box-bg {
-	background: url("../img/checkin.24.png") no-repeat; padding: 70px 40px 0px 80px; width: 680px; height: 400px; overflow: hidden;
+	padding: 70px 40px 0px 80px; width: 680px; height: 400px; overflow: hidden;
 }
 #checkin-box .i-dialog-close {
 	top: 65px; right: 25px; _right: 40px;
 }
 .i-checkin {
-	background: url("../img/checkin.24.png") no-repeat -590px -477px; left: 4px; top: 0px; width: 210px; height: 191px; position: absolute; z-index: 6; _background: url(../img/checkin.24.ie6.png) -590px -477px no-repeat;
+	left: 4px; top: 0px; width: 210px; height: 191px; position: absolute; z-index: 6;
 }
 #checkin-box ul {
 	height: 320px; overflow: hidden;
 }
 #checkin-box li {
-	background: url("../img/checkin.24.png") no-repeat -264px -474px; margin: 0px 40px 20px 0px; padding: 0px 5px; width: 120px; height: 140px; float: left; position: relative; z-index: 7;
+	margin: 0px 40px 20px 0px; padding: 0px 5px; width: 120px; height: 140px; float: left; position: relative; z-index: 7;
 }
 #checkin-box li span {
 	height: 38px; color: rgb(255, 255, 255); line-height: 44px; overflow: hidden; font-size: 34px; display: block; text-shadow: 0 1px 0 #e08e00;
@@ -1635,25 +1632,25 @@ a.comment_packUp {
 	left: 868px; top: 32px; width: 50px; height: 70px; line-height: 130px; overflow: hidden; font-size: 12px;
 }
 #newbieGuide2 {
-	background: url("../img/baoyang.png") no-repeat; width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
+	width: 410px; height: 330px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide2 .newbieGuideClose {
 	left: 340px; top: 45px;
 }
 #newbieGuide3 {
-	background: url("../img/dashang.png") no-repeat; width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
+	width: 400px; height: 320px; display: none; position: absolute; z-index: 1000;
 }
 #newbieGuide3 .newbieGuideClose {
 	left: 325px; top: 40px;
 }
 #newbieGuide4 {
-	background: url("../img/qiubaoyang.png") no-repeat; width: 380px; height: 320px; position: absolute; z-index: 1000;
+	width: 380px; height: 320px; position: absolute; z-index: 1000;
 }
 #newbieGuide4 .newbieGuideClose {
 	left: 310px; top: 40px;
 }
 #newbieGuide5 {
-	background: url("../img/audit_tips.png") no-repeat; width: 165px; height: 100px; position: absolute; z-index: 1000;
+	width: 165px; height: 100px; position: absolute; z-index: 1000;
 }
 #newbieGuide5 .newbieGuideClose {
 	left: 128px; top: 13px; width: 10px; height: 10px;
@@ -1662,7 +1659,7 @@ a.comment_packUp {
 	background: rgb(0, 0, 0); left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity=40); position: fixed; z-index: 999; opacity: 0.4; _height: 1000px; _position: absolute; -moz-opacity: 0.4;
 }
 .reg-guide .checkin-box-bg {
-	background: url("../img/checkin.24.png") no-repeat; padding: 50px 40px 0px 80px; width: 680px; height: 420px; overflow: hidden;
+	padding: 50px 40px 0px 80px; width: 680px; height: 420px; overflow: hidden;
 }
 .reg-guide .i-dialog-close {
 	top: 25px; right: 25px;
@@ -1701,7 +1698,7 @@ a.comment_packUp {
 	background-position: 0px -216px;
 }
 .reg-guide-lucky {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat; width: 800px; height: 470px; overflow: hidden;
+	width: 800px; height: 470px; overflow: hidden;
 }
 .reg-guide-lucky .i-dialog-close {
 	top: 30px; right: 30px;
@@ -1713,10 +1710,10 @@ a.comment_packUp {
 	width: 60px; height: 90px; overflow: hidden; float: left; display: block;
 }
 .reg-guide-lucky a.right-login-qq i {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat 0px -472px; width: 60px; height: 60px; display: block;
+	width: 60px; height: 60px; display: block;
 }
 .reg-guide-lucky a.right-login-weibo i {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat 0px -472px; width: 60px; height: 60px; display: block;
+	width: 60px; height: 60px; display: block;
 }
 .reg-guide-lucky a.right-login-qq i {
 	background-position: -62px -472px;
@@ -1746,7 +1743,7 @@ a.comment_packUp {
 	margin: 20px 0px; width: 100%; overflow: hidden;
 }
 .reg-guide-lucky-login {
-	background: url("../img/reg.guide.lucky.jpg") no-repeat -125px -472px; width: 240px; height: 60px; text-align: center; color: rgb(255, 255, 255); line-height: 56px; font-size: 32px; margin-right: 15px; float: left; text-shadow: 0 1px 0 #03b98c;
+	width: 240px; height: 60px; text-align: center; color: rgb(255, 255, 255); line-height: 56px; font-size: 32px; margin-right: 15px; float: left; text-shadow: 0 1px 0 #03b98c;
 }
 .reg-guide-lucky-login:focus {
 	-moz-outline: none;
@@ -1764,7 +1761,7 @@ a.comment_packUp {
 	width: 380px; line-height: 26px; font-size: 14px;
 }
 .level_icon {
-	background: url("../img/level_ico.png") no-repeat; width: 78px; height: 21px; overflow: hidden; display: inline-block; _background: url(../img/level_ico.ie6.png?v=01) no-repeat;
+	background: url("../img/level_ico.png") no-repeat; width: 78px; height: 21px; overflow: hidden; display: inline-block;
 }
 .icon_lv1 {
 	background-position: 0px -2px;
@@ -2064,7 +2061,7 @@ a.comment_packUp {
 	background-position: 0px -2147px;
 }
 .level_text {
-	background: url("../img/level_text.png") no-repeat; width: 25px; height: 7px; overflow: hidden; display: block; _background: url(../img/level_text.ie6.png) no-repeat;
+	background: url("../img/level_text.png") no-repeat; width: 25px; height: 7px; overflow: hidden; display: block;
 }
 .text_lv1 {
 	background-position: 0px -2px;
@@ -2364,49 +2361,49 @@ a.comment_packUp {
 	background-position: 0px -884px;
 }
 .user-btn a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 dt {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .user-show .t {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .app-ios a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .app-android a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .app-winPhone a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .joke-ba .joke-before {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .joke-ba .joke-after {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .recomment-head a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #comment div input {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .sarch-results {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .main-tags li.img a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #reward .input-btn input {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .buy_box_message {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .history-top {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .main {
 	width: 1000px; overflow: hidden; padding-top: 6px; margin-top: 14px;
@@ -2415,7 +2412,7 @@ dt {
 	margin-top: 4px;
 }
 .banner-recomment {
-	background: url("../img/mahua_index.png") no-repeat; width: 965px; height: 128px; padding-left: 35px; margin-bottom: 20px; float: left;
+	background: url("../img/youjia_index.png") no-repeat; width: 965px; height: 128px; padding-left: 35px; margin-bottom: 20px; float: left;
 }
 .banner-recomment a {
 	width: 100%; height: 100%; color: rgb(102, 102, 102); display: block;
@@ -2457,16 +2454,16 @@ dt {
 	background: rgb(220, 100, 60); border-color: rgb(220, 100, 60);
 }
 .page a.page-back-time {
-	background: url("../img/mahua_common.png?v=04") no-repeat -155px -533px; margin: -6px 0px 0px; padding: 0px 0px 0px 40px; border: currentColor; width: 62px; height: 47px; color: rgb(255, 255, 255); line-height: 47px; float: right; position: relative;
+	background: url("../img/youjia_common.png?v=04") no-repeat -155px -533px; margin: -6px 0px 0px; padding: 0px 0px 0px 40px;  width: 62px; height: 47px; color: rgb(255, 255, 255); line-height: 47px; float: right; position: relative;
 }
 .page a.page-back-time:hover {
-	background: url("../img/mahua_common.png?v=04") no-repeat -155px -585px; border: currentColor;
+	background: url("../img/youjia_common.png?v=04") no-repeat -155px -585px;
 }
 .go-page {
 	width: 90px; height: 34px; overflow: hidden; float: left;
 }
 .go-page input {
-	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(223, 223, 223) currentColor rgb(223, 223, 223) rgb(223, 223, 223); padding: 0px 0px 0px 3px; width: 52px; height: 32px; color: rgb(153, 153, 153); line-height: 32px; float: left;
+	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(223, 223, 223); padding: 0px 0px 0px 3px; width: 52px; height: 32px; color: rgb(153, 153, 153); line-height: 32px; float: left;
 }
 .go-page a {
 	background: rgb(223, 223, 223); margin: 0px; padding: 0px; width: 34px; height: 34px; text-align: center; color: rgb(255, 255, 255); line-height: 34px; float: left;
@@ -2484,7 +2481,7 @@ dt {
 	width: 100%; overflow: hidden; float: left;
 }
 .user-show {
-	background: url("../img/mahua_common.png?v=04") no-repeat 0px -243px rgb(255, 255, 255); padding: 15px 16px; width: 268px; height: 80px; overflow: hidden;
+	background: url("../img/youjia_common.png?v=04") no-repeat 0px -243px rgb(255, 255, 255); padding: 15px 16px; width: 268px; height: 80px; overflow: hidden;
 }
 .user-show img {
 	width: 60px; height: 60px; float: left; display: block;
@@ -2517,16 +2514,16 @@ dt {
 	width: 60px; height: 30px; text-align: center; line-height: 30px; display: block;
 }
 .user-show a.right-login-qq i {
-	background: url("../img/mahua_common.png?v=04") no-repeat -352px -459px;
+	background: url("../img/youjia_common.png?v=04") no-repeat -352px -459px;
 }
 .user-show a.right-login-weibo i {
-	background: url("../img/mahua_common.png?v=04") no-repeat -352px -459px;
+	background: url("../img/youjia_common.png?v=04") no-repeat -352px -459px;
 }
 .user-show a.right-login-weibo i {
 	background-position: -290px -459px;
 }
 .user-show a.right-login-web {
-	background: url("../img/mahua_common.png?v=04") no-repeat -16px -259px; color: #03a8b1; margin-right: 32px;
+	background: url("../img/youjia_common.png?v=04") no-repeat -16px -259px; color: #03a8b1; margin-right: 32px;
 }
 .user-show a.right-login-web:hover {
 	color: rgb(224, 88, 87);
@@ -2553,7 +2550,7 @@ dt {
 	width: 88px; height: 14px; color: rgb(150, 150, 150); line-height: 14px; overflow: hidden; padding-left: 15px; margin-bottom: 10px; border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; float: left;
 }
 .user-show dd.noborder {
-	border: currentColor; padding-left: 0px;
+	 padding-left: 0px;
 }
 .user-show dd em {
 	color: rgb(255, 132, 91); font-style: normal;
@@ -2562,13 +2559,13 @@ dt {
 	background: rgb(250, 250, 250); padding: 10px 1px; width: 298px; text-align: center; border-top-color: rgb(241, 241, 241); border-bottom-color: rgb(228, 228, 226); border-top-width: 1px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid;
 }
 .user-operation .checkin-right-top {
-	background: url("../img/mahua_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
+	background: url("../img/youjia_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
 }
 .user-operation .do-task {
-	background: url("../img/mahua_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
+	background: url("../img/youjia_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
 }
 .user-operation .friends {
-	background: url("../img/mahua_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
+	background: url("../img/youjia_common.png?v=04") no-repeat -430px 0px; width: 96px; height: 16px; line-height: 16px; padding-top: 50px; display: inline-block;
 }
 .user-operation .checkin-right-top span {
 	width: 100%; text-align: center; display: block;
@@ -2610,7 +2607,7 @@ dt {
 	color: rgb(190, 50, 28);
 }
 .user-show .right-top-avatar-a i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; margin-top: -60px; display: block; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin-top: -60px; display: block;
 }
 .user-show .right-top-avatar-a em {
 	width: 60px; height: 26px; text-align: center; line-height: 28px; font-style: normal; float: left; display: block;
@@ -2751,7 +2748,7 @@ dt {
 	width: 165px; float: right;
 }
 .special-right .title {
-	background: url("../img/mahua_index.png") no-repeat 0px -130px; padding: 6px 0px 0px 6px; width: 111px; height: 73px; margin-top: -21px; float: right; position: relative;
+	background: url("../img/youjia_index.png") no-repeat 0px -130px; padding: 6px 0px 0px 6px; width: 111px; height: 73px; margin-top: -21px; float: right; position: relative;
 }
 .special-right .title p {
 	height: 24px; text-align: right; color: rgb(255, 255, 255); line-height: 24px; overflow: hidden; font-size: 16px; font-weight: bold; margin-right: 5px;
@@ -2766,16 +2763,16 @@ dt {
 	width: 100%; text-align: right; margin-top: 20px; float: right;
 }
 .special-right .up {
-	background: url("../img/mahua_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
+	background: url("../img/youjia_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
 }
 .special-right .down {
-	background: url("../img/mahua_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
+	background: url("../img/youjia_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
 }
 .special-right .up-over {
-	background: url("../img/mahua_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
+	background: url("../img/youjia_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
 }
 .special-right .down-over {
-	background: url("../img/mahua_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
+	background: url("../img/youjia_index.png") no-repeat -935px -131px; width: 8px; height: 8px; display: inline-block; cursor: pointer;
 }
 .special-right .up {
 	margin-right: 30px;
@@ -2880,10 +2877,10 @@ dt {
 	width: 100px; border-right-color: rgb(241, 241, 241); border-left-color: rgb(241, 241, 241); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
 }
 .user-list-head a.hover {
-	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: #03a8b1; font-weight: bold; border-bottom-color: #0ea8b1;
+	background: url("../img/youjia_index.png") no-repeat 0px -214px; color: #03a8b1; font-weight: bold; border-bottom-color: #0ea8b1;
 }
 .user-list-head a:hover {
-	background: url("../img/mahua_index.png") no-repeat 0px -214px; color: #0ea8b1; font-weight: bold; border-bottom-color: #0ea8b1;
+	background: url("../img/youjia_index.png") no-repeat 0px -214px; color: #0ea8b1; font-weight: bold; border-bottom-color: #0ea8b1;
 }
 .user-list ul {
 	width: 295px; overflow: hidden; padding-left: 5px; display: none;
@@ -2976,16 +2973,16 @@ dt {
 	margin-bottom: 5px;
 }
 .new-pic-text .title {
-	background: url("../img/mahua_common.png") no-repeat -992px -1087px; height: 22px; line-height: 22px; overflow: hidden; padding-left: 20px; font-family: Arial; font-size: 12px; display: inline-block; _font-weight: normal;
+	background: url("../img/youjia_common.png") no-repeat -992px -1087px; height: 22px; line-height: 22px; overflow: hidden; padding-left: 20px; font-family: Arial; font-size: 12px; display: inline-block; _font-weight: normal;
 }
 .editors-recomment .title {
-	background: url("../img/mahua_common.png") no-repeat -992px -1087px; height: 22px; line-height: 22px; overflow: hidden; padding-left: 20px; font-family: Arial; font-size: 12px; display: inline-block; _font-weight: normal;
+	background: url("../img/youjia_common.png") no-repeat -992px -1087px; height: 22px; line-height: 22px; overflow: hidden; padding-left: 20px; font-family: Arial; font-size: 12px; display: inline-block; _font-weight: normal;
 }
 .new-pic-text img {
 	width: 120px; height: 80px; margin-right: 10px; float: left;
 }
 .new-pic-text .author {
-	background: url("../img/mahua_common.png") no-repeat -177px -52px; margin: 7px 0px; width: 140px; height: 20px; color: rgb(255, 133, 93); line-height: 20px; text-indent: 20px; overflow: hidden; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -177px -52px; margin: 7px 0px; width: 140px; height: 20px; color: rgb(255, 133, 93); line-height: 20px; text-indent: 20px; overflow: hidden; float: left; display: block;
 }
 .new-pic-text .pv {
 	width: 140px; color: rgb(153, 153, 153); overflow: hidden;
@@ -3000,10 +2997,10 @@ dt {
 	font-weight: bold;
 }
 .new-pic-text dd.noborder {
-	border: currentColor;
+	
 }
 .editors-recomment dd.noborder {
-	border: currentColor;
+	
 }
 .editors-recomment dd {
 	width: 270px;
@@ -3030,10 +3027,10 @@ dt {
 	height: 26px; line-height: 26px; overflow: hidden; margin-top: 10px;
 }
 .platform-other a {
-	border-width: medium 1px 2px; border-style: none solid solid; border-color: currentColor rgb(240, 240, 240) rgb(217, 217, 217); width: 40px; height: 24px; text-align: center; color: rgb(204, 204, 204); line-height: 24px; float: right; display: block;
+	border-width: medium 1px 2px; border-style: none solid solid; border-color:rgb(240, 240, 240) rgb(217, 217, 217); width: 40px; height: 24px; text-align: center; color: rgb(204, 204, 204); line-height: 24px; float: right; display: block;
 }
 .platform-other span {
-	background: url("../img/mahua_common.png") no-repeat -972px -342px; width: 160px; height: 26px; color: rgb(102, 102, 102); text-indent: 34px; font-size: 14px; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -972px -342px; width: 160px; height: 26px; color: rgb(102, 102, 102); text-indent: 34px; font-size: 14px; float: left; display: block;
 }
 .platform-tqq span {
 	background-position: -972px -376px;
@@ -3054,13 +3051,13 @@ dt {
 	width: 270px; height: 45px;
 }
 .app-ios a {
-	background: url("../img/mahua_index.png") no-repeat -118px -131px; border: currentColor; width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
+	background: url("../img/youjia_index.png") no-repeat -118px -131px;  width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
 }
 .app-android a {
-	background: url("../img/mahua_index.png") no-repeat -118px -131px; border: currentColor; width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
+	background: url("../img/youjia_index.png") no-repeat -118px -131px;  width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
 }
 .app-winPhone a {
-	background: url("../img/mahua_index.png") no-repeat -118px -131px; border: currentColor; width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
+	background: url("../img/youjia_index.png") no-repeat -118px -131px;  width: 270px; height: 45px; text-align: left; color: rgb(255, 255, 255); line-height: 44px; text-indent: 52px; font-size: 16px; text-shadow: 1px 1px 0 #409bbb; _text-indent: 47px;
 }
 .app-android a {
 	background-position: -389px -131px; text-shadow: 1px 1px 0 #89ae62;
@@ -3090,7 +3087,7 @@ dt {
 	padding-bottom: 0px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .user-operation-joke-list .user-btn {
-	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+	border-bottom-width: medium; border-bottom-style: none;
 }
 .hot-24 {
 	width: 270px; height: 237px; overflow: hidden; padding-right: 15px;
@@ -3120,7 +3117,7 @@ dt {
 	color: rgb(150, 150, 150);
 }
 .hot-text {
-	background: url("../img/mahua_index.png") no-repeat -977px -153px; padding: 11px 0px; height: 20px; line-height: 20px; text-indent: 30px; overflow: hidden; font-size: 14px;
+	background: url("../img/youjia_index.png") no-repeat -977px -153px; padding: 11px 0px; height: 20px; line-height: 20px; text-indent: 30px; overflow: hidden; font-size: 14px;
 }
 .top5 {
 	background-position: -977px -194px;
@@ -3141,7 +3138,7 @@ dt {
 	background-position: -979px -394px;
 }
 .hot-24 dd.top10 {
-	border: currentColor;
+	
 }
 .editors-recomment-joke-list .editors-recomment-img a {
 	height: 140px;
@@ -3228,7 +3225,7 @@ dt {
 	width: 200px; height: 295px;
 }
 .recomment-tag li.big i {
-	background: url("../img/mahua_common.24.png") no-repeat -145px -413px; margin: -298px 0px 0px -3px; width: 75px; height: 75px; display: block; position: absolute; _background: url(../img/mahua_common.24.ie6.png) -145px -413px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -145px -413px; margin: -298px 0px 0px -3px; width: 75px; height: 75px; display: block; position: absolute;
 }
 .comment .title {
 	height: 38px; color: rgb(85, 85, 85); line-height: 38px; font-size: 18px; margin-bottom: 10px;
@@ -3240,7 +3237,7 @@ dt {
 	border: 1px solid rgb(226, 226, 226); width: 636px; height: 140px;
 }
 #comment textarea {
-	padding: 10px 10px 0px; border: currentColor; width: 614px; height: 54px; color: rgb(201, 201, 201); line-height: 18px; overflow: hidden;
+	padding: 10px 10px 0px;  width: 614px; height: 54px; color: rgb(201, 201, 201); line-height: 18px; overflow: hidden;
 }
 #text-length {
 	width: 631px; height: 26px; text-align: right; color: rgb(150, 150, 150); line-height: 26px; padding-right: 5px; font-size: 12px;
@@ -3252,7 +3249,7 @@ dt {
 	width: 520px; height: 36px; color: rgb(150, 150, 150); line-height: 36px; overflow: hidden; float: left;
 }
 #comment div input {
-	background: rgb(4, 206, 155); border: currentColor; width: 80px; height: 36px; text-align: center; color: rgb(255, 255, 255); line-height: 36px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 80px; height: 36px; text-align: center; color: rgb(255, 255, 255); line-height: 36px; overflow: hidden; font-size: 18px; float: right; cursor: pointer;
 }
 .comment-input .message {
 	color: rgb(255, 64, 0); float: right;
@@ -3270,7 +3267,7 @@ dt {
 	width: 100px; float: left;
 }
 .comment-login-pic a {
-	background: url("../img/mahua_common.png") no-repeat -832px -152px; width: 35px; height: 35px; margin-right: 10px; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -832px -152px; width: 35px; height: 35px; margin-right: 10px; float: left; display: block;
 }
 .comment-login-pic a.comment-login-weibo:hover {
 	background-position: -832px -187px;
@@ -3300,10 +3297,10 @@ dt {
 	width: 40px; height: 40px; float: left;
 }
 .comment-content i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -506px; margin: 0px 10px 0px -40px; _background: url(../img/mahua_common.24.ie6.png) 0 -506px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -506px; margin: 0px 10px 0px -40px;
 }
 .comment-content em {
-	background: url("../img/mahua_common.24.png") no-repeat -64px -413px; top: 15px; width: 50px; height: 50px; right: 110px; display: block; position: absolute; _background: url(../img/mahua_common.24.ie6.png) -64px -413px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -64px -413px; top: 15px; width: 50px; height: 50px; right: 110px; display: block; position: absolute;
 }
 .comment-content p {
 	width: 500px; color: rgb(102, 102, 102); line-height: 24px; float: left; _width: 497px;
@@ -3318,7 +3315,7 @@ dt {
 	width: 80px; float: left;
 }
 .comment-ding a {
-	background: url("../img/mahua_common.24.png") no-repeat -199px -492px; margin: 12px 12px 0px 0px; height: 20px; line-height: 20px; text-indent: 28px; float: right; display: block; _background: url(../img/mahua_common.24.ie6.png) -199px -492px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -199px -492px; margin: 12px 12px 0px 0px; height: 20px; line-height: 20px; text-indent: 28px; float: right; display: block;
 }
 .comment-ding a:hover {
 	background-position: -199px -519px; color: #03a8b1;
@@ -3348,7 +3345,7 @@ dt {
 	margin: 35px -15px 0px; padding: 0px 15px; width: 640px;
 }
 .comment-list-joke-list .comment-list-line {
-	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(226, 226, 226) currentColor currentColor; padding: 0px; height: 1px; overflow: visible;
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(226, 226, 226); padding: 0px; height: 1px; overflow: visible;
 }
 .comment-list-joke-list .comment-list-line span {
 	background: rgb(255, 255, 255); padding: 0px 5px; height: 14px; color: rgb(181, 181, 181); line-height: 14px; margin-top: -7px; margin-left: 10px; display: block; position: absolute; z-index: 5;
@@ -3357,7 +3354,7 @@ dt {
 	padding: 15px 0px;
 }
 .comment-list-joke-list li.noborder {
-	border: currentColor;
+	
 }
 .search .left {
 	margin-top: 0px;
@@ -3399,10 +3396,10 @@ dt {
 	background: rgb(255, 166, 136); border-color: rgb(247, 124, 83); color: rgb(255, 255, 255);
 }
 .main-tags li.img a {
-	border: currentColor; width: 130px; height: 130px; color: rgb(255, 255, 255); line-height: 130px; font-size: 20px;
+	 width: 130px; height: 130px; color: rgb(255, 255, 255); line-height: 130px; font-size: 20px;
 }
 .main-tags li.img a:hover {
-	border: currentColor; width: 130px; height: 130px; color: rgb(255, 255, 255); line-height: 130px; font-size: 20px;
+	 width: 130px; height: 130px; color: rgb(255, 255, 255); line-height: 130px; font-size: 20px;
 }
 .main-tags li.img span {
 	left: 0px; top: 0px; width: 130px; height: 130px; text-align: center; line-height: 130px; float: left; display: block; position: absolute;
@@ -3423,7 +3420,7 @@ dt {
 	width: 267px; height: 72px; padding-left: 13px;
 }
 .joke-buy-box .input-radio span {
-	background: url("../img/mahua_common.png") no-repeat -969px -939px rgb(248, 248, 248); margin: 10px 7px 0px 0px; border-radius: 2px; border: 1px solid rgb(231, 231, 231); width: 78px; height: 24px; color: rgb(153, 153, 153); line-height: 24px; text-indent: 28px; float: left; cursor: pointer; text-shadow: 0 1px 0 #fff;
+	background: url("../img/youjia_common.png") no-repeat -969px -939px rgb(248, 248, 248); margin: 10px 7px 0px 0px; border-radius: 2px; border: 1px solid rgb(231, 231, 231); width: 78px; height: 24px; color: rgb(153, 153, 153); line-height: 24px; text-indent: 28px; float: left; cursor: pointer; text-shadow: 0 1px 0 #fff;
 }
 .joke-buy-box .input-radio span:hover {
 	border-color: rgb(229, 154, 0);
@@ -3444,7 +3441,7 @@ dt {
 	height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px;
 }
 .joke-buy-box .input-btn input {
-	border: currentColor; width: 70px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 16px; cursor: pointer;
+	 width: 70px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 16px; cursor: pointer;
 }
 .reward-submit {
 	background: rgb(255, 132, 91); margin-right: 20px;
@@ -3453,7 +3450,7 @@ dt {
 	background: rgb(155, 126, 86);
 }
 .obtain-box {
-	background: url("../img/joke.24.png") no-repeat; height: 295px; _background: url(../img/joke.24.ie6.png) no-repeat;
+	height: 295px;
 }
 .obtain-box dd.oed {
 	padding: 15px 0px; height: 70px;
@@ -3465,7 +3462,7 @@ dt {
 	margin: 0px 5px; color: rgb(255, 132, 91);
 }
 .buy-box {
-	background: url("../img/joke.24.png") no-repeat 0px -305px; height: 141px; padding-top: 148px; _background: url(../img/joke.24.ie6.png) 0 -305px no-repeat;
+	height: 141px; padding-top: 148px;
 }
 .buy-box p.title {
 	height: 26px; text-align: center; line-height: 26px; overflow: hidden; font-size: 16px;
@@ -3485,11 +3482,8 @@ dt {
 #reward-bg {
 	background: rgb(0, 0, 0); left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity=0); position: fixed; z-index: 4; opacity: 0; _height: 1000px; _position: absolute; -moz-opacity: 0;
 }
-.buy-box-success {
-	background: url("../img/joke.24.png") no-repeat 0px -607px; _background: url(../img/joke.24.ie6.png) 0 -607px no-repeat;
-}
 .buy-tips {
-	background: url("../img/joke.24.png?v=01") no-repeat -338px -18px; top: -44px; width: 162px; height: 48px; overflow: hidden; padding-top: 7px; display: none; position: absolute; z-index: 10;
+	top: -44px; width: 162px; height: 48px; overflow: hidden; padding-top: 7px; display: none; position: absolute; z-index: 10;
 }
 .buy-tips i {
 	top: 3px; width: 7px; height: 7px; right: 3px; display: block; position: absolute; cursor: pointer;
@@ -3555,52 +3549,52 @@ dt {
 	background: rgb(248, 248, 248); width: 1000px; overflow: hidden; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .user-nav li a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #editImgBox .head a {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .imgsubmit {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .ajax-file-upload {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .avatar-symbol {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .editInfo {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #editPassword {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .editInfo input {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .mymabi {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .publish {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .audit {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .invite-friends dd input {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .task-btn {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .audit-prompt-submit {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .task-time span {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .no-myinfo {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .user-banner {
 	background: rgb(248, 248, 248); padding: 20px; height: 150px; border-bottom-color: rgb(235, 236, 239); border-bottom-width: 1px; border-bottom-style: solid;
@@ -3618,7 +3612,7 @@ dt {
 	background: rgb(0, 0, 0); filter: alpha(opacity=60); opacity: 0.6; -moz-opacity: 0.6;
 }
 #editImg i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -262px; width: 150px; height: 150px; margin-top: -150px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -262px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -262px; width: 150px; height: 150px; margin-top: -150px; display: block; position: relative;
 }
 .user-info {
 	width: 300px; height: 135px; margin-top: 15px; float: left;
@@ -3645,10 +3639,10 @@ dt {
 	right: 5px;
 }
 .user-info .level i.level_time {
-	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "΢���ź�","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
+	left: 30px; top: 0px; width: 158px; height: 11px; text-align: center; color: rgb(255, 255, 255); line-height: 11px; overflow: hidden; font-family: "微软雅黑","microsoft yahei"; font-size: 10px !important; font-style: normal; position: absolute; text-shadow: 1px 0px 0px #d45f4b, -1px 0px 0px #d45f4b, 0px 1px 0px #d45f4b, 0px -1px 0px #d45f4b; -webkit-text-size-adjust: none;
 }
 .user-info .level span {
-	background: url("../img/mahua_common.png") no-repeat -316px -243px; width: 220px; height: 11px; overflow: hidden; display: block;
+	background: url("../img/youjia_common.png") no-repeat -316px -243px; width: 220px; height: 11px; overflow: hidden; display: block;
 }
 .user-info .level span.red {
 	background-position: -536px -243px; width: 0px; margin-top: -11px;
@@ -3717,7 +3711,7 @@ dt {
 	width: 96px; height: 120px; margin-top: 15px; float: left;
 }
 .go-user-index i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -413px; _background: url(../img/mahua_common.24.ie6.png) 0 -413px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -413px;
 }
 #editImgBox {
 	background: rgb(255, 255, 255); padding: 20px; border-radius: 5px; overflow: hidden; display: none;
@@ -3768,7 +3762,7 @@ dt {
 	margin-left: 0px;
 }
 .imgsubmit {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; cursor: pointer;
 }
 .imgsubmit:hover {
 	background: rgb(0, 183, 137);
@@ -3777,7 +3771,7 @@ dt {
 	width: 350px; height: 40px; color: rgb(255, 32, 32); overflow: hidden; font-size: 12px; margin-left: 20px; float: left; _margin-left: 10px;
 }
 #message p {
-	background: url("../img/mahua_common.png") no-repeat -980px -263px; height: 20px; line-height: 20px; text-indent: 25px; overflow: hidden; margin-top: 10px;
+	background: url("../img/youjia_common.png") no-repeat -980px -263px; height: 20px; line-height: 20px; text-indent: 25px; overflow: hidden; margin-top: 10px;
 }
 .upload-right {
 	width: 200px; height: 310px; overflow: hidden; float: left;
@@ -3786,7 +3780,7 @@ dt {
 	color: rgb(153, 153, 153); line-height: 20px;
 }
 .upload-right i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -750px; display: block; position: relative; _background: url(../img/mahua_common.24.ie6.png) 0 -750px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -750px; display: block; position: relative;
 }
 .upload-right .avatar_200x200_i {
 	width: 200px; height: 200px; margin-top: -200px;
@@ -3810,7 +3804,7 @@ dt {
 	filter: alpha(opacity=100); opacity: 1; -moz-opacity: 1;
 }
 .choose-content li i {
-	background: url("../img/mahua_common.24.png") no-repeat -82px -215px; margin: 70px 0px 0px -35px; width: 38px; height: 30px; float: left; display: none; position: relative; _background: url(../img/mahua_common.24.ie6.png) -82px -215px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat -82px -215px; margin: 70px 0px 0px -35px; width: 38px; height: 30px; float: left; display: none; position: relative;
 }
 .no-myinfo {
 	height: 100px; text-align: center; color: rgb(150, 150, 150); line-height: 100px; font-size: 14px;
@@ -3834,16 +3828,16 @@ dt {
 	border: 1px solid rgb(226, 226, 226); width: 200px; height: 24px; color: rgb(150, 150, 150); line-height: 24px; padding-left: 5px; margin-right: 10px; display: none;
 }
 .eidtMobilePhone-btn {
-	border: currentColor; color: rgb(150, 150, 150); cursor: pointer;
+	 color: rgb(150, 150, 150); cursor: pointer;
 }
 .eidtQQNum-btn {
-	border: currentColor; color: rgb(150, 150, 150); cursor: pointer;
+	 color: rgb(150, 150, 150); cursor: pointer;
 }
 .eidtMobilePhone-submit {
-	border: currentColor; color: rgb(150, 150, 150); cursor: pointer;
+	 color: rgb(150, 150, 150); cursor: pointer;
 }
 .eidtQQNum-submit {
-	border: currentColor; color: rgb(150, 150, 150); cursor: pointer;
+	 color: rgb(150, 150, 150); cursor: pointer;
 }
 .eidtMobilePhone-submit {
 	color: rgb(255, 135, 116); display: none;
@@ -3924,19 +3918,19 @@ ul.content li .tab {
 	width: 100%; height: 47px; overflow: hidden; margin-bottom: 15px;
 }
 .oldPassword {
-	background: url("../img/mahua_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .password {
-	background: url("../img/mahua_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .passconf {
-	background: url("../img/mahua_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px -43px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .editPassword-reset {
-	background: #03a8b1; border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
+	background: #03a8b1;  width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .editPassword-submit {
-	background: #03a8b1; border: currentColor; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
+	background: #03a8b1;  width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .editPassword-submit {
 	background: rgb(4, 206, 155); margin-right: 30px;
@@ -3969,10 +3963,10 @@ ul.content li .tab {
 	width: 100%; color: rgb(150, 150, 150); overflow: hidden; margin-bottom: 15px;
 }
 .invite-friends dd span {
-	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(226, 226, 226) currentColor rgb(226, 226, 226) rgb(226, 226, 226); width: 523px; height: 48px; line-height: 48px; padding-left: 5px; font-size: 14px; float: left; display: block;
+	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(226, 226, 226); width: 523px; height: 48px; line-height: 48px; padding-left: 5px; font-size: 14px; float: left; display: block;
 }
 .invite-friends dd input {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 50px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-size: 20px; float: left; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 120px; height: 50px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-size: 20px; float: left; cursor: pointer;
 }
 .my-invite-friends {
 	margin: 0px auto; padding: 30px 0px; width: 669px; border-top-color: rgb(214, 214, 214); border-top-width: 1px; border-top-style: dashed;
@@ -3984,7 +3978,7 @@ ul.content li .tab {
 	background: rgb(248, 248, 248); padding: 14px 10px; border: 1px solid rgb(238, 238, 238); width: 176px; height: 60px; color: rgb(110, 110, 110); display: block;
 }
 .my-invite-friends .avatar_60x60 i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -413px; margin: 0px 10px 0px -60px; _background: url(../img/mahua_common.24.ie6.png) 0 -413px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -413px; margin: 0px 10px 0px -60px;
 }
 .my-invite-friends .avatar_60x60 i {
 	float: left;
@@ -3996,7 +3990,7 @@ ul.content li .tab {
 	background: rgb(255, 255, 255); border: 1px solid rgb(255, 178, 166); color: rgb(110, 110, 110);
 }
 .my-invite-friends dd a:hover i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px;
 }
 .my-invite-friends dd p {
 	width: 106px; line-height: 30px; float: left;
@@ -4026,7 +4020,7 @@ ul.content li .tab {
 	width: 390px; text-indent: 23px; float: left;
 }
 .results-left span {
-	background: url("../img/mahua_common.png") no-repeat -975px -715px; width: 100%; height: 18px; color: rgb(150, 150, 150); line-height: 18px; display: block;
+	background: url("../img/youjia_common.png") no-repeat -975px -715px; width: 100%; height: 18px; color: rgb(150, 150, 150); line-height: 18px; display: block;
 }
 .results-left a {
 	width: 100%; color: rgb(105, 192, 230); font-size: 14px; margin-top: 5px; display: block;
@@ -4035,7 +4029,7 @@ ul.content li .tab {
 	width: 210px; height: 20px; margin-top: 10px; float: left;
 }
 .results-right a {
-	background: url("../img/mahua_common.png") no-repeat -975px -884px; height: 20px; color: rgb(150, 150, 150); line-height: 20px; text-indent: 25px; margin-right: 10px; display: inline-block; _text-indent: 0; _padding-left: 25px;
+	background: url("../img/youjia_common.png") no-repeat -975px -884px; height: 20px; color: rgb(150, 150, 150); line-height: 20px; text-indent: 25px; margin-right: 10px; display: inline-block; _text-indent: 0; _padding-left: 25px;
 }
 .results-right a.results-qq {
 	background-position: -975px -846px; margin-right: 0px;
@@ -4053,7 +4047,7 @@ ul.content li .tab {
 	color: rgb(224, 88, 87);
 }
 .results i {
-	background: url("../img/mahua_common.png") no-repeat -975px -746px; width: 20px; height: 18px; margin-right: 10px; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -975px -746px; width: 20px; height: 18px; margin-right: 10px; float: left; display: block;
 }
 .results i.publish-no-audit {
 	background-position: -975px -778px;
@@ -4062,7 +4056,7 @@ ul.content li .tab {
 	background-position: -975px -810px;
 }
 .myinfo dl.mahua {
-	margin: 20px 0px 0px; padding: 0px; border: currentColor; width: 640px; overflow: hidden;
+	margin: 20px 0px 0px; padding: 0px;  width: 640px; overflow: hidden;
 }
 .gift {
 	margin-top: 20px;
@@ -4125,7 +4119,7 @@ ul.content li .tab {
 	color: rgb(224, 88, 87);
 }
 .task-right span i {
-	background: url("../img/mahua_common.png") no-repeat -449px -273px; top: 10px; width: 6px; height: 11px; right: -6px; display: block; position: absolute; _background: url(../img/mahua_common.png) -448px -273px no-repeat;
+	background: url("../img/youjia_common.png") no-repeat -449px -273px; top: 10px; width: 6px; height: 11px; right: -6px; display: block; position: absolute;
 }
 .day-task-title {
 	margin: 30px 0px 0px 20px; width: 634px; height: 40px; line-height: 40px; text-indent: 10px; font-size: 20px; border-bottom-color: rgb(214, 214, 214); border-bottom-width: 1px; border-bottom-style: solid;
@@ -4134,16 +4128,16 @@ ul.content li .tab {
 	margin-top: 20px;
 }
 ul.content li.noborder {
-	border: currentColor;
+	
 }
 .task-time {
-	background: url("../img/task_banner.png") no-repeat; width: 680px; height: 130px; margin-top: 10px;
+	 width: 680px; height: 130px; margin-top: 10px;
 }
 .task-time span {
 	margin: 30px 32px 0px 0px; width: 275px; height: 80px; text-align: center; color: rgb(255, 255, 255); line-height: 80px; font-size: 60px; float: right; _font-weight: normal; _font-size: 50px;
 }
 .user-index {
-	background: rgb(241, 241, 241); border: currentColor; padding-top: 6px;
+	background: rgb(241, 241, 241);  padding-top: 6px;
 }
 .user-index .mahua dt {
 	height: 28px; overflow: hidden;
@@ -4158,13 +4152,13 @@ ul.content li.noborder {
 	margin: 0px auto; width: 200px; height: 200px;
 }
 .user-index #editImg i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -548px; width: 220px; height: 200px; margin-top: -200px; display: block; _background: url(../img/mahua_common.24.ie6.png) 0 -548px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -548px; width: 220px; height: 200px; margin-top: -200px; display: block;
 }
 .user-index .left {
-	border: currentColor; margin-top: 14px;
+	 margin-top: 14px;
 }
 .user-index .right {
-	border: currentColor; margin-top: 14px;
+	 margin-top: 14px;
 }
 .user-index .left {
 	background: rgb(241, 241, 241); padding-bottom: 0px;
@@ -4179,7 +4173,7 @@ ul.content li.noborder {
 	width: 96px; height: 120px; margin-top: 15px; float: left;
 }
 .user-index .go-user-index i {
-	background: url("../img/mahua_common.24.png") no-repeat 0px -201px; _background: url(../img/mahua_common.24.ie6.png) 0 -201px no-repeat;
+	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px;
 }
 .user-index .new-pic-text {
 	margin-top: 20px;
@@ -4188,7 +4182,7 @@ ul.content li.noborder {
 	background: rgb(255, 255, 255); padding: 80px 170px 100px 250px; width: 580px; height: 170px; margin-top: 20px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .activation-success-icon {
-	background: url("../img/mahua_common.png") no-repeat -179px -80px; margin: 50px 30px 0px 0px; width: 50px; height: 50px; float: left;
+	background: url("../img/youjia_common.png") no-repeat -179px -80px; margin: 50px 30px 0px 0px; width: 50px; height: 50px; float: left;
 }
 .activation-success {
 	width: 500px; height: 370px; float: left;
@@ -4215,7 +4209,7 @@ ul.content li.noborder {
 	background: rgb(255, 255, 255); padding: 20px 0px 100px; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
 }
 .audit-prompt-content {
-	background: url("../img/audit_prompt_bg.png") no-repeat; margin: 0px auto; width: 734px; height: 365px; padding-top: 180px;
+	 margin: 0px auto; width: 734px; height: 365px; padding-top: 180px;
 }
 .audit-prompt-content .title {
 	height: 56px; color: rgb(255, 252, 229); line-height: 56px; font-size: 40px; text-shadow: 0 2px 0 #ad3c31;
@@ -4233,7 +4227,7 @@ ul.content li.noborder {
 	margin: 14px 0px; height: 30px; line-height: 30px; text-indent: 26px; font-size: 18px;
 }
 .audit-prompt-content dt.audit-prompt-no {
-	background: url("../img/audit_prompt_bg.png") no-repeat 0px -545px; color: rgb(254, 0, 0);
+	 color: rgb(254, 0, 0);
 }
 .audit-prompt-content dd {
 	color: rgb(136, 136, 136); line-height: 24px; text-indent: 26px; font-size: 12px;
@@ -4242,7 +4236,7 @@ ul.content li.noborder {
 	font-size: 12px;
 }
 .audit-prompt-content dt.audit-prompt-yes {
-	background: url("../img/audit_prompt_bg.png") no-repeat 0px -571px; color: rgb(139, 187, 26);
+	 color: rgb(139, 187, 26);
 }
 .audit-prompt-content form {
 	padding-left: 26px; margin-top: 10px;
@@ -4251,7 +4245,7 @@ ul.content li.noborder {
 	border: 1px solid rgb(226, 226, 226); width: 188px; height: 42px; color: rgb(51, 51, 51); padding-left: 10px; font-size: 14px; margin-right: 10px; float: left; position: relative; z-index: 2;
 }
 .audit-prompt-submit {
-	background: rgb(4, 206, 155); border: currentColor; width: 120px; height: 45px; color: rgb(255, 255, 255); font-size: 20px; float: left; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 120px; height: 45px; color: rgb(255, 255, 255); font-size: 20px; float: left; cursor: pointer;
 }
 .audit-prompt-content .pass-value {
 	height: 45px; text-align: left; color: rgb(198, 198, 198); line-height: 45px; font-size: 14px; margin-left: -225px; float: left; display: block; position: relative; z-index: 1;
@@ -4260,37 +4254,37 @@ body {
 	
 }
 .title {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .username {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .password {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 dt {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .btn {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #female {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #male {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .validation-Email-content {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .back-password {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #reset_prompt_box {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 .pass-value-login {
-	font-family: "΢���ź�","microsoft yahei",verdana,lucida,Arial,sans-serif,"����"; _font-weight: bold;
+	font-family: "微软雅黑","microsoft yahei",verdana,lucida,Arial,sans-serif,"黑体"; _font-weight: bold;
 }
 #iframe-login {
 	background: rgb(255, 255, 255); margin: 20px auto; padding: 30px 40px 40px; width: 920px; overflow: hidden; border-bottom-color: rgb(228, 228, 226); border-bottom-width: 2px; border-bottom-style: solid;
@@ -4335,25 +4329,25 @@ dt {
 	margin-top: 0px;
 }
 .username {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .password {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .email {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .pasw {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .pasw2 {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .uname {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .vcode {
-	background: url("../img/mahua_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
+	background: url("../img/youjia_common.png") no-repeat -968px 0px; border: 1px solid rgb(226, 226, 226); width: 253px; height: 43px; color: rgb(51, 51, 51); line-height: 43px; padding-left: 44px; font-size: 14px; float: left; display: block; position: relative; z-index: 2;
 }
 .pass-value {
 	text-align: left; color: rgb(198, 198, 198); font-size: 14px; margin-left: -260px; float: left; position: relative; z-index: 1;
@@ -4407,10 +4401,10 @@ dt {
 	color: rgb(102, 102, 102); float: right;
 }
 .login-left .btn {
-	background: rgb(4, 206, 155); border: currentColor; width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; display: block; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; display: block; cursor: pointer;
 }
 .login-right .btn {
-	background: rgb(4, 206, 155); border: currentColor; width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; display: block; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; float: left; display: block; cursor: pointer;
 }
 .login-left .btn:hover {
 	background: rgb(0, 183, 137);
@@ -4464,10 +4458,10 @@ dd.qq span {
 	height: 32px; text-align: center; line-height: 32px; overflow: hidden; display: block;
 }
 dd.weibo i {
-	background: url("../img/mahua_common.png") no-repeat -832px 0px; width: 64px; height: 64px; display: block;
+	background: url("../img/youjia_common.png") no-repeat -832px 0px; width: 64px; height: 64px; display: block;
 }
 dd.qq i {
-	background: url("../img/mahua_common.png") no-repeat -832px 0px; width: 64px; height: 64px; display: block;
+	background: url("../img/youjia_common.png") no-repeat -832px 0px; width: 64px; height: 64px; display: block;
 }
 dd.qq i {
 	background-position: -896px 0px;
@@ -4491,7 +4485,7 @@ dd.login-reg {
 	margin: 5px 0px 15px 5px; width: 500px; height: 45px; text-align: center; line-height: 45px; display: block; _margin-left: 0;
 }
 span.error {
-	background: url("../img/mahua_common.png") no-repeat -980px -263px; width: 175px; height: 20px; text-align: left; color: rgb(255, 32, 32); line-height: 20px; text-indent: 25px; overflow: hidden; margin-top: 10px; float: left; display: block; _width: 172px;
+	background: url("../img/youjia_common.png") no-repeat -980px -263px; width: 175px; height: 20px; text-align: left; color: rgb(255, 32, 32); line-height: 20px; text-indent: 25px; overflow: hidden; margin-top: 10px; float: left; display: block; _width: 172px;
 }
 span.valid {
 	background-position: -980px -281px;
@@ -4536,13 +4530,13 @@ span.valid {
 	margin: 20px 0px 10px 5px; width: 400px; line-height: 45px; padding-left: 80px;
 }
 #gender {
-	border: currentColor; width: 0px; height: 0px; overflow: hidden; margin-right: 82px; float: left;
+	 width: 0px; height: 0px; overflow: hidden; margin-right: 82px; float: left;
 }
 .female {
-	background: url("../img/mahua_common.png") no-repeat -972px -162px; width: 60px; height: 27px; line-height: 27px; text-indent: 30px; font-size: 14px; margin-right: 20px; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -972px -162px; width: 60px; height: 27px; line-height: 27px; text-indent: 30px; font-size: 14px; margin-right: 20px; float: left; display: block;
 }
 .male {
-	background: url("../img/mahua_common.png") no-repeat -972px -162px; width: 60px; height: 27px; line-height: 27px; text-indent: 30px; font-size: 14px; margin-right: 20px; float: left; display: block;
+	background: url("../img/youjia_common.png") no-repeat -972px -162px; width: 60px; height: 27px; line-height: 27px; text-indent: 30px; font-size: 14px; margin-right: 20px; float: left; display: block;
 }
 .male {
 	background-position: -972px -233px; text-indent: 30px; margin-right: 0px;
@@ -4578,7 +4572,7 @@ span.valid {
 	margin: 20px 0px 30px 5px; width: 400px; line-height: 45px; padding-left: 80px;
 }
 #form_submit_name .btn {
-	background: rgb(4, 206, 155); border: currentColor; width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
+	background: rgb(4, 206, 155);  width: 300px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 20px; cursor: pointer;
 }
 .validation-Email {
 	padding-bottom: 30px;
@@ -4641,7 +4635,7 @@ span.valid {
 	background: rgb(255, 255, 255); border-radius: 5px; display: none;
 }
 #reset_prompt_box dl {
-	background: url("../img/mahua_common.png") no-repeat -178px -80px; margin: 150px auto 0px; width: 330px; height: 50px; padding-left: 66px;
+	background: url("../img/youjia_common.png") no-repeat -178px -80px; margin: 150px auto 0px; width: 330px; height: 50px; padding-left: 66px;
 }
 #reset_prompt_box dt {
 	font-size: 20px;
@@ -4659,7 +4653,7 @@ span.valid {
 	width: 500px; float: left;
 }
 .login-main .login-left .password {
-	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+	 border-top-width: 0px; border-top-style: none;
 }
 .login-main .login-left .user-action {
 	margin: 10px 0px 20px; width: 300px; height: 16px; line-height: 16px; overflow: hidden; float: left;
