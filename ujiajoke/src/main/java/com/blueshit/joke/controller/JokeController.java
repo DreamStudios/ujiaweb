@@ -6,7 +6,9 @@ import com.blueshit.joke.entity.UserInfo;
 import com.blueshit.joke.service.JokeCommentService;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.service.TypeInfoService;
+import com.blueshit.joke.service.UserInfoService;
 import com.blueshit.joke.utils.AuthorizationUser;
+import com.blueshit.joke.utils.Constants;
 import com.blueshit.joke.validator.JokeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -27,14 +29,16 @@ public class JokeController {
 
     private JokeValidator jokeValidator;
     private JokeService jokeService;
+    private UserInfoService userInfoService;
     private JokeCommentService jokeCommentService;
     private TypeInfoService typeInfoService;
 
     @Autowired
-    public JokeController(JokeValidator jokeValidator, JokeService jokeService,
+    public JokeController(JokeValidator jokeValidator, JokeService jokeService,UserInfoService userInfoService,
                           JokeCommentService jokeCommentService,TypeInfoService typeInfoService) {
         this.jokeValidator = jokeValidator;
         this.jokeService = jokeService;
+        this.userInfoService = userInfoService;
         this.jokeCommentService = jokeCommentService;
         this.typeInfoService = typeInfoService;
     }
@@ -177,16 +181,20 @@ public class JokeController {
 
         jokeValidator.validate(joke,result);
         if (!result.hasErrors()) {
-            String tid = request.getParameter("tid");
-            TypeInfo typeInfo = typeInfoService.getTypeInfoById(Integer.parseInt(tid));
-            UserInfo userInfo = AuthorizationUser.getUserInfoEntity(authentication);
-            joke.setUserInfo(userInfo);
-            joke.setTypeInfo(typeInfo);
-            boolean jokeResult = jokeService.saveJoke(joke);
-            if(jokeResult){
-                return "redirect:/success.html";
-            }else {
-                return "redirect:/failure.html";
+            UserInfo userInfo = userInfoService.getUserByEmail(authentication.getName());
+            if(userInfo != null && (userInfo.getTodayJokeNumber() < Constants.getJokeCount(userInfo.getExperience()) || userInfo.getIsVip() == 1)){
+                String tid = request.getParameter("tid");
+                TypeInfo typeInfo = typeInfoService.getTypeInfoById(Integer.parseInt(tid));
+                joke.setUserInfo(userInfo);
+                joke.setTypeInfo(typeInfo);
+                boolean jokeResult = jokeService.saveJoke(joke);
+                if(jokeResult){
+                    return "redirect:/success.html";
+                }else {
+                    return "redirect:/failure.html";
+                }
+            }else { //今日已经达到笑话量已达上限
+                result.rejectValue("title", "今日笑话已达上限", "今日笑话已达上限");
             }
         }
         session.removeAttribute("jokePicture");

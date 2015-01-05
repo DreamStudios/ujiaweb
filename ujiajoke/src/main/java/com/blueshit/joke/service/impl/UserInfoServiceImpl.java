@@ -51,7 +51,7 @@ public class UserInfoServiceImpl implements UserInfoService {
      */
     @Override
     public List<UserInfo> getTodayStar(int number) {
-        String hql = " FROM UserInfo WHERE status=2 ORDER BY isVip DESC, integral DESC,sex DESC,lastLoginTime DESC";
+        String hql = " FROM UserInfo WHERE status=2 ORDER BY isVip DESC,experience DESC, integral DESC,sex DESC,lastLoginTime DESC";
         List<UserInfo> list = userInfoRepository.findTopByHql(hql, number);
         return list;
     }

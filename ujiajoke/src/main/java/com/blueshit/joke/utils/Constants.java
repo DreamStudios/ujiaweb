@@ -59,4 +59,37 @@ public class Constants {
         }
         return level;
     }
+
+    /**
+     * 通过经验值获取等级
+     * @param experience
+     * @return
+     */
+    public static int getJokeCount(int experience){
+        int level = 5;
+        if(experience>=6500 && experience<23000){
+            level = 10;
+        }else if(experience>=23000 && experience<49500){
+            level = 15;
+        }else if(experience>=49500 && experience<86000){
+            level = 20;
+        }else if(experience>=86000 && experience<132500){
+            level = 25;
+        }else if(experience>=132500 && experience<257420){
+            level = 30;
+        }else if(experience>=257420 && experience<451210){
+            level = 35;
+        }else if(experience>=451210 && experience<681225){
+            level = 40;
+        }else if(experience>=681225 && experience<1734250){
+            level = 45;
+        }else if(experience>=1734250 && experience<8888888){
+            level = 50;
+        }else if(experience>=8888888){
+            level = 55;
+        }else {
+            level = 60;
+        }
+        return level;
+    }
 }

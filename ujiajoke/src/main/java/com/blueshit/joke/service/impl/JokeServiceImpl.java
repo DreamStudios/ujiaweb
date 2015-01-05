@@ -73,7 +73,7 @@ public class JokeServiceImpl implements JokeService {
     @Override
     public List<Joke> getOtherUserJokeList(int uid, int number) {
         StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND userInfo.uid != "+uid);
-        hql.append("ORDER BY updateTime DESC");
+        hql.append("ORDER BY updateTime DESC,up DESC,down ASC");
         return jokeRepository.findTopByHql(hql.toString(), number);
     }
 
@@ -154,7 +154,7 @@ public class JokeServiceImpl implements JokeService {
     @Override
     public List<Joke> getOtherJokeList(int jid,int number){
         StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND status=2 AND jid != " + jid);
-        hql.append("ORDER BY updateTime DESC");
+        hql.append("ORDER BY updateTime DESC,up DESC,down ASC");
         return jokeRepository.findTopByHql(hql.toString(), number);
     }
 
@@ -167,7 +167,7 @@ public class JokeServiceImpl implements JokeService {
     @Override
     public List<Joke> getTopJokeList(int number,int style){
         StringBuffer hql = new StringBuffer("From Joke WHERE style="+ style +" AND status=2");
-        hql.append("ORDER BY updateTime DESC");
+        hql.append("ORDER BY up DESC,down ASC, updateTime DESC");
         return jokeRepository.findTopByHql(hql.toString(), number);
     }
 

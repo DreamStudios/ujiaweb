@@ -119,6 +119,10 @@ public class UserInfo implements Serializable {
     @Column(nullable = false)
     private long timestamp = createTime.getTime();
 
+    //今日已发笑话数量
+    @Column(nullable = false, columnDefinition = "int(11) default 0")
+    private int todayJokeNumber = 0;
+
     public int getUid() {
         return uid;
     }
@@ -309,6 +313,14 @@ public class UserInfo implements Serializable {
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public int getTodayJokeNumber() {
+        return todayJokeNumber;
+    }
+
+    public void setTodayJokeNumber(int todayJokeNumber) {
+        this.todayJokeNumber = todayJokeNumber;
     }
 }
 

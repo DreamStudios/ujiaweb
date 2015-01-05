@@ -3615,7 +3615,7 @@ dt {
 	background: url("../img/youjia_common_notm.png") no-repeat 0px -262px; width: 150px; height: 150px; margin-top: -150px; display: block; position: relative;
 }
 .user-info {
-	width: 300px; height: 135px; margin-top: 15px; float: left;
+	width: 700px; height: 135px; margin-top: 15px; float: left;
 }
 .user-info dt {
 	height: 30px; line-height: 30px; font-size: 22px; font-weight: normal;
