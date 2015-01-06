@@ -27,7 +27,7 @@ public class Ad implements Serializable {
     @Column(unique = true, nullable = false)
     private int adid;
 
-    //广告类型(1:广告 2:友情链接)
+    //显示位置(1:广告 2:友情链接 3:轮播)
     @Column(nullable = false)
     private int type;
 

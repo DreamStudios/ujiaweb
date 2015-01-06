@@ -1101,7 +1101,7 @@ a.top-login:hover {
 	background: url("../img/youjia_common_notm.png") no-repeat 0px -201px; margin-top: -60px; display: block; position: relative;
 }
 .yojiastyle {
-	background: rgb(255, 255, 255); padding: 15px; width: 640px; overflow: hidden; margin-bottom: 20px; border-bottom-color: rgb(232, 231, 230); border-bottom-width: 1px; border-bottom-style: solid;
+	background: rgb(255, 255, 255); padding: 15px; width: 660px; overflow: hidden; margin-bottom: 20px; border-bottom-color: rgb(232, 231, 230); border-bottom-width: 1px; border-bottom-style: solid;
 }
 .yojiastyle dt {
 	height: 60px; overflow: hidden;
@@ -2427,7 +2427,7 @@ dt {
 	height: 36px; text-align: center; line-height: 36px; overflow: hidden; display: block;
 }
 .main .left {
-	width: 670px; margin-right: 30px; float: left;
+	width: 679px; margin-right: 30px; float: left;
 }
 .main .right {
 	width: 670px; margin-right: 30px; float: left;
@@ -2472,7 +2472,7 @@ dt {
 	background: rgb(255, 132, 91); color: rgb(255, 255, 255);
 }
 .main .right {
-	width: 300px; overflow: hidden; margin-right: 0px;
+	width: 289px; overflow: hidden; margin-right: 0px;
 }
 .user-operation {
 	overflow: hidden;
@@ -3615,7 +3615,7 @@ dt {
 	background: url("../img/youjia_common_notm.png") no-repeat 0px -262px; width: 150px; height: 150px; margin-top: -150px; display: block; position: relative;
 }
 .user-info {
-	width: 700px; height: 135px; margin-top: 15px; float: left;
+	width: 600px; height: 135px; margin-top: 15px; float: left;
 }
 .user-info dt {
 	height: 30px; line-height: 30px; font-size: 22px; font-weight: normal;

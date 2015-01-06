@@ -27,7 +27,7 @@ public class AdServiceImpl implements AdService{
     /**
      * 获取广告列表
      * @param number
-     * @param type
+     * @param type 广告类型(1:广告 2:友情链接 3:轮播)
      * @return
      */
     @Override

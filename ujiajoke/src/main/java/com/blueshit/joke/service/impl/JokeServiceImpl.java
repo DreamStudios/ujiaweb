@@ -97,6 +97,9 @@ public class JokeServiceImpl implements JokeService {
                 joke = jokeRepository.findOne(id + 1);
                 break;
         }
+        if(null == joke){
+            joke = jokeRepository.findOne(1);
+        }
         return joke;
     }
 

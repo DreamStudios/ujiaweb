@@ -64,7 +64,7 @@
 	<div class="left">
 		<!-- 轮播开始-->
 		<div class="list-top-focus" id="listTopFocus">
-            <ul th:with="list=${@adService.getTopAdList(5,1)}">
+            <ul th:with="list=${@adService.getTopAdList(5,3)}">
                 <li th:each="us:${list}">
                     <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
                         <img src="img/logo.png" alt="有家笑话" th:src="${#httpServletRequest.getContextPath() + us.adPhoto}" th:alt="${us.adTitle}" />
@@ -82,7 +82,7 @@
 				<span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
 			</dt>
             <dd class="content">
-                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + #httpServletRequest.getContextPath() + page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
                 <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
             </dd>
 			<!-- 神回复  -->
@@ -268,12 +268,20 @@ $(function(){
 </script>
 <!--右侧导航开始-->
 <div id="fixed-box">
-	<div class="feedback">
-		<a href="about/fankuiyijian.html" target="_blank" title="新版建议反馈"></a>
-	</div>
-	<div class="return-top">
-		<a href="javascript:void(0);" rel="nofollow" title="返回顶部"></a>
-	</div>
+    <div class="qr-code">
+        <a href="javascript:void(0);" rel="nofollow" title="扫一扫,移动设备轻松看笑话">
+            <div>
+                <img src="img/qrcode.png" alt="二维码"/>
+                <p>有家笑话二维码</p>
+            </div>
+        </a>
+    </div>
+    <div class="feedback">
+        <a href="about/fankuiyijian.html" target="_blank" title="站长信箱"></a>
+    </div>
+    <div class="return-top">
+        <a href="javascript:void(0);" rel="nofollow" title="返回顶部"></a>
+    </div>
 </div>
 <!--右侧导航结束-->
 <!---友情链接开始-->
