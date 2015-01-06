@@ -89,4 +89,19 @@ public interface JokeService {
      * @param flag 1：顶 0：踩
      */
     public void upDownJoke(int jid,int flag);
+
+    /**
+     * 根据状态查询笑话列表
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过)
+     * @return
+     */
+    public Page<Joke> getJokePagesByStatus(int status,int page);
+
+    /**
+     * 审核笑话
+     * @param jid 审核通过
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过)
+     * @return
+     */
+    public boolean examineJoke(int jid,int status);
 }

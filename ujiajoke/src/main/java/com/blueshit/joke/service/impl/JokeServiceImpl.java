@@ -181,6 +181,7 @@ public class JokeServiceImpl implements JokeService {
      * @param value 查询条件值
      * @return
      */
+    @Override
     public Page<Joke> getOtherJokePages(int page,int type,String value){
         StringBuffer hql = new StringBuffer("From Joke WHERE status=2 ");
         if(type == 1){
@@ -197,6 +198,7 @@ public class JokeServiceImpl implements JokeService {
      * @param jid 笑话ID
      * @param flag 1：顶 0：踩
      */
+    @Override
     public void upDownJoke(int jid,int flag){
         String hql ;
         if(flag == 1){
@@ -205,5 +207,32 @@ public class JokeServiceImpl implements JokeService {
             hql = "UPDATE Joke SET down=down+1 WHERE jid="+jid;
         }
         jokeRepository.updateBySql(hql);
+    }
+
+    /**
+     * 根据状态查询笑话列表
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过)
+     * @return
+     */
+    @Override
+    public Page<Joke> getJokePagesByStatus(int status,int page){
+        StringBuffer hql = new StringBuffer("From Joke WHERE status=" + status);
+        return jokeRepository.findByHql(hql.toString(), Constants.Common.PAGE_SIZE, page);
+    }
+
+    /**
+     * 审核笑话
+     * @param jid 审核通过
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过)
+     * @return
+     */
+    @Override
+    public boolean examineJoke(int jid,int status){
+        try {
+            String hql = "UPDATE Joke SET status=" + status + " WHERE jid=" + jid + " AND status!=2";
+            jokeRepository.updateBySql(hql);
+            return true;
+        }catch (Exception e){}
+        return false;
     }
 }

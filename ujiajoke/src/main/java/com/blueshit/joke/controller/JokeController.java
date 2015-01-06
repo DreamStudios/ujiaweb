@@ -200,4 +200,42 @@ public class JokeController {
         session.removeAttribute("jokePicture");
         return "releaseJoke";
     }
+
+    /**
+     * 进入审核笑话页面
+     * @param authentication
+     * @param model
+     * @return
+     */
+    @RequestMapping(value="/examineJoke", method = RequestMethod.GET)
+    public String examineJoke(Authentication authentication,Model model,String page){
+        if(authentication==null){
+            return "redirect:/login.html";
+        }
+        UserInfo userInfo = userInfoService.getUserByEmail(authentication.getName());
+        if(userInfo.getExperience() >= 681225){//总裁及以上级别
+            int pagenumber = getStringParseInt(page);
+            model.addAttribute("pages", jokeService.getJokePagesByStatus(1, pagenumber));
+            model.addAttribute("newPage",pagenumber);
+            return "examineJoke";
+        }else{//级别不够
+            return "redirect:/examineFailure.html";
+        }
+    }
+
+    /**
+     * 审核笑话
+     * @param jid 笑话ID
+     * @param status 笑话状态(0:审核未通过 1:待审核 2:审核通过)
+     * @return
+     */
+    @RequestMapping(value="/examine", method = RequestMethod.GET)
+    @ResponseBody
+    public String examine(int jid,int status){
+        boolean result = jokeService.examineJoke(jid,status);
+        if(result){
+            return "1";
+        }
+        return "0";
+    }
 }

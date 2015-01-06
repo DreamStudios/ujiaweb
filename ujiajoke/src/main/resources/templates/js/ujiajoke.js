@@ -7268,3 +7268,26 @@ function currentTime(){
 	$(".task-time span").html(hour+':'+minute+':'+seconds);
 	setTimeout(function(){currentTime()},1000);
 }
+
+//审核笑话
+function shenhe(obj,status){
+    var jid = $(obj).attr("name");
+    $.ajax({
+        url:"examine.html",
+        data: {"jid":jid,"status":status},
+        type: "GET",
+        dataType:"text",
+        timeout:18000,
+        success:function(data){
+            if(data == "1"){
+                alert("审核完成！");
+                $("a[name='"+jid+"']").hide();
+            }else{
+                alert("处理失败，稍后再试！");
+            }
+        },
+        error: function(){ //请求失败
+            alert("处理失败,时候再试");
+        }
+    });
+}

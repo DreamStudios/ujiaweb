@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="applicable-device" content="pc"/>
+    <title>笑话大全_最新搞笑图片_爆笑冷笑话_有家笑话</title>
+    <meta name="description" content="有家笑话网，与千万笑友一起分享最新最热的爆笑笑话、搞笑图片、动态图、冷笑话、糗事笑话、成人笑话、经典笑话、内涵段子等笑话大全。" />
+    <meta name="keywords" content="笑话,搞笑图片,冷笑话,有家笑话" />
+    <link rel="stylesheet" type="text/css" href="css/indexb6f1.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="js/ujiajoke.js"></script>
+    <script type="text/javascript" src="js/bootstrap-paginator.min.js"></script>
+</head>
+<body>
+<!--头部信息开始-->
+<div class="header" th:replace="index::index_header">
+    <!--标题开始-->
+    <div class="header-top">
+        <div class="header-top-content">
+            <p class="header-top-title">加入有家笑话，成为有家一族，成就快乐家族！</p>
+            <div id="islogin" class="islogin">
+                <a href="register.html" class="top-reg" target="_blank" rel="nofollow">注册</a>
+                <a href="login.html" class="top-login loginClick" rel="nofollow">登录</a>
+            </div>
+        </div>
+    </div>
+    <!--标题结束-->
+    <!--导航菜单开始-->
+    <div class="header-nav">
+        <div class="logo"><a href="index.html"><h1>笑话</h1></a></div>
+        <ul>
+          <li> <a href="index.html" class="hover" title="按热门程度排序">首页</a></li>
+            <li><a href="jiongtu.html" title="按时间先后排序">囧图</a></li>
+            <li><a href="qiushi.html" >糗事</a></li>
+            <li><a href="neihan.html" >内涵图</a></li>
+            <li><a href="vip/vip_index.html" >会员专享<i></i></a></li>
+        </ul>
+        <div class="yojiastyle-slogan"></div>
+    </div>
+    <!--导航菜单结束-->
+</div>
+<!--头部信息结束-->
+<!--主要内容开始-->
+<div class="main">
+    <!--左侧信息开始-->
+	<div class="left">
+        <!-- 笑话列表开始 -->
+		<dl class="yojiastyle" th:name="${page.jid}" th:each="page :${pages}">
+            <dt>
+                <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" target="_blank"><img src="img/toux.jpg" th:src="${#httpServletRequest.getContextPath() + page.userInfo.photo}" th:title="${'经验值'+page.userInfo.experience}"/><i></i></a>
+                <p class="joke-uname">
+                    <a th:href="@{'/'+${page.userInfo.uid}+'/userCenter.html'}" th:text="${page.userInfo.name}">你丫才是逗比</a>
+                    <a href="about/shengjiguize.html" target="_blank" th:text="${'家族级别：'+page.userInfo.level}">实习生</a>
+                    <a href="#" onclick="javascript:shenhe(this,2);" name="s1" th:name="${page.jid}" style="float: right;">审核通过</a>
+                    <a href="#" onclick="javascript:shenhe(this,0);" name="s2" th:name="${page.jid}" style="float: right;color: red;">审核不通过</a>
+                </p>
+                <span class="joke-title"><a th:href="@{'/'+${page.jid}+'/jokeDetail.html'}" th:text="${page.title}" target="_blank">这个破打印机什么状况？</a></span>
+            </dt>
+            <dd class="content">
+                <img th:if="${page.style eq 1}" th:src="${#httpServletRequest.getContextPath() + page.picture}" src="img/12.jpg" alt="【桃姐淘新闻】北京马拉松看醉众人" />
+                <span th:if="${page.style eq 2}" th:utext="${page.content}"></span>
+            </dd>
+			<!-- 神回复  -->
+            <dd class="operation">
+                <a href="javascript:void(0)" rel="nofollow" class="ding" flag="0" title="顶"><img src="img/ding.png" /><i th:text="${page.up}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="cai" flag="0" title="踩"><img src="img/cai.png" /><i th:text="${page.down}">0</i></a>
+                <a href="javascript:void(0)" rel="nofollow" class="comment commentClick" title="点评一下" th:name="${page.jid}"><img src="img/comment.png" /><i>点评一下</i></a>
+                <div class="share">
+                    <a class="share-ico" title="分享" href="javascript:void(0)" rel="nofollow"></a>
+                    <div class="share-btn">
+                        <span>分享到：</span>
+                        <a href="#" th:href="@{share.html(type=1,jid=${page.jid},flag=0)}" target="_blank" class="share-qzone" data-cmd="qzone" title="分享到QQ空间" rel="nofollow">QQ空间</a>
+                        <a href="#" th:href="@{share.html(type=2,jid=${page.jid},flag=0)}" target="_blank" class="share-tqq" data-cmd="tqq" title="分享到腾讯微博" rel="nofollow">腾讯微博</a>
+                        <a href="#" th:href="@{share.html(type=3,jid=${page.jid},flag=0)}" target="_blank" class="share-tsina" data-cmd="tsina" title="分享到新浪微博" rel="nofollow">新浪微博</a>
+                        <a href="#" th:href="@{share.html(type=4,jid=${page.jid},flag=0)}" target="_blank" class="share-sqq" data-cmd="sqq" title="分享到QQ好友" rel="nofollow">QQ好友</a>
+                        <a href="#" rel="nofollow" class="share-copy" title="复制网址" data-cmd="copy" th:name="'http://www.xiaoujia.com//ujiajoke/'+${page.jid}+'/jokeDetail.html'">复制网址</a>
+                    </div>
+                </div>
+                <div class="reward-box"></div>
+            </dd>
+         </dl>
+        <div class="pagination pagination-right"><!-- class="page" -->
+            <div id="example" style="float: left;"></div>
+            <script th:inline="javascript">
+                /*<![CDATA[*/
+                $(function () {
+                    var totalPages = /*[[${pages.totalPages}]]*/1;
+                    var newPage = /*[[${newPage}]]*/1;
+                    $.ajaxSetup({
+                        cache: false
+                    });
+                    var options = {
+                        currentPage: newPage,
+                        totalPages: totalPages,
+                        onPageClicked: function (e, originalEvent, type, page) {
+                            window.location.href = "examineJoke.html?page=" + page ;
+                        }
+                    }
+                    $('#example').bootstrapPaginator(options);
+                })
+                function goPage(){
+                    var pageValue=$('#page').val();
+                    if(!isNaN(pageValue) && parseInt(pageValue)>0){
+                        if(parseInt(pageValue) == 1){
+                            window.location.href = "examineJoke.html";
+                        }else{
+                            window.location.href = "examineJoke.html?page=" + pageValue;
+                        }
+                    }else{
+                        alert('请输入正确的页码');
+                    }
+                }
+                /*]]>*/
+            </script>
+            <div class="go-page" data-maxPage="1000">
+                <input id="page" placeholder="跳到.." type="text" title="跳到.."/><a href="javascript:void(0);" onclick="goPage();">GO</a>
+            </div>
+        </div>
+	</div>
+    <!--左侧信息结束-->
+    <!--右侧信息开始-->
+    <div class="right" id="main-right" th:replace="index::index_right">
+        <!-- 用户信息 -->
+        <ul class="user-operation" id="user-show-ajax">
+            <li class="user-show" >
+                <div class="right-top-avatar-a">
+                    <a href="profile.html" target="_blank">
+                        <img alt="JackAn" src="img/avatar_2.jpg" />
+                    </a>
+                    <a href="#" target="_blank"><em>修改头像</em></a>
+                </div>
+                <dl class="right-top-avatar">
+                    <dt><a href="profile.html" target="_blank">JackAn</a><p></p>
+                    </dt><dd class="noborder">经验值：<em>500</em></dd>
+                    <dd>等级：实习生</dd>
+                    <dd class="noborder">积分：<em>0</em></dd>
+                    <dd>投稿量：0</dd>
+                </dl>
+            </li>
+            <li class="user-operation-bottom">
+                <a href="javascript:alert(1);" rel="nofollow" class="checkin-right-top checkinClick"><span>每日签到<br/>赚笑币</span></a>
+                <a href="#" class="do-task" target="_blank" rel="nofollow"><span>做任务<br/>赚笑币</span></a>
+                <a href="#" class="friends" target="_blank" rel="nofollow"><span>邀请好友<br/>赚笑币</span></a>
+            </li>
+        </ul>
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.jpg" />
+        </div>
+        <!--精彩文字笑话-->
+        <dl class="new-pic-text">
+            <dt>
+                <a href="#" target="_blank"><h2>精彩文字笑话</h2></a><a href="#" target="_blank" class="more">更多</a>
+            </dt>
+            <dd th:each="us:${list}">
+                <a target="_blank" class="title" href="detail/jokedetail.html">那谁的表情才是搞笑</a>
+            </dd>
+        </dl>
+        <!-- 广告位 -->
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.jpg" />
+        </div>
+        <!-- 最新搞笑图片 -->
+        <dl class="new-pic" >
+            <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
+            <dd>
+                <a target="_blank" href="detail/jokedetail.html" >
+                    <img alt="贪吃动物们的糗事" src="img/11.gif" />
+                    <span>贪吃动物们的糗事</span>
+                </a>
+            </dd>
+        </dl>
+        <!-- 客户端下载 -->
+        <div class="platform">
+            <div class="platform-mobilePhone-web">
+                <img src="img/erweima.png" alt="m.yojiastyle.com"/>
+                <p class="title">扫二维码，用手机看笑话</p>
+            </div>
+            <ul class="platform-other">
+                <li class="app-android"><a href="javascript:alert('拼命研发中');" rel="nofollow" target="_blank">安装Android 手机客户端</a></li>
+            </ul>
+        </div>
+        <!-- 广告位 -->
+        <div style="margin-top:20px;width:300px;height:250px" id="rightad">
+            <img src="img/ad.jpg" />
+        </div>
+        <div style="margin-top:20px;width:300px;height:250px">
+            <img src="img/ad.jpg" />
+        </div>
+    </div>
+    <!--右侧信息结束-->
+</div>
+<!--主要内容结束-->
+<script type="text/javascript">
+$(function(){
+	joke_content_area();
+});
+</script>
+<!--右侧导航开始-->
+<div id="fixed-box">
+    <div class="qr-code">
+        <a href="javascript:void(0);" rel="nofollow" title="扫一扫,移动设备轻松看笑话">
+            <div>
+                <img src="img/qrcode.png" alt="二维码"/>
+                <p>有家笑话二维码</p>
+            </div>
+        </a>
+    </div>
+    <div class="feedback">
+        <a href="about/fankuiyijian.html" target="_blank" title="站长信箱"></a>
+    </div>
+    <div class="return-top">
+        <a href="javascript:void(0);" rel="nofollow" title="返回顶部"></a>
+    </div>
+</div>
+<!--右侧导航结束-->
+<!--底部内容开始-->
+<div class="footer" th:replace="index::index_footer">
+    <div class="footer-content">
+        <div class="about">
+            <dl>
+                <dt>关于快乐家族</dt>
+                <dd><a href="about/youjiajianjie.html" target="_blank">家族简介</a><a href="about/youjiagonggao.html" target="_blank">家族公告</a></dd>
+                <dd><a href="about/mianzeshengming.html" target="_blank">免责声明</a><a href="about/fankuiyijian.html" target="_blank" class="a-color-red">反馈意见</a></dd>
+            </dl>
+            <dl>
+                <dt>互动规则</dt>
+                <dd><a href="about/tougaoguize.html" target="_blank">投稿规则</a><a href="about/shengaoguize.html" target="_blank">审稿规则</a></dd>
+                <dd><a href="about/shengjiguize.html" target="_blank">升级规则</a><a href="about/xiaobiguize.html" target="_blank">笑币规则</a></dd>
+            </dl>
+            <dl>
+                <dt>关注</dt>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weibo" rel="nofollow">新浪微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-qzone" rel="nofollow">QQ空间</a></dd>
+                <dd><a href="javascript:alert('暂未开通');" target="_blank" class="footer-QQweibo" rel="nofollow">腾讯微博</a><a href="javascript:alert('暂未开通');" target="_blank" class="footer-weixin" rel="nofollow" style="color: #03a8b1;">官方微站</a></dd>
+            </dl>
+            <dl class="about-contact">
+                <dt>有家合作</dt>
+                <dd>合作：youjiaxiaohua@163.com</dd>
+            </dl>
+        </div>
+        <div class="coypright">
+            <p>Copyright 2014-2024 youjiaxiaohua.com 版权所有 京ICP备13039142号-1 京ICP证130395号</p>
+        </div>
+    </div>
+</div>
+<!--底部内容结束-->
+<!--[if IE 6]>
+	<script>document.execCommand("BackgroundImageCache",false,true)</script>
+<![endif]-->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $('.comment-submit').live('click',function(){
+        var content = $(this).parent().children(":first").val();
+        content = $.trim(content);
+        if(content==""){
+            alert("评论内容不能为空!");
+        }else{
+            $.ajax({
+                url:"addComment.html",
+                data: {"email":$(this).attr("name"),"jid":$(this).attr("id"),"content":content},
+                type: "GET",
+                dataType:"text",
+                timeout:18000,
+                success:function(data){
+                    if(data == "2"){
+                        alert("已经点评过,不要重复点评");
+                    }else if(data == "0"){
+                        alert("点评失败,稍后再试");
+                    }else{
+                        alert("点评成功，稍后您的点评就会展现");
+                    }
+                },
+                error: function(){ //请求失败
+                    alert("点评失败,时候再试");
+                }
+            });
+        }
+    });
+
+    /*]]>*/
+</script>
+</body>
+</html>
