@@ -1,0 +1,1188 @@
+.sec-adbox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999
+}
+
+.sec-ad {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center
+}
+
+.sec-rec,.sec-soft,.sec-game,.sec-ebook,.sec-ringtone,.sec-theme,.sec-wallpaper,.sec-video {
+    margin: 18px 0 0;
+    border: 1px solid #E7E7E7;
+    background: #FFF
+}
+
+.sec-rec {
+    margin-top: 14px;
+    background-color: transparent
+}
+
+.sec-rec .yui3-u,.app-main .yui3-u,.sec-ebook .yui3-u,.sec-wallpaper .yui3-u,.sec-ringtone .yui3-u,.theme-main .yui3-u {
+    float: left
+}
+
+.sec-rec {
+    padding: 0;
+    border: 0;
+    margin-bottom: 18px;
+    *zoom: 1;
+    letter-spacing: normal;
+    background-color: #FFF
+}
+
+.sec-rec .app-bd {
+    width: 821px;
+    border-left: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8
+}
+
+.sec-app .big-app-wrap .app-bd .firrow {
+    border-top: 0
+}
+
+.sec-rec .big-app-wrap .app-bd li {
+    border-right: 1px solid #E8E8E8;
+    border-top: 1px solid #E8E8E8
+}
+
+.rec-slider {
+    overflow: hidden
+}
+
+.sec-rec .rec-ad {
+    float: right
+}
+
+.rec-ad img {
+    width: 163px;
+    height: 248px
+}
+
+.rec-slider-main {
+    position: relative;
+    width: 550px;
+    overflow: hidden;
+    margin-right: 6px
+}
+
+.rec-slider-main img {
+    width: 550px;
+    height: 296px
+}
+
+.rec-slider-side {
+    width: 196px;
+    margin-left: 2px;
+    margin-top: -2px;
+    overflow: hidden;
+    font-size: 0
+}
+
+.rec-slider-side li {
+    margin-top: 2px;
+    zoom: 1
+}
+
+.rec-slider-side a {
+    display: block;
+    width: 196px;
+    vertical-align: top;
+    font-size: 0
+}
+
+.rec-slider-side a:hover {
+    -ms-filter: "alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    opacity: .8
+}
+
+.rec-slider-item {
+    position: relative;
+    height: 296px
+}
+
+.rec-slider-item .shadow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -64px;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    background-color: #000;
+    opacity: .85;
+    filter: alpha(opacity=85)
+}
+
+.rec-slider-item .rec-slider-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -64px;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none
+}
+
+.slidesjs-previous,.slidesjs-next {
+    height: 64px;
+    top: 100%;
+    margin-top: -64px;
+    background-color: transparent
+}
+
+.rec-mixed {
+    width: 821px;
+    font-size: 0;
+    overflow: hidden;
+    float: left;
+    letter-spacing: normal;
+    border-right: 1px solid #E8E8E8
+}
+
+.rec-mixed .rec-mixed-item {
+    float: left;
+    display: inline;
+    border: 1px solid #e8e8e8;
+    border-right: 0;
+    background-color: #fff;
+    width: 123px;
+    height: 203px;
+    padding: 20px;
+    font-size: 12px;
+    overflow: hidden
+}
+
+.rec-mixed .modal-item {
+    margin-right: 0
+}
+
+.rec-mixed .rec-mixed-item-hover,.rec-mixed .rec-mixed-item:hover {
+    background-color: #f3f3f3
+}
+
+.rec-mixed .rec-mixed-item a:hover {
+    text-decoration: none
+}
+
+.rec-mixed .ringtone-control-panel {
+    position: absolute;
+    top: 215px;
+    height: 17px;
+    width: 123px
+}
+
+.rec-mixed .btn-play,.rec-mixed .btn-pause,.rec-mixed .btn-choice,.rec-mixed .btn-download {
+    top: 0
+}
+
+.rec-mixed .btn-play,.rec-mixed .btn-pause {
+    right: 55px
+}
+
+.rec-mixed .btn-download {
+    right: 30px
+}
+
+.rec-mixed .btn-play.websuite,.rec-mixed .btn-pause.websuite {
+    right: 76px
+}
+
+.rec-mixed .btn-download.websuite {
+    right: 50px
+}
+
+.rec-mixed .btn-choice.websuite {
+    right: 24px
+}
+
+.rec-mixed-app,.rec-mixed-other {
+    position: relative;
+    height: 213px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    z-index: 1
+}
+
+.rec-mixed-ringtone,.rec-mixed-ebook {
+}
+
+.rec-mixed-theme,.rec-mixed-wallpaper {
+}
+
+.rec-mixed-theme img {
+    width: 110px;
+    height: 110px
+}
+
+.rec-mixed-other img.app-rec-icon {
+    width: 110px;
+    height: 110px
+}
+
+.rec-mixed .ringtone-poster {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+.rec-mixed .ringtone-name {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    left: 0
+}
+
+.rec-mixed .ringtone-control-image {
+    line-height: 17px
+}
+
+.rec-mixed .progress {
+    background-color: #ceb5e5;
+    top: 144px;
+    left: 11px;
+    height: 0
+}
+
+.rec-mixed h3 {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: baseline;
+    text-align: center
+}
+
+.rec-app-star {
+    margin: 10px 0
+}
+
+.rec-mixed-ringtone .rec-mixed-intro {
+    margin-top: 18px
+}
+
+.rec-mixed-theme .rec-mixed-intro,.rec-mixed-wallpaper .rec-mixed-intro {
+    margin-top: 16px
+}
+
+.rec-mixed-ebook .rec-mixed-intro {
+    margin-top: 12px
+}
+
+.rec-mixed-intro {
+    margin-top: 16px
+}
+
+.rec-mixed-intro p {
+    margin-top: 3px;
+    color: #909090;
+    line-height: 18px;
+    vertical-align: baseline
+}
+
+.rec-mixed-ringtone .rec-mixed-intro .size,.rec-mixed-theme .rec-mixed-intro .size {
+    margin-top: 14px
+}
+
+.rec-mixed-intro .brief {
+    text-align: left;
+    height: 34px;
+    overflow: hidden
+}
+
+.rec-mixed-intro p .star {
+    position: relative;
+    margin-top: 2px
+}
+
+.rec-mixed-intro p .star span {
+    position: absolute;
+    left: 0
+}
+
+.rec-mixed-intro p .fee,.rec-mixed-intro p.download {
+    color: #69b300;
+    margin-top: 10px
+}
+
+.rec-mixed-intro p .fee {
+    margin-left: 5px
+}
+
+.rec-mixed-intro p .state {
+    color: #5ba1f6;
+    margin-left: 5px
+}
+
+.rec-install {
+    display: none;
+    position: relative;
+    top: -16px;
+    background: #fff
+}
+
+.rec-mixed-app:hover .rec-install {
+    display: block
+}
+.sec-topic .slide-nav a {
+	display: inline-block;
+	width: 30px;
+	height: 37px;
+	margin-top: 43px;
+	margin-left: 10px;
+	background: #fff url(../img/app_slide_arrow.jpg) no-repeat 0 0;
+}
+.footer .fanva {
+	position: absolute;
+	width: 140px;
+	height: 43px;
+	right: 50%;
+	margin-right: -219px;
+	background: url(../img/header.png) 0 -226px;
+}
+.sec-rec .big-app-wrap .app-bd li {
+    height: 246px
+}
+
+.sec-rec .big-app-wrap .app-bd .app-detail {
+    height: 206px
+}
+
+.sec-rec .big-app-wrap .app-bd li.active .down-size {
+    display: block
+}
+
+.sec-rec .big-app-wrap .app-bd .app-detail .down-btn {
+    margin-top: 15px
+}
+
+.sec-rec .big-app-wrap .app-bd li.active .app-detail .name {
+    margin: 10px 0
+}
+
+.sec-topic {
+    overflow: hidden;
+    padding-top: 10px;
+    border: 1px solid #E7E7E7;
+    margin-bottom: 18px;
+    background: #fff
+}
+
+.sec-topic .head {
+    border-bottom: 1px solid #e8e8e8;
+    color: #4d97f4;
+    padding-bottom: 10px
+}
+
+.sec-topic .head h2 {
+    padding-left: 20px;
+    height: 20px;
+    font-size: 20px;
+    font-family: Microsoft Yahei;
+    color: #62C5AB
+}
+
+.sec-topic .topic-list {
+    overflow: hidden;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 0 51px;
+    font-size: 0;
+    height: 120px
+}
+
+.sec-topic .slide-over {
+    position: relative;
+    width: 882px;
+    height: 120px;
+    overflow: hidden
+}
+
+.sec-topic .slide-list-wrap {
+    width: 3000px;
+    position: absolute
+}
+
+.sec-topic .topic-list li {
+    padding-right: 14px;
+    float: left
+}
+
+.sec-topic .topic-list img {
+    width: 210px;
+    height: 120px;
+    border-radius: 5px
+}
+
+.sec-topic .slide-nav {
+    position: absolute;
+    font-size: 0;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+    background-color: #FFF
+}
+
+.sec-topic .slide-prev {
+    left: 0
+}
+
+.sec-topic .slide-next {
+    right: 0
+}
+
+.sec-topic .slide-nav a {
+    display: inline-block;
+    width: 30px;
+    height: 37px;
+    margin-top: 43px;
+    margin-left: 10px;
+}
+
+.sec-topic .slide-prev:hover a {
+    background-position: 7px -43px
+}
+
+.sec-topic .slide-prev a,.sec-topic .slide-prev-unable:hover a {
+    background-position: 7px 0
+}
+
+.sec-topic .slide-next:hover a {
+    background-position: -18px -43px
+}
+
+.sec-topic .slide-next a,.sec-topic .slide-next-unable:hover a {
+    background-position: -18px 0
+}
+
+.app-side {
+    width: 180px;
+    margin-left: 19px
+}
+
+.sec-app {
+    padding-top: 14px
+}
+
+.sec-app h3 {
+    font-size: 15px;
+    font-weight: 700
+}
+
+.sec-app .cate-name {
+    display: block;
+    padding-bottom: 15px;
+    width: 100%
+}
+
+.sec-app .cate-name h2 {
+    height: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Microsoft Yahei;
+    padding-left: 20px
+}
+
+.sec-soft .cate-name {
+    border-bottom: 1px solid #e8e8e8;
+    position: relative
+}
+
+.sec-soft .cate-name a {
+    color: #4d97f4
+}
+
+.sec-soft .mod-cate,.sec-game .mod-cate,.sec-theme .mod-cate {
+    height: 405px;
+    overflow: hidden
+}
+
+.sec-game .cate-name {
+    border-bottom: 1px solid #e8e8e8;
+    position: relative
+}
+
+.sec-game .cate-name a {
+    color: #ffa53a
+}
+
+.sec-game .cate-name .change-page,.sec-soft .cate-name .change-page,.sec-game .pagewp,.sec-soft .pagewp {
+    position: absolute;
+    right: 27px;
+    top: 3px;
+    font-size: 14px;
+    color: #959595
+}
+
+.sec-game .pagewp a.page,.sec-soft .pagewp a.page {
+    text-decoration: underline;
+    margin-left: 8px;
+    color: #959595;
+    cursor: pointer
+}
+
+.sec-game .pagewp a.active,.sec-soft .pagewp a.active {
+    text-decoration: none
+}
+
+.app-bd {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    font-size: 0
+}
+
+.app-bd.hide {
+    display: none
+}
+
+.app-bd li {
+    float: left;
+    font-size: 12px;
+    width: 108px;
+    height: 135px;
+    z-index: 1;
+    -webkit-transition: background-color 80ms ease-out;
+    -moz-transition: background-color 80ms ease-out;
+    -ms-transition: background-color 80ms ease-out;
+    transition: background-color 80ms ease-out
+}
+
+.app-bd li.active {
+    background-color: #f4f4f4;
+    z-index: 99
+}
+
+.app-bd .app-box {
+    display: block;
+    height: 126px;
+    text-decoration: none;
+    vertical-align: baseline
+}
+
+.app-bd .app-detail {
+    padding-top: 9px;
+    width: 85px;
+    margin: 0 auto;
+    height: 117px
+}
+
+.app-bd .app-box:hover {
+    text-decoration: none
+}
+
+.app-bd .app-box .icon {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    left: 7px
+}
+
+.app-bd .app-box .icon img {
+    width: 68px;
+    height: 68px;
+    display: block;
+    margin: 0 auto
+}
+
+.app-bd .app-box .down-btn {
+    display: none
+}
+
+.app-bd .app-box .mask {
+    margin-top: -68px;
+    margin-left: 2px;
+    _margin-left: 1px;
+    width: 68px;
+    height: 68px;
+    float: left;
+    position: relative;
+    _background-image: none;
+    _margin-top: -71px
+}
+
+.app-bd li.active .mask {
+    _background-image: none;
+}
+
+.app-bd .app-box .mask-110 {
+    margin-top: -110px;
+    width: 110px;
+    height: 110px;
+    _background-image: none;
+    _margin-top: -113px
+}
+
+.app-bd li.active .app-box {
+    z-index: 99
+}
+
+.app-bd li.active .mask-110 {
+    _background-image: none;
+}
+
+.app-bd li.active .app-detail .down-size,.app-bd li.active .app-detail .brief,.app-bd li.active .app-detail .star-wrap,.app-bd li.active .app-detail .down-num {
+    display: none
+}
+
+.app-bd li.active .down-btn {
+    display: block;
+    height: 28px;
+    position: relative
+}
+
+.app-bd li.active .down-btn .inst-btn-big,.app-bd li.active .down-btn .inst-btn-small {
+    position: absolute;
+    left: 50%;
+    top: 28px
+}
+
+.app-bd li.active .down-btn .inst-btn-big {
+    margin-left: -40px
+}
+
+.app-bd li.active .down-btn .inst-btn-small {
+    margin-left: -31px;
+    padding-left: 1px;
+    width: 61px;
+    height: 19px;
+    line-height: 19px;
+    background-position: left -690px
+}
+
+.app-bd li.active .down-btn .inst-btn-small:hover {
+    background-position: left -709px
+}
+
+.app-bd li.active .down-btn .inst-btn-small:active {
+    background-position: left -728px
+}
+
+.app-bd li.active .down-btn .inst-btn-small em {
+    width: 61px;
+    padding-right: 1px;
+    height: 19px;
+    line-height: 19px;
+    background-position: right -690px
+}
+
+.app-bd li.active .down-btn .inst-btn-small em:hover {
+    background-position: right -709px
+}
+
+.app-bd li.active .down-btn .inst-btn-small em:active {
+    background-position: right -728px
+}
+
+.app-bd li.active .app-popover {
+    display: block
+}
+
+.sec-caterec .app-bd .app-box .mask,.must .app-bd .app-box .mask {
+    *margin-top: -68px
+}
+
+.app-bd .name,.app-bd .down-num,.app-bd .down-btn {
+    width: 85px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center
+}
+
+.app-bd .name {
+    font-weight: 700
+}
+
+.app-bd .name a {
+    color: #555
+}
+
+.app-bd .app-size {
+    display: none
+}
+
+.app-bd .down-num span {
+    padding-left: 12px;
+    overflow: hidden;
+    text-align: left;
+    color: #9f9f9f;
+}
+
+.app-bd .star {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 68px;
+    height: 11px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    _margin-top: 2px;
+    _background-image: none;
+}
+
+.app-bd .star span {
+    position: absolute;
+    display: inline-block;
+    height: 11px;
+    line-height: 11px;
+    _background-image: none;
+}
+
+.star-wrap {
+    padding-left: 8px
+}
+
+.app-bd .app-popover {
+    display: none;
+    max-width: 259px;
+    max-height: 160px;
+    width: 259px;
+    height: 160px;
+    border: 1px solid #C8C8C8;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 99;
+    overflow: hidden;
+    -webkit-box-shadow: 6px 6px 8px 0 rgba(106,106,106,.2);
+    -moz-box-shadow: 6px 6px 8px 0 rgba(106,106,106,.2);
+    box-shadow: 6px 6px 8px 0 rgba(106,106,106,.2)
+}
+
+.app-bd .app-popover .appinfo {
+    zoom: 1
+}
+
+.app-popover .appinfo-left {
+    width: 135px;
+    height: 82px;
+    position: absolute;
+    left: 17px;
+    top: 17px
+}
+
+.app-popover .appinfo-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center
+}
+
+.app-popover .appinfo-right .app-qrcode {
+    width: 106px;
+    height: 106px;
+    margin-bottom: -5px;
+    *margin-bottom: 0
+}
+
+.app-popover .appinfo-right .app-qrcode-ws {
+    width: 80px;
+    height: 80px;
+    margin: 15px 15px 0 0
+}
+
+.app-popover .name {
+    width: auto;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 700
+}
+
+.app-popover .appinfo-left .tag {
+    margin-top: 4px;
+    margin-bottom: 0;
+    margin-left: -2px
+}
+
+.app-popover .appinfo-left .star-wrap {
+    padding-left: 0;
+    margin-top: 3px;
+    margin-bottom: 0
+}
+
+.app-popover .appinfo-left .down-size {
+    margin-top: 5px
+}
+
+.app-popover .score {
+    position: absolute;
+    top: 24px;
+    right: 13px;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: italic
+}
+
+.app-bd .app-popover-left .score {
+    right: 23px
+}
+
+.app-popover .score .number {
+    font-size: 22px;
+    color: #ff9711
+}
+
+.app-popover .brief {
+    position: absolute;
+    width: 225px;
+    top: 115px;
+    left: 20px;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden
+}
+
+.app-popover .brief .comm {
+    font-weight: 700
+}
+
+.big-app-wrap .app-bd li {
+    height: 200px;
+    width: 163px
+}
+
+.big-app-wrap .app-bd .app-box {
+    height: 100%
+}
+
+.big-app-wrap .app-bd .app-detail {
+    width: 123px;
+    height: 160px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden
+}
+
+.big-app-wrap .app-bd .app-detail p {
+    margin: 10px 0
+}
+
+.big-app-wrap .app-box .icon {
+    margin: 0 auto;
+    left: auto;
+    width: 114px;
+    height: 114px
+}
+
+.big-app-wrap .app-bd .app-box .icon img {
+    width: 110px;
+    height: 110px
+}
+
+.big-app-wrap .app-bd .app-box .name,.big-app-wrap .app-bd .app-box .down-num,.big-app-wrap .app-bd .app-box .down-btn {
+    width: 100%
+}
+
+.big-app-wrap .app-bd .app-detail .app-box .name {
+    font-size: 14px
+}
+
+.big-app-wrap .app-bd li .inst-wrap {
+    width: 123px
+}
+
+.big-app-wrap .app-bd .app-box .brief {
+    height: 36px;
+    overflow: hidden;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    color: #2b2b2b;
+    text-align: left
+}
+
+.big-app-wrap .app-bd .app-detail .down-btn {
+    margin-top: 0
+}
+
+.big-app-wrap .app-bd .inst-btn-big {
+    background-position: left -480px;
+    height: 28px;
+    width: 79px;
+    line-height: 28px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.big-app-wrap .app-bd .inst-btn-big:hover {
+    background-position: left -508px
+}
+
+.big-app-wrap .app-bd .inst-btn-big:active {
+    background-position: left -536px
+}
+
+.big-app-wrap .app-bd .inst-btn-big em {
+    background-position: right -480px;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    width: 79px
+}
+
+.big-app-wrap .app-bd .inst-btn-big em:hover {
+    background-position: right -508px
+}
+
+.big-app-wrap .app-bd .inst-btn-big em:active {
+    background-position: right -536px
+}
+
+.big-app-wrap .app-bd .app-popover {
+    top: auto;
+    background-position: 0 -250px
+}
+
+.big-app-wrap .app-bd .app-popover-left {
+    background-position: -300px -250px
+}
+
+.big-app-wrap .app-bd li.active .app-detail .name {
+    margin-top: 3px;
+    margin-bottom: 8px
+}
+
+.board-app {
+    width: 100%
+}
+
+.board-app .hd {
+    position: relative
+}
+
+.board-app .hd .board-nav-tab {
+    position: absolute;
+    top: -5px;
+    left: 82px;
+    z-index: 2
+}
+
+.board-app .hd ul {
+    height: 40px;
+    overflow: hidden;
+}
+
+.sec-game .app-bd,.sec-soft .app-bd,.sec-hot .app-bd {
+    width: 100%
+}
+
+.must .slide-list-wrap .app-bd {
+    width: auto
+}
+
+.board-app .hd li {
+    float: left;
+    width: 82px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    font-size: 14px
+}
+
+.sec-game .board-app .hd li.cur {
+    border-bottom: 3px solid #ffa53a;
+    color: #ffa53a;
+    font-weight: 700
+}
+
+.sec-soft .board-app .hd li.cur {
+    border-bottom: 3px solid #4d97f4;
+    color: #4d97f4;
+    font-weight: 700
+}
+
+.sec-soft .app-side .hd .cur {
+    background-color: #4d97f4;
+    color: #fff
+}
+
+.sec-game .app-side .hd .cur {
+    background-color: #ffa53a;
+    color: #fff
+}
+
+.board-app .hd .cur a {
+    color: #fff
+}
+
+.board-app .bd .app-wrap {
+    display: none
+}
+
+.board-app .bd .cur {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.sec-app .big-app-wrap .app-bd li {
+    border-right: 1px solid #E8E8E8;
+    border-top: 1px solid #E8E8E8
+}
+
+.sec-app .big-app-wrap .app-bd .firrow {
+    border-top: 0
+}
+
+.sec-app .big-app-wrap .app-bd .last {
+    border-right: 0
+}
+
+.board-app li .top {
+    float: left;
+    height: 36px;
+    width: 26px;
+    text-align: center;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    background-color: #f9f9f9
+}
+
+.board-app li .top1 {
+    color: #c00
+}
+
+.board-app li .top2 {
+    color: #f60
+}
+
+.board-app li .top3 {
+    color: #f90
+}
+
+.board-app li .info {
+    margin-left: 40px;
+    height: 36px;
+    border-bottom: 1px dashed #eaeaea
+}
+
+.board-app li.cur .info {
+    display: none
+}
+
+.board-app li.cur .detail-info {
+    display: block;
+    margin-left: 40px;
+    padding-top: 20px;
+    _padding-top: 10px;
+    height: 60px
+}
+
+.board-app li .detail-info {
+    border-bottom: 1px dashed #eaeaea;
+    display: none
+}
+
+.board-app li .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.board-app .detail-info .inst-btn,.board-app .detail-info .name {
+    width: 42px;
+    height: 20px;
+    line-height: 20px
+}
+
+.board-app .detail-info .name {
+    width: 100%
+}
+
+.board-app li.cur .top {
+    height: 80px;
+    line-height: 80px;
+    _height: 70px;
+    line-height: 70px
+}
+
+.board-app li .downnum {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 72px;
+    float: right;
+    color: #9f9f9f;
+    font-size: 12px;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle
+}
+
+.board-app li .downicon {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.board-app .icon-area {
+    float: left;
+    width: 48px;
+    height: 48px
+}
+
+.board-app .icon-area img {
+    display: block;
+    width: 48px;
+    height: 48px
+}
+
+.board-app .icon-area a {
+    float: left;
+    font-size: 0
+}
+
+.board-app .operate {
+    margin-left: 65px;
+    height: 60px;
+    width: 69px;
+    overflow: hidden;
+    position: relative
+}
+
+.board-app .operate p {
+    height: 25px;
+    line-height: 25px
+}
+
+.detail-info .mask {
+    position: relative;
+    float: left;
+    margin-top: -62px;
+    margin-left: 0;
+    width: 48px;
+    height: 48px;
+    _background-image: none;
+}
+
+.detail-info .mask {
+    margin-top: -48px
+}
+
+.sec-app .cate-name span {
+    color: #4d97f4;
+    cursor: default
+}

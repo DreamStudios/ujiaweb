@@ -31,6 +31,10 @@ public class Ad implements Serializable {
     @Column(nullable = false)
     private int type;
 
+    //广告分类(1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+    @Column(nullable = false)
+    private int style;
+
     //广告图片
     @Column(nullable = true,length = 255)
     private String adPhoto;
@@ -166,5 +170,13 @@ public class Ad implements Serializable {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public int getStyle() {
+        return style;
+    }
+
+    public void setStyle(int style) {
+        this.style = style;
     }
 }
