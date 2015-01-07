@@ -150,7 +150,7 @@
 	<div class="right" th:fragment="myJoke_right">
 		<div class="publish-audit">
 	      <a href="releaseJoke.html" class="publish" target="_blank"><i></i><span>投稿</span></a>
-          <a href="javascript:alert(1);" class="audit" target="_blank"><i></i><span>审稿</span></a>
+          <a href="javascript:alert(1);" th:href="@{examineJoke.html}" class="audit" target="_blank"><i></i><span>审稿</span></a>
         </div>		
         <dl class="other-user" th:with="list=${@userInfoService.getTodayStar(9)}">
             <dt>看看他们的笑话</dt>
