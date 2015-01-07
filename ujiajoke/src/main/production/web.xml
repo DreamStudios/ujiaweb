@@ -8,7 +8,7 @@
     </error-page>
     <error-page>
         <error-code>500</error-code>
-        <location>/500.html</location>
+        <location>/failure.html</location>
     </error-page>
     <mime-mapping>
         <extension>.apk</extension>
