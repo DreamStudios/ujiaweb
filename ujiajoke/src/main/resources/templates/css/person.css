@@ -2609,6 +2609,15 @@ ul.content li .tab {
 .task-icon img {
 	width: 80px; height: 80px;
 }
+.task-icon2 {
+    float: right; _margin-left: 5px;
+}
+.task-icon2 {
+    width: 80px; height: 80px;
+}
+.task-icon2 img {
+    width: 80px; height: 80px;
+}
 .task-details {
 	margin: 5px 0px 0px 20px; width: 280px; overflow: hidden; float: left;
 }
@@ -2628,7 +2637,7 @@ ul.content li .tab {
 	width: 240px; height: 34px; margin-top: 24px; float: right;
 }
 .task-right a.task-btn {
-	background: #03a8b1; border-radius: 3px; width: 100px; height: 34px; text-align: center; color: rgb(255, 255, 255); line-height: 34px; font-size: 16px; float: right; display: block; text-shadow: 0 1px 1px #e2a100;
+	border-radius: 3px; width: 100px; height: 34px; text-align: center; color: rgb(255, 255, 255); line-height: 34px; font-size: 16px; float: right; display: block; text-shadow: 0 1px 1px #e2a100;
 }
 .task-right a.hover {
 	background: rgb(231, 231, 231); color: #03a8b1; text-shadow: none;

@@ -92,9 +92,11 @@
 					<dt th:text="${page.adTitle}">投稿</dt>
 					<dd th:text="${page.content}">去投稿页面分享身边的趣事、糗事、囧图</dd>
 				</dl>
-				<div class="task-right">
-					<a href="javascript:alert(1);" th:href="@{download.html(url=${page.adUrl})}" val="publish" class="start-task task-btn">我要看看</a>
-				</div>
+                <div class="task-icon2">
+                    <a href="#" title="点击|扫描均可下载" th:href="${page.adUrl}">
+                        <img src="http://zhushou.baidu.com/qrcode/?text=http://www.xiaoujia.com" th:src="${'http://zhushou.baidu.com/qrcode/?text='+page.adUrl}"/>
+                    </a>
+                </div>
 			</li>
             <li th:if="${pages.totalElements > 0}">
                 <div class="pagination pagination-right">
@@ -138,8 +140,8 @@
         </ul>
         <ul class="content myinfo day-task" th:if="${pages.totalElements == 0}">
             <li>
-                <div class="comment-content">
-                    暂无精品推荐,请浏览别的页面！
+                <div class="comment-content" style="text-align: center;">
+                    精品还再烹煮过程中，暂未出炉，请稍后再来领取！
                 </div>
             </li>
 		</ul>
