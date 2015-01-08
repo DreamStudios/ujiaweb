@@ -4518,11 +4518,6 @@ $(function(){
 	if(parseInt($.cookie('MH_USER_ID'))>0){
 		$('#view-user-show-ajax').hide();
 	}
-	
-	//列表页图片滚动推荐
-	if($('#listTopFocus').length>0){
-		listTopFocus();
-	}
 })
 
 /*==========================================
