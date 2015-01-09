@@ -1,21 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="zh">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="keywords" content="百度手机助手,安卓软件,安卓游戏,下载" />
-  <meta name="description" content="百度手机助手：拥有海量免费优质安卓Android手机应用，提供极速下载，汇集最新最火热的安卓应用，好玩的安卓游戏、实用的安卓软件、每日劲爆推荐榜单，各种时下流行热门合辑等，尽在百度手机助手！" />
+  <meta name="keywords" content="安卓精品,安卓软件,安卓游戏,下载" />
+  <meta name="description" content="安卓精品：拥有海量免费优质安卓Android手机应用，提供极速下载，汇集最新最火热的安卓应用，好玩的安卓游戏、实用的安卓软件、每日劲爆推荐榜单，各种时下流行热门合辑等，尽在安卓精品！" />
   <meta name="baidu-site-verification" content="erwP2X4Bzj" />
   <link rel="stylesheet" type="text/css" href="css/base_341210d.css"/>
   <link rel="stylesheet" type="text/css" href="css/index_89ed6f8.css"/>
   <link rel="stylesheet" type="text/css" href="css/header_66ee3f3.css"/>
-  <title>百度手机助手网页版 - 首页</title>
+  <title>安卓精品--海量精品应用</title>
 </head>
 <body>
 <!--头部信息开始-->
 <div class="header" id="header">
   <div id="search-box" class="yui3-g search-box clearfix">
       <div class="yui3-u logo-wrapper">
-        <h1 class="logo"><a href="/?from=as" title="首页">百度手机助手 Web版</a></h1>
+        <h1 class="logo"><a href="#" title="首页">安卓精品</a></h1>
       </div>
       <div class="yui3-u">
         <form action="/s" target="_blank">
@@ -32,7 +33,6 @@
   </div>
 </div>
 <!--头部信息结束-->
-
 <div id="doc">
 <!--精品专题开始-->
 <div class="sec-topic clearfix">
@@ -42,9 +42,9 @@
     <div class="topic-list">
         <div class="slide-over">
             <ul class="slide-list-wrap">
-                <li>
-                    <a href="#" class="tjitem" title=生活要有点新意>
-                        <img src="http://imgsrc.baidu.com/anxun/pic/item/8ad4b31c8701a18be0c98d179d2f07082838fe4c.jpg" class="imagefix" />
+                <li th:each="jp:${jpList}">
+                    <a href="#" th:href="${jp.adUrl}" class="tjitem" title="生活要有点新意" th:title="${jp.adTitle}">
+                        <img src="#" th:src="${jp.adPhoto}" class="imagefix" />
                     </a>
                 </li>
             </ul>
@@ -54,419 +54,48 @@
     </div>
 </div>
 <!--精品专题结束-->
-
-<!--软件精品开始-->
+<!--手机必备应用开始-->
 <div class="sec-app sec-soft" id="software">
     <div class="yui3-u board-app">
       <div class="cate-name">
-          <h2><span>软件精品</span></h2>
+          <h2><span>手机必备应用</span></h2>
           <!--<a class="change-page" href="javascript:void(0)">更多</a>-->
       </div>
       <div class="bd big-app-wrap">
         <div class="app-wrap cur clearfix">
            <div class="app-bd show">
-             <ul>
-                <li class="">
-                    <a class="app-box" href="#">
+             <ul th:with="list=${@adService.getTopAdListByStyle(12,2)}">
+                <li th:each="ad:${list}">
+                    <a class="app-box" href="#" th:href="${ad.adUrl}">
                       <div class="app-detail">
                           <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
+                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益" th:src="${ad.adPhoto}" th:alt="${ad.adTitle}" />
                               <div class="mask mask1 mask-110"></div>
                           </div>
-                          <p class="name">开卷有益</p>
+                          <p class="name" th:text="${ad.name}">开卷有益</p>
                           <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
+                              <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                              <span class="size" th:text="${ad.size}">5.4MB</span>
                           </p>
                       </div>
                       <div class="app-popover" style="top: 770px; left: 780px;">
                           <div class="appinfo clearfix">
                               <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
+                                  <p class="name" th:text="${ad.name}">开卷有益</p>
                                       <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
+                                         <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
                                       </p>
                                       <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
                                   <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
+                                      <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                                      <span class="size" th:text="${ad.size}">5.4MB</span>
                                   </p>
                               </div>
                               <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="http://zhushou.baidu.com:80/qrcode/?text=www.baidu.com"></p>
+                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" th:src="${'http://zhushou.baidu.com:80/qrcode/?text='+ad.adUrl}" /></p>
                               </div>
                           </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li><li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li><li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li><li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li><li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
-                      </div>
-                	</a>
-                </li>
-                <li class="">
-                    <a class="app-box" href="#">
-                      <div class="app-detail">
-                          <div class="icon">
-                              <img class="imagefix" src="img/timg.jpg" alt="开卷有益">
-                              <div class="mask mask1 mask-110"></div>
-                          </div>
-                          <p class="name">开卷有益</p>
-                          <p class="down-size">
-                              <span class="down">678万下载</span>
-                              <span class="size">5.4MB</span>
-                          </p>
-                      </div>
-                      <div class="app-popover" style="top: 770px; left: 780px;">
-                          <div class="appinfo clearfix">
-                              <div class="appinfo-left">
-                                  <p class="name" title="开卷有益">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok">已通过安全验证</span>
-                                      </p>
-                                      <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
-                                  <p class="down-size">
-                                      <span class="down">678万下载</span>
-                                      <span class="size">5.4MB</span>
-                                  </p>
-                              </div>
-                              <div class="appinfo-right">
-                                  <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="" alt=""></p>
-                              </div>
-                          </div>
-                          <p class="brief"><span class="comm">[小编评语]</span>▓迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</p>
+                          <p class="brief"><span class="comm">[小编评语]</span><span th:text="${ad.content}">迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</span></p>
                       </div>
                 	</a>
                 </li>
@@ -476,6 +105,111 @@
       </div>
     </div>
 </div>
+<!--手机必备应用结束-->
+<!--游戏开始-->
+<div class="sec-app sec-soft" id="game">
+    <div class="yui3-u board-app">
+        <div class="cate-name">
+            <h2><span>爱玩游戏</span></h2>
+            <!--<a class="change-page" href="javascript:void(0)">更多</a>-->
+        </div>
+        <div class="bd big-app-wrap">
+            <div class="app-wrap cur clearfix">
+                <div class="app-bd show">
+                    <ul th:with="list=${@adService.getTopAdListByStyle(24,3)}">
+                        <li th:each="ad:${list}">
+                            <a class="app-box" href="#" th:href="${ad.adUrl}">
+                                <div class="app-detail">
+                                    <div class="icon">
+                                        <img class="imagefix" src="img/timg.jpg" alt="开卷有益" th:src="${ad.adPhoto}" th:alt="${ad.adTitle}" />
+                                        <div class="mask mask1 mask-110"></div>
+                                    </div>
+                                    <p class="name" th:text="${ad.name}">开卷有益</p>
+                                    <p class="down-size">
+                                        <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                                        <span class="size" th:text="${ad.size}">5.4MB</span>
+                                    </p>
+                                </div>
+                                <div class="app-popover" style="top: 770px; left: 780px;">
+                                    <div class="appinfo clearfix">
+                                        <div class="appinfo-left">
+                                            <p class="name" th:text="${ad.name}">开卷有益</p>
+                                            <p class="tag">
+                                                <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
+                                            </p>
+                                            <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
+                                            <p class="down-size">
+                                                <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                                                <span class="size" th:text="${ad.size}">5.4MB</span>
+                                            </p>
+                                        </div>
+                                        <div class="appinfo-right">
+                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="http://zhushou.baidu.com:80/qrcode/?text=www.baidu.com" /></p>
+                                        </div>
+                                    </div>
+                                    <p class="brief"><span class="comm">[小编评语]</span><span th:text="${ad.content}">迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--游戏结束-->
+<!--神友推荐开始-->
+<div class="sec-app sec-soft" id="shenyou">
+    <div class="yui3-u board-app">
+        <div class="cate-name">
+            <h2><span>神友推荐</span></h2>
+            <!--<a class="change-page" href="javascript:void(0)">更多</a>-->
+        </div>
+        <div class="bd big-app-wrap">
+            <div class="app-wrap cur clearfix">
+                <div class="app-bd show">
+                    <ul th:with="list=${@adService.getTopAdListByStyle(24,3)}">
+                        <li th:each="ad:${list}">
+                            <a class="app-box" href="#" th:href="${ad.adUrl}">
+                                <div class="app-detail">
+                                    <div class="icon">
+                                        <img class="imagefix" src="img/timg.jpg" alt="开卷有益" th:src="${ad.adPhoto}" th:alt="${ad.adTitle}" />
+                                        <div class="mask mask1 mask-110"></div>
+                                    </div>
+                                    <p class="name" th:text="${ad.name}">开卷有益</p>
+                                    <p class="down-size">
+                                        <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                                        <span class="size" th:text="${ad.size}">5.4MB</span>
+                                    </p>
+                                </div>
+                                <div class="app-popover" style="top: 770px; left: 780px;">
+                                    <div class="appinfo clearfix">
+                                        <div class="appinfo-left">
+                                            <p class="name" th:text="${ad.name}">开卷有益</p>
+                                            <p class="tag">
+                                                <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
+                                            </p>
+                                            <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
+                                            <p class="down-size">
+                                                <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
+                                                <span class="size" th:text="${ad.size}">5.4MB</span>
+                                            </p>
+                                        </div>
+                                        <div class="appinfo-right">
+                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="http://zhushou.baidu.com:80/qrcode/?text=www.baidu.com" /></p>
+                                        </div>
+                                    </div>
+                                    <p class="brief"><span class="comm">[小编评语]</span><span th:text="${ad.content}">迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--神友推荐结束-->
 <!--底部开始-->
 <div class="footer">
     <a class="fanva" href="http://white.anva.org.cn"></a>

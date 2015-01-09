@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //设置允许访问的资源
         String[] matchers = {
                 "/", "/upload/**", "/*.html", "/kaptcha.jpg", "/about/**", "/img/**", "/css/**", "/js/**",
-                "/*/userCenter.html","/*/jokeDetail.html"
+                "/*/userCenter.html","/*/jokeDetail.html","/appcenter/**"
         };
         http.authorizeRequests().antMatchers(matchers)
                 .permitAll().anyRequest()

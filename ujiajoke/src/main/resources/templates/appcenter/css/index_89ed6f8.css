@@ -883,7 +883,8 @@
 
 .big-app-wrap .app-bd .app-box .icon img {
     width: 110px;
-    height: 110px
+    height: 110px;
+    border-radius:7px;
 }
 
 .big-app-wrap .app-bd .app-box .name,.big-app-wrap .app-bd .app-box .down-num,.big-app-wrap .app-bd .app-box .down-btn {

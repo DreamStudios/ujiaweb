@@ -18,10 +18,18 @@ public interface AdService {
     /**
      * 获取广告列表
      * @param number
-     * @param style
+     * @param type 广告类型(1:广告 2:友情链接 3:轮播)
      * @return
      */
-    public List<Ad> getTopAdList(int number,int style);
+    public List<Ad> getTopAdList(int number,int type);
+
+    /**
+     * 获取应用列表
+     * @param number
+     * @param style 广告分类(1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+     * @return
+     */
+    public List<Ad> getTopAdListByStyle(int number,int style);
 
     /**
      * 获取精品推荐分页

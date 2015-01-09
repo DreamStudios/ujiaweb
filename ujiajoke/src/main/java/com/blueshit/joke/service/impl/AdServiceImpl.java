@@ -38,6 +38,19 @@ public class AdServiceImpl implements AdService{
     }
 
     /**
+     * 获取应用列表
+     * @param number
+     * @param style 广告分类(1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+     * @return
+     */
+    @Override
+    public List<Ad> getTopAdListByStyle(int number,int style){
+        StringBuffer hql = new StringBuffer("From Ad WHERE adStatus=3 AND type=1 AND style=" + style);
+        hql.append("ORDER BY updateTime DESC");
+        return adRepository.findTopByHql(hql.toString(),number);
+    }
+
+    /**
      * 获取精品推荐分页
      */
     public Page<Ad> getAdPage(int page){

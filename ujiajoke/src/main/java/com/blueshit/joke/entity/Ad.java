@@ -46,6 +46,12 @@ public class Ad implements Serializable {
     private String adUrl;
 
     /**
+     * 应用名称
+     */
+    @Column(nullable = false, length = 255)
+    private String name = "";
+
+    /**
      * 广告标题
      */
     @Column(nullable = false, length = 255)
@@ -54,6 +60,14 @@ public class Ad implements Serializable {
     //广告简介
     @Column(nullable = true,length = 255)
     private String content;
+
+    //应用大小
+    @Column(nullable = true,length = 255)
+    private String size;
+
+    //下载量
+    @Column(nullable = false, columnDefinition = "int(11) default 107")
+    private int down = (int)(Math.random()*50000);
 
     /**
      * 广告创建时间
@@ -178,5 +192,29 @@ public class Ad implements Serializable {
 
     public void setStyle(int style) {
         this.style = style;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public int getDown() {
+        return down;
+    }
+
+    public void setDown(int down) {
+        this.down = down;
     }
 }
