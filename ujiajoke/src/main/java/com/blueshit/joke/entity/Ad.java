@@ -31,11 +31,11 @@ public class Ad implements Serializable {
     @Column(nullable = false)
     private int type;
 
-    //广告分类(1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+    //广告分类(0：手机页面专享 1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐,)
     @Column(nullable = false)
     private int style;
 
-    //广告图片
+    //广告图片(LOGO)
     @Column(nullable = true,length = 255)
     private String adPhoto;
 
@@ -70,16 +70,15 @@ public class Ad implements Serializable {
     private int down = (int)(Math.random()*50000);
 
     /**
-     * 广告创建时间
+     * 应用截图1
      */
-    @Column(nullable = false)
-    private Date createTime = new Date();
-
+    @Column(nullable = true, length = 255)
+    private String screenshot1 = "";
     /**
-     * 广告更新时间
+     * 应用截图2
      */
-    @Column(nullable = false)
-    private Date updateTime = new Date();
+    @Column(nullable = true, length = 255)
+    private String screenshot2 = "";
 
     /**
      * 广告状态 1:下线2:暂停3：投放中
@@ -90,6 +89,18 @@ public class Ad implements Serializable {
     //广告权重：排序用
     @Column(nullable = false, columnDefinition = "int(11) default 1")
     private int weight = 1;
+
+    /**
+     * 广告创建时间
+     */
+    @Column(nullable = false)
+    private Date createTime = new Date();
+
+    /**
+     * 广告更新时间
+     */
+    @Column(nullable = false)
+    private Date updateTime = new Date();
 
     /**
      * 广告主
@@ -216,5 +227,21 @@ public class Ad implements Serializable {
 
     public void setDown(int down) {
         this.down = down;
+    }
+
+    public String getScreenshot1() {
+        return screenshot1;
+    }
+
+    public void setScreenshot1(String screenshot1) {
+        this.screenshot1 = screenshot1;
+    }
+
+    public String getScreenshot2() {
+        return screenshot2;
+    }
+
+    public void setScreenshot2(String screenshot2) {
+        this.screenshot2 = screenshot2;
     }
 }

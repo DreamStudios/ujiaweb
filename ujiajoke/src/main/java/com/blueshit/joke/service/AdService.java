@@ -26,7 +26,7 @@ public interface AdService {
     /**
      * 获取应用列表
      * @param number
-     * @param style 广告分类(1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+     * @param style 广告分类(0：手机页面专享 1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
      * @return
      */
     public List<Ad> getTopAdListByStyle(int number,int style);
@@ -35,4 +35,11 @@ public interface AdService {
      * 获取精品推荐分页
      */
     public Page<Ad> getAdPage(int page);
+
+    /**
+     * 通过广告ID获取广告详情信息
+     * @param adid 广告ID
+     * @return
+     */
+    public Ad getAdByAdId(int adid);
 }

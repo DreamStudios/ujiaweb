@@ -53,8 +53,19 @@ public class AdServiceImpl implements AdService{
     /**
      * 获取精品推荐分页
      */
+    @Override
     public Page<Ad> getAdPage(int page){
         String hql = "From Ad WHERE adStatus = 3 AND type=1 ORDER BY weight";
         return adRepository.findByHql(hql, Constants.Common.PAGE_SIZE, page);
+    }
+
+    /**
+     * 通过广告ID获取广告详情信息
+     * @param adid 广告ID
+     * @return
+     */
+    @Override
+    public Ad getAdByAdId(int adid){
+        return adRepository.findOne(adid);
     }
 }

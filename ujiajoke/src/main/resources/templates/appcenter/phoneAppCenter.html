@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>精品应用中心</title>
+</head>
+<body>
+<div class="wrap-2">
+    <!--顶部信息开始-->
+    <div class="top">
+        <div class="center">精品应用推荐</div>
+    </div>
+    <!--顶部信息结束-->
+    <!--应用列表开始-->
+    <ul class="home-app-list-2 clearfix">
+        <li th:each="ad:${appList}">
+            <a class="clearfix" href="phoneAppDetail.html" th:href="@{${ad.adid}+'/phoneAppDetail.html'}">
+                <div class="ico">
+                    <img src="img/timg.jpg" th:src="${ad.adPhoto}" />
+                </div>
+                <div class="app-content">
+                    <div class="title" th:text="${ad.name}">个税计算器</div>
+                    <div class="size" th:text="${'大小'+ad.size}">1.29MB</div>
+                    <div class="type" th:text="${'下载量'+ad.down}">123</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!--应用列表结束-->
+</div>
+<!--底部开始-->
+<div class="footer">
+    <div><a href="http://app.xiaoujia.com/ujiajoke/appcenter/index.html">www.xiaoujia.com</a></div>
+</div>
+<!--底部结束-->
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: none;
+        /*-webkit-touch-callout:none;*/
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        /*-webkit-user-select:none;*/
+        text-decoration: none;
+        font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        -webkit-appearance: none;
+        outline: none;
+        font-size: 14px;
+        -webkit-text-size-adjust: none;
+    }
+    html,body {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #ffffff;
+    }
+    .wrap-2 {
+        display: block;
+        background: #ffffff;
+        padding-top: 45px;
+    }
+    .clearfix:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0px;
+    }
+    .clearfix {
+        zoom: 1;
+    }
+    .top {
+        background: #03a8b1;
+        color: #ffffff;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-bottom: 2px #2f9d2e solid;
+        position: relative;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    .top .center {
+        font-size: 20px;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 170px;
+        display: inline-block;
+    }
+    .home-app-list-2 {
+        width: 100%;
+    }
+    .home-app-list-2 li {
+        float: left;
+        width: 48%;
+        border-bottom: 1px #f0f0f0 solid;
+    }
+    .home-app-list-2 li:nth-child(even) {
+        border-left: 1px #f0f0f0 solid;
+    }
+    .home-app-list-2 a {
+        display: block;
+        background: #fff;
+        padding: 10px;
+    }
+    .home-app-list-2 .ico {
+        width: 50px;
+        height: 50px;
+        float: left;
+    }
+    .home-app-list-2 .app-content {
+        padding-left: 70px;
+    }
+    .home-app-list-2 .ico img {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    .home-app-list-2 .title {
+        font-size: 12px;
+        font-weight: 600;
+        color: #333333;
+        word-break: break-all;
+        line-height: 1.5;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 78px;
+    }
+    .home-app-list-2 .size {
+        color: #ccc;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .home-app-list-2 .type {
+        color: #ccc;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .footer {
+        height: 40px;
+        line-height: 40px;
+        background: #f0f0f0;
+        text-align: center;
+    }
+    .footer a {
+        color: #333;
+    }
+</style>
+</body>
+</html>
