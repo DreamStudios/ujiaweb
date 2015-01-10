@@ -18,6 +18,18 @@ fieldset,img {
     border: 0
 }
 
+.res-tag-ok, .res-tag-warning, .res-tag-danger, .res-tag-wait, .res-tag-end {
+    background-image: url(../img/security.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 18px;
+    margin-right: 3px;
+}
+
 address,caption,cite,code,dfn,em,strong,th,var {
     font-style: normal;
     font-weight: 400

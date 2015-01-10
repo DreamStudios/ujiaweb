@@ -82,9 +82,10 @@
                           <div class="appinfo clearfix">
                               <div class="appinfo-left">
                                   <p class="name" th:text="${ad.name}">开卷有益</p>
-                                      <p class="tag">
-                                         <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
-                                      </p>
+                                  <p class="tag">
+                                      <span class="res-tag-ok">安全免费</span>
+                                      <span class="res-tag-ok">优质</span>
+                                  </p>
                                       <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
                                   <p class="down-size">
                                       <span class="down" th:text="${ad.down+'下载'}">678万下载</span>
@@ -135,7 +136,8 @@
                                         <div class="appinfo-left">
                                             <p class="name" th:text="${ad.name}">开卷有益</p>
                                             <p class="tag">
-                                                <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
+                                                <span class="res-tag-ok">安全免费</span>
+                                                <span class="res-tag-ok">优质</span>
                                             </p>
                                             <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
                                             <p class="down-size">
@@ -144,7 +146,7 @@
                                             </p>
                                         </div>
                                         <div class="appinfo-right">
-                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="http://zhushou.baidu.com:80/qrcode/?text=www.baidu.com" /></p>
+                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" th:src="${'http://zhushou.baidu.com:80/qrcode/?text='+ad.adUrl}" /></p>
                                         </div>
                                     </div>
                                     <p class="brief"><span class="comm">[小编评语]</span><span th:text="${ad.content}">迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</span></p>
@@ -187,7 +189,8 @@
                                         <div class="appinfo-left">
                                             <p class="name" th:text="${ad.name}">开卷有益</p>
                                             <p class="tag">
-                                                <span class="res-tag-ok" style="color: #62C5AB;">已通过安全验证</span>
+                                                <span class="res-tag-ok">安全免费</span>
+                                                <span class="res-tag-ok">优质</span>
                                             </p>
                                             <p class="star-wrap"><span class="star"><span style="width:92%"></span></span></p>
                                             <p class="down-size">
@@ -196,7 +199,7 @@
                                             </p>
                                         </div>
                                         <div class="appinfo-right">
-                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" src="http://zhushou.baidu.com:80/qrcode/?text=www.baidu.com" /></p>
+                                            <p><img class="app-qrcode wsqrcode app-qrcode-ws" th:src="${'http://zhushou.baidu.com:80/qrcode/?text='+ad.adUrl}" /></p>
                                         </div>
                                     </div>
                                     <p class="brief"><span class="comm">[小编评语]</span><span th:text="${ad.content}">迅读引擎能够轻松读取百M文档，独家动态智能排版技术，即看即排。文档虐我千百遍，我待文档如初恋</span></p>
