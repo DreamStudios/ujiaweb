@@ -2,12 +2,18 @@ package com.blueshit.joke.controller;
 
 import com.blueshit.joke.entity.Ad;
 import com.blueshit.joke.service.AdService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -23,10 +29,12 @@ import java.util.List;
 public class AdController {
 
     private AdService adService;
+    private ObjectMapper objectMapper;
 
     @Autowired
-    public AdController(AdService adService) {
+    public AdController(AdService adService,ObjectMapper objectMapper) {
         this.adService = adService;
+        this.objectMapper = objectMapper;
     }
 
     //进入网页版应用中心
@@ -39,14 +47,31 @@ public class AdController {
     }
 
 
-    //进入网页版应用中心
+    //进入手机网页版应用中心
     @RequestMapping(value = "/phoneAppCenter", method = RequestMethod.GET)
     public String phoneAppCenter(Model model){
         //获取精品专辑
-        List<Ad> list = adService.getTopAdListByStyle(20,0);
+        List<Ad> list = adService.getAdPageListByStyle(1,10,0);
         model.addAttribute("appList",list);
         return "appcenter/phoneAppCenter";
     }
+
+    //手机网页版应用中心--获取更多
+    @RequestMapping(value = "/getMore", method = RequestMethod.GET)
+    public String phoneAppCenterGetMore(HttpServletResponse response,
+                                        @RequestParam(value = "page", required = true) String page) throws Exception{
+        int pageNo;
+        try{
+            pageNo = Integer.parseInt(page);
+        }catch (Exception ex){
+            pageNo = 1;
+        }
+        //获取精品专辑
+        List<Ad> list = adService.getAdPageListByStyle(pageNo,10,0);
+        printContentToPage(response,objectMapper.writeValueAsString(list));
+        return null;
+    }
+
     /**
      * 进入应用详情页面
      * @param adid
@@ -58,5 +83,23 @@ public class AdController {
         Ad ad = adService.getAdByAdId(Integer.parseInt(adid));
         model.addAttribute("ad", ad);
         return "appcenter/phoneAppDetail";
+    }
+
+    private void printContentToPage(HttpServletResponse response,String text){
+        PrintWriter out = null;
+        try {
+            //禁止缓存数据
+            response.setHeader("Content-type", "text/json;charset=UTF-8");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Cache-Control", "no-cache");
+            response.setHeader("Expires", "0");
+            response.setCharacterEncoding("UTF-8");
+            out = response.getWriter();
+            out.print(text);
+        } catch (IOException e) {
+        }finally{
+            out.flush();
+            out.close();
+        }
     }
 }

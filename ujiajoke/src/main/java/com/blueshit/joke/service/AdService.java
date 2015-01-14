@@ -32,6 +32,15 @@ public interface AdService {
     public List<Ad> getTopAdListByStyle(int number,int style);
 
     /**
+     * 获取应用列表
+     * @param pageNO 页码
+     * @param pageSize 每页条数
+     * @param style 广告分类(0：手机页面专享 1:精品专辑 2:装机必备 3:精品游戏 4:神友推荐)
+     * @return
+     */
+    public List<Ad> getAdPageListByStyle(int pageNO,int pageSize,int style);
+
+    /**
      * 获取精品推荐分页
      */
     public Page<Ad> getAdPage(int page);

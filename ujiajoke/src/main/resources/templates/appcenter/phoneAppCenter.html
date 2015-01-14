@@ -13,7 +13,7 @@
     </div>
     <!--顶部信息结束-->
     <!--应用列表开始-->
-    <ul class="home-app-list-2 clearfix">
+    <ul class="home-app-list-2 clearfix" id="applist">
         <li th:each="ad:${appList}">
             <a class="clearfix" href="phoneAppDetail.html" th:href="@{${ad.adid}+'/phoneAppDetail.html'}">
                 <div class="ico">
@@ -28,6 +28,7 @@
         </li>
     </ul>
     <!--应用列表结束-->
+    <div style="text-align: center;" id="moreDiv"><a href="#" onclick="javascript:load();" class="more">加载更多</a></div>
 </div>
 <!--底部开始-->
 <div class="footer">
@@ -154,6 +155,58 @@
     .footer a {
         color: #333;
     }
+    .more{
+        color: #333;
+        line-height: 30px;
+        font-size: 12px;
+    }
 </style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type='text/javascript' th:inline="javascript">
+    /*<![CDATA[*/
+    var page = 1;
+    var content="";
+    function load(){
+        page++;
+        $.ajax({
+            url:"getMore.html",
+            data: {"page":page},
+            type: "GET",
+            dataType:"json",
+            timeout:18000,
+            success:function(data){
+                moreApp.hot(data);
+            },
+            error: function(){ //请求失败
+                $("#moreDiv").html("<span>获取失败稍后再试</span>");
+            }
+        });
+    }
+    var moreApp = {
+        hot: function (data) {
+            if(data&& data.length > 0){
+                $.each(data, function (index, ad) {
+                    var content =
+                       "<li>"+
+                          "<a class='clearfix' href='"+ad.adid+"/phoneAppDetail.html'>"+
+                            "<div class='ico'>"+
+                               "<img src='"+ad.adPhoto+"'/>"+
+                            "</div>"+
+                            "<div class='app-content'>"+
+                               "<div class='title'>"+ad.name+"</div>"+
+                               "<div class='size'>大小"+ad.size+"</div>"+
+                               "<div class='type'>下载量"+ad.down+"</div>"+
+                            "</div>"+
+                          "</a>"+
+                       "</li>";
+                    $("#applist").append(content);
+                });
+            }else{
+                $("#moreDiv").html("<span class='more'>全部加载完毕</span>");
+            }
+        }
+    }
+    /*]]>*/
+</script>
 </body>
 </html>

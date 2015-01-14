@@ -81,6 +81,23 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     }
 
     /**
+     * 根据HQL查询分页后的List值
+     * @param hql
+     * @param pageSize 每页显示数量
+     * @param pageNo 页码
+     * @return
+     */
+    public List<T> findPageListByHql(String hql, int pageSize, int pageNo){
+        Query query = em.createQuery(hql);
+        // 设置查询结果的结束记录数
+        query.setMaxResults(pageSize);
+        // 设置查询结果的开始记录数（从0开始计数）
+        int firstResult = (pageNo - 1) * pageSize;
+        query.setFirstResult(firstResult);
+        return query.getResultList();
+    }
+
+    /**
      * 获取前几条数据
      * @param hql
      * @param count 数据量

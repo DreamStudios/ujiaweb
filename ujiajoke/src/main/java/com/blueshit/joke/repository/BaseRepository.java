@@ -42,6 +42,15 @@ public interface BaseRepository<T, ID extends Serializable>
     public Page<T> findByHql(String hql, int pageSize, int pageNo);
 
     /**
+     * 根据HQL查询分页后的List值
+     * @param hql
+     * @param pageSize 每页显示数量
+     * @param pageNo 页码
+     * @return
+     */
+    public List<T> findPageListByHql(String hql, int pageSize, int pageNo);
+
+    /**
      * 获取前几条数据
      * @param hql
      * @param count 数据量

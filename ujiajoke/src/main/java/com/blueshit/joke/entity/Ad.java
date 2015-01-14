@@ -1,5 +1,7 @@
 package com.blueshit.joke.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -105,6 +107,7 @@ public class Ad implements Serializable {
     /**
      * 广告主
      */
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "advid", nullable = false)
     private Advertiser advertiser;
