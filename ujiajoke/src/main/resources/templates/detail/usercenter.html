@@ -131,7 +131,7 @@
                         currentPage: newPage,
                         totalPages: totalPages,
                         onPageClicked: function (e, originalEvent, type, page) {
-                            window.location.href = "/"+uid+"/userCenter.html?page=" + page ;
+                            window.location.href = "userCenter.html?page=" + page ;
                         }
                     }
                     $('#example').bootstrapPaginator(options);
@@ -140,9 +140,9 @@
                     var pageValue=$('#page').val();
                     if(!isNaN(pageValue) && parseInt(pageValue)>0){
                         if(parseInt(pageValue) == 1){
-                            window.location.href = "/"+uid+"/userCenter.html?page=1";
+                            window.location.href = "userCenter.html?page=1";
                         }else{
-                            window.location.href = "/"+uid+"/userCenter.html?page=" + pageValue;
+                            window.location.href = "userCenter.html?page=" + pageValue;
                         }
                     }else{
                         alert('请输入正确的页码');

@@ -92,6 +92,10 @@ public class Ad implements Serializable {
     @Column(nullable = false, columnDefinition = "int(11) default 1")
     private int weight = 1;
 
+    //广告标识：1自己广告 2:其它渠道
+    @Column(nullable = false, columnDefinition = "int(11) default 1")
+    private int flag = 1;
+
     /**
      * 广告创建时间
      */
@@ -246,5 +250,13 @@ public class Ad implements Serializable {
 
     public void setScreenshot2(String screenshot2) {
         this.screenshot2 = screenshot2;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public void setFlag(int flag) {
+        this.flag = flag;
     }
 }
