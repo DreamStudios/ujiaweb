@@ -41,6 +41,10 @@ public class Ad implements Serializable {
     @Column(nullable = true,length = 255)
     private String adPhoto;
 
+    //应用包名
+    @Column(nullable = true,length = 255)
+    private String packageName;
+
     /**
      * 广告链接地址
      */
@@ -258,5 +262,13 @@ public class Ad implements Serializable {
 
     public void setFlag(int flag) {
         this.flag = flag;
+    }
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
     }
 }
