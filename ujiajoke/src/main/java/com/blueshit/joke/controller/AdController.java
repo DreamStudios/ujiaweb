@@ -51,7 +51,7 @@ public class AdController {
     @RequestMapping(value = "/phoneAppCenter", method = RequestMethod.GET)
     public String phoneAppCenter(Model model){
         //获取精品专辑
-        List<Ad> list = adService.getAdPageListByStyle(1,10,0);
+        List<Ad> list = adService.getAdPageListByStyle(1,20,0);
         model.addAttribute("appList",list);
         return "appcenter/phoneAppCenter";
     }
@@ -67,7 +67,7 @@ public class AdController {
             pageNo = 1;
         }
         //获取精品专辑
-        List<Ad> list = adService.getAdPageListByStyle(pageNo,10,0);
+        List<Ad> list = adService.getAdPageListByStyle(pageNo,20,0);
         printContentToPage(response,objectMapper.writeValueAsString(list));
         return null;
     }
