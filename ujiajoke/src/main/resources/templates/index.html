@@ -67,7 +67,7 @@
             <ul th:with="list=${@adService.getTopAdList(5,3)}">
                 <li th:each="us:${list}">
                     <a href="topic/2.html" th:href="${us.adUrl}" target="_blank" class="f_img_668_150">
-                        <img src="img/logo.png" alt="有家笑话" th:src="${#httpServletRequest.getContextPath() + us.adPhoto}" th:alt="${us.adTitle}" />
+                        <img src="img/logo.png" alt="有家笑话" th:src="${us.adPhoto}" th:alt="${us.adTitle}" />
                         <span th:text="${us.adTitle}">一起赚笑币，赢取iPhone6！</span>
                     </a>
                 </li>
