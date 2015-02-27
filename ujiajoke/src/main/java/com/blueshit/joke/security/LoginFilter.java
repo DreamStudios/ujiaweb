@@ -42,10 +42,10 @@ public class LoginFilter extends HttpServlet implements Filter {
 				response.sendRedirect(request.getContextPath()+"/login.html");
 			}
 		}else{
-			Object loginStatus = request.getSession().getAttribute("loginStatus");
+			/*Object loginStatus = request.getSession().getAttribute("loginStatus");
 			if(loginStatus == null){
 				request.getSession().setAttribute("loginStatus", "false");
-			}
+			}*/
 			chain.doFilter(request, response);
 		}
 

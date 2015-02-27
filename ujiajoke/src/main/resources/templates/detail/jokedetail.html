@@ -86,7 +86,7 @@
 			<div id="recomment_hot_1">
                 <ul class="recomment-tag" style="overflow: hidden;" th:with="list=${@jokeService.getOtherJokeList(joke.jid,6)}">
                     <li class="marginbottom" th:each="us,stat :${list}" th:class="${stat.count%3 eq 0?'nomargin marginbottom':'marginbottom'}">
-                        <a href="" target="_blank">
+                        <a href="" th:href="@{'/'+${us.jid}+'/jokeDetail.html'}" target="_blank">
                             <img alt="" src="../img/ad.jpg" th:src="${#httpServletRequest.getContextPath() + us.picture}" />
                             <p th:text="${us.title}">全球最奇葩工作</p>
                         </a>
