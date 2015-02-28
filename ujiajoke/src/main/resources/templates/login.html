@@ -11,6 +11,14 @@
     <script src="js/jquery-1.8.0.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="img/login/base-all-min.css" />
     <link href="img/login/login.css" rel="stylesheet" type="text/css" media="all" />
+    <style type="text/css">
+        .star{
+            width:130px;
+            height:170px;
+            border: 2px solid #ddd;
+            background: #fff;
+        }
+    </style>
 </head>
 
 <body id="syshome" class="login">
@@ -53,7 +61,7 @@
            <span class="getpassword">
                <span style="float:left;margin-right: 28px;" th:if="${session['loginStatus'] eq 'false'}">
                    <input type="text" id="kaptcha" name="kaptcha" class="kaptcha" maxlength="5" style="width: 80px;"  placeholder="请输入验证码" />
-                   <img th:src="kaptcha.jpg" src="developer/home-img/yzm.png" width="110" height="40" id="kaptchaImage" />
+                   <img th:src="@{/captcha-image.html}" src="developer/home-img/yzm.png" width="110" height="40" id="kaptchaImage" />
                    <script type="text/javascript">
                        $(function () {
                            $('#kaptchaImage').click(function () {
@@ -136,9 +144,9 @@
           <td valign="top" bgcolor="ffffff" id="marquePic1">
             <table width="70%" border="0" cellspacing="0">
               <tr>
-                <td align="center" th:each="sch:${list}" width="135px;">
-                    <a th:title="${sch.name}" target="_blank">
-                        <img src="img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + sch.photo}" width="130" height="175" border="0"/>
+                <td align="center" th:each="sch:${list}" width="135px;" style="padding: 0px 1px 0px 0px;">
+                    <a th:title="${sch.name}" target="_blank" th:href="@{'/'+${sch.uid}+'/userCenter.html'}">
+                        <img class="star" src="img/avatar_2.jpg" th:src = "${#httpServletRequest.getContextPath() + sch.photo}"/>
                     </a>
                 </td>
               </tr>

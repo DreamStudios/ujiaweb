@@ -28,7 +28,7 @@ public class LoginFilter extends HttpServlet implements Filter {
 		if(method.equalsIgnoreCase("post") && uri.indexOf("login.html")>0){
 			String kaptchaReceived = request.getParameter("kaptcha");
 			String kaptchaExpected = (String) request.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-			boolean security_code = true;
+            boolean security_code = true;
 			if (kaptchaReceived != null && !kaptchaReceived.equalsIgnoreCase(kaptchaExpected)) {
 				security_code = false;
 			}

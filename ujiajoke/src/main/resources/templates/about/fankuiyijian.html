@@ -91,7 +91,7 @@
                 <dd>
                     <p th:if="${kaptcha ne null}" th:text="${kaptcha}" style="color: red;">验证码不能为空</p>
                     <input type="text" name="kaptcha" id="kaptcha" class="text-input" style="float:left;" placeholder="请输入验证码" />
-                    <img class="yanzhengma" th:src="@{/kaptcha.jpg}" src="../img/register/aa.png" id="kaptchaImage" />
+                    <img class="yanzhengma" th:src="@{/captcha-image.html}" src="../img/register/aa.png" id="kaptchaImage" />
 					<script type="text/javascript">
                         $(function () {
                             $('#kaptchaImage').click(function () {
