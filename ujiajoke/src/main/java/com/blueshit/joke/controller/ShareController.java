@@ -69,7 +69,7 @@ public class ShareController {
                 addr = shareSinaWeibo(title,url,picture);
                 break;
             case 4://QQ好友
-                addr = shareQfrient(title,url);
+                addr = shareQfrient(title,url,picture);
                 break;
         }
         return "redirect:" + addr;
@@ -81,7 +81,7 @@ public class ShareController {
      */
     private String vipJokeShare(VipJoke vipJoke,int type){
         String title = vipJoke.getTitle();
-        String url = SHARE + vipJoke.getJid() + "/jokeDetail.html";
+        String url = SHARE + vipJoke.getJid() + "/vipJokeDetail.html";
         String picture = vipJoke.getStyle() == 1 ? SHARE + vipJoke.getPicture() : "";
         String addr = "";
         switch (type){
@@ -95,7 +95,7 @@ public class ShareController {
                 addr = shareSinaWeibo(title,url,picture);
                 break;
             case 4://QQ好友
-                addr = shareQfrient(title,url);
+                addr = shareQfrient(title,url,picture);
                 break;
         }
         return "redirect:" + addr;
@@ -120,8 +120,8 @@ public class ShareController {
     }
 
     //分享到QQ好友
-    private String shareQfrient(String title,String url){
+    private String shareQfrient(String title,String url,String picture){
         return "http://connect.qq.com/widget/shareqq/index.html?title=" + title +
-                "&url=" + url;
+                "&url=" + url + "&pics=" + picture;
     }
 }

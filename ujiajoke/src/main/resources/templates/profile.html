@@ -18,22 +18,24 @@
         var token=/*[[${_csrf.token}]]*/'';
         var sessionid = /*[[${#httpSession.id}]]*/"";
         $(function() {
-            $('#jokePicture').uploadify({
-                'method'   : 'post',
-                'formData'      : {'sessionId' : 'photo','extName':'.png'},
-                'fileObjName' : 'file',
-                'fileTypeExts'  : '*.png;*.jpg;*.gif;',
-                'fileSizeLimit'  : '50K',
-                'successTimeout' : 90,
-                'buttonImage'  : 'img/uploadButton.png',
-                'swf' : 'js/uploadify.swf',
-                'uploader' : contexPath+'/fileUpload;jsessionid=' + sessionid + '?'+parameterName+'='+token,
-                'onUploadSuccess': function (file, data, response) {
-                    if (response) {
-                        $("#myphoto").attr("src", data);
+            setTimeout(function(){
+                $('#jokePicture').uploadify({
+                    'method'   : 'post',
+                    'formData'      : {'sessionId' : 'photo','extName':'.png'},
+                    'fileObjName' : 'file',
+                    'fileTypeExts'  : '*.png;*.jpg;*.gif;',
+                    'fileSizeLimit'  : '50K',
+                    'successTimeout' : 90,
+                    'buttonImage'  : 'img/uploadButton.png',
+                    'swf' : 'js/uploadify.swf',
+                    'uploader' : contexPath+'/fileUpload;jsessionid=' + sessionid + '?'+parameterName+'='+token,
+                    'onUploadSuccess': function (file, data, response) {
+                        if (response) {
+                            $("#myphoto").attr("src", data);
+                        }
                     }
-                }
-            });
+                });
+            },10);
         });
         /*]]>*/
     </script>

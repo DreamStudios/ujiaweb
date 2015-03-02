@@ -2,6 +2,7 @@ package com.blueshit.joke.service;
 
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.entity.VipJoke;
 import org.springframework.data.domain.Page;
 
 import java.util.HashMap;
@@ -65,6 +66,13 @@ public interface JokeService {
      * @return
      */
     public List<Joke> getOtherJokeList(int jid,int number);
+
+    /**
+     * 获取此笑话外的其它笑话(会员)
+     * @param jid
+     * @return
+     */
+    public List<VipJoke> getOtherVipJokeList(int jid,int number);
 
     /**
      * 根据笑话类型查询笑话信息

@@ -2,8 +2,10 @@ package com.blueshit.joke.service.impl;
 
 import com.blueshit.joke.entity.Joke;
 import com.blueshit.joke.entity.UserInfo;
+import com.blueshit.joke.entity.VipJoke;
 import com.blueshit.joke.repository.AdRepository;
 import com.blueshit.joke.repository.JokeRepository;
+import com.blueshit.joke.repository.VipJokeRepository;
 import com.blueshit.joke.service.JokeService;
 import com.blueshit.joke.utils.Constants;
 import org.slf4j.Logger;
@@ -27,6 +29,8 @@ public class JokeServiceImpl implements JokeService {
 
     @Autowired
     JokeRepository jokeRepository;
+    @Autowired
+    VipJokeRepository vipJokeRepository;
     @Autowired
     AdRepository adRepository;
 
@@ -159,6 +163,18 @@ public class JokeServiceImpl implements JokeService {
         StringBuffer hql = new StringBuffer("From Joke WHERE style=1 AND status=2 AND jid != " + jid);
         hql.append("ORDER BY updateTime DESC,up DESC,down ASC");
         return jokeRepository.findTopByHql(hql.toString(), number);
+    }
+
+    /**
+     * 获取此笑话外的其它笑话(会员)
+     * @param jid
+     * @return
+     */
+    @Override
+    public List<VipJoke> getOtherVipJokeList(int jid,int number){
+        StringBuffer hql = new StringBuffer("From VipJoke WHERE style=1 AND status=2 AND jid != " + jid);
+        hql.append("ORDER BY updateTime DESC,up DESC,down ASC");
+        return vipJokeRepository.findTopByHql(hql.toString(), number);
     }
 
     /**

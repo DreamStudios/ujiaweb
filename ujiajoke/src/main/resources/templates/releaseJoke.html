@@ -18,17 +18,19 @@
         var token=/*[[${_csrf.token}]]*/'';
         var sessionid = /*[[${#httpSession.id}]]*/"";
         $(function() {
-            $('#jokePicture').uploadify({
-                'method'   : 'post',
-                'formData'      : {'sessionId' : 'picture','extName':'.png'},
-                'fileObjName' : 'file',
-                'fileTypeExts'  : '*.png;*.jpg;*.gif;',
-                'fileSizeLimit'  : '1024K',
-                'successTimeout' : 90,
-                'buttonImage'  : 'img/uploadButton.png',
-                'swf' : 'js/uploadify.swf',
-                'uploader' : contexPath+'/fileUpload;jsessionid=' + sessionid + '?'+parameterName+'='+token
-            });
+            setTimeout(function(){
+                $('#jokePicture').uploadify({
+                    'method'   : 'post',
+                    'formData'      : {'sessionId' : 'picture','extName':'.png'},
+                    'fileObjName' : 'file',
+                    'fileTypeExts'  : '*.png;*.jpg;*.gif;',
+                    'fileSizeLimit'  : '1024K',
+                    'successTimeout' : 90,
+                    'buttonImage'  : 'img/uploadButton.png',
+                    'swf' : 'js/uploadify.swf',
+                    'uploader' : contexPath+'/fileUpload;jsessionid=' + sessionid + '?'+parameterName+'='+token
+                });
+            },10);
             $('#style').change(function(){
                 var va = $(this).children('option:selected').val();
                 if(va == 1){
