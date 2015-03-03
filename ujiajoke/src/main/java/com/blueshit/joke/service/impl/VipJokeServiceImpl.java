@@ -49,6 +49,9 @@ public class VipJokeServiceImpl implements VipJokeService{
                 joke = vipJokeRepository.findOne(id + 1);
                 break;
         }
+        if(null == joke){
+            joke = vipJokeRepository.findOne(1);
+        }
         return joke;
     }
 
