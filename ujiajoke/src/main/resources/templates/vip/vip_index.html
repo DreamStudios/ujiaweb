@@ -204,7 +204,7 @@
             <img src="../img/ad.jpg" />
         </div>
         <!--精彩文字笑话-->
-        <dl class="new-pic-text" th:with="list=${@jokeService.getTopJokeList(15,2)}">
+        <dl class="new-pic-text" th:with="list=${@jokeService.getTopVipJokeList(15,2)}">
             <dt>
                 <a href="#" target="_blank"><h2>精彩文字笑话</h2></a><a href="#" target="_blank" class="more">更多</a>
             </dt>
@@ -217,7 +217,7 @@
             <img src="../img/ad.jpg" />
         </div>
         <!-- 最新搞笑图片 -->
-        <dl class="new-pic" th:with="list=${@jokeService.getTopJokeList(10,1)}">
+        <dl class="new-pic" th:with="list=${@jokeService.getTopVipJokeList(10,1)}">
             <dt><a href="#" target="_blank"><h2>精彩搞笑图片</h2></a><a href="#" target="_blank" class="more">更多</a></dt>
             <dd>
                 <a target="_blank" href="../detail/vipJokeDetail.html" th:href="@{'/'+${us.jid}+'/vipJokeDetail.html'}" th:each="us,stats:${list}" th:class="${stats.odd?'':'new-pic-left'}">

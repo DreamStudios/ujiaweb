@@ -83,6 +83,14 @@ public interface JokeService {
     public List<Joke> getTopJokeList(int number,int style);
 
     /**
+     * 根据笑话类型查询VIP笑话信息
+     * @param number 数据条数
+     * @param style 1:图文 2:纯文字
+     * @return
+     */
+    public List<VipJoke> getTopVipJokeList(int number,int style);
+
+    /**
      * 分页查询其它笑话
      * @param page 当前页
      * @param type 查询类型(1:文字笑话 2:笑点)

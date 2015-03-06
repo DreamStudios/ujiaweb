@@ -191,6 +191,19 @@ public class JokeServiceImpl implements JokeService {
     }
 
     /**
+     * 根据笑话类型查询VIP笑话信息
+     * @param number 数据条数
+     * @param style 1:图文 2:纯文字
+     * @return
+     */
+    @Override
+    public List<VipJoke> getTopVipJokeList(int number,int style){
+        StringBuffer hql = new StringBuffer("From VipJoke WHERE style="+ style +" AND status=2");
+        hql.append("ORDER BY up DESC,down ASC, updateTime DESC");
+        return vipJokeRepository.findTopByHql(hql.toString(), number);
+    }
+
+    /**
      * 分页查询其它笑话
      * @param page 当前页
      * @param type 查询类型(1:文字笑话 2:笑点)
