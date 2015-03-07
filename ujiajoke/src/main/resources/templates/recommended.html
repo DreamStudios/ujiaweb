@@ -87,7 +87,7 @@
         </ul>
 		<ul class="content myinfo day-task" th:if="${pages.totalElements > 0}">
 			<li th:each="page :${pages}">
-				<div class="task-icon"><img src="img/avatar_2.jpg" th:src="${#httpServletRequest.getContextPath() + page.adPhoto}"/></div>
+				<div class="task-icon"><img src="img/avatar_2.jpg" th:src="${page.adPhoto}"/></div>
 				<dl class="task-details">
 					<dt th:text="${page.name}">名称</dt>
 					<dd th:text="${page.adTitle}">标题</dd>
