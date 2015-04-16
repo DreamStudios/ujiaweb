@@ -164,6 +164,7 @@ public class JokeCommentController {
      * @param jid
      * @return
      */
+    //@RequestMapping(value = "/getVipComment", produces = "text/html; charset=UTF-8") //解决response乱码问题
     @RequestMapping(value = "/getVipComment")
     public String getVipComment(Authentication authentication,HttpServletResponse response,int jid){
         List<VipJokeComment> list = vipJokeCommentService.getJokeCommentList(jid, 5);
